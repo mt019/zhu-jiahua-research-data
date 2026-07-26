@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+data/raw/books/*
+!data/raw/books/.gitkeep
+data/raw/web/*
+!data/raw/web/.gitkeep
+data/raw/articles/*
+!data/raw/articles/.gitkeep
+data/raw/reports/*
+!data/raw/reports/.gitkeep
+data/materials/*
+!data/materials/.gitkeep
+notes/*
+!notes/.gitkeep

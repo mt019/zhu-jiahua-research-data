@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-07-26",
+  "sourceId": "zhu-jiahua-speeches-user-pdf",
+  "coverage": {
+    "section": "壹 文化學術",
+    "pdfPagesReviewed": "41–48",
+    "bookPagesReviewed": "1–8",
+    "records": 7
+  },
+  "items": [
+    {
+      "id": "ZJH-001",
+      "title": "設立兩廣地質調查所意見書",
+      "section": "壹 文化學術",
+      "documentType": "意見書",
+      "dateOriginal": "民國十六年五月",
+      "dateIso": "1927-05",
+      "place": "廣州",
+      "pdfPages": [41],
+      "bookPages": [1],
+      "status": "起訖核對",
+      "subjects": ["地質調查", "土地測量", "礦產", "公共機構"]
+    },
+    {
+      "id": "ZJH-002",
+      "title": "復庚款生陳永齡述提倡大地測量學經過",
+      "section": "壹 文化學術",
+      "documentType": "函",
+      "dateOriginal": "民國二十七年十二月二十三日",
+      "dateIso": "1938-12-23",
+      "recipient": "陳永齡",
+      "pdfPages": [42, 43],
+      "bookPages": [2, 3],
+      "status": "起訖核對",
+      "subjects": ["大地測量", "庚款留學", "同濟大學", "人才培養"]
+    },
+    {
+      "id": "ZJH-003",
+      "title": "復同濟大學校長趙士卿述提倡大地測量學經過",
+      "section": "壹 文化學術",
+      "documentType": "函",
+      "dateOriginal": "民國二十八年七月十二日",
+      "dateIso": "1939-07-12",
+      "recipient": "趙士卿",
+      "pdfPages": [43, 44],
+      "bookPages": [3, 4],
+      "status": "起訖核對",
+      "subjects": ["大地測量", "同濟大學", "測量學系", "戰時教育"]
+    },
+    {
+      "id": "ZJH-004",
+      "title": "函同濟大學校長周均時轉請改進測量學系之意見",
+      "section": "壹 文化學術",
+      "documentType": "函",
+      "dateOriginal": "民國二十九年九月二日",
+      "dateIso": "1940-09-02",
+      "recipient": "周均時",
+      "pdfPages": [44, 45],
+      "bookPages": [4, 5],
+      "status": "起訖核對",
+      "subjects": ["大地測量", "同濟大學", "測量學系", "留學"]
+    },
+    {
+      "id": "ZJH-005",
+      "title": "全國學術會議召集意義",
+      "section": "壹 文化學術",
+      "documentType": "談話",
+      "dateOriginal": "民國三十年三月廿一日",
+      "dateIso": "1941-03-21",
+      "event": "全國學術會議",
+      "pdfPages": [45, 46],
+      "bookPages": [5, 6],
+      "status": "起訖核對",
+      "subjects": ["全國學術會議", "科學研究", "抗戰建國", "學術組織"]
+    },
+    {
+      "id": "ZJH-006",
+      "title": "對英國科學協會廣播詞",
+      "section": "壹 文化學術",
+      "documentType": "廣播詞",
+      "dateOriginal": "民國三十年九月二十六日",
+      "dateIso": "1941-09-26",
+      "audience": "英國科學協會",
+      "pdfPages": [46, 47],
+      "bookPages": [6, 7],
+      "status": "起訖核對",
+      "subjects": ["中英科學合作", "抗戰", "科學動員", "國際合作"]
+    },
+    {
+      "id": "ZJH-007",
+      "title": "科學研究之意見",
+      "section": "壹 文化學術",
+      "documentType": "年會講詞",
+      "dateOriginal": "民國三十年十一月三十日",
+      "dateIso": "1941-11-30",
+      "event": "自然科學社第十四屆年會",
+      "pdfPages": [48],
+      "bookPages": [8],
+      "status": "待續核",
+      "subjects": ["自然科學", "科學研究", "學術分工", "學術合作"]
+    }
+  ]
+}

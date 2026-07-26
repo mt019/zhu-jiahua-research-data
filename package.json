@@ -1,0 +1,9 @@
+{
+  "name": "zhu-jiahua-research-data",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node engineering/scripts/validate-processed.mjs",
+    "sync": "npm run validate && node engineering/scripts/sync-to-canvas.mjs"
+  }
+}
