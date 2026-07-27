@@ -6,8 +6,8 @@
     "pdfPages": "342–369",
     "bookPages": "303–330",
     "itemCount": 6,
-    "boundaryStatus": "六篇起訖、日期與明載場合均經原頁核對",
-    "fullTextStatus": "第一篇全文已人工逐頁核對；其餘五篇待全文校訂"
+    "boundaryStatus": "六篇起訖、日期與明載場合均經原頁核對；第五、第六篇的起訖已於全文校訂時更正（見各篇 boundaryRevision）",
+    "fullTextStatus": "六篇全文均已人工逐頁核對"
   },
   "items": [
     {
@@ -36,7 +36,8 @@
       "bookPages": [308, 309, 310, 311, 312],
       "startPosition": "PDF 347 下半起",
       "endPosition": "PDF 351 中段止；同頁接下一篇",
-      "status": "篇名、日期、場合與起訖已核對；全文待校",
+      "status": "全文已人工逐頁核對",
+      "transcription": "../transcriptions/ZJH-LE-002.md",
       "subjects": ["法律教育", "課程", "師資", "法學院", "法治"]
     },
     {
@@ -50,8 +51,9 @@
       "bookPages": [312, 313, 314, 315, 316],
       "startPosition": "PDF 351 中段起",
       "endPosition": "PDF 355 題名欄前止；同頁接下一篇",
-      "status": "篇名、日期、場合與起訖已核對；全文待校",
-      "subjects": ["法律教育", "法學院", "課程", "人才培養"]
+      "status": "全文已人工逐頁核對",
+      "transcription": "../transcriptions/ZJH-LE-003.md",
+      "subjects": ["法律教育", "法學院", "課程", "人才培養", "龐德報告", "邊疆教育"]
     },
     {
       "id": "ZJH-LE-004",
@@ -64,8 +66,9 @@
       "bookPages": [316, 317, 318, 319],
       "startPosition": "PDF 355 中段起",
       "endPosition": "PDF 358 題名欄前止；同頁接下一篇",
-      "status": "篇名、日期、場合與起訖已核對；全文待校",
-      "subjects": ["法律教育", "法治", "道德", "社會秩序"]
+      "status": "全文已人工逐頁核對",
+      "transcription": "../transcriptions/ZJH-LE-004.md",
+      "subjects": ["法律教育", "法治", "道德", "社會秩序", "分組制", "法學院制度"]
     },
     {
       "id": "ZJH-LE-005",
@@ -74,12 +77,14 @@
       "dateIso": "1948-12-02",
       "occasion": "第七次法律教育委員會會議；地點未載",
       "documentType": "會議致詞",
-      "pdfPages": [358, 359, 360, 361, 362, 363, 364],
-      "bookPages": [319, 320, 321, 322, 323, 324, 325],
+      "pdfPages": [358, 359, 360, 361, 362, 363],
+      "bookPages": [319, 320, 321, 322, 323, 324],
       "startPosition": "PDF 358 中段起",
-      "endPosition": "PDF 364 題名欄前止；同頁接下一篇",
-      "status": "篇名、日期與起訖已核對；全文待校",
-      "subjects": ["法律教育", "法學研究", "法制", "行政法令"]
+      "endPosition": "PDF 363（原書 324）末止；下一篇另起整頁",
+      "status": "全文已人工逐頁核對",
+      "transcription": "../transcriptions/ZJH-LE-005.md",
+      "boundaryRevision": "全文校訂時更正：原記末頁 PDF 364 有誤，本篇止於 PDF 363",
+      "subjects": ["法律教育", "法學研究", "法制", "行政法令", "分組制存廢", "比較法典史"]
     },
     {
       "id": "ZJH-LE-006",
@@ -90,10 +95,12 @@
       "documentType": "演講",
       "pdfPages": [364, 365, 366, 367, 368, 369],
       "bookPages": [325, 326, 327, 328, 329, 330],
-      "startPosition": "PDF 364 中段起",
+      "startPosition": "PDF 364（原書 325）整頁起，該頁無頁眉",
       "endPosition": "PDF 369 中段止；同頁接「五 教師節紀念」",
-      "status": "篇名、日期、場合與起訖已核對；全文待校",
-      "subjects": ["法治", "行政", "民主自由", "青年"]
+      "status": "全文已人工逐頁核對",
+      "transcription": "../transcriptions/ZJH-LE-006.md",
+      "boundaryRevision": "全文校訂時更正：原記「PDF 364 中段起」有誤，本篇自 PDF 364 整頁起",
+      "subjects": ["法治", "行政", "民主自由", "青年", "行政訴訟", "法家", "臺灣"]
     }
   ]
 }
