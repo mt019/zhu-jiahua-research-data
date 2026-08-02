@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-27",
+  "generatedAt": "2026-07-28",
   "source": {
     "kind": "使用者持有的掃描本",
     "bibliography": "王聿均、孫斌合編，《朱家驊先生言論集》",
@@ -15,46 +15,7 @@
   },
   "materialCoverage": {
     "physicalPages": 786,
-    "fileSizeMB": 46.6,
-    "textLayer": "全書為掃描頁，尚待逐頁辨讀",
-    "ocrStatus": "已確認需直排繁體中文辨讀與人工校訂",
-    "tableOfContentsStatus": "已定位於全書第 27–40 頁，篇名與頁碼正在逐項整理",
-    "pageMapStatus": "待建立全書頁次與原書頁碼對照",
-    "publicFullText": true,
     "fullTextPolicy": "人工校訂完成的逐篇原文可公開"
-  },
-  "materialSegments": [
-    {
-      "label": "前置文字",
-      "pdfPages": "1–14",
-      "status": "已抽樣定位",
-      "note": "包含書名頁、前言／獻詞與〈緣起〉等內容。"
-    },
-    {
-      "label": "照片頁",
-      "pdfPages": "15–26",
-      "status": "已抽樣定位",
-      "note": "應與正文分開整理；照片說明另行辨讀。"
-    },
-    {
-      "label": "目錄",
-      "pdfPages": "27–40",
-      "status": "完整定位",
-      "note": "共十四頁直排目錄；第 27–40 頁分別對應目錄第一至十四頁。"
-    },
-    {
-      "label": "言論正文",
-      "pdfPages": "41–786",
-      "status": "起頁已確認",
-      "note": "第 41 頁起為「壹 文化學術」，首篇〈設立兩廣地質調查所意見書〉。"
-    }
-  ],
-  "contentProgress": {
-    "catalogedItems": 13,
-    "verifiedFullTexts": 7,
-    "reviewedPdfPages": "41–48、342–369",
-    "reviewedBookPages": "1–8、303–330",
-    "status": "法律教育六篇全文均已逐頁人工核對並完整公開；校訂過程更正了兩篇的起訖頁"
   },
   "legalEducation": {
     "title": "法律教育",
@@ -90,7 +51,8 @@
         "dateIso": "1945-04-18",
         "occasion": "在教育部法律教育委員會致詞",
         "bookPages": "303–308",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "法律教育問題"
       },
       {
         "id": "ZJH-LE-002",
@@ -99,7 +61,8 @@
         "dateIso": "1947-06-27",
         "occasion": "第三次法律教育會議講詞",
         "bookPages": "308–312",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "一種看法"
       },
       {
         "id": "ZJH-LE-003",
@@ -108,7 +71,8 @@
         "dateIso": "1948-02-04",
         "occasion": "在教育部會議室講",
         "bookPages": "312–316",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "第五次會議"
       },
       {
         "id": "ZJH-LE-004",
@@ -117,7 +81,8 @@
         "dateIso": "1948-07-01",
         "occasion": "在教育部會議室講",
         "bookPages": "316–319",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "第六次會議"
       },
       {
         "id": "ZJH-LE-005",
@@ -126,7 +91,8 @@
         "dateIso": "1948-12-02",
         "occasion": "第七次法律教育委員會會議",
         "bookPages": "319–324",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "第七次會議"
       },
       {
         "id": "ZJH-LE-006",
@@ -135,76 +101,160 @@
         "dateIso": "1950-09-12",
         "occasion": "在臺灣省青年服務團講",
         "bookPages": "325–330",
-        "status": "全文已校訂"
+        "status": "全文已校訂",
+        "shortTitle": "法治行政"
+      }
+    ],
+    "themes": [
+      {
+        "id": "talent",
+        "label": "法學人才的質、量與分佈",
+        "summary": "1945 年逐部門估算需求，其後不再重算，改談制度怎麼擺。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-001",
+            "note": "分質、量、分佈三面；估算全國約需三萬人，可用之才不及一萬；法學校院集中東南與平津。"
+          },
+          {
+            "id": "ZJH-LE-002",
+            "note": "把人才問題接到師資：公費留學法律科十三名高於其他學科，並批評助教靠年資升級。"
+          }
+        ]
+      },
+      {
+        "id": "grouping",
+        "label": "法律學系的分組制",
+        "summary": "十八個月內從執行、質疑走到主張廢除，是六篇裡立場移動最清楚的一條。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-002",
+            "note": "報告已照第二次會議決議兼採混合制及分組制，通令各校施行。"
+          },
+          {
+            "id": "ZJH-LE-004",
+            "note": "列為待研討問題：三年推行「並不使人滿意」，法律學系與司法組的科目「幾已全無區別，系外分組，乃成疊架」。"
+          },
+          {
+            "id": "ZJH-LE-005",
+            "note": "主張廢除——「存之而不能行，或行之而弊多於利，無寧廢之」，改以必修科／選修科二分取代。"
+          }
+        ]
+      },
+      {
+        "id": "faculty-structure",
+        "label": "法學院與院系分立",
+        "summary": "主張法學院專究法學、政經社會另立學院，並記下新制在各校遇到的實際阻力。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-002",
+            "note": "同濟、浙江、河南、重慶四校增設法學院，且都專重法律，不設政經等系。"
+          },
+          {
+            "id": "ZJH-LE-004",
+            "note": "用 liberal training 與 professional training 的區分主張法學院應專究法學。"
+          },
+          {
+            "id": "ZJH-LE-005",
+            "note": "浙大因不分系而預算只照一系編列、校務會議上「沒有幾個系主任來幫院長說話」；蘭大反而要求增設經濟學系。"
+          }
+        ]
+      },
+      {
+        "id": "pound",
+        "label": "龐德報告",
+        "summary": "龐德（Roscoe Pound）1946 年夏來華寫成報告書，1948 年 2 月出席第五次會議；三篇裡的用法各不相同。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-003",
+            "note": "被回應的批評者：逐點回應其關於憲政、法學不統一與著述貧乏、國際公法兼具政治與法律兩面的意見。"
+          },
+          {
+            "id": "ZJH-LE-004",
+            "note": "被援引的支持者：引其「或許是中國法律教育制度草創時期的產物」，並說他也認為師資設備充足是採行分組制的條件。"
+          },
+          {
+            "id": "ZJH-LE-005",
+            "note": "被引用的稱許者：我國幾種重要法典「比之諸先進國家，毫無遜色。龐德先生曾力予贊揚」。"
+          }
+        ]
+      },
+      {
+        "id": "democracy",
+        "label": "民主與法治的先後",
+        "summary": "措辭一路加重，1948 年七月把民主直接等同於法治。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-002",
+            "note": "「要談民主，須先談法治不可。不以法治為基礎的民主政治，是無根基的。」"
+          },
+          {
+            "id": "ZJH-LE-004",
+            "note": "「所謂民主，即是法治。無法治的民主政治，等於暴民政治。」"
+          },
+          {
+            "id": "ZJH-LE-006",
+            "note": "從反面說：「甚至有些主張民主自由的人，連憲法也討厭起來了。」"
+          }
+        ]
+      },
+      {
+        "id": "morality",
+        "label": "道德、禮與法",
+        "summary": "兩度處理法律與道德的關係，但訴諸傳統的方向相反。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-002",
+            "note": "引方孝孺「廣仁義而寓之於法」反駁道德復興論；空泛的道德名詞「恐適足為不肖者竊用」。"
+          },
+          {
+            "id": "ZJH-LE-004",
+            "note": "把禮放在法律與道德之間：禮不像法律有硬性規定，也不像道德只有抽象原則。"
+          },
+          {
+            "id": "ZJH-LE-006",
+            "note": "大段引管子〈任法〉〈明法〉、韓非子〈大體〉與張釋之，反駁「我國一向只懂得人治」。"
+          }
+        ]
+      },
+      {
+        "id": "method",
+        "label": "法典與習慣：法學家該做什麼",
+        "summary": "判斷創制階段已隨憲法頒行完成，工作重心應轉向解釋與適用。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-005",
+            "note": "法制含創制（法典）與傳統（習慣）兩因素；舉法國 1804、德國 1896 民法典與英美普通法為例，並以杜馬、波地哀、柯克、勃拉司登為「貫通工作」的例證。"
+          }
+        ]
+      },
+      {
+        "id": "education-reach",
+        "label": "中等、社會與邊疆教育",
+        "summary": "法律教育不只在大學：課本、廣播、劇本與邊生名額都被算進來。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-003",
+            "note": "高中公民列入憲法、民法、刑法、民刑訴訟法與法院組織；國民法律手冊編撰中、每星期五法律廣播已講十次；中央、西北、蘭州三校留邊生名額。"
+          }
+        ]
+      },
+      {
+        "id": "administration",
+        "label": "行政與法治行政",
+        "summary": "從整理法規的舊事，走到遷臺後對青年講行政裁量與行政救濟。",
+        "appearances": [
+          {
+            "id": "ZJH-LE-005",
+            "note": "追述 1933 年戴季陶主持行政法規整理委員會，1933-05-08 至 1934-12-14 完成建議及整理方案 226 件。"
+          },
+          {
+            "id": "ZJH-LE-006",
+            "note": "行政就是管理；法規裁量與便宜裁量仍須在合法或合乎公益的範圍內；人民有行政訴訟與訴願可用。"
+          }
+        ]
       }
     ]
   },
-  "catalogPreview": [
-    {
-      "id": "ZJH-001",
-      "title": "設立兩廣地質調查所意見書",
-      "date": "民國十六年五月",
-      "dateIso": "1927-05",
-      "place": "廣州",
-      "documentType": "意見書",
-      "bookPages": "1",
-      "status": "全文已核對"
-    },
-    {
-      "id": "ZJH-002",
-      "title": "復庚款生陳永齡述提倡大地測量學經過",
-      "date": "民國二十七年十二月二十三日",
-      "dateIso": "1938-12-23",
-      "documentType": "函",
-      "bookPages": "2–3",
-      "status": "篇名日期已核對"
-    },
-    {
-      "id": "ZJH-003",
-      "title": "復同濟大學校長趙士卿述提倡大地測量學經過",
-      "date": "民國二十八年七月十二日",
-      "dateIso": "1939-07-12",
-      "documentType": "函",
-      "bookPages": "3–4",
-      "status": "篇名日期已核對"
-    },
-    {
-      "id": "ZJH-004",
-      "title": "函同濟大學校長周均時轉請改進測量學系之意見",
-      "date": "民國二十九年九月二日",
-      "dateIso": "1940-09-02",
-      "documentType": "函",
-      "bookPages": "4–5",
-      "status": "篇名日期已核對"
-    },
-    {
-      "id": "ZJH-005",
-      "title": "全國學術會議召集意義",
-      "date": "民國三十年三月廿一日",
-      "dateIso": "1941-03-21",
-      "documentType": "談話",
-      "bookPages": "5–6",
-      "status": "篇名日期已核對"
-    },
-    {
-      "id": "ZJH-006",
-      "title": "對英國科學協會廣播詞",
-      "date": "民國三十年九月二十六日",
-      "dateIso": "1941-09-26",
-      "documentType": "廣播詞",
-      "bookPages": "6–7",
-      "status": "篇名日期已核對"
-    },
-    {
-      "id": "ZJH-007",
-      "title": "科學研究之意見",
-      "date": "民國三十年十一月三十日",
-      "dateIso": "1941-11-30",
-      "documentType": "年會講詞",
-      "bookPages": "8起",
-      "status": "起頁已核對"
-    }
-  ],
   "verifiedTexts": [
     {
       "id": "ZJH-001",
@@ -369,49 +419,1800 @@
       "detail": "區分原始演說／文章的歷史層次與後來編纂選擇，避免把選集直接當成完整思想全貌。"
     }
   ],
-  "methodPlan": [
-    {
-      "step": "頁面定址",
-      "detail": "先辨認前置頁、目錄、正文與附錄，建立全書頁次與原書頁碼對照。"
-    },
-    {
-      "step": "目錄建檔",
-      "detail": "逐篇記錄篇名、日期、場合、文類與頁碼；無法由原頁確認者明標待核。"
-    },
-    {
-      "step": "辨讀與校驗",
-      "detail": "以跨時期樣本檢查直排繁體中文辨讀品質，保留頁碼與人工校改狀態。"
-    },
-    {
-      "step": "多軸索引",
-      "detail": "建立人物、機構、地點、政策領域、歷史事件與關鍵語彙索引。"
-    },
-    {
-      "step": "時序比較",
-      "detail": "在資料覆蓋足夠後，比較同一主題於不同年代與制度位置中的變化。"
-    }
-  ],
-  "riskRegister": [
-    {
-      "risk": "影像型來源",
-      "status": "高",
-      "response": "初步辨讀只作檢索輔助；篇名、日期、引文與頁碼必須回看原頁。"
-    },
-    {
-      "risk": "編纂選擇",
-      "status": "高",
-      "response": "把言論集視為經選編的材料集合，後續另找版本、報刊與檔案互證。"
-    },
-    {
-      "risk": "年代與場合缺漏",
-      "status": "待查",
-      "response": "欄位允許未知值，不從文意自行補日期或受眾。"
-    }
-  ],
-  "immediateNextWork": [
-    "建立法律教育篇群的人物、機構與概念索引（龐德、戴季陶、各大學法學院、行政法規整理委員會）",
-    "核對六篇所述制度事實的外部來源（公費留學名額、行政法規整理委員會報告書、各校法學院沿革）",
-    "完整轉錄全書目錄，續建全書頁次與原書頁碼對照",
-    "選取其他時期的言論作跨領域比較樣本"
-  ]
+  "tableOfContents": {
+    "itemCount": 198,
+    "partCount": 14,
+    "readableCount": 7,
+    "frontMatter": [
+      {
+        "title": "獻詞",
+        "bookStartPage": 1,
+        "tocPdfPage": 27
+      },
+      {
+        "title": "緣起",
+        "bookStartPage": 1,
+        "tocPdfPage": 27
+      },
+      {
+        "title": "圖片",
+        "bookStartPage": 1,
+        "tocPdfPage": 27
+      }
+    ],
+    "parts": [
+      {
+        "name": "壹、文化學術",
+        "count": 20,
+        "bookPages": "1–71"
+      },
+      {
+        "name": "貳、中央研究院",
+        "count": 12,
+        "bookPages": "73–104"
+      },
+      {
+        "name": "叁、教育言論",
+        "count": 57,
+        "bookPages": "111–369"
+      },
+      {
+        "name": "肆、新生活運動",
+        "count": 6,
+        "bookPages": "371–383"
+      },
+      {
+        "name": "伍、中英庚款基金董事會",
+        "count": 8,
+        "bookPages": "385–399"
+      },
+      {
+        "name": "陸、交通部與浙江省政",
+        "count": 5,
+        "bookPages": "407–429"
+      },
+      {
+        "name": "柒、黨務教育",
+        "count": 7,
+        "bookPages": "433–453"
+      },
+      {
+        "name": "捌、抗戰言論",
+        "count": 26,
+        "bookPages": "457–553"
+      },
+      {
+        "name": "玖、國際聯盟、聯合國",
+        "count": 9,
+        "bookPages": "557–577"
+      },
+      {
+        "name": "拾、邊疆言論",
+        "count": 9,
+        "bookPages": "581–627"
+      },
+      {
+        "name": "拾壹、專論",
+        "count": 6,
+        "bookPages": "637–654"
+      },
+      {
+        "name": "拾貳、致中外友人書",
+        "count": 10,
+        "bookPages": "657–687"
+      },
+      {
+        "name": "拾叁、書序",
+        "count": 12,
+        "bookPages": "697–719"
+      },
+      {
+        "name": "拾肆、追念師友",
+        "count": 11,
+        "bookPages": "723–745"
+      }
+    ],
+    "items": [
+      {
+        "id": "ZJH-001",
+        "title": "設立兩廣地質調查所意見書",
+        "part": "壹、文化學術",
+        "bookStartPage": 1,
+        "date": "民國十六年五月",
+        "dateIso": "1927-05",
+        "textPath": "/zhujiahua/text-two-guang-geological-survey"
+      },
+      {
+        "id": "ZJH-002",
+        "title": "復庚款生陳永齡述提倡大地測量學經過",
+        "part": "壹、文化學術",
+        "bookStartPage": 2,
+        "date": "民國二十七年十二月二十三日",
+        "dateIso": "1938-12-23"
+      },
+      {
+        "id": "ZJH-003",
+        "title": "復同濟大學校長趙士卿述提倡大地測量學經過",
+        "part": "壹、文化學術",
+        "bookStartPage": 3,
+        "date": "民國二十八年七月十三日",
+        "dateIso": "1939-07-13"
+      },
+      {
+        "id": "ZJH-004",
+        "title": "函同濟大學校長周均時轉請改進測量學系之意見",
+        "part": "壹、文化學術",
+        "bookStartPage": 4,
+        "date": "民國二十九年九月二日",
+        "dateIso": "1940-09-02"
+      },
+      {
+        "id": "ZJH-005",
+        "title": "全國學術會議召集意義",
+        "part": "壹、文化學術",
+        "bookStartPage": 5,
+        "date": "民國三十年三月二十一日",
+        "dateIso": "1941-03-21",
+        "note": "正文題下作「民國三十年三月廿一日談話」"
+      },
+      {
+        "id": "ZJH-006",
+        "title": "對英國科學協會廣播詞",
+        "part": "壹、文化學術",
+        "bookStartPage": 6,
+        "date": "民國三十年九月二十六日",
+        "dateIso": "1941-09-26"
+      },
+      {
+        "id": "ZJH-007",
+        "title": "科學研究之意見",
+        "part": "壹、文化學術",
+        "bookStartPage": 8,
+        "date": "民國三十年十一月三十日",
+        "dateIso": "1941-11-30"
+      },
+      {
+        "id": "ZJH-008",
+        "title": "電賀中國工程師學會在蘭州舉行年會",
+        "part": "壹、文化學術",
+        "bookStartPage": 12,
+        "date": "民國三十一年七月二十八日",
+        "dateIso": "1942-07-28"
+      },
+      {
+        "id": "ZJH-009",
+        "title": "函陸地測量總局黃思基商討共同發展測量事業",
+        "part": "壹、文化學術",
+        "bookStartPage": 12,
+        "date": "民國三十一年十月一日",
+        "dateIso": "1942-10-01"
+      },
+      {
+        "id": "ZJH-010",
+        "title": "如何迎頭趕上西洋文化",
+        "part": "壹、文化學術",
+        "bookStartPage": 14,
+        "date": "民國三十一年十月三十一日",
+        "dateIso": "1942-10-31"
+      },
+      {
+        "id": "ZJH-011",
+        "title": "牛頓與近代科學",
+        "part": "壹、文化學術",
+        "bookStartPage": 22,
+        "date": "民國三十二年一月五日",
+        "dateIso": "1943-01-05"
+      },
+      {
+        "id": "ZJH-012",
+        "title": "中國地質學會第十九屆年會致詞",
+        "part": "壹、文化學術",
+        "bookStartPage": 25,
+        "date": "民國三十二年三月五日",
+        "dateIso": "1943-03-05"
+      },
+      {
+        "id": "ZJH-013",
+        "title": "科學世界與建國前途",
+        "part": "壹、文化學術",
+        "bookStartPage": 29,
+        "date": "民國三十二年四月八日",
+        "dateIso": "1943-04-08"
+      },
+      {
+        "id": "ZJH-014",
+        "title": "科學之路",
+        "part": "壹、文化學術",
+        "bookStartPage": 37,
+        "date": "民國三十二年七月十九日",
+        "dateIso": "1943-07-19"
+      },
+      {
+        "id": "ZJH-015",
+        "title": "科學與軍事",
+        "part": "壹、文化學術",
+        "bookStartPage": 48,
+        "date": "民國三十二年八月二十六日",
+        "dateIso": "1943-08-26"
+      },
+      {
+        "id": "ZJH-016",
+        "title": "青年與科學",
+        "part": "壹、文化學術",
+        "bookStartPage": 56,
+        "date": "民國三十三年三月二十七日",
+        "dateIso": "1944-03-27"
+      },
+      {
+        "id": "ZJH-017",
+        "title": "中國工程師學會年會致詞",
+        "part": "壹、文化學術",
+        "bookStartPage": 60,
+        "date": "民國三十四年六月六日",
+        "dateIso": "1945-06-06"
+      },
+      {
+        "id": "ZJH-018",
+        "title": "中國教育學術團體聯合會致詞",
+        "part": "壹、文化學術",
+        "bookStartPage": 62,
+        "date": "民國三十四年八月十八日",
+        "dateIso": "1945-08-18"
+      },
+      {
+        "id": "ZJH-019",
+        "title": "自然科學之重要性",
+        "part": "壹、文化學術",
+        "bookStartPage": 68,
+        "date": "民國三十四年十月十七日",
+        "dateIso": "1945-10-17"
+      },
+      {
+        "id": "ZJH-020",
+        "title": "十科學團體聯合年會致詞",
+        "part": "壹、文化學術",
+        "bookStartPage": 71,
+        "date": "民國三十七年十月九日",
+        "dateIso": "1948-10-09"
+      },
+      {
+        "id": "ZJH-021",
+        "title": "代理中央研究院院長就職談話",
+        "part": "貳、中央研究院",
+        "bookStartPage": 73,
+        "date": "民國二十九年十月一日",
+        "dateIso": "1940-10-01"
+      },
+      {
+        "id": "ZJH-022",
+        "title": "評議會第二屆第一次年會致詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 74,
+        "date": "民國三十一年六月三十日",
+        "dateIso": "1942-06-30"
+      },
+      {
+        "id": "ZJH-023",
+        "title": "抗戰以來中央研究院之概況",
+        "part": "貳、中央研究院",
+        "bookStartPage": 77,
+        "date": "民國三十一年十月十日",
+        "dateIso": "1942-10-10"
+      },
+      {
+        "id": "ZJH-024",
+        "title": "歡迎英國陶德斯尼德漢兩教授",
+        "part": "貳、中央研究院",
+        "bookStartPage": 84,
+        "date": "民國三十二年四月十日",
+        "dateIso": "1943-04-10",
+        "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名"
+      },
+      {
+        "id": "ZJH-025",
+        "title": "評議會第二屆第二次年會開幕詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 85,
+        "date": "民國三十三年三月八日",
+        "dateIso": "1944-03-08"
+      },
+      {
+        "id": "ZJH-026",
+        "title": "評議會第二屆第四次年會開幕詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 88,
+        "date": "民國三十六年十月十五日",
+        "dateIso": "1947-10-15",
+        "note": "目次未列第二屆第三次年會，原書如此"
+      },
+      {
+        "id": "ZJH-027",
+        "title": "評議會第二屆第五次年會開幕詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 89,
+        "date": "民國三十七年三月二十五日",
+        "dateIso": "1948-03-25"
+      },
+      {
+        "id": "ZJH-028",
+        "title": "中央研究院概況",
+        "part": "貳、中央研究院",
+        "bookStartPage": 91,
+        "date": "民國三十七年七月二十六日",
+        "dateIso": "1948-07-26"
+      },
+      {
+        "id": "ZJH-029",
+        "title": "第一次院士會議開幕詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 95,
+        "date": "民國三十七年九月二十三日",
+        "dateIso": "1948-09-23"
+      },
+      {
+        "id": "ZJH-030",
+        "title": "第二次院士會議開幕詞——學術研究工作的簡說",
+        "part": "貳、中央研究院",
+        "bookStartPage": 98,
+        "date": "民國四十六年四月二日",
+        "dateIso": "1957-04-02"
+      },
+      {
+        "id": "ZJH-031",
+        "title": "第二次院士會議閉幕詞",
+        "part": "貳、中央研究院",
+        "bookStartPage": 103,
+        "date": "民國四十六年四月四日",
+        "dateIso": "1957-04-04"
+      },
+      {
+        "id": "ZJH-032",
+        "title": "三十年來的中央研究院",
+        "part": "貳、中央研究院",
+        "bookStartPage": 104,
+        "date": "民國四十七年六月九日",
+        "dateIso": "1958-06-09"
+      },
+      {
+        "id": "ZJH-033",
+        "title": "我們今後要加緊教育工作",
+        "part": "叁、教育言論",
+        "bookStartPage": 111,
+        "section": "一、教育行政",
+        "date": "民國十九年十一月十日",
+        "dateIso": "1930-11-10"
+      },
+      {
+        "id": "ZJH-034",
+        "title": "中國大學教育的現狀及應行注意各點",
+        "part": "叁、教育言論",
+        "bookStartPage": 115,
+        "section": "一、教育行政",
+        "date": "民國二十年　月",
+        "dateIso": "1931",
+        "note": "原書月份欄空白"
+      },
+      {
+        "id": "ZJH-035",
+        "title": "九個月來教育部整理全國教育之說明",
+        "part": "叁、教育言論",
+        "bookStartPage": 131,
+        "section": "一、教育行政",
+        "date": "民國二十一年十一月二十五日",
+        "dateIso": "1932-11-25"
+      },
+      {
+        "id": "ZJH-036",
+        "title": "政府應編纂中小學教科書提案",
+        "part": "叁、教育言論",
+        "bookStartPage": 154,
+        "section": "一、教育行政",
+        "date": "民國二十二年四月二十八日",
+        "dateIso": "1933-04-28"
+      },
+      {
+        "id": "ZJH-037",
+        "title": "復興民族之最基本工作",
+        "part": "叁、教育言論",
+        "bookStartPage": 156,
+        "section": "一、教育行政",
+        "date": "民國二十四年一月一日",
+        "dateIso": "1935-01-01"
+      },
+      {
+        "id": "ZJH-038",
+        "title": "中小學制興革的尋繹",
+        "part": "叁、教育言論",
+        "bookStartPage": 159,
+        "section": "一、教育行政",
+        "date": "民國二十四年",
+        "dateIso": "1935"
+      },
+      {
+        "id": "ZJH-039",
+        "title": "致陳部長立夫函商討師範學院制度",
+        "part": "叁、教育言論",
+        "bookStartPage": 164,
+        "section": "一、教育行政",
+        "date": "民國三十一年三月三十日",
+        "dateIso": "1942-03-30"
+      },
+      {
+        "id": "ZJH-040",
+        "title": "第二次任教育部長就職致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 170,
+        "section": "一、教育行政",
+        "date": "民國三十三年十二月十四日",
+        "dateIso": "1944-12-14"
+      },
+      {
+        "id": "ZJH-041",
+        "title": "抗戰第八年之教育",
+        "part": "叁、教育言論",
+        "bookStartPage": 171,
+        "section": "一、教育行政",
+        "date": "民國三十四年七月七日",
+        "dateIso": "1945-07-07"
+      },
+      {
+        "id": "ZJH-042",
+        "title": "敵人投降對教育界學術界文化界同仁廣播詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 174,
+        "section": "一、教育行政",
+        "date": "民國三十四年八月十四日",
+        "dateIso": "1945-08-14"
+      },
+      {
+        "id": "ZJH-043",
+        "title": "全國教育善後復員會議開會致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 176,
+        "section": "一、教育行政",
+        "date": "民國三十四年九月二十日",
+        "dateIso": "1945-09-20"
+      },
+      {
+        "id": "ZJH-044",
+        "title": "全國教育善後復員會議期間紀念週講詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 180,
+        "section": "一、教育行政",
+        "date": "民國三十四年九月二十四日",
+        "dateIso": "1945-09-24"
+      },
+      {
+        "id": "ZJH-045",
+        "title": "全國教育善後復員會議閉幕致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 183,
+        "section": "一、教育行政",
+        "date": "民國三十四年九月二十六日",
+        "dateIso": "1945-09-26"
+      },
+      {
+        "id": "ZJH-046",
+        "title": "教育行政工作之回顧",
+        "part": "叁、教育言論",
+        "bookStartPage": 186,
+        "section": "一、教育行政",
+        "date": "民國三十五年五月二十四日",
+        "dateIso": "1946-05-24"
+      },
+      {
+        "id": "ZJH-047",
+        "title": "教育復員工作檢討",
+        "part": "叁、教育言論",
+        "bookStartPage": 188,
+        "section": "一、教育行政",
+        "date": "民國三十五年十二月二十八日",
+        "dateIso": "1946-12-28"
+      },
+      {
+        "id": "ZJH-048",
+        "title": "聯合國教育科學文化組織中國委員會第一屆大會開幕致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 200,
+        "section": "一、教育行政",
+        "date": "民國三十六年八月二十八日",
+        "dateIso": "1947-08-28"
+      },
+      {
+        "id": "ZJH-049",
+        "title": "聯合國教育科學文化組織南京基本教育研究會開幕致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 203,
+        "section": "一、教育行政",
+        "date": "民國三十六年九月三日",
+        "dateIso": "1947-09-03"
+      },
+      {
+        "id": "ZJH-050",
+        "title": "聯合國教育科學文化組織南京基本教育研究會閉幕致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 205,
+        "section": "一、教育行政",
+        "date": "民國三十六年九月十二日",
+        "dateIso": "1947-09-12"
+      },
+      {
+        "id": "ZJH-051",
+        "title": "向臺灣全省教育人員廣播詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 206,
+        "section": "一、教育行政",
+        "date": "民國三十七年",
+        "dateIso": "1948"
+      },
+      {
+        "id": "ZJH-052",
+        "title": "臺灣省第一屆全省教育會議致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 208,
+        "section": "一、教育行政",
+        "date": "民國三十七年一月十八日",
+        "dateIso": "1948-01-18"
+      },
+      {
+        "id": "ZJH-053",
+        "title": "視察臺灣省教育觀感",
+        "part": "叁、教育言論",
+        "bookStartPage": 214,
+        "section": "一、教育行政",
+        "date": "民國三十七年二月二日",
+        "dateIso": "1948-02-02"
+      },
+      {
+        "id": "ZJH-054",
+        "title": "教育工作概況",
+        "part": "叁、教育言論",
+        "bookStartPage": 217,
+        "section": "二、教育施政報告",
+        "date": "民國三十四年四月二十三日",
+        "dateIso": "1945-04-23"
+      },
+      {
+        "id": "ZJH-055",
+        "title": "今日之教育",
+        "part": "叁、教育言論",
+        "bookStartPage": 222,
+        "section": "二、教育施政報告",
+        "date": "民國三十四年七月九日",
+        "dateIso": "1945-07-09"
+      },
+      {
+        "id": "ZJH-056",
+        "title": "教育行政工作現狀",
+        "part": "叁、教育言論",
+        "bookStartPage": 233,
+        "section": "二、教育施政報告",
+        "date": "民國三十五年六月二十四日",
+        "dateIso": "1946-06-24"
+      },
+      {
+        "id": "ZJH-057",
+        "title": "教育復員後的工作",
+        "part": "叁、教育言論",
+        "bookStartPage": 236,
+        "section": "二、教育施政報告",
+        "date": "民國三十六年",
+        "dateIso": "1947"
+      },
+      {
+        "id": "ZJH-058",
+        "title": "政治報告——教育部份",
+        "part": "叁、教育言論",
+        "bookStartPage": 240,
+        "section": "二、教育施政報告",
+        "date": "民國三十七年四月十四日",
+        "dateIso": "1948-04-14"
+      },
+      {
+        "id": "ZJH-059",
+        "title": "教育施政報告",
+        "part": "叁、教育言論",
+        "bookStartPage": 246,
+        "section": "二、教育施政報告",
+        "date": "民國三十七年六月三十日",
+        "dateIso": "1948-06-30"
+      },
+      {
+        "id": "ZJH-060",
+        "title": "國立中山大學籌備之經過和將來之希望",
+        "part": "叁、教育言論",
+        "bookStartPage": 249,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十六年四月一日",
+        "dateIso": "1927-04-01"
+      },
+      {
+        "id": "ZJH-061",
+        "title": "國立中山大學校務報告",
+        "part": "叁、教育言論",
+        "bookStartPage": 261,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十七年十月一日",
+        "dateIso": "1928-10-01"
+      },
+      {
+        "id": "ZJH-062",
+        "title": "歡宴中山大學全校教授席上講詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 264,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十八年六月二十九日",
+        "dateIso": "1929-06-29"
+      },
+      {
+        "id": "ZJH-063",
+        "title": "答廣州民國日報記者問繼長中山大學經過",
+        "part": "叁、教育言論",
+        "bookStartPage": 267,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十九年九月十八日",
+        "dateIso": "1930-09-18"
+      },
+      {
+        "id": "ZJH-064",
+        "title": "就任國立中山大學校長講演詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 269,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十九年十月六日",
+        "dateIso": "1930-10-06"
+      },
+      {
+        "id": "ZJH-065",
+        "title": "別國立中山大學同事諸先生書",
+        "part": "叁、教育言論",
+        "bookStartPage": 276,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十九年十二月九日",
+        "dateIso": "1930-12-09"
+      },
+      {
+        "id": "ZJH-066",
+        "title": "別國立中山大學同學諸君書",
+        "part": "叁、教育言論",
+        "bookStartPage": 277,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國十九年十二月九日",
+        "dateIso": "1930-12-09"
+      },
+      {
+        "id": "ZJH-067",
+        "title": "中山大學是黨的大學",
+        "part": "叁、教育言論",
+        "bookStartPage": 282,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國三十一年七月四日",
+        "dateIso": "1942-07-04"
+      },
+      {
+        "id": "ZJH-068",
+        "title": "向中山大學醫學院全體學生訓話",
+        "part": "叁、教育言論",
+        "bookStartPage": 284,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國三十七年十月二十日",
+        "dateIso": "1948-10-20"
+      },
+      {
+        "id": "ZJH-069",
+        "title": "爲中山大學二十四週年紀念獻詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 287,
+        "section": "三、各大學演講詞",
+        "subsection": "（一）國立中山大學",
+        "date": "民國三十七年十一月五日",
+        "dateIso": "1948-11-05",
+        "note": "原書作「爲」"
+      },
+      {
+        "id": "ZJH-070",
+        "title": "對國立中央大學畢業生訓話",
+        "part": "叁、教育言論",
+        "bookStartPage": 288,
+        "section": "三、各大學演講詞",
+        "subsection": "（二）國立中央大學",
+        "date": "民國二十八年七月二十五日",
+        "dateIso": "1939-07-25"
+      },
+      {
+        "id": "ZJH-071",
+        "title": "大學與大學生的使命",
+        "part": "叁、教育言論",
+        "bookStartPage": 290,
+        "section": "三、各大學演講詞",
+        "subsection": "（二）國立中央大學",
+        "date": "民國三十三年十二月二十五日",
+        "dateIso": "1944-12-25"
+      },
+      {
+        "id": "ZJH-072",
+        "title": "電函丁文淵校長賀國立同濟大學三十五週年校慶",
+        "part": "叁、教育言論",
+        "bookStartPage": 296,
+        "section": "三、各大學演講詞",
+        "subsection": "（三）國立同濟大學",
+        "date": "民國三十五年五月十日",
+        "dateIso": "1946-05-10",
+        "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用"
+      },
+      {
+        "id": "ZJH-073",
+        "title": "我回憶中的同濟大學",
+        "part": "叁、教育言論",
+        "bookStartPage": 298,
+        "section": "三、各大學演講詞",
+        "subsection": "（三）國立同濟大學",
+        "date": "民國四十六年五月一日",
+        "dateIso": "1957-05-01"
+      },
+      {
+        "id": "ZJH-074",
+        "title": "中國之法律教育",
+        "part": "叁、教育言論",
+        "bookStartPage": 303,
+        "section": "四、法律教育",
+        "date": "民國三十四年四月十八日",
+        "dateIso": "1945-04-18",
+        "note": "正文題名作「中國之法律教育問題」，與目次不同",
+        "textPath": "/zhujiahua/original-text"
+      },
+      {
+        "id": "ZJH-075",
+        "title": "法律教育的一種看法",
+        "part": "叁、教育言論",
+        "bookStartPage": 308,
+        "section": "四、法律教育",
+        "date": "民國三十六年六月二十七日",
+        "dateIso": "1947-06-27",
+        "textPath": "/zhujiahua/text-a-view-of-legal-education"
+      },
+      {
+        "id": "ZJH-076",
+        "title": "法律教育委員會第五次會議致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 312,
+        "section": "四、法律教育",
+        "date": "民國三十七年二月四日",
+        "dateIso": "1948-02-04",
+        "textPath": "/zhujiahua/text-committee-5th"
+      },
+      {
+        "id": "ZJH-077",
+        "title": "法律教育委員會第六次會議致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 316,
+        "section": "四、法律教育",
+        "date": "民國三十七年七月一日",
+        "dateIso": "1948-07-01",
+        "textPath": "/zhujiahua/text-committee-6th"
+      },
+      {
+        "id": "ZJH-078",
+        "title": "法律教育委員會第七次會議致詞",
+        "part": "叁、教育言論",
+        "bookStartPage": 319,
+        "section": "四、法律教育",
+        "date": "民國三十七年十二月二日",
+        "dateIso": "1948-12-02",
+        "textPath": "/zhujiahua/text-committee-7th"
+      },
+      {
+        "id": "ZJH-079",
+        "title": "法治行政",
+        "part": "叁、教育言論",
+        "bookStartPage": 325,
+        "section": "四、法律教育",
+        "date": "民國三十九年九月十二日",
+        "dateIso": "1950-09-12",
+        "textPath": "/zhujiahua/text-rule-of-law-administration"
+      },
+      {
+        "id": "ZJH-080",
+        "title": "教師節之感言",
+        "part": "叁、教育言論",
+        "bookStartPage": 330,
+        "section": "五、教師節紀念",
+        "date": "民國三十四年九月二十八日",
+        "dateIso": "1945-09-28"
+      },
+      {
+        "id": "ZJH-081",
+        "title": "六十年來中國教育與　蔣主席",
+        "part": "叁、教育言論",
+        "bookStartPage": 333,
+        "section": "五、教師節紀念",
+        "date": "民國三十五年十月二十八日",
+        "dateIso": "1946-10-28",
+        "note": "原書於「與」「蔣」之間空一格（擡頭）"
+      },
+      {
+        "id": "ZJH-082",
+        "title": "中學教師的地位與責任",
+        "part": "叁、教育言論",
+        "bookStartPage": 340,
+        "section": "五、教師節紀念",
+        "date": "民國四十年三月三十日",
+        "dateIso": "1951-03-30"
+      },
+      {
+        "id": "ZJH-083",
+        "title": "孔子教育哲學的基本原則",
+        "part": "叁、教育言論",
+        "bookStartPage": 345,
+        "section": "五、教師節紀念",
+        "date": "民國四十年九月二十八日",
+        "dateIso": "1951-09-28"
+      },
+      {
+        "id": "ZJH-084",
+        "title": "個人修養與民族復興",
+        "part": "叁、教育言論",
+        "bookStartPage": 351,
+        "section": "六、青年修養與國家民族",
+        "date": "民國二十六年",
+        "dateIso": "1937"
+      },
+      {
+        "id": "ZJH-085",
+        "title": "三民主義青年團在中國青年運動中的意義與價值",
+        "part": "叁、教育言論",
+        "bookStartPage": 354,
+        "section": "六、青年修養與國家民族",
+        "date": "民國三十一年七月一日",
+        "dateIso": "1942-07-01"
+      },
+      {
+        "id": "ZJH-086",
+        "title": "五四運動二十五週年紀念談話",
+        "part": "叁、教育言論",
+        "bookStartPage": 358,
+        "section": "六、青年修養與國家民族",
+        "date": "民國三十三年五月四日",
+        "dateIso": "1944-05-04"
+      },
+      {
+        "id": "ZJH-087",
+        "title": "青年自身之修養",
+        "part": "叁、教育言論",
+        "bookStartPage": 361,
+        "section": "六、青年修養與國家民族",
+        "date": "民國三十四年三月二十九日",
+        "dateIso": "1945-03-29"
+      },
+      {
+        "id": "ZJH-088",
+        "title": "我們對於青年的希望",
+        "part": "叁、教育言論",
+        "bookStartPage": 366,
+        "section": "六、青年修養與國家民族",
+        "date": "民國三十五年八月二十六日",
+        "dateIso": "1946-08-26"
+      },
+      {
+        "id": "ZJH-089",
+        "title": "建國與青年",
+        "part": "叁、教育言論",
+        "bookStartPage": 369,
+        "section": "六、青年修養與國家民族",
+        "date": "民國三十六年三月二十九日",
+        "dateIso": "1947-03-29"
+      },
+      {
+        "id": "ZJH-090",
+        "title": "首都新生活運動促進會成立大會開會詞",
+        "part": "肆、新生活運動",
+        "bookStartPage": 371,
+        "date": "民國二十三年三月十六日",
+        "dateIso": "1934-03-16"
+      },
+      {
+        "id": "ZJH-091",
+        "title": "新生活運動與教育",
+        "part": "肆、新生活運動",
+        "bookStartPage": 374,
+        "date": "民國二十三年三月十九日",
+        "dateIso": "1934-03-19"
+      },
+      {
+        "id": "ZJH-092",
+        "title": "新生活運動在抗戰期間",
+        "part": "肆、新生活運動",
+        "bookStartPage": 377,
+        "date": "民國三十年一月一日",
+        "dateIso": "1941-01-01"
+      },
+      {
+        "id": "ZJH-093",
+        "title": "新生活運動與復興民族",
+        "part": "肆、新生活運動",
+        "bookStartPage": 378,
+        "date": "民國三十一年三月二十日",
+        "dateIso": "1942-03-20"
+      },
+      {
+        "id": "ZJH-094",
+        "title": "新生活運動之意義",
+        "part": "肆、新生活運動",
+        "bookStartPage": 380,
+        "date": "民國三十一年十二月十六日",
+        "dateIso": "1942-12-16"
+      },
+      {
+        "id": "ZJH-095",
+        "title": "新生活運動與教育之關係",
+        "part": "肆、新生活運動",
+        "bookStartPage": 383,
+        "date": "民國三十六年二月十六日",
+        "dateIso": "1947-02-16"
+      },
+      {
+        "id": "ZJH-096",
+        "title": "對中英庚款第一屆留英學生訓詞",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 385,
+        "date": "民國二十二年八月二十九日",
+        "dateIso": "1933-08-29"
+      },
+      {
+        "id": "ZJH-097",
+        "title": "對中英庚款第二屆留英學生訓詞",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 386,
+        "date": "民國二十三年八月十八日",
+        "dateIso": "1934-08-18"
+      },
+      {
+        "id": "ZJH-098",
+        "title": "勉中國地理研究所大地測量組同仁",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 388,
+        "date": "民國三十年十二月四日",
+        "dateIso": "1941-12-04"
+      },
+      {
+        "id": "ZJH-099",
+        "title": "復國立黔江中學全體學生兼告河西湟川兩中學學生書",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 390,
+        "date": "民國三十年一月二十八日",
+        "dateIso": "1941-01-28"
+      },
+      {
+        "id": "ZJH-100",
+        "title": "中國地理研究之重要",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 393,
+        "date": "民國三十一年二月五日",
+        "dateIso": "1942-02-05"
+      },
+      {
+        "id": "ZJH-101",
+        "title": "簽呈　總裁報告中國地理研究所概況",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 395,
+        "date": "民國三十二年一月二十一日",
+        "dateIso": "1943-01-21",
+        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+      },
+      {
+        "id": "ZJH-102",
+        "title": "簽呈　總裁報告測量事業聯繫計劃乞裁察施行",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 397,
+        "date": "民國三十二年三月九日",
+        "dateIso": "1943-03-09",
+        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+      },
+      {
+        "id": "ZJH-103",
+        "title": "中英文教基金董事會概況",
+        "part": "伍、中英庚款基金董事會",
+        "bookStartPage": 399,
+        "date": "民國三十八年四月",
+        "dateIso": "1949-04"
+      },
+      {
+        "id": "ZJH-104",
+        "title": "中國之交通",
+        "part": "陸、交通部與浙江省政",
+        "bookStartPage": 407
+      },
+      {
+        "id": "ZJH-105",
+        "title": "我在交通部的重要改革",
+        "part": "陸、交通部與浙江省政",
+        "bookStartPage": 413
+      },
+      {
+        "id": "ZJH-106",
+        "title": "浙江省第一屆考取縣長之訓話",
+        "part": "陸、交通部與浙江省政",
+        "bookStartPage": 421,
+        "date": "民國十七年四月",
+        "dateIso": "1928-04"
+      },
+      {
+        "id": "ZJH-107",
+        "title": "浙江省政報告",
+        "part": "陸、交通部與浙江省政",
+        "bookStartPage": 425,
+        "date": "民國二十五年十二月二十一日",
+        "dateIso": "1936-12-21"
+      },
+      {
+        "id": "ZJH-108",
+        "title": "浙江省今後的政治動向",
+        "part": "陸、交通部與浙江省政",
+        "bookStartPage": 429
+      },
+      {
+        "id": "ZJH-109",
+        "title": "嚴防反動份子的活動",
+        "part": "柒、黨務教育",
+        "bookStartPage": 433,
+        "date": "民國十六年一月十五日",
+        "dateIso": "1927-01-15"
+      },
+      {
+        "id": "ZJH-110",
+        "title": "告全國教育學術界同仁書",
+        "part": "柒、黨務教育",
+        "bookStartPage": 437,
+        "date": "民國二十九年三月二十四日",
+        "dateIso": "1940-03-24"
+      },
+      {
+        "id": "ZJH-111",
+        "title": "中國婦女運動之回顧與前瞻",
+        "part": "柒、黨務教育",
+        "bookStartPage": 438,
+        "date": "民國二十九年五月七日",
+        "dateIso": "1940-05-07"
+      },
+      {
+        "id": "ZJH-112",
+        "title": "學校黨務的詮釋",
+        "part": "柒、黨務教育",
+        "bookStartPage": 444,
+        "date": "民國二十九年六月二十二日",
+        "dateIso": "1940-06-22"
+      },
+      {
+        "id": "ZJH-113",
+        "title": "學校黨務之鵠的",
+        "part": "柒、黨務教育",
+        "bookStartPage": 446,
+        "date": "民國二十九年七月七日",
+        "dateIso": "1940-07-07"
+      },
+      {
+        "id": "ZJH-114",
+        "title": "自力更生與教育學術界的組織力",
+        "part": "柒、黨務教育",
+        "bookStartPage": 450,
+        "date": "民國二十九年十月二十三日",
+        "dateIso": "1940-10-23"
+      },
+      {
+        "id": "ZJH-115",
+        "title": "黨務與教育",
+        "part": "柒、黨務教育",
+        "bookStartPage": 453,
+        "date": "民國三十年一月一日",
+        "dateIso": "1941-01-01"
+      },
+      {
+        "id": "ZJH-116",
+        "title": "暴日對華侵略眞象",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 457,
+        "section": "一、國內方面",
+        "date": "民國二十一年四月四日",
+        "dateIso": "1932-04-04",
+        "note": "原書作「眞」"
+      },
+      {
+        "id": "ZJH-117",
+        "title": "抗戰感想關於焦土抗戰與游擊戰",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 462,
+        "section": "一、國內方面",
+        "date": "民國二十七年一月十一日",
+        "dateIso": "1938-01-11"
+      },
+      {
+        "id": "ZJH-118",
+        "title": "「八一三」紀念日談抗戰經過與感想",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 463,
+        "section": "一、國內方面",
+        "date": "民國二十七年八月十三日",
+        "dateIso": "1938-08-13"
+      },
+      {
+        "id": "ZJH-119",
+        "title": "以獻身國家來紀念「九一八」",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 465,
+        "section": "一、國內方面",
+        "date": "民國二十七年九月十八日",
+        "dateIso": "1938-09-18"
+      },
+      {
+        "id": "ZJH-120",
+        "title": "抗戰兩年來的教訓",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 467,
+        "section": "一、國內方面",
+        "date": "民國二十八年七月九日",
+        "dateIso": "1939-07-09",
+        "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此"
+      },
+      {
+        "id": "ZJH-121",
+        "title": "抗戰兩年來的回顧與前瞻",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 469,
+        "section": "一、國內方面",
+        "date": "民國二十八年六月十二日",
+        "dateIso": "1939-06-12",
+        "note": "日期早於前篇，原書如此"
+      },
+      {
+        "id": "ZJH-122",
+        "title": "共同認識與共同奮鬥",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 473,
+        "section": "一、國內方面",
+        "date": "民國二十九年三月二十八日",
+        "dateIso": "1940-03-28"
+      },
+      {
+        "id": "ZJH-123",
+        "title": "抗戰三年以來的政治進步",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 476,
+        "section": "一、國內方面",
+        "date": "民國二十九年六月二十日",
+        "dateIso": "1940-06-20"
+      },
+      {
+        "id": "ZJH-124",
+        "title": "僑胞對抗戰應有之認識與努力",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 479,
+        "section": "一、國內方面",
+        "date": "民國二十九年七月七日",
+        "dateIso": "1940-07-07"
+      },
+      {
+        "id": "ZJH-125",
+        "title": "致留在上海的文化界人士一封短簡",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 484,
+        "section": "一、國內方面",
+        "date": "民國三十年一月一日",
+        "dateIso": "1941-01-01"
+      },
+      {
+        "id": "ZJH-126",
+        "title": "抗戰現勢與敵人的末路",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 485,
+        "section": "一、國內方面",
+        "date": "民國三十三年五月一日",
+        "dateIso": "1944-05-01"
+      },
+      {
+        "id": "ZJH-127",
+        "title": "新形勢與新任務",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 487,
+        "section": "一、國內方面",
+        "date": "民國三十三年六月一日",
+        "dateIso": "1944-06-01"
+      },
+      {
+        "id": "ZJH-128",
+        "title": "告近東回教民眾書",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 491,
+        "section": "二、國際方面",
+        "date": "民國二十七年八月十五日",
+        "dateIso": "1938-08-15"
+      },
+      {
+        "id": "ZJH-129",
+        "title": "告友邦人士書",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 493,
+        "section": "二、國際方面",
+        "date": "民國二十七年九月十五日",
+        "dateIso": "1938-09-15"
+      },
+      {
+        "id": "ZJH-130",
+        "title": "最近國際形勢之觀察",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 496,
+        "section": "二、國際方面",
+        "date": "民國二十八年八月十五日",
+        "dateIso": "1939-08-15"
+      },
+      {
+        "id": "ZJH-131",
+        "title": "第二次歐戰爆發後之國際形勢",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 502,
+        "section": "二、國際方面",
+        "date": "民國二十八年十一月二十八日",
+        "dateIso": "1939-11-28"
+      },
+      {
+        "id": "ZJH-132",
+        "title": "爲日汪密約告歐美友邦人士",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 510,
+        "section": "二、國際方面",
+        "note": "原書作「爲」"
+      },
+      {
+        "id": "ZJH-133",
+        "title": "太平洋上的安定力",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 513,
+        "section": "二、國際方面",
+        "date": "民國三十年一月十五日",
+        "dateIso": "1941-01-15"
+      },
+      {
+        "id": "ZJH-134",
+        "title": "歐戰與遠東",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 515,
+        "section": "二、國際方面",
+        "date": "民國三十年二月十七日",
+        "dateIso": "1941-02-17"
+      },
+      {
+        "id": "ZJH-135",
+        "title": "蘇日中立條約成立後的國際情勢",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 523,
+        "section": "二、國際方面",
+        "date": "民國三十年五月五日",
+        "dateIso": "1941-05-05"
+      },
+      {
+        "id": "ZJH-136",
+        "title": "歐戰與美國",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 528,
+        "section": "二、國際方面",
+        "date": "民國三十年六月",
+        "dateIso": "1941-06"
+      },
+      {
+        "id": "ZJH-137",
+        "title": "未來世界和平組織",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 533,
+        "section": "二、國際方面",
+        "date": "民國三十一年一月十四日",
+        "dateIso": "1942-01-14"
+      },
+      {
+        "id": "ZJH-138",
+        "title": "太平洋戰爭爆發後的國際形勢",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 535,
+        "section": "二、國際方面",
+        "date": "民國三十一年二月九日",
+        "dateIso": "1942-02-09"
+      },
+      {
+        "id": "ZJH-139",
+        "title": "世界戰局與中國抗戰",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 540,
+        "section": "二、國際方面",
+        "date": "民國三十一年九月六日",
+        "dateIso": "1942-09-06"
+      },
+      {
+        "id": "ZJH-140",
+        "title": "漫談世界大局",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 548,
+        "section": "二、國際方面",
+        "date": "民國三十三年五月五日",
+        "dateIso": "1944-05-05"
+      },
+      {
+        "id": "ZJH-141",
+        "title": "當前世界戰局的檢討",
+        "part": "捌、抗戰言論",
+        "bookStartPage": 553,
+        "section": "二、國際方面",
+        "date": "民國三十四年二月十二日",
+        "dateIso": "1945-02-12"
+      },
+      {
+        "id": "ZJH-142",
+        "title": "國際聯盟中國同志會招待外國記者講詞",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 557,
+        "date": "民國二十七年一月二十九日",
+        "dateIso": "1938-01-29"
+      },
+      {
+        "id": "ZJH-143",
+        "title": "「九一八」九週年紀念告友邦人士書",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 559,
+        "date": "民國二十九年九月十八日",
+        "dateIso": "1940-09-18"
+      },
+      {
+        "id": "ZJH-144",
+        "title": "聯合國中國同志會第二次大會致詞",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 560,
+        "date": "民國三十七年三月十四日",
+        "dateIso": "1948-03-14"
+      },
+      {
+        "id": "ZJH-145",
+        "title": "呼籲加強擁護聯合國保障世界和平",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 563,
+        "date": "民國三十七年十月二十四日",
+        "dateIso": "1948-10-24"
+      },
+      {
+        "id": "ZJH-146",
+        "title": "聯合國對人類的貢獻",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 565,
+        "date": "民國四十年三月二十五日",
+        "dateIso": "1951-03-25"
+      },
+      {
+        "id": "ZJH-147",
+        "title": "根絕侵略主義完成聯合國使命",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 569,
+        "date": "民國四十年十月二十四日",
+        "dateIso": "1951-10-24"
+      },
+      {
+        "id": "ZJH-148",
+        "title": "實現聯合國的崇高理想",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 572,
+        "date": "民國四十二年十月二十四日",
+        "dateIso": "1953-10-24"
+      },
+      {
+        "id": "ZJH-149",
+        "title": "聯合國中國同志會第八屆會員大會開會詞",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 574,
+        "date": "民國四十二年十二月六日",
+        "dateIso": "1953-12-06"
+      },
+      {
+        "id": "ZJH-150",
+        "title": "聯合國中國同志會第十屆會員大會開會詞",
+        "part": "玖、國際聯盟、聯合國",
+        "bookStartPage": 577,
+        "date": "民國四十六年五月五日",
+        "dateIso": "1957-05-05"
+      },
+      {
+        "id": "ZJH-151",
+        "title": "西北觀感",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 581,
+        "date": "民國三十年九月十五日",
+        "dateIso": "1941-09-15"
+      },
+      {
+        "id": "ZJH-152",
+        "title": "到西北去",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 583,
+        "date": "民國三十年九月二十五日",
+        "dateIso": "1941-09-25"
+      },
+      {
+        "id": "ZJH-153",
+        "title": "西北建設問題與科學化運動",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 585,
+        "date": "民國三十年十月十二日",
+        "dateIso": "1941-10-12"
+      },
+      {
+        "id": "ZJH-154",
+        "title": "西北經濟建設之我見",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 587,
+        "date": "民國三十年十月十三日",
+        "dateIso": "1941-10-13"
+      },
+      {
+        "id": "ZJH-155",
+        "title": "邊疆問題與邊疆工作",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 594,
+        "date": "民國三十一年十月二十一日",
+        "dateIso": "1942-10-21"
+      },
+      {
+        "id": "ZJH-156",
+        "title": "邊務工作應有的認識和態度",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 605,
+        "date": "民國三十一年十月二十五日",
+        "dateIso": "1942-10-25"
+      },
+      {
+        "id": "ZJH-157",
+        "title": "新疆壯行詞",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 615,
+        "date": "民國三十一年十二月二十九日",
+        "dateIso": "1942-12-29"
+      },
+      {
+        "id": "ZJH-158",
+        "title": "去新疆後",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 621,
+        "date": "民國三十二年三月二十三日",
+        "dateIso": "1943-03-23"
+      },
+      {
+        "id": "ZJH-159",
+        "title": "邊疆政策與邊疆建設",
+        "part": "拾、邊疆言論",
+        "bookStartPage": 627,
+        "date": "民國三十二年四月二十八日",
+        "dateIso": "1943-04-28"
+      },
+      {
+        "id": "ZJH-160",
+        "title": "關於一個譯詩問題的批評",
+        "part": "拾壹、專論",
+        "bookStartPage": 637,
+        "date": "民國十四年十月三日",
+        "dateIso": "1925-10-03"
+      },
+      {
+        "id": "ZJH-161",
+        "title": "外銀輸入的利弊",
+        "part": "拾壹、專論",
+        "bookStartPage": 640,
+        "date": "民國二十年一月十九日",
+        "dateIso": "1931-01-19"
+      },
+      {
+        "id": "ZJH-162",
+        "title": "中國的民主政治",
+        "part": "拾壹、專論",
+        "bookStartPage": 643,
+        "date": "民國三十年",
+        "dateIso": "1941"
+      },
+      {
+        "id": "ZJH-163",
+        "title": "建軍與將校團",
+        "part": "拾壹、專論",
+        "bookStartPage": 647,
+        "date": "民國三十年八月",
+        "dateIso": "1941-08"
+      },
+      {
+        "id": "ZJH-164",
+        "title": "從建國大綱談到地方自治",
+        "part": "拾壹、專論",
+        "bookStartPage": 652,
+        "date": "民國三十六年一月四日",
+        "dateIso": "1947-01-04"
+      },
+      {
+        "id": "ZJH-165",
+        "title": "新重慶與新時代",
+        "part": "拾壹、專論",
+        "bookStartPage": 654,
+        "date": "民國三十六年三月",
+        "dateIso": "1947-03"
+      },
+      {
+        "id": "ZJH-166",
+        "title": "致德國總參謀長 Keitel 大將書",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 657,
+        "date": "民國二十九年七月七日",
+        "dateIso": "1940-07-07",
+        "note": "原書以拉丁字母印作 Keitel"
+      },
+      {
+        "id": "ZJH-167",
+        "title": "致英國克利浦斯爵士書",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 659,
+        "date": "民國三十一年二月二十五日",
+        "dateIso": "1942-02-25"
+      },
+      {
+        "id": "ZJH-168",
+        "title": "復美國陸軍部長史汀生書",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 661,
+        "date": "民國三十一年九月二十五日",
+        "dateIso": "1942-09-25"
+      },
+      {
+        "id": "ZJH-169",
+        "title": "附史汀生致朱先生函",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 661,
+        "note": "附錄，與前篇同頁接排"
+      },
+      {
+        "id": "ZJH-170",
+        "title": "致美國蒲利德先生備忘錄",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 662,
+        "date": "民國三十七年十一月十九日",
+        "dateIso": "1948-11-19"
+      },
+      {
+        "id": "ZJH-171",
+        "title": "致美國國務卿杜爾斯公開信",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 664,
+        "date": "民國四十三年四月二十五日",
+        "dateIso": "1954-04-25"
+      },
+      {
+        "id": "ZJH-172",
+        "title": "致德國友人書",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 666,
+        "date": "民國四十四年四月八日",
+        "dateIso": "1955-04-08"
+      },
+      {
+        "id": "ZJH-173",
+        "title": "復穆罕默德伊敏函—論所謂「新疆問題」",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 668,
+        "date": "民國四十一年二月二十三日",
+        "dateIso": "1952-02-23"
+      },
+      {
+        "id": "ZJH-174",
+        "title": "復穆罕默德伊敏函—二論「新疆問題」",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 675,
+        "date": "民國四十三年十月一日",
+        "dateIso": "1954-10-01"
+      },
+      {
+        "id": "ZJH-175",
+        "title": "再復穆罕默德伊敏函—三論所謂「新疆問題」",
+        "part": "拾貳、致中外友人書",
+        "bookStartPage": 687,
+        "date": "民國四十六年七月三十日",
+        "dateIso": "1957-07-30"
+      },
+      {
+        "id": "ZJH-176",
+        "title": "第一次中國教育年鑑序",
+        "part": "拾叁、書序",
+        "bookStartPage": 697,
+        "date": "民國二十二年十月",
+        "dateIso": "1933-10"
+      },
+      {
+        "id": "ZJH-177",
+        "title": "朱倓著「幾社考」序言",
+        "part": "拾叁、書序",
+        "bookStartPage": 698,
+        "date": "民國三十年十一月二十四日",
+        "dateIso": "1941-11-24"
+      },
+      {
+        "id": "ZJH-178",
+        "title": "戴季陶著「青年之路」再版序",
+        "part": "拾叁、書序",
+        "bookStartPage": 701,
+        "date": "民國三十一年四月二十六日",
+        "dateIso": "1942-04-26"
+      },
+      {
+        "id": "ZJH-179",
+        "title": "國立同濟大學測量系特刊序—測量之效用",
+        "part": "拾叁、書序",
+        "bookStartPage": 704,
+        "date": "民國三十一年六月",
+        "dateIso": "1942-06"
+      },
+      {
+        "id": "ZJH-180",
+        "title": "王文新著「師範教育概論」書序",
+        "part": "拾叁、書序",
+        "bookStartPage": 707,
+        "date": "民國三十一年八月",
+        "dateIso": "1942-08"
+      },
+      {
+        "id": "ZJH-181",
+        "title": "高平叔著「蔡孑民先生傳略」序",
+        "part": "拾叁、書序",
+        "bookStartPage": 709,
+        "date": "民國三十一年九月十九日",
+        "dateIso": "1942-09-19",
+        "note": "蔡孑民即蔡元培（孑民為其號）"
+      },
+      {
+        "id": "ZJH-182",
+        "title": "中國地理研究所地理組序言",
+        "part": "拾叁、書序",
+        "bookStartPage": 711,
+        "date": "民國三十一年十月二十七日",
+        "dateIso": "1942-10-27"
+      },
+      {
+        "id": "ZJH-183",
+        "title": "中國地理研究所測量組序言",
+        "part": "拾叁、書序",
+        "bookStartPage": 713,
+        "date": "民國三十一年十月二十七日",
+        "dateIso": "1942-10-27",
+        "note": "與前篇同日，分屬地理組與測量組，非重複"
+      },
+      {
+        "id": "ZJH-184",
+        "title": "葉祖灝著「廢除不平等條約」序",
+        "part": "拾叁、書序",
+        "bookStartPage": 715,
+        "date": "民國三十三年四月",
+        "dateIso": "1944-04"
+      },
+      {
+        "id": "ZJH-185",
+        "title": "第二次中國教育年鑑序",
+        "part": "拾叁、書序",
+        "bookStartPage": 716,
+        "date": "民國三十七年十月",
+        "dateIso": "1948-10"
+      },
+      {
+        "id": "ZJH-186",
+        "title": "徐觀餘著「中國童子軍」序言",
+        "part": "拾叁、書序",
+        "bookStartPage": 717,
+        "date": "民國四十年四月十四日",
+        "dateIso": "1951-04-14"
+      },
+      {
+        "id": "ZJH-187",
+        "title": "陳思成博士著「國父學說的法理體系」序",
+        "part": "拾叁、書序",
+        "bookStartPage": 719,
+        "date": "民國四十三年五月十一日",
+        "dateIso": "1954-05-11"
+      },
+      {
+        "id": "ZJH-188",
+        "title": "追念蔣百里先生",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 723,
+        "date": "民國二十七年十二月二十八日",
+        "dateIso": "1938-12-28"
+      },
+      {
+        "id": "ZJH-189",
+        "title": "悼蔡孑民先生",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 723,
+        "date": "民國二十九年三月二十四日",
+        "dateIso": "1940-03-24",
+        "note": "與前篇同頁接排；蔡孑民即蔡元培"
+      },
+      {
+        "id": "ZJH-190",
+        "title": "永念孑民先生的精神",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 725,
+        "date": "民國三十年三月五日",
+        "dateIso": "1941-03-05",
+        "note": "孑民即蔡元培"
+      },
+      {
+        "id": "ZJH-191",
+        "title": "悼滕若渠同志",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 727,
+        "date": "民國三十一年八月十一日",
+        "dateIso": "1942-08-11"
+      },
+      {
+        "id": "ZJH-192",
+        "title": "悼朱子元君",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 729,
+        "date": "民國三十一年九月十九日",
+        "dateIso": "1942-09-19"
+      },
+      {
+        "id": "ZJH-193",
+        "title": "蔡孑民先生逝世三周年紀念辭",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 732,
+        "date": "民國三十二年三月五日",
+        "dateIso": "1943-03-05",
+        "note": "蔡孑民即蔡元培"
+      },
+      {
+        "id": "ZJH-194",
+        "title": "悼張靜江先生",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 733,
+        "date": "民國三十九年五月十九日",
+        "dateIso": "1950-05-19",
+        "note": "目次所載日期早於張靜江逝世之日"
+      },
+      {
+        "id": "ZJH-195",
+        "title": "追念戴季陶先生",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 736,
+        "date": "民國四十年二月十二日",
+        "dateIso": "1951-02-12"
+      },
+      {
+        "id": "ZJH-196",
+        "title": "悼亡友傅孟真先生",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 741,
+        "date": "民國三十九年十二月二十九日",
+        "dateIso": "1950-12-29"
+      },
+      {
+        "id": "ZJH-197",
+        "title": "附紀念傅故所長孟真五十六歲誕辰特刊序",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 744,
+        "note": "附錄"
+      },
+      {
+        "id": "ZJH-198",
+        "title": "丁文江與中央研究院",
+        "part": "拾肆、追念師友",
+        "bookStartPage": 745,
+        "date": "民國四十五年十二月",
+        "dateIso": "1956-12"
+      }
+    ],
+    "pageNote": "頁碼為原書頁碼。相鄰兩篇共用一頁時，目次只標一個起頁。"
+  }
 }
