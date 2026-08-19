@@ -7,7 +7,8 @@ date_iso: 1945-04-18
 occasion: 在教育部法律教育委員會致詞
 pdf_pages: [342, 343, 344, 345, 346, 347]
 book_pages: [303, 304, 305, 306, 307, 308]
-transcription_status: 人工逐頁核對
+transcription_status: 待複核
+verification_note: 待複核：2026-08-19 以 Google Cloud Vision 辨讀稿逐字對照，已回原頁圖確認七處校訂稿與原書不符（如原書 305「却又不多」校訂稿作「亦復不多」）。本篇底稿為 tesseract 輸出，該引擎在本書認錯率 7.36%。全部差異的複核尚未做完。
 verified_at: 2026-07-27
 glyph_policy: 未定
 glyph_note: 兩形並存（爲0／為23；眞0／真1；敎0／教28；卽0／即4；旣0／既4），偏向通用字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19

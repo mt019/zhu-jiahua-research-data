@@ -7,7 +7,8 @@ date_iso: 1948-02-04
 occasion: 在教育部會議室講
 pdf_pages: [351, 352, 353, 354, 355]
 book_pages: [312, 313, 314, 315, 316]
-transcription_status: 人工逐頁核對
+transcription_status: 待複核
+verification_note: 待複核：2026-08-19 以 Google Cloud Vision 辨讀稿逐字對照，已回原頁圖確認七處校訂稿與原書不符（如原書 305「却又不多」校訂稿作「亦復不多」）。本篇底稿為 tesseract 輸出，該引擎在本書認錯率 7.36%。全部差異的複核尚未做完。
 verified_at: 2026-07-27
 glyph_policy: 未定
 glyph_note: 兩形並存（爲10／為1；眞1／真0；敎0／教29；靑0／青1；卽4／即0；旣0／既3），偏向原書字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19

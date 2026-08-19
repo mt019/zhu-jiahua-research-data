@@ -7,7 +7,8 @@ date_iso: 1948-12-02
 occasion: 第七次法律教育委員會會議；原書未載地點
 pdf_pages: [358, 359, 360, 361, 362, 363]
 book_pages: [319, 320, 321, 322, 323, 324]
-transcription_status: 人工逐頁核對
+transcription_status: 待複核
+verification_note: 待複核：2026-08-19 以 Google Cloud Vision 辨讀稿逐字對照，已回原頁圖確認七處校訂稿與原書不符（如原書 305「却又不多」校訂稿作「亦復不多」）。本篇底稿為 tesseract 輸出，該引擎在本書認錯率 7.36%。全部差異的複核尚未做完。
 verified_at: 2026-07-27
 glyph_policy: 未定
 glyph_note: 兩形並存（爲41／為2；眞2／真0；敎0／教12；卽3／即0；旣0／既1），偏向原書字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19
