@@ -106,8 +106,27 @@ if (draftFiles.length) {
     if (!draft.statusNote || !draft.statusNote.includes('未經逐字人工校訂')) {
       throw new Error(`${file} 沒有寫明未經逐字人工校訂`);
     }
-    if (!Array.isArray(draft.pages) || draft.pages.length === 0) {
+    if (!Array.isArray(draft.paragraphs) || draft.paragraphs.length === 0) {
       throw new Error(`${file} 沒有正文`);
+    }
+    // 頁碼改記成段落裡的字元位置（原書的分頁不是分段），指到不存在的段或超出段長就是壞的
+    if (!Array.isArray(draft.pageBreaks) || draft.pageBreaks.length === 0) {
+      throw new Error(`${file} 沒有原書頁碼的位置`);
+    }
+    for (const brk of draft.pageBreaks) {
+      const para = draft.paragraphs[brk.para];
+      if (typeof para !== 'string' || brk.offset > para.length) {
+        throw new Error(`${file} 的頁碼位置 ${JSON.stringify(brk)} 指不到正文`);
+      }
+    }
+    // 書眉與書根併進正文的殘留：頁碼的中文數字不該出現在該頁起頭
+    const CN = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+    for (const brk of draft.pageBreaks) {
+      if (!(brk.bookPage >= 100)) continue;
+      const cn = String(brk.bookPage).split('').map((d) => CN[Number(d)]).join('');
+      if (draft.paragraphs[brk.para].slice(brk.offset).startsWith(cn)) {
+        throw new Error(`${file} 原書第 ${brk.bookPage} 頁的書根併進正文了`);
+      }
     }
     if (draft.missingBookPages?.length && !draft.missingNote) {
       throw new Error(`${file} 有缺頁卻沒有寫明是哪一頁`);

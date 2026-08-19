@@ -2,20 +2,22 @@
   "generatedAt": "2026-08-19",
   "status": "未校辨讀稿",
   "count": 198,
-  "totalChars": 535035,
+  "totalChars": 533586,
   "items": [
     {
       "id": "ZJH-001",
       "charCount": 472,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 2,
       "missingBookPages": []
     },
     {
       "id": "ZJH-002",
-      "charCount": 726,
+      "charCount": 725,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
@@ -23,6 +25,7 @@
       "charCount": 754,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
@@ -30,13 +33,15 @@
       "charCount": 601,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-005",
-      "charCount": 612,
+      "charCount": 611,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
@@ -44,125 +49,143 @@
       "charCount": 1191,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-007",
-      "charCount": 3170,
+      "charCount": 3169,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-008",
-      "charCount": 345,
+      "charCount": 371,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 2,
       "missingBookPages": []
     },
     {
       "id": "ZJH-009",
-      "charCount": 979,
+      "charCount": 952,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-010",
-      "charCount": 6388,
-      "noiseRemoved": 7,
+      "charCount": 6384,
+      "noiseRemoved": 8,
       "pageCount": 9,
+      "paragraphCount": 37,
       "missingBookPages": []
     },
     {
       "id": "ZJH-011",
-      "charCount": 1729,
-      "noiseRemoved": 2,
+      "charCount": 1723,
+      "noiseRemoved": 7,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-012",
-      "charCount": 2907,
-      "noiseRemoved": 0,
+      "charCount": 2904,
+      "noiseRemoved": 1,
       "pageCount": 5,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-013",
-      "charCount": 6789,
-      "noiseRemoved": 1,
+      "charCount": 6777,
+      "noiseRemoved": 2,
       "pageCount": 9,
+      "paragraphCount": 25,
       "missingBookPages": []
     },
     {
       "id": "ZJH-014",
-      "charCount": 8261,
+      "charCount": 8242,
       "noiseRemoved": 3,
       "pageCount": 11,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-015",
-      "charCount": 6827,
-      "noiseRemoved": 2,
+      "charCount": 6807,
+      "noiseRemoved": 4,
       "pageCount": 9,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
       "id": "ZJH-016",
-      "charCount": 3168,
+      "charCount": 3164,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-017",
-      "charCount": 1316,
-      "noiseRemoved": 0,
+      "charCount": 1313,
+      "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-018",
-      "charCount": 4038,
+      "charCount": 4031,
       "noiseRemoved": 1,
       "pageCount": 6,
+      "paragraphCount": 19,
       "missingBookPages": []
     },
     {
       "id": "ZJH-019",
-      "charCount": 2243,
+      "charCount": 2237,
       "noiseRemoved": 0,
-      "pageCount": 4,
+      "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-020",
-      "charCount": 1217,
+      "charCount": 1222,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-021",
-      "charCount": 647,
+      "charCount": 643,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-022",
-      "charCount": 2449,
-      "noiseRemoved": 2,
+      "charCount": 2443,
+      "noiseRemoved": 3,
       "pageCount": 4,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-023",
-      "charCount": 4269,
-      "noiseRemoved": 0,
+      "charCount": 4262,
+      "noiseRemoved": 3,
       "pageCount": 7,
+      "paragraphCount": 28,
       "missingBookPages": []
     },
     {
@@ -170,120 +193,137 @@
       "charCount": 808,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 2,
       "missingBookPages": []
     },
     {
       "id": "ZJH-025",
-      "charCount": 2045,
+      "charCount": 2041,
       "noiseRemoved": 4,
       "pageCount": 3,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-026",
-      "charCount": 1155,
-      "noiseRemoved": 0,
+      "charCount": 1149,
+      "noiseRemoved": 1,
       "pageCount": 2,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-027",
-      "charCount": 1331,
+      "charCount": 1332,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-028",
-      "charCount": 2832,
+      "charCount": 2820,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-029",
-      "charCount": 1853,
+      "charCount": 1855,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-030",
-      "charCount": 3428,
+      "charCount": 3427,
       "noiseRemoved": 2,
       "pageCount": 6,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-031",
-      "charCount": 903,
+      "charCount": 902,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-032",
-      "charCount": 11390,
-      "noiseRemoved": 0,
+      "charCount": 11367,
+      "noiseRemoved": 3,
       "pageCount": 17,
+      "paragraphCount": 64,
       "missingBookPages": []
     },
     {
       "id": "ZJH-033",
-      "charCount": 2831,
+      "charCount": 2823,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 8,
       "missingBookPages": [
         124
       ]
     },
     {
       "id": "ZJH-034",
-      "charCount": 5282,
+      "charCount": 5277,
       "noiseRemoved": 1,
       "pageCount": 7,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-035",
-      "charCount": 16463,
-      "noiseRemoved": 3,
-      "pageCount": 23,
+      "charCount": 16407,
+      "noiseRemoved": 5,
+      "pageCount": 22,
+      "paragraphCount": 56,
       "missingBookPages": []
     },
     {
       "id": "ZJH-036",
-      "charCount": 1334,
+      "charCount": 1343,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 26,
       "missingBookPages": []
     },
     {
       "id": "ZJH-037",
-      "charCount": 1837,
-      "noiseRemoved": 1,
+      "charCount": 1832,
+      "noiseRemoved": 2,
       "pageCount": 4,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-038",
-      "charCount": 4229,
+      "charCount": 4207,
       "noiseRemoved": 1,
       "pageCount": 6,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-039",
-      "charCount": 4324,
+      "charCount": 4295,
       "noiseRemoved": 0,
       "pageCount": 7,
+      "paragraphCount": 19,
       "missingBookPages": []
     },
     {
       "id": "ZJH-040",
-      "charCount": 848,
+      "charCount": 835,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
@@ -291,69 +331,79 @@
       "charCount": 1369,
       "noiseRemoved": 2,
       "pageCount": 2,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-042",
-      "charCount": 1845,
+      "charCount": 1839,
       "noiseRemoved": 2,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-043",
-      "charCount": 2478,
+      "charCount": 2467,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 18,
       "missingBookPages": []
     },
     {
       "id": "ZJH-044",
       "charCount": 2581,
-      "noiseRemoved": 0,
+      "noiseRemoved": 1,
       "pageCount": 4,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-045",
-      "charCount": 1662,
+      "charCount": 1643,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-046",
-      "charCount": 1903,
+      "charCount": 1900,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-047",
-      "charCount": 8050,
-      "noiseRemoved": 12,
+      "charCount": 8015,
+      "noiseRemoved": 14,
       "pageCount": 13,
+      "paragraphCount": 60,
       "missingBookPages": []
     },
     {
       "id": "ZJH-048",
-      "charCount": 2365,
+      "charCount": 2364,
       "noiseRemoved": 8,
       "pageCount": 4,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-049",
-      "charCount": 997,
+      "charCount": 993,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-050",
-      "charCount": 914,
+      "charCount": 909,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
@@ -361,111 +411,127 @@
       "charCount": 1283,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-052",
-      "charCount": 4571,
+      "charCount": 4568,
       "noiseRemoved": 6,
       "pageCount": 6,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-053",
-      "charCount": 2624,
+      "charCount": 2620,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 15,
       "missingBookPages": []
     },
     {
       "id": "ZJH-054",
-      "charCount": 3358,
-      "noiseRemoved": 0,
-      "pageCount": 6,
+      "charCount": 3342,
+      "noiseRemoved": 1,
+      "pageCount": 5,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-055",
-      "charCount": 7915,
-      "noiseRemoved": 0,
+      "charCount": 7901,
+      "noiseRemoved": 1,
       "pageCount": 11,
+      "paragraphCount": 38,
       "missingBookPages": []
     },
     {
       "id": "ZJH-056",
-      "charCount": 2340,
+      "charCount": 2331,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-057",
-      "charCount": 2526,
+      "charCount": 2522,
       "noiseRemoved": 5,
       "pageCount": 5,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-058",
-      "charCount": 4170,
+      "charCount": 4156,
       "noiseRemoved": 0,
       "pageCount": 7,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
       "id": "ZJH-059",
-      "charCount": 2255,
+      "charCount": 2236,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 15,
       "missingBookPages": []
     },
     {
       "id": "ZJH-060",
-      "charCount": 7757,
+      "charCount": 7748,
       "noiseRemoved": 11,
       "pageCount": 12,
+      "paragraphCount": 62,
       "missingBookPages": []
     },
     {
       "id": "ZJH-061",
-      "charCount": 2116,
+      "charCount": 2113,
       "noiseRemoved": 2,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-062",
-      "charCount": 2211,
+      "charCount": 2208,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 16,
       "missingBookPages": []
     },
     {
       "id": "ZJH-063",
-      "charCount": 1759,
+      "charCount": 1749,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-064",
-      "charCount": 5143,
+      "charCount": 5132,
       "noiseRemoved": 0,
       "pageCount": 8,
+      "paragraphCount": 12,
       "missingBookPages": []
     },
     {
       "id": "ZJH-065",
-      "charCount": 713,
+      "charCount": 707,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-066",
-      "charCount": 3819,
+      "charCount": 3820,
       "noiseRemoved": 3,
       "pageCount": 6,
+      "paragraphCount": 20,
       "missingBookPages": []
     },
     {
@@ -473,34 +539,39 @@
       "charCount": 1228,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-068",
-      "charCount": 1797,
+      "charCount": 1794,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-069",
-      "charCount": 942,
+      "charCount": 940,
       "noiseRemoved": 6,
       "pageCount": 2,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-070",
-      "charCount": 1203,
+      "charCount": 1187,
       "noiseRemoved": 2,
       "pageCount": 3,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-071",
-      "charCount": 4650,
+      "charCount": 4654,
       "noiseRemoved": 0,
       "pageCount": 7,
+      "paragraphCount": 13,
       "missingBookPages": []
     },
     {
@@ -508,120 +579,137 @@
       "charCount": 1583,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-073",
-      "charCount": 3806,
-      "noiseRemoved": 2,
+      "charCount": 3802,
+      "noiseRemoved": 3,
       "pageCount": 6,
+      "paragraphCount": 15,
       "missingBookPages": []
     },
     {
       "id": "ZJH-074",
-      "charCount": 3460,
-      "noiseRemoved": 0,
+      "charCount": 3453,
+      "noiseRemoved": 1,
       "pageCount": 5,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
       "id": "ZJH-075",
-      "charCount": 3050,
+      "charCount": 3047,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 12,
       "missingBookPages": []
     },
     {
       "id": "ZJH-076",
-      "charCount": 2800,
+      "charCount": 2790,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-077",
-      "charCount": 2658,
+      "charCount": 2664,
       "noiseRemoved": 3,
       "pageCount": 4,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-078",
-      "charCount": 4066,
+      "charCount": 4061,
       "noiseRemoved": 1,
       "pageCount": 6,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-079",
-      "charCount": 4322,
+      "charCount": 4301,
       "noiseRemoved": 5,
       "pageCount": 6,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-080",
-      "charCount": 1898,
+      "charCount": 1894,
       "noiseRemoved": 1,
       "pageCount": 4,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-081",
-      "charCount": 5573,
-      "noiseRemoved": 12,
+      "charCount": 5547,
+      "noiseRemoved": 13,
       "pageCount": 8,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-082",
-      "charCount": 3994,
+      "charCount": 3983,
       "noiseRemoved": 7,
       "pageCount": 6,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-083",
-      "charCount": 2851,
-      "noiseRemoved": 2,
+      "charCount": 2838,
+      "noiseRemoved": 3,
       "pageCount": 6,
+      "paragraphCount": 10,
       "missingBookPages": [
         350
       ]
     },
     {
       "id": "ZJH-084",
-      "charCount": 2400,
+      "charCount": 2393,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-085",
-      "charCount": 3273,
-      "noiseRemoved": 1,
+      "charCount": 3254,
+      "noiseRemoved": 2,
       "pageCount": 5,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-086",
-      "charCount": 1815,
-      "noiseRemoved": 2,
+      "charCount": 1812,
+      "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-087",
-      "charCount": 4260,
+      "charCount": 4249,
       "noiseRemoved": 2,
       "pageCount": 6,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-088",
-      "charCount": 2134,
+      "charCount": 2131,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
@@ -629,41 +717,47 @@
       "charCount": 1167,
       "noiseRemoved": 2,
       "pageCount": 3,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-090",
-      "charCount": 2713,
+      "charCount": 2710,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-091",
-      "charCount": 1648,
+      "charCount": 1644,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-092",
-      "charCount": 935,
+      "charCount": 928,
       "noiseRemoved": 2,
       "pageCount": 2,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-093",
-      "charCount": 1523,
+      "charCount": 1519,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-094",
-      "charCount": 1852,
+      "charCount": 1849,
       "noiseRemoved": 2,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
@@ -671,13 +765,15 @@
       "charCount": 1349,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-096",
-      "charCount": 950,
+      "charCount": 941,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
@@ -685,27 +781,31 @@
       "charCount": 1035,
       "noiseRemoved": 4,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-098",
-      "charCount": 1487,
+      "charCount": 1474,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-099",
-      "charCount": 1989,
-      "noiseRemoved": 0,
+      "charCount": 1984,
+      "noiseRemoved": 2,
       "pageCount": 4,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-100",
-      "charCount": 1196,
+      "charCount": 1195,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
@@ -713,64 +813,73 @@
       "charCount": 1180,
       "noiseRemoved": 2,
       "pageCount": 2,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-102",
-      "charCount": 1071,
+      "charCount": 1061,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-103",
-      "charCount": 5597,
-      "noiseRemoved": 3,
+      "charCount": 5581,
+      "noiseRemoved": 1,
       "pageCount": 8,
+      "paragraphCount": 25,
       "missingBookPages": []
     },
     {
       "id": "ZJH-104",
-      "charCount": 4746,
-      "noiseRemoved": 0,
+      "charCount": 4735,
+      "noiseRemoved": 1,
       "pageCount": 7,
+      "paragraphCount": 21,
       "missingBookPages": []
     },
     {
       "id": "ZJH-105",
-      "charCount": 4513,
-      "noiseRemoved": 1,
+      "charCount": 4494,
+      "noiseRemoved": 3,
       "pageCount": 9,
+      "paragraphCount": 101,
       "missingBookPages": []
     },
     {
       "id": "ZJH-106",
-      "charCount": 2703,
+      "charCount": 2700,
       "noiseRemoved": 1,
       "pageCount": 5,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-107",
-      "charCount": 2924,
+      "charCount": 2905,
       "noiseRemoved": 1,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-108",
-      "charCount": 1614,
+      "charCount": 1608,
       "noiseRemoved": 0,
-      "pageCount": 4,
+      "pageCount": 3,
+      "paragraphCount": 9,
       "missingBookPages": [
         432
       ]
     },
     {
       "id": "ZJH-109",
-      "charCount": 2854,
-      "noiseRemoved": 0,
+      "charCount": 2844,
+      "noiseRemoved": 1,
       "pageCount": 4,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
@@ -778,55 +887,63 @@
       "charCount": 650,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-111",
-      "charCount": 4683,
+      "charCount": 4672,
       "noiseRemoved": 2,
       "pageCount": 7,
+      "paragraphCount": 22,
       "missingBookPages": []
     },
     {
       "id": "ZJH-112",
-      "charCount": 1482,
+      "charCount": 1487,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-113",
-      "charCount": 3119,
-      "noiseRemoved": 0,
+      "charCount": 3115,
+      "noiseRemoved": 1,
       "pageCount": 5,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-114",
-      "charCount": 2343,
+      "charCount": 2336,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-115",
-      "charCount": 2499,
+      "charCount": 2480,
       "noiseRemoved": 2,
       "pageCount": 5,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-116",
-      "charCount": 3746,
+      "charCount": 3745,
       "noiseRemoved": 4,
       "pageCount": 6,
+      "paragraphCount": 19,
       "missingBookPages": []
     },
     {
       "id": "ZJH-117",
-      "charCount": 747,
+      "charCount": 746,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
@@ -834,351 +951,401 @@
       "charCount": 1199,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-119",
-      "charCount": 1256,
-      "noiseRemoved": 0,
+      "charCount": 1250,
+      "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-120",
-      "charCount": 1951,
-      "noiseRemoved": 3,
+      "charCount": 1946,
+      "noiseRemoved": 4,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-121",
-      "charCount": 3129,
+      "charCount": 3119,
       "noiseRemoved": 2,
-      "pageCount": 5,
+      "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-122",
-      "charCount": 1736,
+      "charCount": 1734,
       "noiseRemoved": 2,
-      "pageCount": 3,
+      "pageCount": 4,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
       "id": "ZJH-123",
-      "charCount": 2580,
+      "charCount": 2578,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-124",
-      "charCount": 3160,
+      "charCount": 3134,
       "noiseRemoved": 0,
-      "pageCount": 5,
+      "pageCount": 4,
+      "paragraphCount": 12,
       "missingBookPages": []
     },
     {
       "id": "ZJH-125",
-      "charCount": 508,
+      "charCount": 515,
       "noiseRemoved": 0,
-      "pageCount": 2,
+      "pageCount": 1,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-126",
-      "charCount": 1678,
+      "charCount": 1673,
       "noiseRemoved": 3,
       "pageCount": 3,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-127",
-      "charCount": 3432,
+      "charCount": 3434,
       "noiseRemoved": 2,
       "pageCount": 5,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-128",
-      "charCount": 1242,
+      "charCount": 1241,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-129",
-      "charCount": 1796,
-      "noiseRemoved": 0,
+      "charCount": 1785,
+      "noiseRemoved": 2,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-130",
-      "charCount": 4774,
-      "noiseRemoved": 1,
+      "charCount": 4755,
+      "noiseRemoved": 2,
       "pageCount": 7,
+      "paragraphCount": 15,
       "missingBookPages": []
     },
     {
       "id": "ZJH-131",
-      "charCount": 6178,
+      "charCount": 6169,
       "noiseRemoved": 7,
       "pageCount": 9,
+      "paragraphCount": 19,
       "missingBookPages": []
     },
     {
       "id": "ZJH-132",
-      "charCount": 1745,
+      "charCount": 1741,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-133",
-      "charCount": 1371,
+      "charCount": 1363,
       "noiseRemoved": 1,
-      "pageCount": 3,
+      "pageCount": 2,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-134",
-      "charCount": 6632,
-      "noiseRemoved": 13,
+      "charCount": 6609,
+      "noiseRemoved": 14,
       "pageCount": 9,
+      "paragraphCount": 19,
       "missingBookPages": []
     },
     {
       "id": "ZJH-135",
-      "charCount": 3719,
+      "charCount": 3717,
       "noiseRemoved": 2,
       "pageCount": 6,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
       "id": "ZJH-136",
-      "charCount": 3925,
-      "noiseRemoved": 2,
+      "charCount": 3916,
+      "noiseRemoved": 3,
       "pageCount": 6,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-137",
-      "charCount": 1310,
+      "charCount": 1306,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-138",
-      "charCount": 3529,
+      "charCount": 3509,
       "noiseRemoved": 0,
       "pageCount": 6,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-139",
-      "charCount": 6551,
-      "noiseRemoved": 4,
+      "charCount": 6535,
+      "noiseRemoved": 7,
       "pageCount": 9,
+      "paragraphCount": 23,
       "missingBookPages": []
     },
     {
       "id": "ZJH-140",
-      "charCount": 3472,
-      "noiseRemoved": 0,
+      "charCount": 3473,
+      "noiseRemoved": 3,
       "pageCount": 6,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-141",
-      "charCount": 2692,
+      "charCount": 2685,
       "noiseRemoved": 1,
-      "pageCount": 5,
+      "pageCount": 4,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-142",
-      "charCount": 1715,
+      "charCount": 1709,
       "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-143",
-      "charCount": 817,
+      "charCount": 814,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-144",
-      "charCount": 2407,
-      "noiseRemoved": 5,
+      "charCount": 2396,
+      "noiseRemoved": 7,
       "pageCount": 4,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-145",
-      "charCount": 1147,
+      "charCount": 1140,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-146",
-      "charCount": 2367,
-      "noiseRemoved": 6,
-      "pageCount": 5,
+      "charCount": 2362,
+      "noiseRemoved": 7,
+      "pageCount": 4,
+      "paragraphCount": 15,
       "missingBookPages": []
     },
     {
       "id": "ZJH-147",
-      "charCount": 2463,
+      "charCount": 2454,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-148",
-      "charCount": 1660,
+      "charCount": 1656,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-149",
-      "charCount": 2109,
-      "noiseRemoved": 1,
+      "charCount": 2105,
+      "noiseRemoved": 2,
       "pageCount": 4,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-150",
-      "charCount": 2038,
+      "charCount": 2031,
       "noiseRemoved": 1,
       "pageCount": 4,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-151",
-      "charCount": 1779,
+      "charCount": 1772,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-152",
-      "charCount": 1122,
-      "noiseRemoved": 0,
+      "charCount": 1115,
+      "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-153",
-      "charCount": 1412,
+      "charCount": 1409,
       "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-154",
-      "charCount": 5199,
-      "noiseRemoved": 0,
+      "charCount": 5185,
+      "noiseRemoved": 2,
       "pageCount": 7,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-155",
-      "charCount": 9054,
-      "noiseRemoved": 0,
+      "charCount": 9026,
+      "noiseRemoved": 4,
       "pageCount": 12,
+      "paragraphCount": 24,
       "missingBookPages": []
     },
     {
       "id": "ZJH-156",
-      "charCount": 7262,
+      "charCount": 7244,
       "noiseRemoved": 8,
       "pageCount": 10,
+      "paragraphCount": 18,
       "missingBookPages": []
     },
     {
       "id": "ZJH-157",
-      "charCount": 4493,
+      "charCount": 4482,
       "noiseRemoved": 4,
       "pageCount": 6,
+      "paragraphCount": 14,
       "missingBookPages": []
     },
     {
       "id": "ZJH-158",
-      "charCount": 4774,
-      "noiseRemoved": 3,
+      "charCount": 4761,
+      "noiseRemoved": 4,
       "pageCount": 7,
+      "paragraphCount": 20,
       "missingBookPages": []
     },
     {
       "id": "ZJH-159",
-      "charCount": 5557,
+      "charCount": 5554,
       "noiseRemoved": 2,
       "pageCount": 10,
+      "paragraphCount": 31,
       "missingBookPages": [
         636
       ]
     },
     {
       "id": "ZJH-160",
-      "charCount": 1678,
+      "charCount": 1677,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 36,
       "missingBookPages": []
     },
     {
       "id": "ZJH-161",
-      "charCount": 2402,
-      "noiseRemoved": 1,
+      "charCount": 2395,
+      "noiseRemoved": 2,
       "pageCount": 4,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-162",
-      "charCount": 3230,
+      "charCount": 3213,
       "noiseRemoved": 0,
       "pageCount": 5,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-163",
-      "charCount": 3761,
+      "charCount": 3740,
       "noiseRemoved": 0,
       "pageCount": 6,
+      "paragraphCount": 16,
       "missingBookPages": []
     },
     {
       "id": "ZJH-164",
-      "charCount": 1148,
+      "charCount": 1145,
       "noiseRemoved": 6,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-165",
-      "charCount": 1575,
-      "noiseRemoved": 0,
-      "pageCount": 4,
+      "charCount": 1571,
+      "noiseRemoved": 1,
+      "pageCount": 3,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-166",
-      "charCount": 1498,
+      "charCount": 1491,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-167",
-      "charCount": 1307,
+      "charCount": 1304,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 2,
       "missingBookPages": []
     },
     {
@@ -1186,13 +1353,15 @@
       "charCount": 244,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-169",
-      "charCount": 327,
+      "charCount": 324,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
@@ -1200,106 +1369,121 @@
       "charCount": 1199,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 11,
       "missingBookPages": []
     },
     {
       "id": "ZJH-171",
-      "charCount": 1907,
-      "noiseRemoved": 0,
+      "charCount": 1898,
+      "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
       "id": "ZJH-172",
-      "charCount": 1360,
+      "charCount": 1354,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-173",
-      "charCount": 5643,
+      "charCount": 5634,
       "noiseRemoved": 12,
       "pageCount": 8,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-174",
-      "charCount": 9721,
+      "charCount": 9685,
       "noiseRemoved": 9,
       "pageCount": 13,
+      "paragraphCount": 51,
       "missingBookPages": []
     },
     {
       "id": "ZJH-175",
-      "charCount": 6066,
+      "charCount": 6036,
       "noiseRemoved": 23,
       "pageCount": 9,
+      "paragraphCount": 35,
       "missingBookPages": [
         696
       ]
     },
     {
       "id": "ZJH-176",
-      "charCount": 1092,
+      "charCount": 1082,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-177",
-      "charCount": 1857,
+      "charCount": 1849,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-178",
-      "charCount": 2808,
+      "charCount": 2794,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-179",
-      "charCount": 1967,
+      "charCount": 1957,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-180",
-      "charCount": 1415,
+      "charCount": 1410,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-181",
-      "charCount": 1065,
+      "charCount": 1062,
       "noiseRemoved": 8,
       "pageCount": 2,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
       "id": "ZJH-182",
-      "charCount": 1512,
+      "charCount": 1504,
       "noiseRemoved": 4,
       "pageCount": 3,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-183",
-      "charCount": 1575,
+      "charCount": 1570,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-184",
-      "charCount": 1017,
+      "charCount": 1001,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 4,
       "missingBookPages": []
     },
     {
@@ -1307,20 +1491,23 @@
       "charCount": 657,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-186",
-      "charCount": 941,
+      "charCount": 935,
       "noiseRemoved": 0,
-      "pageCount": 3,
+      "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-187",
-      "charCount": 2221,
+      "charCount": 2210,
       "noiseRemoved": 1,
       "pageCount": 3,
+      "paragraphCount": 12,
       "missingBookPages": [
         722
       ]
@@ -1330,6 +1517,7 @@
       "charCount": 386,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
@@ -1337,55 +1525,63 @@
       "charCount": 1072,
       "noiseRemoved": 0,
       "pageCount": 3,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-190",
-      "charCount": 1177,
+      "charCount": 1174,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 3,
       "missingBookPages": []
     },
     {
       "id": "ZJH-191",
-      "charCount": 1256,
+      "charCount": 1252,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-192",
-      "charCount": 2501,
+      "charCount": 2492,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 9,
       "missingBookPages": []
     },
     {
       "id": "ZJH-193",
-      "charCount": 271,
-      "noiseRemoved": 0,
-      "pageCount": 2,
+      "charCount": 270,
+      "noiseRemoved": 1,
+      "pageCount": 1,
+      "paragraphCount": 1,
       "missingBookPages": []
     },
     {
       "id": "ZJH-194",
-      "charCount": 2574,
+      "charCount": 2568,
       "noiseRemoved": 4,
       "pageCount": 4,
+      "paragraphCount": 13,
       "missingBookPages": []
     },
     {
       "id": "ZJH-195",
-      "charCount": 3659,
+      "charCount": 3656,
       "noiseRemoved": 0,
       "pageCount": 6,
+      "paragraphCount": 10,
       "missingBookPages": []
     },
     {
       "id": "ZJH-196",
-      "charCount": 2177,
+      "charCount": 2168,
       "noiseRemoved": 0,
       "pageCount": 4,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
@@ -1393,13 +1589,15 @@
       "charCount": 991,
       "noiseRemoved": 0,
       "pageCount": 2,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
       "id": "ZJH-198",
-      "charCount": 45,
+      "charCount": 42,
       "noiseRemoved": 0,
       "pageCount": 1,
+      "paragraphCount": 1,
       "missingBookPages": []
     }
   ]
