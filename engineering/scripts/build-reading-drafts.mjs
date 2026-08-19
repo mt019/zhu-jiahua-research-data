@@ -335,6 +335,8 @@ const byId = new Map(toc.map((t) => [t.id, t]))
 const index = []
 let totalChars = 0
 let joined = 0
+let marginLeftovers = 0
+let strayMarks = 0
 
 for (let i = 0; i < heads.length; i += 1) {
   const h = heads[i]
@@ -347,6 +349,7 @@ for (let i = 0; i < heads.length; i += 1) {
 
   const paragraphs = []
   const pageBreaks = []
+  let pendingTail = null
   const bookPages = []
   let noiseRemoved = 0
   for (let p = h.pdfPage; p <= endPdf; p += 1) {
@@ -398,19 +401,41 @@ for (let i = 0; i < heads.length; i += 1) {
     }
 
     for (let k = 0; k < cleaned.length; k += 1) {
-      const line = cleaned[k]
+      const line = { ...cleaned[k] }
       // 該頁第一段沒有縮排，表示它是上一頁那一段的下半截，接回去；篇的第一段不接
       const continues = k === 0 && !line.indented && paragraphs.length > 0
+      // 頁末那個孤立的標點接在上一段之後，而上一段又被下一頁接續時，它就落在句子中間
+      // （原書 105 頁前後接成「發起組設中央研。究院籌備委員會」）。那一點是掃描件上的
+      // 污損，不是原書的句號，接續發生時剝掉。
+      if (continues && pendingTail === paragraphs.length - 1) {
+        paragraphs[pendingTail] = paragraphs[pendingTail].slice(0, -1)
+        strayMarks += 1
+        for (const brk of pageBreaks) {
+          if (brk.para === pendingTail && brk.offset > paragraphs[pendingTail].length) brk.offset = paragraphs[pendingTail].length
+        }
+      }
+      pendingTail = null
       if (k === 0) {
         brk.para = continues ? paragraphs.length - 1 : paragraphs.length
         brk.offset = continues ? paragraphs[paragraphs.length - 1].length : 0
         pageBreaks.push(brk)
       }
       if (k === 0 && continues) {
+        // 續頁第一行若以標點開頭，那個標點是頁首的污損：直排鉛印避頭點，句號與逗號
+        // 不排在行首（原書 104 頁末「⋯發起組設中央研」接 105 頁首，辨讀稿在「究院」
+        // 前面多讀出一個句號）。
+        const head = line.text[0]
+        // 只剝句號。頓號與逗號可能是原書上一頁末尾的標點被切到次頁首行（原書 481
+        // 頁「講演、著述」的頓號就落在這個位置），剝掉會改到原文。
+        if (head && /[。.]/.test(head)) {
+          line.text = line.text.slice(1)
+          strayMarks += 1
+        }
         paragraphs[paragraphs.length - 1] += line.text
         joined += 1
       } else if (line.tail && paragraphs.length) {
         paragraphs[paragraphs.length - 1] += line.text
+        pendingTail = paragraphs.length - 1
       } else if (k === 0 || line.indented) {
         paragraphs.push(line.text)
       } else {
@@ -422,6 +447,40 @@ for (let i = 0; i < heads.length; i += 1) {
   // 行尾的標點在切行的當下看不到右鄰居（「⋯眞知眞理,」接下一行的「而不問其他。」），
   // 接完再走一次
   for (let k = 0; k < paragraphs.length; k += 1) paragraphs[k] = widen(paragraphs[k])
+
+  // 邊欄的字與正文擠在同一欄時，上面按座標的兩關都認不出來，剩下的殘字黏在段落的兩端：
+  //
+  // 段末——「⋯各種事業依然是很落後。並」的並、「⋯應趕速推行。華僑」的華僑。判準是句號、
+  // 驚嘆號或問號之後還掛著一兩個字，而那一兩個字裡沒有標點。收尾的引號不算（「⋯共同幸福
+  // 之目標。」），所以引號要排除在外；正常的句子也不會在句號後面再接一兩個字就結束。
+  //
+  // 段首——原書第 42 頁的書根「四二」黏在該頁第一句前面（「四二代環境的影響」）。只在
+  // 頁碼的位置檢查，而且要與該頁的頁碼一字不差才剝，兩位數的中文數字在正文裡很常見。
+  const TAIL_LEFTOVER = /[。！？]([^。！？，、；：「『（）」』\s]{1,2})$/
+  for (let k = 0; k < paragraphs.length; k += 1) {
+    const m = TAIL_LEFTOVER.exec(paragraphs[k])
+    if (m && paragraphs[k].length > 20) {
+      paragraphs[k] = paragraphs[k].slice(0, -m[1].length)
+      marginLeftovers += 1
+    }
+  }
+  const CN_DIGIT = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九']
+  for (const brk of pageBreaks) {
+    if (!(brk.bookPage >= 10)) continue
+    const cn = String(brk.bookPage).split('').map((d) => CN_DIGIT[Number(d)]).join('')
+    const para = paragraphs[brk.para]
+    if (typeof para !== 'string') continue
+    if (para.slice(brk.offset, brk.offset + cn.length) !== cn) continue
+    paragraphs[brk.para] = para.slice(0, brk.offset) + para.slice(brk.offset + cn.length)
+    marginLeftovers += 1
+    for (const other of pageBreaks) {
+      if (other !== brk && other.para === brk.para && other.offset > brk.offset) other.offset -= cn.length
+    }
+  }
+  for (const brk of pageBreaks) {
+    const para = paragraphs[brk.para]
+    if (typeof para === 'string' && brk.offset > para.length) brk.offset = para.length
+  }
 
   const chars = paragraphs.reduce((n, t) => n + t.length, 0)
   totalChars += chars
@@ -459,4 +518,6 @@ writeFileSync(
   `${JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), status: '未校辨讀稿', count: index.length, totalChars, items: index }, null, 2)}\n`,
 )
 console.log(`跨頁接回的段落 ${joined} 處`)
+console.log(`段落兩端的邊欄殘字 ${marginLeftovers} 處`)
+console.log(`卡在跨頁接續點上的孤立標點 ${strayMarks} 處`)
 console.log(`讀稿 ${index.length} 篇，合計 ${totalChars.toLocaleString('en-US')} 字，寫進 ${OUT_DIR}`)
