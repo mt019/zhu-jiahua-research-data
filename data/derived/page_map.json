@@ -1,0 +1,5626 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-19",
+  "source": "Google Cloud Vision 辨讀稿的書眉與書根",
+  "status": "待核：頁碼取自辨讀稿，未逐頁核對原頁圖",
+  "caveats": [
+    "bookPage 是該頁自己印著、辨讀稿讀出來的；bookPageInferred 由相鄰頁的偏移推得，未經核對。",
+    "偏移在六處各減一，各少掉一個原書頁：124 上下（實際位置在 112 至 124 之間，該段沒有一頁讀得出頁碼）、350、432、636、696、722。逐處讀了前一頁的末行正文：349、431、695、721四處話已說完，少的那頁多半是分節前的空白背面；123 與 635 兩處停在句子中間，那兩頁有正文而掃描件裡沒有。",
+    "前面的目次與序自成一套頁碼，不在本表的偏移帶內，一律留空。"
+  ],
+  "totalPdfPages": 786,
+  "numberedPages": 602,
+  "offsets": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "offsetBreaks": [
+    {
+      "pdfPage": 164,
+      "bookPage": 125,
+      "offset": 39
+    },
+    {
+      "pdfPage": 389,
+      "bookPage": 351,
+      "offset": 38
+    },
+    {
+      "pdfPage": 470,
+      "bookPage": 433,
+      "offset": 37
+    },
+    {
+      "pdfPage": 673,
+      "bookPage": 637,
+      "offset": 36
+    },
+    {
+      "pdfPage": 732,
+      "bookPage": 697,
+      "offset": 35
+    },
+    {
+      "pdfPage": 757,
+      "bookPage": 723,
+      "offset": 34
+    }
+  ],
+  "gaps": [
+    {
+      "bookPage": 124,
+      "afterPdfPage": 151,
+      "locatedIn": "112–124 之間某頁，該段讀不出頁碼",
+      "piece": {
+        "id": "ZJH-034",
+        "title": "中國大學教育的現狀及應行注意各點",
+        "bookStartPage": 115
+      },
+      "nextPieceStartsAt": 131
+    },
+    {
+      "bookPage": 350,
+      "afterPdfPage": 388,
+      "locatedIn": "確定",
+      "piece": {
+        "id": "ZJH-083",
+        "title": "孔子教育哲學的基本原則",
+        "bookStartPage": 345
+      },
+      "nextPieceStartsAt": 351
+    },
+    {
+      "bookPage": 432,
+      "afterPdfPage": 467,
+      "locatedIn": "430–432 之間某頁，該段讀不出頁碼",
+      "piece": {
+        "id": "ZJH-108",
+        "title": "浙江省今後的政治動向",
+        "bookStartPage": 429
+      },
+      "nextPieceStartsAt": 433
+    },
+    {
+      "bookPage": 636,
+      "afterPdfPage": 672,
+      "locatedIn": "確定",
+      "piece": {
+        "id": "ZJH-159",
+        "title": "邊疆政策與邊疆建設",
+        "bookStartPage": 627
+      },
+      "nextPieceStartsAt": 637
+    },
+    {
+      "bookPage": 696,
+      "afterPdfPage": 731,
+      "locatedIn": "確定",
+      "piece": {
+        "id": "ZJH-175",
+        "title": "再復穆罕默德伊敏函—三論所謂「新疆問題」",
+        "bookStartPage": 687
+      },
+      "nextPieceStartsAt": 697
+    },
+    {
+      "bookPage": 722,
+      "afterPdfPage": 756,
+      "locatedIn": "確定",
+      "piece": {
+        "id": "ZJH-187",
+        "title": "陳思成博士著「國父學說的法理體系」序",
+        "bookStartPage": 719
+      },
+      "nextPieceStartsAt": 723
+    }
+  ],
+  "items": [
+    {
+      "pdfPage": 1,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -39,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 2,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -38,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 3,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -37,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 4,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -36,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 5,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -35,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 6,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -34,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 7,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -33,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 8,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -32,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 9,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -31,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 10,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -30,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 11,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -29,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 12,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -28,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 13,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -27,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 14,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -26,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 15,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -25,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 16,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -24,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 17,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -23,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 18,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -22,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 19,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -21,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 20,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -20,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 21,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -19,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 22,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -18,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 23,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -17,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 24,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -16,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 25,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -15,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 26,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -14,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 27,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -13,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 28,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -12,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 29,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -11,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 30,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -10,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 31,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -9,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 32,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -8,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 33,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -7,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 34,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -6,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 35,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -5,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 36,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -4,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 37,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -3,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 38,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -2,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 39,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": -1,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 40,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 0,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 41,
+      "bookPage": 1,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 42,
+      "bookPage": 2,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 43,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 3,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 44,
+      "bookPage": 4,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 45,
+      "bookPage": 5,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 46,
+      "bookPage": 6,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 47,
+      "bookPage": 7,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 48,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 8,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 49,
+      "bookPage": 9,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 50,
+      "bookPage": 10,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 51,
+      "bookPage": 11,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 52,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 12,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 53,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 13,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 54,
+      "bookPage": 14,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 55,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 15,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 56,
+      "bookPage": 16,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 57,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 17,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 58,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 18,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 59,
+      "bookPage": 19,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 60,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 20,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 61,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 21,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 62,
+      "bookPage": 22,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 63,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 23,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 64,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 24,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 65,
+      "bookPage": 25,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 66,
+      "bookPage": 26,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 67,
+      "bookPage": 27,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 68,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 28,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 69,
+      "bookPage": 29,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 70,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 30,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 71,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 31,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 72,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 32,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 73,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 33,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 74,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 34,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 75,
+      "bookPage": 35,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 76,
+      "bookPage": 36,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 77,
+      "bookPage": 37,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 78,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 38,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 79,
+      "bookPage": 39,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 80,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 40,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 81,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 41,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 82,
+      "bookPage": 42,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 83,
+      "bookPage": 43,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 84,
+      "bookPage": 44,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 85,
+      "bookPage": 45,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 86,
+      "bookPage": 46,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 87,
+      "bookPage": 47,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 88,
+      "bookPage": 48,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 89,
+      "bookPage": 49,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 90,
+      "bookPage": 50,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 91,
+      "bookPage": 51,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 92,
+      "bookPage": 52,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 93,
+      "bookPage": 53,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 94,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 54,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 95,
+      "bookPage": 55,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 96,
+      "bookPage": 56,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 97,
+      "bookPage": 57,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 98,
+      "bookPage": 58,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 99,
+      "bookPage": 59,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 100,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 60,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 101,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 61,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 102,
+      "bookPage": 62,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 103,
+      "bookPage": 63,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 104,
+      "bookPage": 64,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 105,
+      "bookPage": 65,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 106,
+      "bookPage": 66,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 107,
+      "bookPage": 67,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 108,
+      "bookPage": 68,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 109,
+      "bookPage": 69,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 110,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 70,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 111,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 71,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 112,
+      "bookPage": 72,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 113,
+      "bookPage": 73,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 114,
+      "bookPage": 74,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 115,
+      "bookPage": 75,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 116,
+      "bookPage": 76,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 117,
+      "bookPage": 77,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 118,
+      "bookPage": 78,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 119,
+      "bookPage": 79,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 120,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 80,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 121,
+      "bookPage": 81,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 122,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 82,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 123,
+      "bookPage": 83,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 124,
+      "bookPage": 84,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 125,
+      "bookPage": 85,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 126,
+      "bookPage": 86,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 127,
+      "bookPage": 87,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 128,
+      "bookPage": 88,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 129,
+      "bookPage": 89,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 130,
+      "bookPage": 90,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 131,
+      "bookPage": 91,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 132,
+      "bookPage": 92,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 133,
+      "bookPage": 93,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 134,
+      "bookPage": 94,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 135,
+      "bookPage": 95,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 136,
+      "bookPage": 96,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 137,
+      "bookPage": 97,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 138,
+      "bookPage": 98,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 139,
+      "bookPage": 99,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 140,
+      "bookPage": 100,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 141,
+      "bookPage": 101,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 142,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 102,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 143,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 103,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 144,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 104,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 145,
+      "bookPage": 105,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 146,
+      "bookPage": 106,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 147,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 107,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 148,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 108,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 149,
+      "bookPage": 109,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 150,
+      "bookPage": 110,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 151,
+      "bookPage": 111,
+      "offset": 40,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 152,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 112,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 153,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 113,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 154,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 114,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 155,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 115,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 156,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 116,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 157,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 117,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 158,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 118,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 159,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 119,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 160,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 120,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 161,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 121,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 162,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 122,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 163,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 123,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 164,
+      "bookPage": 125,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 165,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 126,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 166,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 127,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 167,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 128,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 168,
+      "bookPage": 129,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 169,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 130,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 170,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 131,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 171,
+      "bookPage": 132,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 172,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 133,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 173,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 134,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 174,
+      "bookPage": 135,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 175,
+      "bookPage": 136,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 176,
+      "bookPage": 137,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 177,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 138,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 178,
+      "bookPage": 139,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 179,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 140,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 180,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 141,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 181,
+      "bookPage": 142,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 182,
+      "bookPage": 143,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 183,
+      "bookPage": 144,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 184,
+      "bookPage": 145,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 185,
+      "bookPage": 146,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 186,
+      "bookPage": 147,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 187,
+      "bookPage": 148,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 188,
+      "bookPage": 149,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 189,
+      "bookPage": 150,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 190,
+      "bookPage": 151,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 191,
+      "bookPage": 152,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 192,
+      "bookPage": 153,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 193,
+      "bookPage": 154,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 194,
+      "bookPage": 155,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 195,
+      "bookPage": 156,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 196,
+      "bookPage": 157,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 197,
+      "bookPage": 158,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 198,
+      "bookPage": 159,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 199,
+      "bookPage": 160,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 200,
+      "bookPage": 161,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 201,
+      "bookPage": 162,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 202,
+      "bookPage": 163,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 203,
+      "bookPage": 164,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 204,
+      "bookPage": 165,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 205,
+      "bookPage": 166,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 206,
+      "bookPage": 167,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 207,
+      "bookPage": 168,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 208,
+      "bookPage": 169,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 209,
+      "bookPage": 170,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 210,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 171,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 211,
+      "bookPage": 172,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 212,
+      "bookPage": 173,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 213,
+      "bookPage": 174,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 214,
+      "bookPage": 175,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 215,
+      "bookPage": 176,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 216,
+      "bookPage": 177,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 217,
+      "bookPage": 178,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 218,
+      "bookPage": 179,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 219,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 180,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 220,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 181,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 221,
+      "bookPage": 182,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 222,
+      "bookPage": 183,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 223,
+      "bookPage": 184,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 224,
+      "bookPage": 185,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 225,
+      "bookPage": 186,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 226,
+      "bookPage": 187,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 227,
+      "bookPage": 188,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 228,
+      "bookPage": 189,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 229,
+      "bookPage": 190,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 230,
+      "bookPage": 191,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 231,
+      "bookPage": 192,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 232,
+      "bookPage": 193,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 233,
+      "bookPage": 194,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 234,
+      "bookPage": 195,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 235,
+      "bookPage": 196,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 236,
+      "bookPage": 197,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 237,
+      "bookPage": 198,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 238,
+      "bookPage": 199,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 239,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 200,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 240,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 201,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 241,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 202,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 242,
+      "bookPage": 203,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 243,
+      "bookPage": 204,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 244,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 205,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 245,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 206,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 246,
+      "bookPage": 207,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 247,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 208,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 248,
+      "bookPage": 209,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 249,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 210,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 250,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 211,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 251,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 212,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 252,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 213,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 253,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 214,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 254,
+      "bookPage": 215,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 255,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 216,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 256,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 217,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 257,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 218,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 258,
+      "bookPage": 219,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 259,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 220,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 260,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 221,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 261,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 222,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 262,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 223,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 263,
+      "bookPage": 224,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 264,
+      "bookPage": 225,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 265,
+      "bookPage": 226,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 266,
+      "bookPage": 227,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 267,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 228,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 268,
+      "bookPage": 229,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 269,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 230,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 270,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 231,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 271,
+      "bookPage": 232,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 272,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 233,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 273,
+      "bookPage": 234,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 274,
+      "bookPage": 235,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 275,
+      "bookPage": 236,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 276,
+      "bookPage": 237,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 277,
+      "bookPage": 238,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 278,
+      "bookPage": 239,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 279,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 240,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 280,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 241,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 281,
+      "bookPage": 242,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 282,
+      "bookPage": 243,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 283,
+      "bookPage": 244,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 284,
+      "bookPage": 245,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 285,
+      "bookPage": 246,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 286,
+      "bookPage": 247,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 287,
+      "bookPage": 248,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 288,
+      "bookPage": 249,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 289,
+      "bookPage": 250,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 290,
+      "bookPage": 251,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 291,
+      "bookPage": 252,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 292,
+      "bookPage": 253,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 293,
+      "bookPage": 254,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 294,
+      "bookPage": 255,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 295,
+      "bookPage": 256,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 296,
+      "bookPage": 257,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 297,
+      "bookPage": 258,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 298,
+      "bookPage": 259,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 299,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 260,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 300,
+      "bookPage": 261,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 301,
+      "bookPage": 262,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 302,
+      "bookPage": 263,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 303,
+      "bookPage": 264,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 304,
+      "bookPage": 265,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 305,
+      "bookPage": 266,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 306,
+      "bookPage": 267,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 307,
+      "bookPage": 268,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 308,
+      "bookPage": 269,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 309,
+      "bookPage": 270,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 310,
+      "bookPage": 271,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 311,
+      "bookPage": 272,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 312,
+      "bookPage": 273,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 313,
+      "bookPage": 274,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 314,
+      "bookPage": 275,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 315,
+      "bookPage": 276,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 316,
+      "bookPage": 277,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 317,
+      "bookPage": 278,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 318,
+      "bookPage": 279,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 319,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 280,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 320,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 281,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 321,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 282,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 322,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 283,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 323,
+      "bookPage": 284,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 324,
+      "bookPage": 285,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 325,
+      "bookPage": 286,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 326,
+      "bookPage": 287,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 327,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 288,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 328,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 289,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 329,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 290,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 330,
+      "bookPage": 291,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 331,
+      "bookPage": 292,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 332,
+      "bookPage": 293,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 333,
+      "bookPage": 294,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 334,
+      "bookPage": 295,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 335,
+      "bookPage": 296,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 336,
+      "bookPage": 297,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 337,
+      "bookPage": 298,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 338,
+      "bookPage": 299,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 339,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 300,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 340,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 301,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 341,
+      "bookPage": 302,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 342,
+      "bookPage": 303,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 343,
+      "bookPage": 304,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 344,
+      "bookPage": 305,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 345,
+      "bookPage": 306,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 346,
+      "bookPage": 307,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 347,
+      "bookPage": 308,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 348,
+      "bookPage": 309,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 349,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 310,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 350,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 311,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 351,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 312,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 352,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 313,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 353,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 314,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 354,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 315,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 355,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 316,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 356,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 317,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 357,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 318,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 358,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 319,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 359,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 320,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 360,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 321,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 361,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 322,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 362,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 323,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 363,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 324,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 364,
+      "bookPage": 325,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 365,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 326,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 366,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 327,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 367,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 328,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 368,
+      "bookPage": 329,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 369,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 330,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 370,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 331,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 371,
+      "bookPage": 332,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 372,
+      "bookPage": 333,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 373,
+      "bookPage": 334,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 374,
+      "bookPage": 335,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 375,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 336,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 376,
+      "bookPage": 337,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 377,
+      "bookPage": 338,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 378,
+      "bookPage": 339,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 379,
+      "bookPage": 340,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 380,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 341,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 381,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 342,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 382,
+      "bookPage": 343,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 383,
+      "bookPage": 344,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 384,
+      "bookPage": 345,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 385,
+      "bookPage": 346,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 386,
+      "bookPage": 347,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 387,
+      "bookPage": 348,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 388,
+      "bookPage": 349,
+      "offset": 39,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 389,
+      "bookPage": 351,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 390,
+      "bookPage": 352,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 391,
+      "bookPage": 353,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 392,
+      "bookPage": 354,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 393,
+      "bookPage": 355,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 394,
+      "bookPage": 356,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 395,
+      "bookPage": 357,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 396,
+      "bookPage": 358,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 397,
+      "bookPage": 359,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 398,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 360,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 399,
+      "bookPage": 361,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 400,
+      "bookPage": 362,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 401,
+      "bookPage": 363,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 402,
+      "bookPage": 364,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 403,
+      "bookPage": 365,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 404,
+      "bookPage": 366,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 405,
+      "bookPage": 367,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 406,
+      "bookPage": 368,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 407,
+      "bookPage": 369,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 408,
+      "bookPage": 370,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 409,
+      "bookPage": 371,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 410,
+      "bookPage": 372,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 411,
+      "bookPage": 373,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 412,
+      "bookPage": 374,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 413,
+      "bookPage": 375,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 414,
+      "bookPage": 376,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 415,
+      "bookPage": 377,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 416,
+      "bookPage": 378,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 417,
+      "bookPage": 379,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 418,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 380,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 419,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 381,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 420,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 382,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 421,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 383,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 422,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 384,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 423,
+      "bookPage": 385,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 424,
+      "bookPage": 386,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 425,
+      "bookPage": 387,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 426,
+      "bookPage": 388,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 427,
+      "bookPage": 389,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 428,
+      "bookPage": 390,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 429,
+      "bookPage": 391,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 430,
+      "bookPage": 392,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 431,
+      "bookPage": 393,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 432,
+      "bookPage": 394,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 433,
+      "bookPage": 395,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 434,
+      "bookPage": 396,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 435,
+      "bookPage": 397,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 436,
+      "bookPage": 398,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 437,
+      "bookPage": 399,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 438,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 400,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 439,
+      "bookPage": 401,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 440,
+      "bookPage": 402,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 441,
+      "bookPage": 403,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 442,
+      "bookPage": 404,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 443,
+      "bookPage": 405,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 444,
+      "bookPage": 406,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 445,
+      "bookPage": 407,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 446,
+      "bookPage": 408,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 447,
+      "bookPage": 409,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 448,
+      "bookPage": 410,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 449,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 411,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 450,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 412,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 451,
+      "bookPage": 413,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 452,
+      "bookPage": 414,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 453,
+      "bookPage": 415,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 454,
+      "bookPage": 416,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 455,
+      "bookPage": 417,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 456,
+      "bookPage": 418,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 457,
+      "bookPage": 419,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 458,
+      "bookPage": 420,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 459,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 421,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 460,
+      "bookPage": 422,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 461,
+      "bookPage": 423,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 462,
+      "bookPage": 424,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 463,
+      "bookPage": 425,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 464,
+      "bookPage": 426,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 465,
+      "bookPage": 427,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 466,
+      "bookPage": 428,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 467,
+      "bookPage": 429,
+      "offset": 38,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 468,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 430,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 469,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 431,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 470,
+      "bookPage": 433,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 471,
+      "bookPage": 434,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 472,
+      "bookPage": 435,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 473,
+      "bookPage": 436,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 474,
+      "bookPage": 437,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 475,
+      "bookPage": 438,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 476,
+      "bookPage": 439,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 477,
+      "bookPage": 440,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 478,
+      "bookPage": 441,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 479,
+      "bookPage": 442,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 480,
+      "bookPage": 443,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 481,
+      "bookPage": 444,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 482,
+      "bookPage": 445,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 483,
+      "bookPage": 446,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 484,
+      "bookPage": 447,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 485,
+      "bookPage": 448,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 486,
+      "bookPage": 449,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 487,
+      "bookPage": 450,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 488,
+      "bookPage": 451,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 489,
+      "bookPage": 452,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 490,
+      "bookPage": 453,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 491,
+      "bookPage": 454,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 492,
+      "bookPage": 455,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 493,
+      "bookPage": 456,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 494,
+      "bookPage": 457,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 495,
+      "bookPage": 458,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 496,
+      "bookPage": 459,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 497,
+      "bookPage": 460,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 498,
+      "bookPage": 461,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 499,
+      "bookPage": 462,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 500,
+      "bookPage": 463,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 501,
+      "bookPage": 464,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 502,
+      "bookPage": 465,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 503,
+      "bookPage": 466,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 504,
+      "bookPage": 467,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 505,
+      "bookPage": 468,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 506,
+      "bookPage": 469,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 507,
+      "bookPage": 470,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 508,
+      "bookPage": 471,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 509,
+      "bookPage": 472,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 510,
+      "bookPage": 473,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 511,
+      "bookPage": 474,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 512,
+      "bookPage": 475,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 513,
+      "bookPage": 476,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 514,
+      "bookPage": 477,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 515,
+      "bookPage": 478,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 516,
+      "bookPage": 479,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 517,
+      "bookPage": 480,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 518,
+      "bookPage": 481,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 519,
+      "bookPage": 482,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 520,
+      "bookPage": 483,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 521,
+      "bookPage": 484,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 522,
+      "bookPage": 485,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 523,
+      "bookPage": 486,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 524,
+      "bookPage": 487,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 525,
+      "bookPage": 488,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 526,
+      "bookPage": 489,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 527,
+      "bookPage": 490,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 528,
+      "bookPage": 491,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 529,
+      "bookPage": 492,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 530,
+      "bookPage": 493,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 531,
+      "bookPage": 494,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 532,
+      "bookPage": 495,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 533,
+      "bookPage": 496,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 534,
+      "bookPage": 497,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 535,
+      "bookPage": 498,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 536,
+      "bookPage": 499,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 537,
+      "bookPage": 500,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 538,
+      "bookPage": 501,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 539,
+      "bookPage": 502,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 540,
+      "bookPage": 503,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 541,
+      "bookPage": 504,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 542,
+      "bookPage": 505,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 543,
+      "bookPage": 506,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 544,
+      "bookPage": 507,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 545,
+      "bookPage": 508,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 546,
+      "bookPage": 509,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 547,
+      "bookPage": 510,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 548,
+      "bookPage": 511,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 549,
+      "bookPage": 512,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 550,
+      "bookPage": 513,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 551,
+      "bookPage": 514,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 552,
+      "bookPage": 515,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 553,
+      "bookPage": 516,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 554,
+      "bookPage": 517,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 555,
+      "bookPage": 518,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 556,
+      "bookPage": 519,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 557,
+      "bookPage": 520,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 558,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 521,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 559,
+      "bookPage": 522,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 560,
+      "bookPage": 523,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 561,
+      "bookPage": 524,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 562,
+      "bookPage": 525,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 563,
+      "bookPage": 526,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 564,
+      "bookPage": 527,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 565,
+      "bookPage": 528,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 566,
+      "bookPage": 529,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 567,
+      "bookPage": 530,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 568,
+      "bookPage": 531,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 569,
+      "bookPage": 532,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 570,
+      "bookPage": 533,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 571,
+      "bookPage": 534,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 572,
+      "bookPage": 535,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 573,
+      "bookPage": 536,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 574,
+      "bookPage": 537,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 575,
+      "bookPage": 538,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 576,
+      "bookPage": 539,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 577,
+      "bookPage": 540,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 578,
+      "bookPage": 541,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 579,
+      "bookPage": 542,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 580,
+      "bookPage": 543,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 581,
+      "bookPage": 544,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 582,
+      "bookPage": 545,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 583,
+      "bookPage": 546,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 584,
+      "bookPage": 547,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 585,
+      "bookPage": 548,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 586,
+      "bookPage": 549,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 587,
+      "bookPage": 550,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 588,
+      "bookPage": 551,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 589,
+      "bookPage": 552,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 590,
+      "bookPage": 553,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 591,
+      "bookPage": 554,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 592,
+      "bookPage": 555,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 593,
+      "bookPage": 556,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 594,
+      "bookPage": 557,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 595,
+      "bookPage": 558,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 596,
+      "bookPage": 559,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 597,
+      "bookPage": 560,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 598,
+      "bookPage": 561,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 599,
+      "bookPage": 562,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 600,
+      "bookPage": 563,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 601,
+      "bookPage": 564,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 602,
+      "bookPage": 565,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 603,
+      "bookPage": 566,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 604,
+      "bookPage": 567,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 605,
+      "bookPage": 568,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 606,
+      "bookPage": 569,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 607,
+      "bookPage": 570,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 608,
+      "bookPage": 571,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 609,
+      "bookPage": 572,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 610,
+      "bookPage": 573,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 611,
+      "bookPage": 574,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 612,
+      "bookPage": 575,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 613,
+      "bookPage": 576,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 614,
+      "bookPage": 577,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 615,
+      "bookPage": 578,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 616,
+      "bookPage": 579,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 617,
+      "bookPage": 580,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 618,
+      "bookPage": 581,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 619,
+      "bookPage": 582,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 620,
+      "bookPage": 583,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 621,
+      "bookPage": 584,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 622,
+      "bookPage": 585,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 623,
+      "bookPage": 586,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 624,
+      "bookPage": 587,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 625,
+      "bookPage": 588,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 626,
+      "bookPage": 589,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 627,
+      "bookPage": 590,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 628,
+      "bookPage": 591,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 629,
+      "bookPage": 592,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 630,
+      "bookPage": 593,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 631,
+      "bookPage": 594,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 632,
+      "bookPage": 595,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 633,
+      "bookPage": 596,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 634,
+      "bookPage": 597,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 635,
+      "bookPage": 598,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 636,
+      "bookPage": 599,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 637,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 600,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 638,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 601,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 639,
+      "bookPage": 602,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 640,
+      "bookPage": 603,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 641,
+      "bookPage": 604,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 642,
+      "bookPage": 605,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 643,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 606,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 644,
+      "bookPage": 607,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 645,
+      "bookPage": 608,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 646,
+      "bookPage": 609,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 647,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 610,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 648,
+      "bookPage": 611,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 649,
+      "bookPage": 612,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 650,
+      "bookPage": 613,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 651,
+      "bookPage": 614,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 652,
+      "bookPage": 615,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 653,
+      "bookPage": 616,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 654,
+      "bookPage": 617,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 655,
+      "bookPage": 618,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 656,
+      "bookPage": 619,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 657,
+      "bookPage": 620,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 658,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 621,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 659,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 622,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 660,
+      "bookPage": 623,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 661,
+      "bookPage": 624,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 662,
+      "bookPage": 625,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 663,
+      "bookPage": 626,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 664,
+      "bookPage": 627,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 665,
+      "bookPage": 628,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 666,
+      "bookPage": 629,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 667,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 630,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 668,
+      "bookPage": 631,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 669,
+      "bookPage": 632,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 670,
+      "bookPage": 633,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 671,
+      "bookPage": 634,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 672,
+      "bookPage": 635,
+      "offset": 37,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 673,
+      "bookPage": 637,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 674,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 638,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 675,
+      "bookPage": 639,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 676,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 640,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 677,
+      "bookPage": 641,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 678,
+      "bookPage": 642,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 679,
+      "bookPage": 643,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 680,
+      "bookPage": 644,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 681,
+      "bookPage": 645,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 682,
+      "bookPage": 646,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 683,
+      "bookPage": 647,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 684,
+      "bookPage": 648,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 685,
+      "bookPage": 649,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 686,
+      "bookPage": 650,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 687,
+      "bookPage": 651,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 688,
+      "bookPage": 652,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 689,
+      "bookPage": 653,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 690,
+      "bookPage": 654,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 691,
+      "bookPage": 655,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 692,
+      "bookPage": 656,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 693,
+      "bookPage": 657,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 694,
+      "bookPage": 658,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 695,
+      "bookPage": 659,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 696,
+      "bookPage": 660,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 697,
+      "bookPage": 661,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 698,
+      "bookPage": 662,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 699,
+      "bookPage": 663,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 700,
+      "bookPage": 664,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 701,
+      "bookPage": 665,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 702,
+      "bookPage": 666,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 703,
+      "bookPage": 667,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 704,
+      "bookPage": 668,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 705,
+      "bookPage": 669,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 706,
+      "bookPage": 670,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 707,
+      "bookPage": 671,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 708,
+      "bookPage": 672,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 709,
+      "bookPage": 673,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 710,
+      "bookPage": 674,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 711,
+      "bookPage": 675,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 712,
+      "bookPage": 676,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 713,
+      "bookPage": 677,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 714,
+      "bookPage": 678,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 715,
+      "bookPage": 679,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 716,
+      "bookPage": 680,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 717,
+      "bookPage": 681,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 718,
+      "bookPage": 682,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 719,
+      "bookPage": 683,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 720,
+      "bookPage": 684,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 721,
+      "bookPage": 685,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 722,
+      "bookPage": 686,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 723,
+      "bookPage": 687,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 724,
+      "bookPage": 688,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 725,
+      "bookPage": 689,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 726,
+      "bookPage": 690,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 727,
+      "bookPage": 691,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 728,
+      "bookPage": 692,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 729,
+      "bookPage": 693,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 730,
+      "bookPage": 694,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 731,
+      "bookPage": 695,
+      "offset": 36,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 732,
+      "bookPage": 697,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 733,
+      "bookPage": 698,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 734,
+      "bookPage": 699,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 735,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 700,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 736,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 701,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 737,
+      "bookPage": 702,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 738,
+      "bookPage": 703,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 739,
+      "bookPage": 704,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 740,
+      "bookPage": 705,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 741,
+      "bookPage": 706,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 742,
+      "bookPage": 707,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 743,
+      "bookPage": 708,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 744,
+      "bookPage": 709,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 745,
+      "bookPage": 710,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 746,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 711,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 747,
+      "bookPage": 712,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 748,
+      "bookPage": 713,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 749,
+      "bookPage": 714,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 750,
+      "bookPage": 715,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 751,
+      "bookPage": 716,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 752,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 717,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 753,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 718,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 754,
+      "bookPage": 719,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 755,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 720,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 756,
+      "bookPage": 721,
+      "offset": 35,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 757,
+      "bookPage": 723,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 758,
+      "bookPage": 724,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 759,
+      "bookPage": 725,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 760,
+      "bookPage": 726,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 761,
+      "bookPage": 727,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 762,
+      "bookPage": 728,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 763,
+      "bookPage": 729,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 764,
+      "bookPage": 730,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 765,
+      "bookPage": 731,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 766,
+      "bookPage": 732,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 767,
+      "bookPage": 733,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 768,
+      "bookPage": 734,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 769,
+      "bookPage": 735,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 770,
+      "bookPage": 736,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 771,
+      "bookPage": 737,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 772,
+      "bookPage": 738,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 773,
+      "bookPage": 739,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 774,
+      "bookPage": 740,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 775,
+      "bookPage": 741,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 776,
+      "bookPage": 742,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 777,
+      "bookPage": 743,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 778,
+      "bookPage": 744,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 779,
+      "bookPage": 745,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 780,
+      "bookPage": 746,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 781,
+      "bookPage": 747,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 782,
+      "bookPage": 748,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 783,
+      "bookPage": 749,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 784,
+      "bookPage": 750,
+      "offset": 34,
+      "bookPageInferred": null,
+      "inferredFrom": null
+    },
+    {
+      "pdfPage": 785,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 751,
+      "inferredFrom": "相鄰頁的偏移"
+    },
+    {
+      "pdfPage": 786,
+      "bookPage": null,
+      "offset": null,
+      "bookPageInferred": 752,
+      "inferredFrom": "相鄰頁的偏移"
+    }
+  ]
+}

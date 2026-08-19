@@ -9,6 +9,8 @@ pdf_pages: [364, 365, 366, 367, 368, 369]
 book_pages: [325, 326, 327, 328, 329, 330]
 transcription_status: 人工逐頁核對
 verified_at: 2026-07-27
+glyph_policy: 未定
+glyph_note: 兩形並存（爲32／為1；眞7／真0；敎2／教4；靑0／青2；卽4／即0；旣3／既1），偏向原書字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19
 ---
 
 # 法治行政

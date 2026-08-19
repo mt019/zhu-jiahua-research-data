@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 
 const target = new URL('../../data/processed/zhu-jiahua-app.json', import.meta.url);
 const data = JSON.parse(await readFile(target, 'utf8'));
@@ -35,6 +35,51 @@ if (readable.length !== data.verifiedTexts.length) {
 for (let i = 1; i < toc.items.length; i += 1) {
   if (toc.items[i].bookStartPage < toc.items[i - 1].bookStartPage) {
     throw new Error(`篇目起頁未依原書遞增：${toc.items[i].id}`);
+  }
+}
+
+// 篇目索引的單一事實來源是 data/derived/toc_index.json，公開快照只是它的投影。
+// 先前兩邊各存一份，起頁更正之後快照沒有跟著動，前端讀到的還是舊頁碼。
+const tocIndex = JSON.parse(
+  await readFile(new URL('../../data/derived/toc_index.json', import.meta.url), 'utf8'),
+);
+if (tocIndex.items.length !== toc.items.length) {
+  throw new Error(`快照篇目 ${toc.items.length} 筆，toc_index.json ${tocIndex.items.length} 筆`);
+}
+for (let i = 0; i < tocIndex.items.length; i += 1) {
+  const src = tocIndex.items[i];
+  const out = toc.items[i];
+  for (const [key, value] of [
+    ['id', src.id],
+    ['title', src.title],
+    ['part', src.part],
+    ['bookStartPage', src.bookStartPage],
+  ]) {
+    if (out[key] !== value) {
+      throw new Error(`${src.id} 的 ${key} 與 toc_index.json 不符：快照 ${out[key]}，索引 ${value}。跑 build-app-toc.mjs 重建`);
+    }
+  }
+}
+
+// 校訂稿要宣告字形政策；沒有這一欄的視為未定，不得當成已經處理過（~/.claude/rules/轉錄體例.md）。
+const GLYPH_KEYS = ['glyph_policy', 'glyphPolicy'];
+const GLYPH_VALUES = ['原書字形', '通用字形', '未定'];
+for (const dir of ['../../data/derived/transcriptions', '../../data/derived/chronology/transcriptions']) {
+  const base = new URL(`${dir}/`, import.meta.url);
+  let files;
+  try {
+    files = (await readdir(base)).filter((f) => f.endsWith('.md'));
+  } catch {
+    continue;
+  }
+  for (const file of files) {
+    const text = await readFile(new URL(file, base), 'utf8');
+    const line = text.split('\n').find((l) => GLYPH_KEYS.some((k) => l.startsWith(`${k}:`)));
+    if (!line) throw new Error(`${dir}/${file} 沒有宣告字形政策`);
+    const value = line.split(':').slice(1).join(':').trim();
+    if (!GLYPH_VALUES.includes(value)) {
+      throw new Error(`${dir}/${file} 的字形政策「${value}」不在 ${GLYPH_VALUES.join('、')} 之內`);
+    }
   }
 }
 

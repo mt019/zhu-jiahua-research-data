@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-28",
+  "generatedAt": "2026-08-19",
   "source": {
     "kind": "使用者持有的掃描本",
     "bibliography": "王聿均、孫斌合編，《朱家驊先生言論集》",
@@ -520,7 +520,12 @@
         "bookStartPage": 1,
         "date": "民國十六年五月",
         "dateIso": "1927-05",
-        "textPath": "/zhujiahua/text-two-guang-geological-survey"
+        "textPath": "/zhujiahua/text-two-guang-geological-survey",
+        "occasion": "於廣州",
+        "occasionStatus": "待核",
+        "bookEndPage": 1,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-002",
@@ -528,7 +533,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 2,
         "date": "民國二十七年十二月二十三日",
-        "dateIso": "1938-12-23"
+        "dateIso": "1938-12-23",
+        "bookEndPage": 3,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-003",
@@ -536,7 +544,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 3,
         "date": "民國二十八年七月十三日",
-        "dateIso": "1939-07-13"
+        "dateIso": "1939-07-13",
+        "bookEndPage": 4,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-004",
@@ -544,7 +555,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 4,
         "date": "民國二十九年九月二日",
-        "dateIso": "1940-09-02"
+        "dateIso": "1940-09-02",
+        "bookEndPage": 5,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-005",
@@ -553,7 +567,14 @@
         "bookStartPage": 5,
         "date": "民國三十年三月二十一日",
         "dateIso": "1941-03-21",
-        "note": "正文題下作「民國三十年三月廿一日談話」"
+        "note": "正文題下作「民國三十年三月廿一日談話」",
+        "dateInText": "民國三十年三月廿一日",
+        "dateInTextStatus": "待核",
+        "occasion": "談話",
+        "occasionStatus": "待核",
+        "bookEndPage": 6,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-006",
@@ -561,7 +582,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 6,
         "date": "民國三十年九月二十六日",
-        "dateIso": "1941-09-26"
+        "dateIso": "1941-09-26",
+        "bookEndPage": 7,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-007",
@@ -569,7 +593,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 8,
         "date": "民國三十年十一月三十日",
-        "dateIso": "1941-11-30"
+        "dateIso": "1941-11-30",
+        "occasion": "在自然科學社第十四屆年會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 12,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-008",
@@ -577,7 +606,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 12,
         "date": "民國三十一年七月二十八日",
-        "dateIso": "1942-07-28"
+        "dateIso": "1942-07-28",
+        "bookEndPage": 12,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-009",
@@ -585,7 +617,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 12,
         "date": "民國三十一年十月一日",
-        "dateIso": "1942-10-01"
+        "dateIso": "1942-10-01",
+        "bookEndPage": 14,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-010",
@@ -593,7 +628,10 @@
         "part": "壹、文化學術",
         "bookStartPage": 14,
         "date": "民國三十一年十月三十一日",
-        "dateIso": "1942-10-31"
+        "dateIso": "1942-10-31",
+        "bookEndPage": 22,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-011",
@@ -601,7 +639,14 @@
         "part": "壹、文化學術",
         "bookStartPage": 22,
         "date": "民國三十二年一月五日",
-        "dateIso": "1943-01-05"
+        "dateIso": "1943-01-05",
+        "dateInText": "一九四三年一月五日",
+        "dateInTextStatus": "待核",
+        "occasion": "牛頓三百年紀念日廣播講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 25,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-012",
@@ -609,7 +654,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 25,
         "date": "民國三十二年三月五日",
-        "dateIso": "1943-03-05"
+        "dateIso": "1943-03-05",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 29,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-013",
@@ -617,7 +667,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 29,
         "date": "民國三十二年四月八日",
-        "dateIso": "1943-04-08"
+        "dateIso": "1943-04-08",
+        "occasion": "在青年團第一次全國代表大會講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 37,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-014",
@@ -625,7 +680,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 37,
         "date": "民國三十二年七月十九日",
-        "dateIso": "1943-07-19"
+        "dateIso": "1943-07-19",
+        "occasion": "在三民主義青年團南嶽夏令營講",
+        "occasionStatus": "待核",
+        "bookEndPage": 47,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-015",
@@ -633,7 +693,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 48,
         "date": "民國三十二年八月二十六日",
-        "dateIso": "1943-08-26"
+        "dateIso": "1943-08-26",
+        "occasion": "在重慶北碚三民主義青年團夏令營講",
+        "occasionStatus": "待核",
+        "bookEndPage": 56,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-016",
@@ -641,7 +706,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 56,
         "date": "民國三十三年三月二十七日",
-        "dateIso": "1944-03-27"
+        "dateIso": "1944-03-27",
+        "occasion": "於重慶陪都",
+        "occasionStatus": "待核",
+        "bookEndPage": 60,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-017",
@@ -649,7 +719,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 60,
         "date": "民國三十四年六月六日",
-        "dateIso": "1945-06-06"
+        "dateIso": "1945-06-06",
+        "occasion": "於重慶復興關",
+        "occasionStatus": "待核",
+        "bookEndPage": 62,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-018",
@@ -657,7 +732,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 62,
         "date": "民國三十四年八月十八日",
-        "dateIso": "1945-08-18"
+        "dateIso": "1945-08-18",
+        "occasion": "於北碚",
+        "occasionStatus": "待核",
+        "bookEndPage": 67,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-019",
@@ -665,7 +745,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 68,
         "date": "民國三十四年十月十七日",
-        "dateIso": "1945-10-17"
+        "dateIso": "1945-10-17",
+        "occasion": "中華自然科學社十九屆年會致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 71,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-020",
@@ -673,7 +758,12 @@
         "part": "壹、文化學術",
         "bookStartPage": 71,
         "date": "民國三十七年十月九日",
-        "dateIso": "1948-10-09"
+        "dateIso": "1948-10-09",
+        "occasion": "在中央大學大禮堂講",
+        "occasionStatus": "待核",
+        "bookEndPage": 72,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-021",
@@ -681,7 +771,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 73,
         "date": "民國二十九年十月一日",
-        "dateIso": "1940-10-01"
+        "dateIso": "1940-10-01",
+        "bookEndPage": 74,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-022",
@@ -689,7 +782,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 74,
         "date": "民國三十一年六月三十日",
-        "dateIso": "1942-06-30"
+        "dateIso": "1942-06-30",
+        "bookEndPage": 77,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-023",
@@ -697,7 +793,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 77,
         "date": "民國三十一年十月十日",
-        "dateIso": "1942-10-10"
+        "dateIso": "1942-10-10",
+        "bookEndPage": 83,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-024",
@@ -706,7 +805,10 @@
         "bookStartPage": 84,
         "date": "民國三十二年四月十日",
         "dateIso": "1943-04-10",
-        "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名"
+        "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名",
+        "bookEndPage": 85,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-025",
@@ -714,7 +816,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 85,
         "date": "民國三十三年三月八日",
-        "dateIso": "1944-03-08"
+        "dateIso": "1944-03-08",
+        "bookEndPage": 87,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-026",
@@ -723,7 +828,10 @@
         "bookStartPage": 88,
         "date": "民國三十六年十月十五日",
         "dateIso": "1947-10-15",
-        "note": "目次未列第二屆第三次年會，原書如此"
+        "note": "目次未列第二屆第三次年會，原書如此",
+        "bookEndPage": 89,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-027",
@@ -731,7 +839,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 89,
         "date": "民國三十七年三月二十五日",
-        "dateIso": "1948-03-25"
+        "dateIso": "1948-03-25",
+        "bookEndPage": 91,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-028",
@@ -739,7 +850,12 @@
         "part": "貳、中央研究院",
         "bookStartPage": 91,
         "date": "民國三十七年七月二十六日",
-        "dateIso": "1948-07-26"
+        "dateIso": "1948-07-26",
+        "occasion": "在中國國民黨中央黨部紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 95,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-029",
@@ -747,7 +863,12 @@
         "part": "貳、中央研究院",
         "bookStartPage": 95,
         "date": "民國三十七年九月二十三日",
-        "dateIso": "1948-09-23"
+        "dateIso": "1948-09-23",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 98,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-030",
@@ -755,7 +876,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 98,
         "date": "民國四十六年四月二日",
-        "dateIso": "1957-04-02"
+        "dateIso": "1957-04-02",
+        "bookEndPage": 103,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-031",
@@ -763,7 +887,10 @@
         "part": "貳、中央研究院",
         "bookStartPage": 103,
         "date": "民國四十六年四月四日",
-        "dateIso": "1957-04-04"
+        "dateIso": "1957-04-04",
+        "bookEndPage": 104,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-032",
@@ -771,26 +898,45 @@
         "part": "貳、中央研究院",
         "bookStartPage": 104,
         "date": "民國四十七年六月九日",
-        "dateIso": "1958-06-09"
+        "dateIso": "1958-06-09",
+        "dateInText": "三十年",
+        "dateInTextStatus": "待核",
+        "occasion": "來的中央研究院民國四十七年六月九日／在中央研究院三十週年紀念致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 120,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-033",
         "title": "我們今後要加緊教育工作",
         "part": "叁、教育言論",
-        "bookStartPage": 111,
+        "bookStartPage": 121,
         "section": "一、教育行政",
         "date": "民國十九年十一月十日",
-        "dateIso": "1930-11-10"
+        "dateIso": "1930-11-10",
+        "occasion": "在中央第八十五次紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 125,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-034",
         "title": "中國大學教育的現狀及應行注意各點",
         "part": "叁、教育言論",
-        "bookStartPage": 115,
+        "bookStartPage": 125,
         "section": "一、教育行政",
         "date": "民國二十年　月",
         "dateIso": "1931",
-        "note": "原書月份欄空白"
+        "note": "原書月份欄空白",
+        "dateInText": "民國二十年春",
+        "dateInTextStatus": "待核",
+        "occasion": "在中央紀念週講",
+        "occasionStatus": "待核",
+        "bookEndPage": 131,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-035",
@@ -799,7 +945,10 @@
         "bookStartPage": 131,
         "section": "一、教育行政",
         "date": "民國二十一年十一月二十五日",
-        "dateIso": "1932-11-25"
+        "dateIso": "1932-11-25",
+        "bookEndPage": 154,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-036",
@@ -808,7 +957,12 @@
         "bookStartPage": 154,
         "section": "一、教育行政",
         "date": "民國二十二年四月二十八日",
-        "dateIso": "1933-04-28"
+        "dateIso": "1933-04-28",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 156,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-037",
@@ -817,7 +971,12 @@
         "bookStartPage": 156,
         "section": "一、教育行政",
         "date": "民國二十四年一月一日",
-        "dateIso": "1935-01-01"
+        "dateIso": "1935-01-01",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 159,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-038",
@@ -826,7 +985,10 @@
         "bookStartPage": 159,
         "section": "一、教育行政",
         "date": "民國二十四年",
-        "dateIso": "1935"
+        "dateIso": "1935",
+        "bookEndPage": 164,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-039",
@@ -835,7 +997,10 @@
         "bookStartPage": 164,
         "section": "一、教育行政",
         "date": "民國三十一年三月三十日",
-        "dateIso": "1942-03-30"
+        "dateIso": "1942-03-30",
+        "bookEndPage": 170,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-040",
@@ -844,7 +1009,10 @@
         "bookStartPage": 170,
         "section": "一、教育行政",
         "date": "民國三十三年十二月十四日",
-        "dateIso": "1944-12-14"
+        "dateIso": "1944-12-14",
+        "bookEndPage": 171,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-041",
@@ -853,7 +1021,10 @@
         "bookStartPage": 171,
         "section": "一、教育行政",
         "date": "民國三十四年七月七日",
-        "dateIso": "1945-07-07"
+        "dateIso": "1945-07-07",
+        "bookEndPage": 173,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-042",
@@ -862,7 +1033,10 @@
         "bookStartPage": 174,
         "section": "一、教育行政",
         "date": "民國三十四年八月十四日",
-        "dateIso": "1945-08-14"
+        "dateIso": "1945-08-14",
+        "bookEndPage": 176,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-043",
@@ -871,7 +1045,10 @@
         "bookStartPage": 176,
         "section": "一、教育行政",
         "date": "民國三十四年九月二十日",
-        "dateIso": "1945-09-20"
+        "dateIso": "1945-09-20",
+        "bookEndPage": 180,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-044",
@@ -880,7 +1057,10 @@
         "bookStartPage": 180,
         "section": "一、教育行政",
         "date": "民國三十四年九月二十四日",
-        "dateIso": "1945-09-24"
+        "dateIso": "1945-09-24",
+        "bookEndPage": 183,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-045",
@@ -889,7 +1069,10 @@
         "bookStartPage": 183,
         "section": "一、教育行政",
         "date": "民國三十四年九月二十六日",
-        "dateIso": "1945-09-26"
+        "dateIso": "1945-09-26",
+        "bookEndPage": 186,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-046",
@@ -898,7 +1081,10 @@
         "bookStartPage": 186,
         "section": "一、教育行政",
         "date": "民國三十五年五月二十四日",
-        "dateIso": "1946-05-24"
+        "dateIso": "1946-05-24",
+        "bookEndPage": 188,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-047",
@@ -907,7 +1093,10 @@
         "bookStartPage": 188,
         "section": "一、教育行政",
         "date": "民國三十五年十二月二十八日",
-        "dateIso": "1946-12-28"
+        "dateIso": "1946-12-28",
+        "bookEndPage": 200,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-048",
@@ -916,7 +1105,10 @@
         "bookStartPage": 200,
         "section": "一、教育行政",
         "date": "民國三十六年八月二十八日",
-        "dateIso": "1947-08-28"
+        "dateIso": "1947-08-28",
+        "bookEndPage": 203,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-049",
@@ -925,7 +1117,10 @@
         "bookStartPage": 203,
         "section": "一、教育行政",
         "date": "民國三十六年九月三日",
-        "dateIso": "1947-09-03"
+        "dateIso": "1947-09-03",
+        "bookEndPage": 205,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-050",
@@ -934,7 +1129,10 @@
         "bookStartPage": 205,
         "section": "一、教育行政",
         "date": "民國三十六年九月十二日",
-        "dateIso": "1947-09-12"
+        "dateIso": "1947-09-12",
+        "bookEndPage": 206,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-051",
@@ -943,7 +1141,10 @@
         "bookStartPage": 206,
         "section": "一、教育行政",
         "date": "民國三十七年",
-        "dateIso": "1948"
+        "dateIso": "1948",
+        "bookEndPage": 208,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-052",
@@ -952,7 +1153,12 @@
         "bookStartPage": 208,
         "section": "一、教育行政",
         "date": "民國三十七年一月十八日",
-        "dateIso": "1948-01-18"
+        "dateIso": "1948-01-18",
+        "occasion": "在臺中",
+        "occasionStatus": "待核",
+        "bookEndPage": 213,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-053",
@@ -961,7 +1167,12 @@
         "bookStartPage": 214,
         "section": "一、教育行政",
         "date": "民國三十七年二月二日",
-        "dateIso": "1948-02-02"
+        "dateIso": "1948-02-02",
+        "occasion": "在教育部月會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 217,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-054",
@@ -970,7 +1181,12 @@
         "bookStartPage": 217,
         "section": "二、教育施政報告",
         "date": "民國三十四年四月二十三日",
-        "dateIso": "1945-04-23"
+        "dateIso": "1945-04-23",
+        "occasion": "在中央紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 222,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-055",
@@ -979,7 +1195,12 @@
         "bookStartPage": 222,
         "section": "二、教育施政報告",
         "date": "民國三十四年七月九日",
-        "dateIso": "1945-07-09"
+        "dateIso": "1945-07-09",
+        "occasion": "第四屆參政會第一次大會報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 232,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-056",
@@ -988,7 +1209,12 @@
         "bookStartPage": 233,
         "section": "二、教育施政報告",
         "date": "民國三十五年六月二十四日",
-        "dateIso": "1946-06-24"
+        "dateIso": "1946-06-24",
+        "occasion": "在國民政府中央紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 236,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-057",
@@ -997,7 +1223,10 @@
         "bookStartPage": 236,
         "section": "二、教育施政報告",
         "date": "民國三十六年",
-        "dateIso": "1947"
+        "dateIso": "1947",
+        "bookEndPage": 240,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-058",
@@ -1006,7 +1235,12 @@
         "bookStartPage": 240,
         "section": "二、教育施政報告",
         "date": "民國三十七年四月十四日",
-        "dateIso": "1948-04-14"
+        "dateIso": "1948-04-14",
+        "occasion": "在國民大會報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 246,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-059",
@@ -1015,7 +1249,12 @@
         "bookStartPage": 246,
         "section": "二、教育施政報告",
         "date": "民國三十七年六月三十日",
-        "dateIso": "1948-06-30"
+        "dateIso": "1948-06-30",
+        "occasion": "於立法院教育文化委員會報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 249,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-060",
@@ -1023,9 +1262,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 249,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十六年四月一日",
-        "dateIso": "1927-04-01"
+        "dateIso": "1927-04-01",
+        "occasion": "在本校開學典禮日講演詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 260,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-061",
@@ -1033,9 +1276,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 261,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十七年十月一日",
-        "dateIso": "1928-10-01"
+        "dateIso": "1928-10-01",
+        "occasion": "在廣州中山大學",
+        "occasionStatus": "待核",
+        "bookEndPage": 263,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-062",
@@ -1043,9 +1290,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 264,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十八年六月二十九日",
-        "dateIso": "1929-06-29"
+        "dateIso": "1929-06-29",
+        "dateInText": "民國十八年六月廿九日",
+        "dateInTextStatus": "待核",
+        "occasion": "在廣州中山大學",
+        "occasionStatus": "待核",
+        "bookEndPage": 267,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-063",
@@ -1053,9 +1306,11 @@
         "part": "叁、教育言論",
         "bookStartPage": 267,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十九年九月十八日",
-        "dateIso": "1930-09-18"
+        "dateIso": "1930-09-18",
+        "bookEndPage": 269,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-064",
@@ -1063,9 +1318,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 269,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十九年十月六日",
-        "dateIso": "1930-10-06"
+        "dateIso": "1930-10-06",
+        "dateInText": "十九年十月六日",
+        "dateInTextStatus": "待核",
+        "bookEndPage": 276,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-065",
@@ -1073,9 +1332,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 276,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十九年十二月九日",
-        "dateIso": "1930-12-09"
+        "dateIso": "1930-12-09",
+        "occasion": "在廣州中山大學",
+        "occasionStatus": "待核",
+        "bookEndPage": 277,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-066",
@@ -1083,9 +1346,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 277,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國十九年十二月九日",
-        "dateIso": "1930-12-09"
+        "dateIso": "1930-12-09",
+        "occasion": "在廣州中山大學",
+        "occasionStatus": "待核",
+        "bookEndPage": 282,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-067",
@@ -1093,9 +1360,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 282,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國三十一年七月四日",
-        "dateIso": "1942-07-04"
+        "dateIso": "1942-07-04",
+        "occasion": "在中山大學同學會歡迎會致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 284,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-068",
@@ -1103,9 +1374,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 284,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國三十七年十月二十日",
-        "dateIso": "1948-10-20"
+        "dateIso": "1948-10-20",
+        "dateInText": "民國三十七年十月廿日",
+        "dateInTextStatus": "待核",
+        "bookEndPage": 286,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-069",
@@ -1113,10 +1388,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 287,
         "section": "三、各大學演講詞",
-        "subsection": "（一）國立中山大學",
         "date": "民國三十七年十一月五日",
         "dateIso": "1948-11-05",
-        "note": "原書作「爲」"
+        "note": "原書作「爲」",
+        "bookEndPage": 288,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-070",
@@ -1124,9 +1401,11 @@
         "part": "叁、教育言論",
         "bookStartPage": 288,
         "section": "三、各大學演講詞",
-        "subsection": "（二）國立中央大學",
         "date": "民國二十八年七月二十五日",
-        "dateIso": "1939-07-25"
+        "dateIso": "1939-07-25",
+        "bookEndPage": 290,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-071",
@@ -1134,9 +1413,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 290,
         "section": "三、各大學演講詞",
-        "subsection": "（二）國立中央大學",
         "date": "民國三十三年十二月二十五日",
-        "dateIso": "1944-12-25"
+        "dateIso": "1944-12-25",
+        "dateInText": "民國三十三年十二月廿五日",
+        "dateInTextStatus": "待核",
+        "occasion": "在中央大學紀念週講",
+        "occasionStatus": "待核",
+        "bookEndPage": 296,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-072",
@@ -1144,10 +1429,14 @@
         "part": "叁、教育言論",
         "bookStartPage": 296,
         "section": "三、各大學演講詞",
-        "subsection": "（三）國立同濟大學",
         "date": "民國三十五年五月十日",
         "dateIso": "1946-05-10",
-        "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用"
+        "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用；可能表示「電…」「函…」兩件併列，亦可能為單一篇名。待正文原書頁 296 核",
+        "dateInText": "民國三十一年五月十日",
+        "dateInTextStatus": "待核",
+        "bookEndPage": 298,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-073",
@@ -1155,9 +1444,11 @@
         "part": "叁、教育言論",
         "bookStartPage": 298,
         "section": "三、各大學演講詞",
-        "subsection": "（三）國立同濟大學",
         "date": "民國四十六年五月一日",
-        "dateIso": "1957-05-01"
+        "dateIso": "1957-05-01",
+        "bookEndPage": 303,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-074",
@@ -1167,8 +1458,11 @@
         "section": "四、法律教育",
         "date": "民國三十四年四月十八日",
         "dateIso": "1945-04-18",
+        "textPath": "/zhujiahua/original-text",
         "note": "正文題名作「中國之法律教育問題」，與目次不同",
-        "textPath": "/zhujiahua/original-text"
+        "bookEndPage": 308,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-075",
@@ -1178,7 +1472,12 @@
         "section": "四、法律教育",
         "date": "民國三十六年六月二十七日",
         "dateIso": "1947-06-27",
-        "textPath": "/zhujiahua/text-a-view-of-legal-education"
+        "textPath": "/zhujiahua/text-a-view-of-legal-education",
+        "occasion": "第三次法律教育會議講詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 312,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-076",
@@ -1188,7 +1487,12 @@
         "section": "四、法律教育",
         "date": "民國三十七年二月四日",
         "dateIso": "1948-02-04",
-        "textPath": "/zhujiahua/text-committee-5th"
+        "textPath": "/zhujiahua/text-committee-5th",
+        "occasion": "在教育部會議室講",
+        "occasionStatus": "待核",
+        "bookEndPage": 316,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-077",
@@ -1198,7 +1502,10 @@
         "section": "四、法律教育",
         "date": "民國三十七年七月一日",
         "dateIso": "1948-07-01",
-        "textPath": "/zhujiahua/text-committee-6th"
+        "textPath": "/zhujiahua/text-committee-6th",
+        "bookEndPage": 319,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-078",
@@ -1208,7 +1515,10 @@
         "section": "四、法律教育",
         "date": "民國三十七年十二月二日",
         "dateIso": "1948-12-02",
-        "textPath": "/zhujiahua/text-committee-7th"
+        "textPath": "/zhujiahua/text-committee-7th",
+        "bookEndPage": 324,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-079",
@@ -1218,7 +1528,12 @@
         "section": "四、法律教育",
         "date": "民國三十九年九月十二日",
         "dateIso": "1950-09-12",
-        "textPath": "/zhujiahua/text-rule-of-law-administration"
+        "textPath": "/zhujiahua/text-rule-of-law-administration",
+        "occasion": "在臺灣省青年服務團講",
+        "occasionStatus": "待核",
+        "bookEndPage": 330,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-080",
@@ -1227,7 +1542,12 @@
         "bookStartPage": 330,
         "section": "五、教師節紀念",
         "date": "民國三十四年九月二十八日",
-        "dateIso": "1945-09-28"
+        "dateIso": "1945-09-28",
+        "occasion": "教師節",
+        "occasionStatus": "待核",
+        "bookEndPage": 333,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-081",
@@ -1237,7 +1557,14 @@
         "section": "五、教師節紀念",
         "date": "民國三十五年十月二十八日",
         "dateIso": "1946-10-28",
-        "note": "原書於「與」「蔣」之間空一格（擡頭）"
+        "note": "原書於「與」「蔣」之間空一格（擡頭）",
+        "dateInText": "六十年",
+        "dateInTextStatus": "待核",
+        "occasion": "來中國教育與蔣主席民國三十五年十月二十八日",
+        "occasionStatus": "待核",
+        "bookEndPage": 340,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-082",
@@ -1246,7 +1573,12 @@
         "bookStartPage": 340,
         "section": "五、教師節紀念",
         "date": "民國四十年三月三十日",
-        "dateIso": "1951-03-30"
+        "dateIso": "1951-03-30",
+        "occasion": "在臺灣師範學院國父紀念週講",
+        "occasionStatus": "待核",
+        "bookEndPage": 345,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-083",
@@ -1255,7 +1587,10 @@
         "bookStartPage": 345,
         "section": "五、教師節紀念",
         "date": "民國四十年九月二十八日",
-        "dateIso": "1951-09-28"
+        "dateIso": "1951-09-28",
+        "bookEndPage": 351,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-084",
@@ -1264,7 +1599,12 @@
         "bookStartPage": 351,
         "section": "六、青年修養與國家民族",
         "date": "民國二十六年",
-        "dateIso": "1937"
+        "dateIso": "1937",
+        "occasion": "在廬山講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 354,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-085",
@@ -1273,7 +1613,10 @@
         "bookStartPage": 354,
         "section": "六、青年修養與國家民族",
         "date": "民國三十一年七月一日",
-        "dateIso": "1942-07-01"
+        "dateIso": "1942-07-01",
+        "bookEndPage": 358,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-086",
@@ -1282,7 +1625,10 @@
         "bookStartPage": 358,
         "section": "六、青年修養與國家民族",
         "date": "民國三十三年五月四日",
-        "dateIso": "1944-05-04"
+        "dateIso": "1944-05-04",
+        "bookEndPage": 360,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-087",
@@ -1291,7 +1637,10 @@
         "bookStartPage": 361,
         "section": "六、青年修養與國家民族",
         "date": "民國三十四年三月二十九日",
-        "dateIso": "1945-03-29"
+        "dateIso": "1945-03-29",
+        "bookEndPage": 366,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-088",
@@ -1300,7 +1649,10 @@
         "bookStartPage": 366,
         "section": "六、青年修養與國家民族",
         "date": "民國三十五年八月二十六日",
-        "dateIso": "1946-08-26"
+        "dateIso": "1946-08-26",
+        "bookEndPage": 369,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-089",
@@ -1309,7 +1661,10 @@
         "bookStartPage": 369,
         "section": "六、青年修養與國家民族",
         "date": "民國三十六年三月二十九日",
-        "dateIso": "1947-03-29"
+        "dateIso": "1947-03-29",
+        "bookEndPage": 371,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-090",
@@ -1317,7 +1672,12 @@
         "part": "肆、新生活運動",
         "bookStartPage": 371,
         "date": "民國二十三年三月十六日",
-        "dateIso": "1934-03-16"
+        "dateIso": "1934-03-16",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 374,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-091",
@@ -1325,7 +1685,12 @@
         "part": "肆、新生活運動",
         "bookStartPage": 374,
         "date": "民國二十三年三月十九日",
-        "dateIso": "1934-03-19"
+        "dateIso": "1934-03-19",
+        "occasion": "在中央紀念週講",
+        "occasionStatus": "待核",
+        "bookEndPage": 376,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-092",
@@ -1333,7 +1698,10 @@
         "part": "肆、新生活運動",
         "bookStartPage": 377,
         "date": "民國三十年一月一日",
-        "dateIso": "1941-01-01"
+        "dateIso": "1941-01-01",
+        "bookEndPage": 378,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-093",
@@ -1341,7 +1709,10 @@
         "part": "肆、新生活運動",
         "bookStartPage": 378,
         "date": "民國三十一年三月二十日",
-        "dateIso": "1942-03-20"
+        "dateIso": "1942-03-20",
+        "bookEndPage": 380,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-094",
@@ -1349,7 +1720,10 @@
         "part": "肆、新生活運動",
         "bookStartPage": 380,
         "date": "民國三十一年十二月十六日",
-        "dateIso": "1942-12-16"
+        "dateIso": "1942-12-16",
+        "bookEndPage": 382,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-095",
@@ -1357,7 +1731,12 @@
         "part": "肆、新生活運動",
         "bookStartPage": 383,
         "date": "民國三十六年二月十六日",
-        "dateIso": "1947-02-16"
+        "dateIso": "1947-02-16",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 385,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-096",
@@ -1365,7 +1744,10 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 385,
         "date": "民國二十二年八月二十九日",
-        "dateIso": "1933-08-29"
+        "dateIso": "1933-08-29",
+        "bookEndPage": 386,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-097",
@@ -1373,7 +1755,12 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 386,
         "date": "民國二十三年八月十八日",
-        "dateIso": "1934-08-18"
+        "dateIso": "1934-08-18",
+        "occasion": "於上海",
+        "occasionStatus": "待核",
+        "bookEndPage": 388,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-098",
@@ -1381,7 +1768,12 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 388,
         "date": "民國三十年十二月四日",
-        "dateIso": "1941-12-04"
+        "dateIso": "1941-12-04",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 390,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-099",
@@ -1389,7 +1781,10 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 390,
         "date": "民國三十年一月二十八日",
-        "dateIso": "1941-01-28"
+        "dateIso": "1941-01-28",
+        "bookEndPage": 393,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-100",
@@ -1397,7 +1792,10 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 393,
         "date": "民國三十一年二月五日",
-        "dateIso": "1942-02-05"
+        "dateIso": "1942-02-05",
+        "bookEndPage": 394,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-101",
@@ -1406,7 +1804,10 @@
         "bookStartPage": 395,
         "date": "民國三十二年一月二十一日",
         "dateIso": "1943-01-21",
-        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+        "bookEndPage": 396,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-102",
@@ -1415,7 +1816,10 @@
         "bookStartPage": 397,
         "date": "民國三十二年三月九日",
         "dateIso": "1943-03-09",
-        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+        "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+        "bookEndPage": 398,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-103",
@@ -1423,19 +1827,34 @@
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 399,
         "date": "民國三十八年四月",
-        "dateIso": "1949-04"
+        "dateIso": "1949-04",
+        "bookEndPage": 406,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-104",
         "title": "中國之交通",
         "part": "陸、交通部與浙江省政",
-        "bookStartPage": 407
+        "bookStartPage": 407,
+        "note": "原書無日期",
+        "dateInText": "民國二十三年十月",
+        "dateInTextStatus": "待核",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 413,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-105",
         "title": "我在交通部的重要改革",
         "part": "陸、交通部與浙江省政",
-        "bookStartPage": 413
+        "bookStartPage": 413,
+        "note": "原書無日期",
+        "bookEndPage": 421,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-106",
@@ -1443,7 +1862,10 @@
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 421,
         "date": "民國十七年四月",
-        "dateIso": "1928-04"
+        "dateIso": "1928-04",
+        "bookEndPage": 425,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-107",
@@ -1451,13 +1873,26 @@
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 425,
         "date": "民國二十五年十二月二十一日",
-        "dateIso": "1936-12-21"
+        "dateIso": "1936-12-21",
+        "occasion": "在省府紀念週報告詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 428,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-108",
         "title": "浙江省今後的政治動向",
         "part": "陸、交通部與浙江省政",
-        "bookStartPage": 429
+        "bookStartPage": 429,
+        "note": "原書無日期",
+        "dateInText": "民國二十六年一月四日",
+        "dateInTextStatus": "待核",
+        "occasion": "黨政擴大紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 433,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-109",
@@ -1465,7 +1900,12 @@
         "part": "柒、黨務教育",
         "bookStartPage": 433,
         "date": "民國十六年一月十五日",
-        "dateIso": "1927-01-15"
+        "dateIso": "1927-01-15",
+        "occasion": "於廣州",
+        "occasionStatus": "待核",
+        "bookEndPage": 437,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-110",
@@ -1473,7 +1913,10 @@
         "part": "柒、黨務教育",
         "bookStartPage": 437,
         "date": "民國二十九年三月二十四日",
-        "dateIso": "1940-03-24"
+        "dateIso": "1940-03-24",
+        "bookEndPage": 437,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-111",
@@ -1481,7 +1924,12 @@
         "part": "柒、黨務教育",
         "bookStartPage": 438,
         "date": "民國二十九年五月七日",
-        "dateIso": "1940-05-07"
+        "dateIso": "1940-05-07",
+        "occasion": "對新運婦女高級幹部訓練班講詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 444,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-112",
@@ -1489,7 +1937,12 @@
         "part": "柒、黨務教育",
         "bookStartPage": 444,
         "date": "民國二十九年六月二十二日",
-        "dateIso": "1940-06-22"
+        "dateIso": "1940-06-22",
+        "occasion": "在中央電臺廣播講詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 446,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-113",
@@ -1497,7 +1950,10 @@
         "part": "柒、黨務教育",
         "bookStartPage": 446,
         "date": "民國二十九年七月七日",
-        "dateIso": "1940-07-07"
+        "dateIso": "1940-07-07",
+        "bookEndPage": 450,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-114",
@@ -1505,7 +1961,10 @@
         "part": "柒、黨務教育",
         "bookStartPage": 450,
         "date": "民國二十九年十月二十三日",
-        "dateIso": "1940-10-23"
+        "dateIso": "1940-10-23",
+        "bookEndPage": 453,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-115",
@@ -1513,7 +1972,10 @@
         "part": "柒、黨務教育",
         "bookStartPage": 453,
         "date": "民國三十年一月一日",
-        "dateIso": "1941-01-01"
+        "dateIso": "1941-01-01",
+        "bookEndPage": 457,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-116",
@@ -1523,7 +1985,12 @@
         "section": "一、國內方面",
         "date": "民國二十一年四月四日",
         "dateIso": "1932-04-04",
-        "note": "原書作「眞」"
+        "note": "原書作「眞」",
+        "occasion": "在中央留京辦事處總理紀念週講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 462,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-117",
@@ -1532,7 +1999,12 @@
         "bookStartPage": 462,
         "section": "一、國內方面",
         "date": "民國二十七年一月十一日",
-        "dateIso": "1938-01-11"
+        "dateIso": "1938-01-11",
+        "occasion": "到漢口時對記者談話",
+        "occasionStatus": "待核",
+        "bookEndPage": 463,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-118",
@@ -1541,7 +2013,12 @@
         "bookStartPage": 463,
         "section": "一、國內方面",
         "date": "民國二十七年八月十三日",
-        "dateIso": "1938-08-13"
+        "dateIso": "1938-08-13",
+        "occasion": "於漢口",
+        "occasionStatus": "待核",
+        "bookEndPage": 465,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-119",
@@ -1550,7 +2027,14 @@
         "bookStartPage": 465,
         "section": "一、國內方面",
         "date": "民國二十七年九月十八日",
-        "dateIso": "1938-09-18"
+        "dateIso": "1938-09-18",
+        "dateInText": "民國二十七年九月二十日",
+        "dateInTextStatus": "待核",
+        "occasion": "於漢口",
+        "occasionStatus": "待核",
+        "bookEndPage": 467,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-120",
@@ -1560,7 +2044,12 @@
         "section": "一、國內方面",
         "date": "民國二十八年七月九日",
         "dateIso": "1939-07-09",
-        "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此"
+        "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此",
+        "occasion": "廣播",
+        "occasionStatus": "待核",
+        "bookEndPage": 469,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-121",
@@ -1570,7 +2059,10 @@
         "section": "一、國內方面",
         "date": "民國二十八年六月十二日",
         "dateIso": "1939-06-12",
-        "note": "日期早於前篇，原書如此"
+        "note": "日期早於前篇，原書如此",
+        "bookEndPage": 473,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-122",
@@ -1579,7 +2071,10 @@
         "bookStartPage": 473,
         "section": "一、國內方面",
         "date": "民國二十九年三月二十八日",
-        "dateIso": "1940-03-28"
+        "dateIso": "1940-03-28",
+        "bookEndPage": 476,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-123",
@@ -1588,7 +2083,10 @@
         "bookStartPage": 476,
         "section": "一、國內方面",
         "date": "民國二十九年六月二十日",
-        "dateIso": "1940-06-20"
+        "dateIso": "1940-06-20",
+        "bookEndPage": 479,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-124",
@@ -1597,7 +2095,10 @@
         "bookStartPage": 479,
         "section": "一、國內方面",
         "date": "民國二十九年七月七日",
-        "dateIso": "1940-07-07"
+        "dateIso": "1940-07-07",
+        "bookEndPage": 484,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-125",
@@ -1606,7 +2107,10 @@
         "bookStartPage": 484,
         "section": "一、國內方面",
         "date": "民國三十年一月一日",
-        "dateIso": "1941-01-01"
+        "dateIso": "1941-01-01",
+        "bookEndPage": 485,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-126",
@@ -1615,7 +2119,12 @@
         "bookStartPage": 485,
         "section": "一、國內方面",
         "date": "民國三十三年五月一日",
-        "dateIso": "1944-05-01"
+        "dateIso": "1944-05-01",
+        "occasion": "在中央廣播電臺播講",
+        "occasionStatus": "待核",
+        "bookEndPage": 487,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-127",
@@ -1624,7 +2133,12 @@
         "bookStartPage": 487,
         "section": "一、國內方面",
         "date": "民國三十三年六月一日",
-        "dateIso": "1944-06-01"
+        "dateIso": "1944-06-01",
+        "occasion": "向淪陷區播講",
+        "occasionStatus": "待核",
+        "bookEndPage": 491,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-128",
@@ -1633,7 +2147,10 @@
         "bookStartPage": 491,
         "section": "二、國際方面",
         "date": "民國二十七年八月十五日",
-        "dateIso": "1938-08-15"
+        "dateIso": "1938-08-15",
+        "bookEndPage": 493,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-129",
@@ -1642,7 +2159,12 @@
         "bookStartPage": 493,
         "section": "二、國際方面",
         "date": "民國二十七年九月十五日",
-        "dateIso": "1938-09-15"
+        "dateIso": "1938-09-15",
+        "occasion": "於漢口",
+        "occasionStatus": "待核",
+        "bookEndPage": 496,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-130",
@@ -1651,7 +2173,12 @@
         "bookStartPage": 496,
         "section": "二、國際方面",
         "date": "民國二十八年八月十五日",
-        "dateIso": "1939-08-15"
+        "dateIso": "1939-08-15",
+        "occasion": "在重慶青年夏令營講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 502,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-131",
@@ -1660,7 +2187,12 @@
         "bookStartPage": 502,
         "section": "二、國際方面",
         "date": "民國二十八年十一月二十八日",
-        "dateIso": "1939-11-28"
+        "dateIso": "1939-11-28",
+        "occasion": "在外交問題研究會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 510,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-132",
@@ -1668,7 +2200,10 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 510,
         "section": "二、國際方面",
-        "note": "原書作「爲」"
+        "note": "原書無日期；原書作「爲」",
+        "bookEndPage": 512,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-133",
@@ -1677,7 +2212,10 @@
         "bookStartPage": 513,
         "section": "二、國際方面",
         "date": "民國三十年一月十五日",
-        "dateIso": "1941-01-15"
+        "dateIso": "1941-01-15",
+        "bookEndPage": 515,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-134",
@@ -1686,7 +2224,12 @@
         "bookStartPage": 515,
         "section": "二、國際方面",
         "date": "民國三十年二月十七日",
-        "dateIso": "1941-02-17"
+        "dateIso": "1941-02-17",
+        "occasion": "在陸軍大學講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 523,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-135",
@@ -1695,7 +2238,10 @@
         "bookStartPage": 523,
         "section": "二、國際方面",
         "date": "民國三十年五月五日",
-        "dateIso": "1941-05-05"
+        "dateIso": "1941-05-05",
+        "bookEndPage": 528,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-136",
@@ -1704,7 +2250,10 @@
         "bookStartPage": 528,
         "section": "二、國際方面",
         "date": "民國三十年六月",
-        "dateIso": "1941-06"
+        "dateIso": "1941-06",
+        "bookEndPage": 533,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-137",
@@ -1713,7 +2262,12 @@
         "bookStartPage": 533,
         "section": "二、國際方面",
         "date": "民國三十一年一月十四日",
-        "dateIso": "1942-01-14"
+        "dateIso": "1942-01-14",
+        "occasion": "廣播",
+        "occasionStatus": "待核",
+        "bookEndPage": 535,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-138",
@@ -1722,7 +2276,12 @@
         "bookStartPage": 535,
         "section": "二、國際方面",
         "date": "民國三十一年二月九日",
-        "dateIso": "1942-02-09"
+        "dateIso": "1942-02-09",
+        "occasion": "在中央組織部總理紀念週講",
+        "occasionStatus": "待核",
+        "bookEndPage": 540,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-139",
@@ -1731,7 +2290,12 @@
         "bookStartPage": 540,
         "section": "二、國際方面",
         "date": "民國三十一年九月六日",
-        "dateIso": "1942-09-06"
+        "dateIso": "1942-09-06",
+        "occasion": "在宜賓中央軍校特別訓練班講",
+        "occasionStatus": "待核",
+        "bookEndPage": 548,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-140",
@@ -1740,7 +2304,12 @@
         "bookStartPage": 548,
         "section": "二、國際方面",
         "date": "民國三十三年五月五日",
-        "dateIso": "1944-05-05"
+        "dateIso": "1944-05-05",
+        "occasion": "在中央組織部講",
+        "occasionStatus": "待核",
+        "bookEndPage": 553,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-141",
@@ -1749,7 +2318,12 @@
         "bookStartPage": 553,
         "section": "二、國際方面",
         "date": "民國三十四年二月十二日",
-        "dateIso": "1945-02-12"
+        "dateIso": "1945-02-12",
+        "occasion": "在教育部講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 557,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-142",
@@ -1757,7 +2331,12 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 557,
         "date": "民國二十七年一月二十九日",
-        "dateIso": "1938-01-29"
+        "dateIso": "1938-01-29",
+        "occasion": "於漢口",
+        "occasionStatus": "待核",
+        "bookEndPage": 559,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-143",
@@ -1765,7 +2344,10 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 559,
         "date": "民國二十九年九月十八日",
-        "dateIso": "1940-09-18"
+        "dateIso": "1940-09-18",
+        "bookEndPage": 560,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-144",
@@ -1773,7 +2355,10 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 560,
         "date": "民國三十七年三月十四日",
-        "dateIso": "1948-03-14"
+        "dateIso": "1948-03-14",
+        "bookEndPage": 563,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-145",
@@ -1781,7 +2366,10 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 563,
         "date": "民國三十七年十月二十四日",
-        "dateIso": "1948-10-24"
+        "dateIso": "1948-10-24",
+        "bookEndPage": 565,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-146",
@@ -1789,7 +2377,12 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 565,
         "date": "民國四十年三月二十五日",
-        "dateIso": "1951-03-25"
+        "dateIso": "1951-03-25",
+        "occasion": "在聯合國中國同志會會員大會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 569,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-147",
@@ -1797,7 +2390,12 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 569,
         "date": "民國四十年十月二十四日",
-        "dateIso": "1951-10-24"
+        "dateIso": "1951-10-24",
+        "occasion": "在自由中國各界慶祝聯合國日大會開幕致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 572,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-148",
@@ -1805,7 +2403,12 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 572,
         "date": "民國四十二年十月二十四日",
-        "dateIso": "1953-10-24"
+        "dateIso": "1953-10-24",
+        "occasion": "在臺北全國各界慶祝第八屆聯合國大會開會致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 574,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-149",
@@ -1813,7 +2416,10 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 574,
         "date": "民國四十二年十二月六日",
-        "dateIso": "1953-12-06"
+        "dateIso": "1953-12-06",
+        "bookEndPage": 577,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-150",
@@ -1821,7 +2427,12 @@
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 577,
         "date": "民國四十六年五月五日",
-        "dateIso": "1957-05-05"
+        "dateIso": "1957-05-05",
+        "occasion": "在聯合國中國同志會會員大會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 580,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-151",
@@ -1829,7 +2440,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 581,
         "date": "民國三十年九月十五日",
-        "dateIso": "1941-09-15"
+        "dateIso": "1941-09-15",
+        "occasion": "在中央紀念週報告",
+        "occasionStatus": "待核",
+        "bookEndPage": 583,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-152",
@@ -1837,7 +2453,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 583,
         "date": "民國三十年九月二十五日",
-        "dateIso": "1941-09-25"
+        "dateIso": "1941-09-25",
+        "occasion": "在中央廣播電臺播講",
+        "occasionStatus": "待核",
+        "bookEndPage": 585,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-153",
@@ -1845,7 +2466,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 585,
         "date": "民國三十年十月十二日",
-        "dateIso": "1941-10-12"
+        "dateIso": "1941-10-12",
+        "occasion": "在中央廣播電臺播講",
+        "occasionStatus": "待核",
+        "bookEndPage": 587,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-154",
@@ -1853,7 +2479,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 587,
         "date": "民國三十年十月十三日",
-        "dateIso": "1941-10-13"
+        "dateIso": "1941-10-13",
+        "occasion": "在資源委員會講",
+        "occasionStatus": "待核",
+        "bookEndPage": 593,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-155",
@@ -1861,7 +2492,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 594,
         "date": "民國三十一年十月二十一日",
-        "dateIso": "1942-10-21"
+        "dateIso": "1942-10-21",
+        "occasion": "在招待邊疆人士茶話會席上講",
+        "occasionStatus": "待核",
+        "bookEndPage": 605,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-156",
@@ -1869,7 +2505,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 605,
         "date": "民國三十一年十月二十五日",
-        "dateIso": "1942-10-25"
+        "dateIso": "1942-10-25",
+        "occasion": "在邊務工作會報席上致詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 614,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-157",
@@ -1877,7 +2518,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 615,
         "date": "民國三十一年十二月二十九日",
-        "dateIso": "1942-12-29"
+        "dateIso": "1942-12-29",
+        "occasion": "在中央組織部招待赴新疆工作同志茶會席上講",
+        "occasionStatus": "待核",
+        "bookEndPage": 620,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-158",
@@ -1885,7 +2531,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 621,
         "date": "民國三十二年三月二十三日",
-        "dateIso": "1943-03-23"
+        "dateIso": "1943-03-23",
+        "occasion": "在中央組織部招待第二次赴新疆工作同志茶會席上講",
+        "occasionStatus": "待核",
+        "bookEndPage": 627,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-159",
@@ -1893,7 +2544,12 @@
         "part": "拾、邊疆言論",
         "bookStartPage": 627,
         "date": "民國三十二年四月二十八日",
-        "dateIso": "1943-04-28"
+        "dateIso": "1943-04-28",
+        "occasion": "在第二次邊疆會報席上講",
+        "occasionStatus": "待核",
+        "bookEndPage": 637,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-160",
@@ -1901,7 +2557,10 @@
         "part": "拾壹、專論",
         "bookStartPage": 637,
         "date": "民國十四年十月三日",
-        "dateIso": "1925-10-03"
+        "dateIso": "1925-10-03",
+        "bookEndPage": 640,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-161",
@@ -1909,7 +2568,12 @@
         "part": "拾壹、專論",
         "bookStartPage": 640,
         "date": "民國二十年一月十九日",
-        "dateIso": "1931-01-19"
+        "dateIso": "1931-01-19",
+        "occasion": "在中央大學紀念週講演",
+        "occasionStatus": "待核",
+        "bookEndPage": 643,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-162",
@@ -1917,7 +2581,10 @@
         "part": "拾壹、專論",
         "bookStartPage": 643,
         "date": "民國三十年",
-        "dateIso": "1941"
+        "dateIso": "1941",
+        "bookEndPage": 647,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-163",
@@ -1925,7 +2592,12 @@
         "part": "拾壹、專論",
         "bookStartPage": 647,
         "date": "民國三十年八月",
-        "dateIso": "1941-08"
+        "dateIso": "1941-08",
+        "occasion": "在中央陸軍軍官學校第七分校講詞",
+        "occasionStatus": "待核",
+        "bookEndPage": 652,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-164",
@@ -1933,7 +2605,12 @@
         "part": "拾壹、專論",
         "bookStartPage": 652,
         "date": "民國三十六年一月四日",
-        "dateIso": "1947-01-04"
+        "dateIso": "1947-01-04",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 654,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-165",
@@ -1941,7 +2618,12 @@
         "part": "拾壹、專論",
         "bookStartPage": 654,
         "date": "民國三十六年三月",
-        "dateIso": "1947-03"
+        "dateIso": "1947-03",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 657,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-166",
@@ -1950,7 +2632,10 @@
         "bookStartPage": 657,
         "date": "民國二十九年七月七日",
         "dateIso": "1940-07-07",
-        "note": "原書以拉丁字母印作 Keitel"
+        "note": "原書以拉丁字母印作 Keitel",
+        "bookEndPage": 659,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-167",
@@ -1958,7 +2643,10 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 659,
         "date": "民國三十一年二月二十五日",
-        "dateIso": "1942-02-25"
+        "dateIso": "1942-02-25",
+        "bookEndPage": 660,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-168",
@@ -1966,14 +2654,20 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 661,
         "date": "民國三十一年九月二十五日",
-        "dateIso": "1942-09-25"
+        "dateIso": "1942-09-25",
+        "bookEndPage": 661,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-169",
         "title": "附史汀生致朱先生函",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 661,
-        "note": "附錄，與前篇同頁接排"
+        "note": "附錄，與前篇同頁接排；原書無日期",
+        "bookEndPage": 662,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-170",
@@ -1981,7 +2675,12 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 662,
         "date": "民國三十七年十一月十九日",
-        "dateIso": "1948-11-19"
+        "dateIso": "1948-11-19",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 663,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-171",
@@ -1989,7 +2688,10 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 664,
         "date": "民國四十三年四月二十五日",
-        "dateIso": "1954-04-25"
+        "dateIso": "1954-04-25",
+        "bookEndPage": 666,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-172",
@@ -1997,7 +2699,10 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 666,
         "date": "民國四十四年四月八日",
-        "dateIso": "1955-04-08"
+        "dateIso": "1955-04-08",
+        "bookEndPage": 668,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-173",
@@ -2005,7 +2710,12 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 668,
         "date": "民國四十一年二月二十三日",
-        "dateIso": "1952-02-23"
+        "dateIso": "1952-02-23",
+        "dateInText": "民國四十一年二月廿三日",
+        "dateInTextStatus": "待核",
+        "bookEndPage": 675,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-174",
@@ -2013,7 +2723,10 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 675,
         "date": "民國四十三年十月一日",
-        "dateIso": "1954-10-01"
+        "dateIso": "1954-10-01",
+        "bookEndPage": 687,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-175",
@@ -2021,7 +2734,10 @@
         "part": "拾貳、致中外友人書",
         "bookStartPage": 687,
         "date": "民國四十六年七月三十日",
-        "dateIso": "1957-07-30"
+        "dateIso": "1957-07-30",
+        "bookEndPage": 697,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-176",
@@ -2029,7 +2745,12 @@
         "part": "拾叁、書序",
         "bookStartPage": 697,
         "date": "民國二十二年十月",
-        "dateIso": "1933-10"
+        "dateIso": "1933-10",
+        "occasion": "於南京",
+        "occasionStatus": "待核",
+        "bookEndPage": 698,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-177",
@@ -2037,7 +2758,10 @@
         "part": "拾叁、書序",
         "bookStartPage": 698,
         "date": "民國三十年十一月二十四日",
-        "dateIso": "1941-11-24"
+        "dateIso": "1941-11-24",
+        "bookEndPage": 700,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-178",
@@ -2045,7 +2769,12 @@
         "part": "拾叁、書序",
         "bookStartPage": 701,
         "date": "民國三十一年四月二十六日",
-        "dateIso": "1942-04-26"
+        "dateIso": "1942-04-26",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 704,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-179",
@@ -2053,7 +2782,12 @@
         "part": "拾叁、書序",
         "bookStartPage": 704,
         "date": "民國三十一年六月",
-        "dateIso": "1942-06"
+        "dateIso": "1942-06",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 707,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-180",
@@ -2061,7 +2795,12 @@
         "part": "拾叁、書序",
         "bookStartPage": 707,
         "date": "民國三十一年八月",
-        "dateIso": "1942-08"
+        "dateIso": "1942-08",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 709,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-181",
@@ -2070,7 +2809,12 @@
         "bookStartPage": 709,
         "date": "民國三十一年九月十九日",
         "dateIso": "1942-09-19",
-        "note": "蔡孑民即蔡元培（孑民為其號）"
+        "note": "蔡孑民即蔡元培（孑民為其號）",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 710,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-182",
@@ -2078,7 +2822,10 @@
         "part": "拾叁、書序",
         "bookStartPage": 711,
         "date": "民國三十一年十月二十七日",
-        "dateIso": "1942-10-27"
+        "dateIso": "1942-10-27",
+        "bookEndPage": 713,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-183",
@@ -2087,7 +2834,10 @@
         "bookStartPage": 713,
         "date": "民國三十一年十月二十七日",
         "dateIso": "1942-10-27",
-        "note": "與前篇同日，分屬地理組與測量組，非重複"
+        "note": "與前篇同日，分屬地理組與測量組，非重複",
+        "bookEndPage": 715,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-184",
@@ -2095,7 +2845,12 @@
         "part": "拾叁、書序",
         "bookStartPage": 715,
         "date": "民國三十三年四月",
-        "dateIso": "1944-04"
+        "dateIso": "1944-04",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 716,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-185",
@@ -2103,7 +2858,10 @@
         "part": "拾叁、書序",
         "bookStartPage": 716,
         "date": "民國三十七年十月",
-        "dateIso": "1948-10"
+        "dateIso": "1948-10",
+        "bookEndPage": 717,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-186",
@@ -2111,7 +2869,10 @@
         "part": "拾叁、書序",
         "bookStartPage": 717,
         "date": "民國四十年四月十四日",
-        "dateIso": "1951-04-14"
+        "dateIso": "1951-04-14",
+        "bookEndPage": 719,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-187",
@@ -2119,7 +2880,10 @@
         "part": "拾叁、書序",
         "bookStartPage": 719,
         "date": "民國四十三年五月十一日",
-        "dateIso": "1954-05-11"
+        "dateIso": "1954-05-11",
+        "bookEndPage": 723,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-188",
@@ -2127,7 +2891,12 @@
         "part": "拾肆、追念師友",
         "bookStartPage": 723,
         "date": "民國二十七年十二月二十八日",
-        "dateIso": "1938-12-28"
+        "dateIso": "1938-12-28",
+        "occasion": "重慶大公報",
+        "occasionStatus": "待核",
+        "bookEndPage": 723,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-189",
@@ -2136,7 +2905,12 @@
         "bookStartPage": 723,
         "date": "民國二十九年三月二十四日",
         "dateIso": "1940-03-24",
-        "note": "與前篇同頁接排；蔡孑民即蔡元培"
+        "note": "與前篇同頁接排；蔡孑民即蔡元培",
+        "occasion": "重慶中央日報",
+        "occasionStatus": "待核",
+        "bookEndPage": 725,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-190",
@@ -2145,7 +2919,10 @@
         "bookStartPage": 725,
         "date": "民國三十年三月五日",
         "dateIso": "1941-03-05",
-        "note": "孑民即蔡元培"
+        "note": "孑民即蔡元培",
+        "bookEndPage": 726,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": false
       },
       {
         "id": "ZJH-191",
@@ -2153,7 +2930,12 @@
         "part": "拾肆、追念師友",
         "bookStartPage": 727,
         "date": "民國三十一年八月十一日",
-        "dateIso": "1942-08-11"
+        "dateIso": "1942-08-11",
+        "occasion": "於重慶",
+        "occasionStatus": "待核",
+        "bookEndPage": 729,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-192",
@@ -2161,7 +2943,10 @@
         "part": "拾肆、追念師友",
         "bookStartPage": 729,
         "date": "民國三十一年九月十九日",
-        "dateIso": "1942-09-19"
+        "dateIso": "1942-09-19",
+        "bookEndPage": 732,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-193",
@@ -2170,7 +2955,10 @@
         "bookStartPage": 732,
         "date": "民國三十二年三月五日",
         "dateIso": "1943-03-05",
-        "note": "蔡孑民即蔡元培"
+        "note": "蔡孑民即蔡元培",
+        "bookEndPage": 733,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-194",
@@ -2179,7 +2967,10 @@
         "bookStartPage": 733,
         "date": "民國三十九年五月十九日",
         "dateIso": "1950-05-19",
-        "note": "目次所載日期早於張靜江逝世之日"
+        "note": "目次所載日期早於張靜江逝世之日；日期依目次照錄，待與正文原書頁 733 的題下日期核對",
+        "bookEndPage": 736,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-195",
@@ -2187,7 +2978,12 @@
         "part": "拾肆、追念師友",
         "bookStartPage": 736,
         "date": "民國四十年二月十二日",
-        "dateIso": "1951-02-12"
+        "dateIso": "1951-02-12",
+        "occasion": "於臺北",
+        "occasionStatus": "待核",
+        "bookEndPage": 741,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-196",
@@ -2195,14 +2991,26 @@
         "part": "拾肆、追念師友",
         "bookStartPage": 741,
         "date": "民國三十九年十二月二十九日",
-        "dateIso": "1950-12-29"
+        "dateIso": "1950-12-29",
+        "occasion": "於臺北",
+        "occasionStatus": "待核",
+        "bookEndPage": 744,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-197",
         "title": "附紀念傅故所長孟真五十六歲誕辰特刊序",
         "part": "拾肆、追念師友",
         "bookStartPage": 744,
-        "note": "附錄"
+        "note": "附錄；原書無日期",
+        "dateInText": "民國四十年三月十日",
+        "dateInTextStatus": "待核",
+        "occasion": "於臺北",
+        "occasionStatus": "待核",
+        "bookEndPage": 745,
+        "bookEndPageStatus": "待核",
+        "sharesEndPage": true
       },
       {
         "id": "ZJH-198",

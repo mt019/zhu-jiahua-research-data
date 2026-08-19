@@ -9,6 +9,8 @@ pdf_pages: [355, 356, 357, 358]
 book_pages: [316, 317, 318, 319]
 transcription_status: 人工逐頁核對
 verified_at: 2026-07-27
+glyph_policy: 未定
+glyph_note: 兩形並存（爲19／為3；敎0／教15；卽13／即0；旣0／既1），偏向原書字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19
 ---
 
 # 法律教育委員會第六次會議致詞

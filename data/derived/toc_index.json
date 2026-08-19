@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-08-19",
   "source": {
     "work": "朱家驊先生言論集",
     "tocPdfPages": "27–40（目次印刷頁一至十四）",
@@ -14,7 +14,8 @@
   "caveats": [
     "bookStartPage 是「目次所載起頁」，不等於正文實際起頁：本篇群已知法律教育六篇中，目次與正文逐頁核對結果全數相符，但相鄰兩篇共頁時目次仍只標一個起頁。",
     "dateOriginal 一律照目次小字照錄；正文題下的日期用字可能不同（目次用「二十」，正文多用「廿」，且常多附場合，如「談話」）。兩者不一致時以正文為準並在該篇留註。",
-    "PDF 頁次與原書頁碼的換算在全書並非定值：已核 PDF 41＝原書 1（差 40）、PDF 342＝原書 303（差 39），中間某處少一頁，位置待原 PDF 到手後定位。故本檔不記 PDF 頁次，只記原書頁碼。"
+    "PDF 頁次與原書頁碼的換算在全書並非定值：已核 PDF 41＝原書 1（差 40）、PDF 342＝原書 303（差 39），中間某處少一頁，位置待原 PDF 到手後定位。故本檔不記 PDF 頁次，只記原書頁碼。",
+    "textHead 一格是從辨讀稿抽的正文題下資訊（場合、訖頁、正文用的篇名），未逐頁核對原頁圖，狀態待核；目次那幾欄不受它影響。"
   ],
   "frontMatter": [
     {
@@ -44,7 +45,19 @@
       "bookStartPage": 1,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 41,
+        "pdfEndPage": 41,
+        "bookEndPage": 1,
+        "pdfPageCount": 1,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "於廣州",
+        "dateInText": "民國十六年五月"
+      }
     },
     {
       "seq": 2,
@@ -56,7 +69,19 @@
       "bookStartPage": 2,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 42,
+        "pdfEndPage": 43,
+        "bookEndPage": 3,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十七年十二月二十三日"
+      }
     },
     {
       "seq": 3,
@@ -68,7 +93,19 @@
       "bookStartPage": 3,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 43,
+        "pdfEndPage": 44,
+        "bookEndPage": 4,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十八年七月十三日"
+      }
     },
     {
       "seq": 4,
@@ -80,7 +117,19 @@
       "bookStartPage": 4,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 44,
+        "pdfEndPage": 45,
+        "bookEndPage": 5,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年九月二日"
+      }
     },
     {
       "seq": 5,
@@ -93,7 +142,19 @@
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
       "note": "正文題下作「民國三十年三月廿一日談話」",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 45,
+        "pdfEndPage": 46,
+        "bookEndPage": 6,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "談話",
+        "dateInText": "民國三十年三月廿一日"
+      }
     },
     {
       "seq": 6,
@@ -105,7 +166,19 @@
       "bookStartPage": 6,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 46,
+        "pdfEndPage": 47,
+        "bookEndPage": 7,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十年九月二十六日"
+      }
     },
     {
       "seq": 7,
@@ -117,7 +190,19 @@
       "bookStartPage": 8,
       "tocPdfPage": 27,
       "status": "目次核對；另有篇級紀錄",
-      "detailRecord": "speech_catalog.json"
+      "detailRecord": "speech_catalog.json",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 48,
+        "pdfEndPage": 52,
+        "bookEndPage": 12,
+        "pdfPageCount": 5,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在自然科學社第十四屆年會講",
+        "dateInText": "民國三十年十一月三十日"
+      }
     },
     {
       "seq": 8,
@@ -128,7 +213,19 @@
       "dateIso": "1942-07-28",
       "bookStartPage": 12,
       "tocPdfPage": 27,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 52,
+        "pdfEndPage": 52,
+        "bookEndPage": 12,
+        "pdfPageCount": 1,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年七月二十八日"
+      }
     },
     {
       "seq": 9,
@@ -139,7 +236,18 @@
       "dateIso": "1942-10-01",
       "bookStartPage": 12,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 52,
+        "pdfEndPage": 54,
+        "bookEndPage": 14,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null
+      }
     },
     {
       "seq": 10,
@@ -150,7 +258,19 @@
       "dateIso": "1942-10-31",
       "bookStartPage": 14,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 54,
+        "pdfEndPage": 62,
+        "bookEndPage": 22,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年十月三十一日"
+      }
     },
     {
       "seq": 11,
@@ -161,7 +281,19 @@
       "dateIso": "1943-01-05",
       "bookStartPage": 22,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 62,
+        "pdfEndPage": 65,
+        "bookEndPage": 25,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "牛頓三百年紀念日廣播講演",
+        "dateInText": "一九四三年一月五日"
+      }
     },
     {
       "seq": 12,
@@ -172,7 +304,19 @@
       "dateIso": "1943-03-05",
       "bookStartPage": 25,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 65,
+        "pdfEndPage": 69,
+        "bookEndPage": 29,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "dateInText": "民國三十二年三月五日"
+      }
     },
     {
       "seq": 13,
@@ -183,7 +327,19 @@
       "dateIso": "1943-04-08",
       "bookStartPage": 29,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 69,
+        "pdfEndPage": 77,
+        "bookEndPage": 37,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在青年團第一次全國代表大會講演",
+        "dateInText": "民國三十二年四月八日"
+      }
     },
     {
       "seq": 14,
@@ -194,7 +350,19 @@
       "dateIso": "1943-07-19",
       "bookStartPage": 37,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 77,
+        "pdfEndPage": 87,
+        "bookEndPage": 47,
+        "pdfPageCount": 11,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在三民主義青年團南嶽夏令營講",
+        "dateInText": "民國三十二年七月十九日"
+      }
     },
     {
       "seq": 15,
@@ -205,7 +373,19 @@
       "dateIso": "1943-08-26",
       "bookStartPage": 48,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 88,
+        "pdfEndPage": 96,
+        "bookEndPage": 56,
+        "pdfPageCount": 9,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在重慶北碚三民主義青年團夏令營講",
+        "dateInText": "民國三十二年八月二十六日"
+      }
     },
     {
       "seq": 16,
@@ -216,7 +396,19 @@
       "dateIso": "1944-03-27",
       "bookStartPage": 56,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 96,
+        "pdfEndPage": 100,
+        "bookEndPage": 60,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶陪都",
+        "dateInText": "民國三十三年三月二十七日"
+      }
     },
     {
       "seq": 17,
@@ -227,7 +419,19 @@
       "dateIso": "1945-06-06",
       "bookStartPage": 60,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 100,
+        "pdfEndPage": 102,
+        "bookEndPage": 62,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶復興關",
+        "dateInText": "民國三十四年六月六日"
+      }
     },
     {
       "seq": 18,
@@ -238,7 +442,20 @@
       "dateIso": "1945-08-18",
       "bookStartPage": 62,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 102,
+        "pdfEndPage": 107,
+        "bookEndPage": 67,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "於北碚",
+        "titleInText": "中國教育學術團體聯合年會致詞",
+        "dateInText": "民國三十四年八月十八日"
+      }
     },
     {
       "seq": 19,
@@ -249,7 +466,19 @@
       "dateIso": "1945-10-17",
       "bookStartPage": 68,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 108,
+        "pdfEndPage": 111,
+        "bookEndPage": 71,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "中華自然科學社十九屆年會致詞",
+        "dateInText": "民國三十四年十月十七日"
+      }
     },
     {
       "seq": 20,
@@ -260,7 +489,19 @@
       "dateIso": "1948-10-09",
       "bookStartPage": 71,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 111,
+        "pdfEndPage": 112,
+        "bookEndPage": 72,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在中央大學大禮堂講",
+        "dateInText": "民國三十七年十月九日"
+      }
     },
     {
       "seq": 21,
@@ -271,7 +512,19 @@
       "dateIso": "1940-10-01",
       "bookStartPage": 73,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 113,
+        "pdfEndPage": 114,
+        "bookEndPage": 74,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年十月一日"
+      }
     },
     {
       "seq": 22,
@@ -282,7 +535,20 @@
       "dateIso": "1942-06-30",
       "bookStartPage": 74,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 114,
+        "pdfEndPage": 117,
+        "bookEndPage": 77,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "國立中央研究院評議會第二屆第一次年會致辭",
+        "dateInText": "民國三十一年六月三十日"
+      }
     },
     {
       "seq": 23,
@@ -293,7 +559,19 @@
       "dateIso": "1942-10-10",
       "bookStartPage": 77,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 117,
+        "pdfEndPage": 123,
+        "bookEndPage": 83,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十一年十月十日"
+      }
     },
     {
       "seq": 24,
@@ -305,7 +583,20 @@
       "bookStartPage": 84,
       "tocPdfPage": 28,
       "status": "目次核對",
-      "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名"
+      "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 124,
+        "pdfEndPage": 125,
+        "bookEndPage": 85,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "歡迎英國陶德斯尼德漢兩教授致詞",
+        "dateInText": "民國三十二年四月十日"
+      }
     },
     {
       "seq": 25,
@@ -316,7 +607,20 @@
       "dateIso": "1944-03-08",
       "bookStartPage": 85,
       "tocPdfPage": 28,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 125,
+        "pdfEndPage": 127,
+        "bookEndPage": 87,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "titleInText": "國立中央研究院評議會第二屆第二次年會開幕詞",
+        "dateInText": "民國三十三年三月八日"
+      }
     },
     {
       "seq": 26,
@@ -328,7 +632,20 @@
       "bookStartPage": 88,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "note": "目次未列第二屆第三次年會，原書如此"
+      "note": "目次未列第二屆第三次年會，原書如此",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 128,
+        "pdfEndPage": 129,
+        "bookEndPage": 89,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "國立中央研究院評議會第二屆第四次年會開幕詞",
+        "dateInText": "民國三十六年十月十五日"
+      }
     },
     {
       "seq": 27,
@@ -339,7 +656,20 @@
       "dateIso": "1948-03-25",
       "bookStartPage": 89,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 129,
+        "pdfEndPage": 131,
+        "bookEndPage": 91,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "國立中央研究院評議會第二屆第五次年會開會詞",
+        "dateInText": "民國三十七年三月二十五日"
+      }
     },
     {
       "seq": 28,
@@ -350,7 +680,20 @@
       "dateIso": "1948-07-26",
       "bookStartPage": 91,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 131,
+        "pdfEndPage": 135,
+        "bookEndPage": 95,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中國國民黨中央黨部紀念週報告",
+        "titleInText": "國立中央研究院概況",
+        "dateInText": "民國三十七年七月二十六日"
+      }
     },
     {
       "seq": 29,
@@ -361,7 +704,20 @@
       "dateIso": "1948-09-23",
       "bookStartPage": 95,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 135,
+        "pdfEndPage": 138,
+        "bookEndPage": 98,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "titleInText": "國立中央研究院第一次院士會議開幕詞",
+        "dateInText": "民國三十七年九月二十三日"
+      }
     },
     {
       "seq": 30,
@@ -372,7 +728,20 @@
       "dateIso": "1957-04-02",
       "bookStartPage": 98,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 138,
+        "pdfEndPage": 143,
+        "bookEndPage": 103,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "第二次院士會議開幕致詞",
+        "dateInText": "民國四十六年四月二日"
+      }
     },
     {
       "seq": 31,
@@ -383,7 +752,19 @@
       "dateIso": "1957-04-04",
       "bookStartPage": 103,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 143,
+        "pdfEndPage": 144,
+        "bookEndPage": 104,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十六年四月四日"
+      }
     },
     {
       "seq": 32,
@@ -394,7 +775,20 @@
       "dateIso": "1958-06-09",
       "bookStartPage": 104,
       "tocPdfPage": 29,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 144,
+        "pdfEndPage": 160,
+        "bookEndPage": 120,
+        "pdfPageCount": 17,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "來的中央研究院民國四十七年六月九日／在中央研究院三十週年紀念致詞",
+        "titleInText": "三十年來的中央研究院民國四十七年六月九日",
+        "dateInText": "三十年"
+      }
     },
     {
       "seq": 33,
@@ -403,10 +797,23 @@
       "title": "我們今後要加緊教育工作",
       "dateOriginal": "民國十九年十一月十日",
       "dateIso": "1930-11-10",
-      "bookStartPage": 111,
+      "bookStartPage": 121,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 160,
+        "pdfEndPage": 164,
+        "bookEndPage": 125,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央第八十五次紀念週報告",
+        "dateInText": "民國十九年十一月十日"
+      },
+      "revisionNote": "起頁 2026-08-19 更正：舊記 111，回目次頁圖（PDF 29）判讀為 121，與正文標題行所在頁一致"
     },
     {
       "seq": 34,
@@ -415,11 +822,24 @@
       "title": "中國大學教育的現狀及應行注意各點",
       "dateOriginal": "民國二十年　月",
       "dateIso": "1931",
-      "bookStartPage": 115,
+      "bookStartPage": 125,
       "tocPdfPage": 29,
       "status": "目次核對",
       "section": "一、教育行政",
-      "note": "原書月份欄空白"
+      "note": "原書月份欄空白",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 164,
+        "pdfEndPage": 170,
+        "bookEndPage": 131,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央紀念週講",
+        "dateInText": "民國二十年春"
+      },
+      "revisionNote": "起頁 2026-08-19 更正：舊記 115，回目次頁圖（PDF 29）判讀為 125，與正文標題行所在頁一致"
     },
     {
       "seq": 35,
@@ -431,7 +851,19 @@
       "bookStartPage": 131,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 170,
+        "pdfEndPage": 193,
+        "bookEndPage": 154,
+        "pdfPageCount": 24,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十一年十一月二十五日"
+      }
     },
     {
       "seq": 36,
@@ -443,7 +875,19 @@
       "bookStartPage": 154,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 193,
+        "pdfEndPage": 195,
+        "bookEndPage": 156,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國二十二年四月二十八日"
+      }
     },
     {
       "seq": 37,
@@ -455,7 +899,19 @@
       "bookStartPage": 156,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 195,
+        "pdfEndPage": 198,
+        "bookEndPage": 159,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國二十四年一月一日"
+      }
     },
     {
       "seq": 38,
@@ -467,7 +923,19 @@
       "bookStartPage": 159,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 198,
+        "pdfEndPage": 203,
+        "bookEndPage": 164,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十四年"
+      }
     },
     {
       "seq": 39,
@@ -479,7 +947,20 @@
       "bookStartPage": 164,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 203,
+        "pdfEndPage": 209,
+        "bookEndPage": 170,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "致陳部長立夫商討師範學院制度函",
+        "dateInText": "民國三十一年三月三十日"
+      }
     },
     {
       "seq": 40,
@@ -491,7 +972,19 @@
       "bookStartPage": 170,
       "tocPdfPage": 29,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 209,
+        "pdfEndPage": 210,
+        "bookEndPage": 171,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十三年十二月十四日"
+      }
     },
     {
       "seq": 41,
@@ -503,7 +996,19 @@
       "bookStartPage": 171,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 210,
+        "pdfEndPage": 212,
+        "bookEndPage": 173,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十四年七月七日"
+      }
     },
     {
       "seq": 42,
@@ -515,7 +1020,20 @@
       "bookStartPage": 174,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 213,
+        "pdfEndPage": 215,
+        "bookEndPage": 176,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "敵人投降時對教育界學術界文化界同仁廣播詞",
+        "dateInText": "民國三十四年八月十四日"
+      }
     },
     {
       "seq": 43,
@@ -527,7 +1045,19 @@
       "bookStartPage": 176,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 215,
+        "pdfEndPage": 219,
+        "bookEndPage": 180,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十四年九月二十日"
+      }
     },
     {
       "seq": 44,
@@ -539,7 +1069,19 @@
       "bookStartPage": 180,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 219,
+        "pdfEndPage": 222,
+        "bookEndPage": 183,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十四年九月二十四日"
+      }
     },
     {
       "seq": 45,
@@ -551,7 +1093,19 @@
       "bookStartPage": 183,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 222,
+        "pdfEndPage": 225,
+        "bookEndPage": 186,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十四年九月二十六日"
+      }
     },
     {
       "seq": 46,
@@ -563,7 +1117,19 @@
       "bookStartPage": 186,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 225,
+        "pdfEndPage": 227,
+        "bookEndPage": 188,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十五年五月二十四日"
+      }
     },
     {
       "seq": 47,
@@ -575,7 +1141,19 @@
       "bookStartPage": 188,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 227,
+        "pdfEndPage": 239,
+        "bookEndPage": 200,
+        "pdfPageCount": 13,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十五年十二月二十八日"
+      }
     },
     {
       "seq": 48,
@@ -587,7 +1165,20 @@
       "bookStartPage": 200,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 239,
+        "pdfEndPage": 242,
+        "bookEndPage": 203,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "聯合國教育科學文化組織中國委員會第一屆大會致詞",
+        "dateInText": "民國三十六年八月二十八日"
+      }
     },
     {
       "seq": 49,
@@ -599,7 +1190,20 @@
       "bookStartPage": 203,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 242,
+        "pdfEndPage": 244,
+        "bookEndPage": 205,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "聯合國教育科學文化組織南京基本教育研究會議開幕致詞",
+        "dateInText": "民國三十六年九月三日"
+      }
     },
     {
       "seq": 50,
@@ -611,7 +1215,20 @@
       "bookStartPage": 205,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 244,
+        "pdfEndPage": 245,
+        "bookEndPage": 206,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "聯合國教育科學文化組織南京基本教育研究會議閉幕致詞",
+        "dateInText": "民國三十六年九月十二日"
+      }
     },
     {
       "seq": 51,
@@ -623,7 +1240,19 @@
       "bookStartPage": 206,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 245,
+        "pdfEndPage": 247,
+        "bookEndPage": 208,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十七年"
+      }
     },
     {
       "seq": 52,
@@ -635,7 +1264,19 @@
       "bookStartPage": 208,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 247,
+        "pdfEndPage": 252,
+        "bookEndPage": 213,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在臺中",
+        "dateInText": "民國三十七年一月十八日"
+      }
     },
     {
       "seq": 53,
@@ -647,7 +1288,20 @@
       "bookStartPage": 214,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "一、教育行政"
+      "section": "一、教育行政",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 253,
+        "pdfEndPage": 256,
+        "bookEndPage": 217,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在教育部月會講",
+        "titleInText": "視察臺灣教育觀感",
+        "dateInText": "民國三十七年二月二日"
+      }
     },
     {
       "seq": 54,
@@ -659,7 +1313,20 @@
       "bookStartPage": 217,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 256,
+        "pdfEndPage": 261,
+        "bookEndPage": 222,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央紀念週報告",
+        "titleInText": "育工作概況",
+        "dateInText": "民國三十四年四月二十三日"
+      }
     },
     {
       "seq": 55,
@@ -671,7 +1338,19 @@
       "bookStartPage": 222,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 261,
+        "pdfEndPage": 271,
+        "bookEndPage": 232,
+        "pdfPageCount": 11,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "第四屆參政會第一次大會報告",
+        "dateInText": "民國三十四年七月九日"
+      }
     },
     {
       "seq": 56,
@@ -683,7 +1362,19 @@
       "bookStartPage": 233,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 272,
+        "pdfEndPage": 275,
+        "bookEndPage": 236,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在國民政府中央紀念週報告",
+        "dateInText": "民國三十五年六月二十四日"
+      }
     },
     {
       "seq": 57,
@@ -695,7 +1386,19 @@
       "bookStartPage": 236,
       "tocPdfPage": 30,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 275,
+        "pdfEndPage": 279,
+        "bookEndPage": 240,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十六年"
+      }
     },
     {
       "seq": 58,
@@ -707,7 +1410,19 @@
       "bookStartPage": 240,
       "tocPdfPage": 31,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 279,
+        "pdfEndPage": 285,
+        "bookEndPage": 246,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在國民大會報告",
+        "dateInText": "民國三十七年四月十四日"
+      }
     },
     {
       "seq": 59,
@@ -719,7 +1434,19 @@
       "bookStartPage": 246,
       "tocPdfPage": 31,
       "status": "目次核對",
-      "section": "二、教育施政報告"
+      "section": "二、教育施政報告",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 285,
+        "pdfEndPage": 288,
+        "bookEndPage": 249,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於立法院教育文化委員會報告",
+        "dateInText": "民國三十七年六月三十日"
+      }
     },
     {
       "seq": 60,
@@ -732,7 +1459,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 288,
+        "pdfEndPage": 299,
+        "bookEndPage": 260,
+        "pdfPageCount": 12,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在本校開學典禮日講演詞",
+        "dateInText": "民國十六年四月一日"
+      }
     },
     {
       "seq": 61,
@@ -745,7 +1484,20 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 300,
+        "pdfEndPage": 302,
+        "bookEndPage": 263,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": false,
+        "occasion": "在廣州中山大學",
+        "titleInText": "國立中山大學校務報告演詞",
+        "dateInText": "民國十七年十月一日"
+      }
     },
     {
       "seq": 62,
@@ -758,7 +1510,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 303,
+        "pdfEndPage": 306,
+        "bookEndPage": 267,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在廣州中山大學",
+        "dateInText": "民國十八年六月廿九日"
+      }
     },
     {
       "seq": 63,
@@ -771,7 +1535,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 306,
+        "pdfEndPage": 308,
+        "bookEndPage": 269,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國十九年九月十八日"
+      }
     },
     {
       "seq": 64,
@@ -784,7 +1560,20 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 308,
+        "pdfEndPage": 315,
+        "bookEndPage": 276,
+        "pdfPageCount": 8,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "就任國立中山大學校長講演詞國民",
+        "dateInText": "十九年十月六日"
+      }
     },
     {
       "seq": 65,
@@ -797,7 +1586,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 315,
+        "pdfEndPage": 316,
+        "bookEndPage": 277,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在廣州中山大學",
+        "dateInText": "民國十九年十二月九日"
+      }
     },
     {
       "seq": 66,
@@ -810,7 +1611,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 316,
+        "pdfEndPage": 321,
+        "bookEndPage": 282,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在廣州中山大學",
+        "dateInText": "民國十九年十二月九日"
+      }
     },
     {
       "seq": 67,
@@ -823,7 +1636,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 321,
+        "pdfEndPage": 323,
+        "bookEndPage": 284,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中山大學同學會歡迎會致詞",
+        "dateInText": "民國三十一年七月四日"
+      }
     },
     {
       "seq": 68,
@@ -836,7 +1661,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（一）國立中山大學"
+      "subsection": "（一）國立中山大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 323,
+        "pdfEndPage": 325,
+        "bookEndPage": 286,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十七年十月廿日"
+      }
     },
     {
       "seq": 69,
@@ -850,7 +1687,20 @@
       "status": "目次核對",
       "section": "三、各大學演講詞",
       "subsection": "（一）國立中山大學",
-      "note": "原書作「爲」"
+      "note": "原書作「爲」",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 326,
+        "pdfEndPage": 327,
+        "bookEndPage": 288,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "為中山大學二十四週年紀念獻詞",
+        "dateInText": "民國三十七年十一月五日"
+      }
     },
     {
       "seq": 70,
@@ -863,7 +1713,20 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（二）國立中央大學"
+      "subsection": "（二）國立中央大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 327,
+        "pdfEndPage": 329,
+        "bookEndPage": 290,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "對中央大學畢業學生訓詞",
+        "dateInText": "民國二十八年七月二十五日"
+      }
     },
     {
       "seq": 71,
@@ -876,7 +1739,19 @@
       "tocPdfPage": 31,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（二）國立中央大學"
+      "subsection": "（二）國立中央大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 329,
+        "pdfEndPage": 335,
+        "bookEndPage": 296,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央大學紀念週講",
+        "dateInText": "民國三十三年十二月廿五日"
+      }
     },
     {
       "seq": 72,
@@ -890,7 +1765,20 @@
       "status": "目次核對",
       "section": "三、各大學演講詞",
       "subsection": "（三）國立同濟大學",
-      "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用；可能表示「電…」「函…」兩件併列，亦可能為單一篇名。待正文原書頁 296 核"
+      "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用；可能表示「電…」「函…」兩件併列，亦可能為單一篇名。待正文原書頁 296 核",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 335,
+        "pdfEndPage": 337,
+        "bookEndPage": 298,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "電丁校長",
+        "dateInText": "民國三十一年五月十日"
+      }
     },
     {
       "seq": 73,
@@ -903,7 +1791,19 @@
       "tocPdfPage": 32,
       "status": "目次核對",
       "section": "三、各大學演講詞",
-      "subsection": "（三）國立同濟大學"
+      "subsection": "（三）國立同濟大學",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 337,
+        "pdfEndPage": 342,
+        "bookEndPage": 303,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十六年五月一日"
+      }
     },
     {
       "seq": 74,
@@ -918,7 +1818,20 @@
       "section": "四、法律教育",
       "note": "正文題名作「中國之法律教育問題」，與目次不同",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-001"
+      "legacyId": "ZJH-LE-001",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 342,
+        "pdfEndPage": 347,
+        "bookEndPage": 308,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "中國之法律教育問題",
+        "dateInText": "民國三十四年四月十八日"
+      }
     },
     {
       "seq": 75,
@@ -932,7 +1845,19 @@
       "status": "目次核對；全文已人工逐頁核對",
       "section": "四、法律教育",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-002"
+      "legacyId": "ZJH-LE-002",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 347,
+        "pdfEndPage": 351,
+        "bookEndPage": 312,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "第三次法律教育會議講詞",
+        "dateInText": "民國三十六年六月二十七日"
+      }
     },
     {
       "seq": 76,
@@ -946,7 +1871,19 @@
       "status": "目次核對；全文已人工逐頁核對",
       "section": "四、法律教育",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-003"
+      "legacyId": "ZJH-LE-003",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 351,
+        "pdfEndPage": 355,
+        "bookEndPage": 316,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在教育部會議室講",
+        "dateInText": "民國三十七年二月四日"
+      }
     },
     {
       "seq": 77,
@@ -960,7 +1897,19 @@
       "status": "目次核對；全文已人工逐頁核對",
       "section": "四、法律教育",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-004"
+      "legacyId": "ZJH-LE-004",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 355,
+        "pdfEndPage": 358,
+        "bookEndPage": 319,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十七年七月一日"
+      }
     },
     {
       "seq": 78,
@@ -974,7 +1923,19 @@
       "status": "目次核對；全文已人工逐頁核對",
       "section": "四、法律教育",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-005"
+      "legacyId": "ZJH-LE-005",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 358,
+        "pdfEndPage": 363,
+        "bookEndPage": 324,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十七年十二月二日"
+      }
     },
     {
       "seq": 79,
@@ -988,7 +1949,19 @@
       "status": "目次核對；全文已人工逐頁核對",
       "section": "四、法律教育",
       "detailRecord": "legal_education/catalog.json",
-      "legacyId": "ZJH-LE-006"
+      "legacyId": "ZJH-LE-006",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 364,
+        "pdfEndPage": 369,
+        "bookEndPage": 330,
+        "pdfPageCount": 6,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在臺灣省青年服務團講",
+        "dateInText": "民國三十九年九月十二日"
+      }
     },
     {
       "seq": 80,
@@ -1000,7 +1973,20 @@
       "bookStartPage": 330,
       "tocPdfPage": 32,
       "status": "目次核對",
-      "section": "五、教師節紀念"
+      "section": "五、教師節紀念",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 369,
+        "pdfEndPage": 372,
+        "bookEndPage": 333,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "教師節",
+        "titleInText": "教師節之感想",
+        "dateInText": "民國三十四年九月二十八日"
+      }
     },
     {
       "seq": 81,
@@ -1013,7 +1999,20 @@
       "tocPdfPage": 32,
       "status": "目次核對",
       "section": "五、教師節紀念",
-      "note": "原書於「與」「蔣」之間空一格（擡頭）"
+      "note": "原書於「與」「蔣」之間空一格（擡頭）",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 372,
+        "pdfEndPage": 379,
+        "bookEndPage": 340,
+        "pdfPageCount": 8,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "來中國教育與蔣主席民國三十五年十月二十八日",
+        "titleInText": "六十年來中國教育與蔣主席民國三十五年十月二十八日",
+        "dateInText": "六十年"
+      }
     },
     {
       "seq": 82,
@@ -1025,7 +2024,19 @@
       "bookStartPage": 340,
       "tocPdfPage": 32,
       "status": "目次核對",
-      "section": "五、教師節紀念"
+      "section": "五、教師節紀念",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 379,
+        "pdfEndPage": 384,
+        "bookEndPage": 345,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在臺灣師範學院國父紀念週講",
+        "dateInText": "民國四十年三月三十日"
+      }
     },
     {
       "seq": 83,
@@ -1037,7 +2048,19 @@
       "bookStartPage": 345,
       "tocPdfPage": 32,
       "status": "目次核對",
-      "section": "五、教師節紀念"
+      "section": "五、教師節紀念",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 384,
+        "pdfEndPage": 389,
+        "bookEndPage": 351,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十年九月二十八日"
+      }
     },
     {
       "seq": 84,
@@ -1049,7 +2072,19 @@
       "bookStartPage": 351,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 389,
+        "pdfEndPage": 392,
+        "bookEndPage": 354,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在廬山講演",
+        "dateInText": "民國二十六年"
+      }
     },
     {
       "seq": 85,
@@ -1061,7 +2096,19 @@
       "bookStartPage": 354,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 392,
+        "pdfEndPage": 396,
+        "bookEndPage": 358,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年七月一日"
+      }
     },
     {
       "seq": 86,
@@ -1073,7 +2120,19 @@
       "bookStartPage": 358,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 396,
+        "pdfEndPage": 398,
+        "bookEndPage": 360,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十三年五月四日"
+      }
     },
     {
       "seq": 87,
@@ -1085,7 +2144,19 @@
       "bookStartPage": 361,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 399,
+        "pdfEndPage": 404,
+        "bookEndPage": 366,
+        "pdfPageCount": 6,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十四年三月二十九日"
+      }
     },
     {
       "seq": 88,
@@ -1097,7 +2168,19 @@
       "bookStartPage": 366,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 404,
+        "pdfEndPage": 407,
+        "bookEndPage": 369,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十五年八月二十六日"
+      }
     },
     {
       "seq": 89,
@@ -1109,7 +2192,19 @@
       "bookStartPage": 369,
       "tocPdfPage": 33,
       "status": "目次核對",
-      "section": "六、青年修養與國家民族"
+      "section": "六、青年修養與國家民族",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 407,
+        "pdfEndPage": 409,
+        "bookEndPage": 371,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十六年三月二十九日"
+      }
     },
     {
       "seq": 90,
@@ -1120,7 +2215,19 @@
       "dateIso": "1934-03-16",
       "bookStartPage": 371,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 409,
+        "pdfEndPage": 412,
+        "bookEndPage": 374,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國二十三年三月十六日"
+      }
     },
     {
       "seq": 91,
@@ -1131,7 +2238,19 @@
       "dateIso": "1934-03-19",
       "bookStartPage": 374,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 412,
+        "pdfEndPage": 414,
+        "bookEndPage": 376,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在中央紀念週講",
+        "dateInText": "民國二十三年三月十九日"
+      }
     },
     {
       "seq": 92,
@@ -1142,7 +2261,19 @@
       "dateIso": "1941-01-01",
       "bookStartPage": 377,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 415,
+        "pdfEndPage": 416,
+        "bookEndPage": 378,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十年一月一日"
+      }
     },
     {
       "seq": 93,
@@ -1153,7 +2284,19 @@
       "dateIso": "1942-03-20",
       "bookStartPage": 378,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 416,
+        "pdfEndPage": 418,
+        "bookEndPage": 380,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年三月二十日"
+      }
     },
     {
       "seq": 94,
@@ -1164,7 +2307,19 @@
       "dateIso": "1942-12-16",
       "bookStartPage": 380,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 418,
+        "pdfEndPage": 420,
+        "bookEndPage": 382,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十一年十二月十六日"
+      }
     },
     {
       "seq": 95,
@@ -1175,7 +2330,19 @@
       "dateIso": "1947-02-16",
       "bookStartPage": 383,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 421,
+        "pdfEndPage": 423,
+        "bookEndPage": 385,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國三十六年二月十六日"
+      }
     },
     {
       "seq": 96,
@@ -1186,7 +2353,19 @@
       "dateIso": "1933-08-29",
       "bookStartPage": 385,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 423,
+        "pdfEndPage": 424,
+        "bookEndPage": 386,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "對中英庚款董事會第一屆留英學生訓詞"
+      }
     },
     {
       "seq": 97,
@@ -1197,7 +2376,20 @@
       "dateIso": "1934-08-18",
       "bookStartPage": 386,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 424,
+        "pdfEndPage": 426,
+        "bookEndPage": 388,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於上海",
+        "titleInText": "對中英庚款董事會第二屆留英學生訓詞",
+        "dateInText": "民國二十三年八月十八日"
+      }
     },
     {
       "seq": 98,
@@ -1208,7 +2400,20 @@
       "dateIso": "1941-12-04",
       "bookStartPage": 388,
       "tocPdfPage": 33,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 426,
+        "pdfEndPage": 428,
+        "bookEndPage": 390,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "titleInText": "勉大地測量組同人",
+        "dateInText": "民國三十年十二月四日"
+      }
     },
     {
       "seq": 99,
@@ -1219,7 +2424,20 @@
       "dateIso": "1941-01-28",
       "bookStartPage": 390,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 428,
+        "pdfEndPage": 431,
+        "bookEndPage": 393,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "復黔江中學全體學生兼告河西湟川兩中學學生書",
+        "dateInText": "民國三十年一月二十八日"
+      }
     },
     {
       "seq": 100,
@@ -1230,7 +2448,19 @@
       "dateIso": "1942-02-05",
       "bookStartPage": 393,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 431,
+        "pdfEndPage": 432,
+        "bookEndPage": 394,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十一年二月五日"
+      }
     },
     {
       "seq": 101,
@@ -1242,7 +2472,20 @@
       "bookStartPage": 395,
       "tocPdfPage": 34,
       "status": "目次核對",
-      "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+      "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 433,
+        "pdfEndPage": 434,
+        "bookEndPage": 396,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": false,
+        "occasion": null,
+        "titleInText": "簽呈總裁報告中國地理研究所工作概況",
+        "dateInText": "民國三十二年一月二十一日"
+      }
     },
     {
       "seq": 102,
@@ -1254,7 +2497,19 @@
       "bookStartPage": 397,
       "tocPdfPage": 34,
       "status": "目次核對",
-      "note": "原書於「簽呈」「總裁」之間空一格（擡頭）"
+      "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 435,
+        "pdfEndPage": 436,
+        "bookEndPage": 398,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十二年三月九日"
+      }
     },
     {
       "seq": 103,
@@ -1265,7 +2520,19 @@
       "dateIso": "1949-04",
       "bookStartPage": 399,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 437,
+        "pdfEndPage": 444,
+        "bookEndPage": 406,
+        "pdfPageCount": 8,
+        "sharesStartPage": false,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十八年四月"
+      }
     },
     {
       "seq": 104,
@@ -1277,7 +2544,19 @@
       "bookStartPage": 407,
       "tocPdfPage": 34,
       "status": "目次核對",
-      "note": "原書無日期"
+      "note": "原書無日期",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 445,
+        "pdfEndPage": 451,
+        "bookEndPage": 413,
+        "pdfPageCount": 7,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國二十三年十月"
+      }
     },
     {
       "seq": 105,
@@ -1289,7 +2568,19 @@
       "bookStartPage": 413,
       "tocPdfPage": 34,
       "status": "目次核對",
-      "note": "原書無日期"
+      "note": "原書無日期",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 451,
+        "pdfEndPage": 459,
+        "bookEndPage": 421,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "我在交通部任內的重要改革"
+      }
     },
     {
       "seq": 106,
@@ -1300,7 +2591,20 @@
       "dateIso": "1928-04",
       "bookStartPage": 421,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 459,
+        "pdfEndPage": 463,
+        "bookEndPage": 425,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "對浙江省第一屆考取縣長之訓話",
+        "dateInText": "民國十七年四月"
+      }
     },
     {
       "seq": 107,
@@ -1311,7 +2615,19 @@
       "dateIso": "1936-12-21",
       "bookStartPage": 425,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 463,
+        "pdfEndPage": 466,
+        "bookEndPage": 428,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在省府紀念週報告詞",
+        "dateInText": "民國二十五年十二月二十一日"
+      }
     },
     {
       "seq": 108,
@@ -1323,7 +2639,19 @@
       "bookStartPage": 429,
       "tocPdfPage": 34,
       "status": "目次核對",
-      "note": "原書無日期"
+      "note": "原書無日期",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 467,
+        "pdfEndPage": 470,
+        "bookEndPage": 433,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "黨政擴大紀念週報告",
+        "dateInText": "民國二十六年一月四日"
+      }
     },
     {
       "seq": 109,
@@ -1334,7 +2662,19 @@
       "dateIso": "1927-01-15",
       "bookStartPage": 433,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 470,
+        "pdfEndPage": 474,
+        "bookEndPage": 437,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於廣州",
+        "dateInText": "民國十六年一月十五日"
+      }
     },
     {
       "seq": 110,
@@ -1345,7 +2685,20 @@
       "dateIso": "1940-03-24",
       "bookStartPage": 437,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 474,
+        "pdfEndPage": 474,
+        "bookEndPage": 437,
+        "pdfPageCount": 1,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "titleInText": "告全國教育學術界同人書",
+        "dateInText": "民國二十九年三月二十四日"
+      }
     },
     {
       "seq": 111,
@@ -1356,7 +2709,20 @@
       "dateIso": "1940-05-07",
       "bookStartPage": 438,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 475,
+        "pdfEndPage": 481,
+        "bookEndPage": 444,
+        "pdfPageCount": 7,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "對新運婦女高級幹部訓練班講詞",
+        "titleInText": "中國婦女運動之回顧與瞻望",
+        "dateInText": "民國二十九年五月七日"
+      }
     },
     {
       "seq": 112,
@@ -1367,7 +2733,20 @@
       "dateIso": "1940-06-22",
       "bookStartPage": 444,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 481,
+        "pdfEndPage": 483,
+        "bookEndPage": 446,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央電臺廣播講詞",
+        "titleInText": "黨務的詮釋",
+        "dateInText": "民國二十九年六月二十二日"
+      }
     },
     {
       "seq": 113,
@@ -1378,7 +2757,19 @@
       "dateIso": "1940-07-07",
       "bookStartPage": 446,
       "tocPdfPage": 34,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 483,
+        "pdfEndPage": 487,
+        "bookEndPage": 450,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年七月七日"
+      }
     },
     {
       "seq": 114,
@@ -1389,7 +2780,19 @@
       "dateIso": "1940-10-23",
       "bookStartPage": 450,
       "tocPdfPage": 35,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 487,
+        "pdfEndPage": 490,
+        "bookEndPage": 453,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年十月二十三日"
+      }
     },
     {
       "seq": 115,
@@ -1400,7 +2803,19 @@
       "dateIso": "1941-01-01",
       "bookStartPage": 453,
       "tocPdfPage": 35,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 490,
+        "pdfEndPage": 494,
+        "bookEndPage": 457,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十年一月一日"
+      }
     },
     {
       "seq": 116,
@@ -1413,7 +2828,20 @@
       "tocPdfPage": 35,
       "status": "目次核對",
       "section": "一、國內方面",
-      "note": "原書作「眞」"
+      "note": "原書作「眞」",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 494,
+        "pdfEndPage": 499,
+        "bookEndPage": 462,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央留京辦事處總理紀念週講演",
+        "titleInText": "暴日對華侵略真象",
+        "dateInText": "民國二十一年四月四日"
+      }
     },
     {
       "seq": 117,
@@ -1425,7 +2853,20 @@
       "bookStartPage": 462,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 499,
+        "pdfEndPage": 500,
+        "bookEndPage": 463,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "到漢口時對記者談話",
+        "titleInText": "抗戰感想關於焦土政策與游擊戰",
+        "dateInText": "民國二十七年一月十一日"
+      }
     },
     {
       "seq": 118,
@@ -1437,7 +2878,19 @@
       "bookStartPage": 463,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 500,
+        "pdfEndPage": 502,
+        "bookEndPage": 465,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於漢口",
+        "dateInText": "民國二十七年八月十三日"
+      }
     },
     {
       "seq": 119,
@@ -1449,7 +2902,19 @@
       "bookStartPage": 465,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 502,
+        "pdfEndPage": 504,
+        "bookEndPage": 467,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於漢口",
+        "dateInText": "民國二十七年九月二十日"
+      }
     },
     {
       "seq": 120,
@@ -1462,7 +2927,19 @@
       "tocPdfPage": 35,
       "status": "目次核對",
       "section": "一、國內方面",
-      "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此"
+      "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 504,
+        "pdfEndPage": 506,
+        "bookEndPage": 469,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "廣播",
+        "dateInText": "民國二十八年七月九日"
+      }
     },
     {
       "seq": 121,
@@ -1475,7 +2952,20 @@
       "tocPdfPage": 35,
       "status": "目次核對",
       "section": "一、國內方面",
-      "note": "日期早於前篇，原書如此"
+      "note": "日期早於前篇，原書如此",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 506,
+        "pdfEndPage": 510,
+        "bookEndPage": 473,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "抗戰兩週年的回顧與前瞻",
+        "dateInText": "民國二十八年六月十二日"
+      }
     },
     {
       "seq": 122,
@@ -1487,7 +2977,19 @@
       "bookStartPage": 473,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 510,
+        "pdfEndPage": 513,
+        "bookEndPage": 476,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年三月二十八日"
+      }
     },
     {
       "seq": 123,
@@ -1499,7 +3001,19 @@
       "bookStartPage": 476,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 513,
+        "pdfEndPage": 516,
+        "bookEndPage": 479,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年六月二十日"
+      }
     },
     {
       "seq": 124,
@@ -1511,7 +3025,19 @@
       "bookStartPage": 479,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 516,
+        "pdfEndPage": 521,
+        "bookEndPage": 484,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年七月七日"
+      }
     },
     {
       "seq": 125,
@@ -1523,7 +3049,20 @@
       "bookStartPage": 484,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 521,
+        "pdfEndPage": 522,
+        "bookEndPage": 485,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "致留在上海的文化界人士一封短筒",
+        "dateInText": "民國三十年一月一日"
+      }
     },
     {
       "seq": 126,
@@ -1535,7 +3074,19 @@
       "bookStartPage": 485,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 522,
+        "pdfEndPage": 524,
+        "bookEndPage": 487,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央廣播電臺播講",
+        "dateInText": "民國三十三年五月一日"
+      }
     },
     {
       "seq": 127,
@@ -1547,7 +3098,19 @@
       "bookStartPage": 487,
       "tocPdfPage": 35,
       "status": "目次核對",
-      "section": "一、國內方面"
+      "section": "一、國內方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 524,
+        "pdfEndPage": 528,
+        "bookEndPage": 491,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "向淪陷區播講",
+        "dateInText": "民國三十三年六月一日"
+      }
     },
     {
       "seq": 128,
@@ -1559,7 +3122,20 @@
       "bookStartPage": 491,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 529,
+        "pdfEndPage": 530,
+        "bookEndPage": 493,
+        "pdfPageCount": 2,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "告近東同教民眾書",
+        "dateInText": "民國二十七年八月十五日"
+      }
     },
     {
       "seq": 129,
@@ -1571,7 +3147,19 @@
       "bookStartPage": 493,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 530,
+        "pdfEndPage": 533,
+        "bookEndPage": 496,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於漢口",
+        "dateInText": "民國二十七年九月十五日"
+      }
     },
     {
       "seq": 130,
@@ -1583,7 +3171,19 @@
       "bookStartPage": 496,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 533,
+        "pdfEndPage": 539,
+        "bookEndPage": 502,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在重慶青年夏令營講演",
+        "dateInText": "民國二十八年八月十五日"
+      }
     },
     {
       "seq": 131,
@@ -1595,7 +3195,19 @@
       "bookStartPage": 502,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 539,
+        "pdfEndPage": 547,
+        "bookEndPage": 510,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在外交問題研究會講",
+        "dateInText": "民國二十八年十一月二十八日"
+      }
     },
     {
       "seq": 132,
@@ -1608,7 +3220,19 @@
       "tocPdfPage": 36,
       "status": "目次核對",
       "section": "二、國際方面",
-      "note": "原書無日期；原書作「爲」"
+      "note": "原書無日期；原書作「爲」",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 547,
+        "pdfEndPage": 549,
+        "bookEndPage": 512,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "titleInText": "為日汪密約告歐美友邦人士"
+      }
     },
     {
       "seq": 133,
@@ -1620,7 +3244,19 @@
       "bookStartPage": 513,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 550,
+        "pdfEndPage": 552,
+        "bookEndPage": 515,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十年一月十五日"
+      }
     },
     {
       "seq": 134,
@@ -1632,7 +3268,19 @@
       "bookStartPage": 515,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 552,
+        "pdfEndPage": 560,
+        "bookEndPage": 523,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在陸軍大學講演",
+        "dateInText": "民國三十年二月十七日"
+      }
     },
     {
       "seq": 135,
@@ -1644,7 +3292,20 @@
       "bookStartPage": 523,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 560,
+        "pdfEndPage": 565,
+        "bookEndPage": 528,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "蘇日中立條約成立後的國際形勢",
+        "dateInText": "民國三十年五月五日"
+      }
     },
     {
       "seq": 136,
@@ -1656,7 +3317,19 @@
       "bookStartPage": 528,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 565,
+        "pdfEndPage": 570,
+        "bookEndPage": 533,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十年六月"
+      }
     },
     {
       "seq": 137,
@@ -1668,7 +3341,19 @@
       "bookStartPage": 533,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 570,
+        "pdfEndPage": 572,
+        "bookEndPage": 535,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "廣播",
+        "dateInText": "民國三十一年一月十四日"
+      }
     },
     {
       "seq": 138,
@@ -1680,7 +3365,19 @@
       "bookStartPage": 535,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 572,
+        "pdfEndPage": 577,
+        "bookEndPage": 540,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央組織部總理紀念週講",
+        "dateInText": "民國三十一年二月九日"
+      }
     },
     {
       "seq": 139,
@@ -1692,7 +3389,19 @@
       "bookStartPage": 540,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 577,
+        "pdfEndPage": 585,
+        "bookEndPage": 548,
+        "pdfPageCount": 9,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在宜賓中央軍校特別訓練班講",
+        "dateInText": "民國三十一年九月六日"
+      }
     },
     {
       "seq": 140,
@@ -1704,7 +3413,19 @@
       "bookStartPage": 548,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 585,
+        "pdfEndPage": 590,
+        "bookEndPage": 553,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央組織部講",
+        "dateInText": "民國三十三年五月五日"
+      }
     },
     {
       "seq": 141,
@@ -1716,7 +3437,19 @@
       "bookStartPage": 553,
       "tocPdfPage": 36,
       "status": "目次核對",
-      "section": "二、國際方面"
+      "section": "二、國際方面",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 590,
+        "pdfEndPage": 594,
+        "bookEndPage": 557,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在教育部講演",
+        "dateInText": "民國三十四年二月十二日"
+      }
     },
     {
       "seq": 142,
@@ -1727,7 +3460,20 @@
       "dateIso": "1938-01-29",
       "bookStartPage": 557,
       "tocPdfPage": 36,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 594,
+        "pdfEndPage": 596,
+        "bookEndPage": 559,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於漢口",
+        "titleInText": "國聯同志會招待外國記者演講詞",
+        "dateInText": "民國二十七年一月二十九日"
+      }
     },
     {
       "seq": 143,
@@ -1738,7 +3484,20 @@
       "dateIso": "1940-09-18",
       "bookStartPage": 559,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 596,
+        "pdfEndPage": 597,
+        "bookEndPage": 560,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "九週年紀念告友邦人士書",
+        "dateInText": "民國二十九年九月十八日"
+      }
     },
     {
       "seq": 144,
@@ -1749,7 +3508,20 @@
       "dateIso": "1948-03-14",
       "bookStartPage": 560,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 597,
+        "pdfEndPage": 600,
+        "bookEndPage": 563,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "聯合國中國同志會第二次大會開幕詞",
+        "dateInText": "民國三十七年三月十四日"
+      }
     },
     {
       "seq": 145,
@@ -1760,7 +3532,19 @@
       "dateIso": "1948-10-24",
       "bookStartPage": 563,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 600,
+        "pdfEndPage": 602,
+        "bookEndPage": 565,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十七年十月二十四日"
+      }
     },
     {
       "seq": 146,
@@ -1771,7 +3555,19 @@
       "dateIso": "1951-03-25",
       "bookStartPage": 565,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 602,
+        "pdfEndPage": 606,
+        "bookEndPage": 569,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在聯合國中國同志會會員大會講",
+        "dateInText": "民國四十年三月二十五日"
+      }
     },
     {
       "seq": 147,
@@ -1782,7 +3578,19 @@
       "dateIso": "1951-10-24",
       "bookStartPage": 569,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 606,
+        "pdfEndPage": 609,
+        "bookEndPage": 572,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在自由中國各界慶祝聯合國日大會開幕致詞",
+        "dateInText": "民國四十年十月二十四日"
+      }
     },
     {
       "seq": 148,
@@ -1793,7 +3601,19 @@
       "dateIso": "1953-10-24",
       "bookStartPage": 572,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 609,
+        "pdfEndPage": 611,
+        "bookEndPage": 574,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在臺北全國各界慶祝第八屆聯合國大會開會致詞",
+        "dateInText": "民國四十二年十月二十四日"
+      }
     },
     {
       "seq": 149,
@@ -1804,7 +3624,19 @@
       "dateIso": "1953-12-06",
       "bookStartPage": 574,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 611,
+        "pdfEndPage": 614,
+        "bookEndPage": 577,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十二年十二月六日"
+      }
     },
     {
       "seq": 150,
@@ -1815,7 +3647,19 @@
       "dateIso": "1957-05-05",
       "bookStartPage": 577,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 614,
+        "pdfEndPage": 617,
+        "bookEndPage": 580,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在聯合國中國同志會會員大會講",
+        "dateInText": "民國四十六年五月五日"
+      }
     },
     {
       "seq": 151,
@@ -1826,7 +3670,19 @@
       "dateIso": "1941-09-15",
       "bookStartPage": 581,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 618,
+        "pdfEndPage": 620,
+        "bookEndPage": 583,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在中央紀念週報告",
+        "dateInText": "民國三十年九月十五日"
+      }
     },
     {
       "seq": 152,
@@ -1837,7 +3693,19 @@
       "dateIso": "1941-09-25",
       "bookStartPage": 583,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 620,
+        "pdfEndPage": 622,
+        "bookEndPage": 585,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央廣播電臺播講",
+        "dateInText": "民國三十年九月二十五日"
+      }
     },
     {
       "seq": 153,
@@ -1848,7 +3716,19 @@
       "dateIso": "1941-10-12",
       "bookStartPage": 585,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 622,
+        "pdfEndPage": 624,
+        "bookEndPage": 587,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央廣播電臺播講",
+        "dateInText": "民國三十年十月十二日"
+      }
     },
     {
       "seq": 154,
@@ -1859,7 +3739,19 @@
       "dateIso": "1941-10-13",
       "bookStartPage": 587,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 624,
+        "pdfEndPage": 630,
+        "bookEndPage": 593,
+        "pdfPageCount": 7,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在資源委員會講",
+        "dateInText": "民國三十年十月十三日"
+      }
     },
     {
       "seq": 155,
@@ -1870,7 +3762,19 @@
       "dateIso": "1942-10-21",
       "bookStartPage": 594,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 631,
+        "pdfEndPage": 642,
+        "bookEndPage": 605,
+        "pdfPageCount": 12,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在招待邊疆人士茶話會席上講",
+        "dateInText": "民國三十一年十月二十一日"
+      }
     },
     {
       "seq": 156,
@@ -1881,7 +3785,19 @@
       "dateIso": "1942-10-25",
       "bookStartPage": 605,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 642,
+        "pdfEndPage": 651,
+        "bookEndPage": 614,
+        "pdfPageCount": 10,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "在邊務工作會報席上致詞",
+        "dateInText": "民國三十一年十月二十五日"
+      }
     },
     {
       "seq": 157,
@@ -1892,7 +3808,19 @@
       "dateIso": "1942-12-29",
       "bookStartPage": 615,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 652,
+        "pdfEndPage": 657,
+        "bookEndPage": 620,
+        "pdfPageCount": 6,
+        "sharesStartPage": false,
+        "sharesEndPage": false,
+        "occasion": "在中央組織部招待赴新疆工作同志茶會席上講",
+        "dateInText": "民國三十一年十二月二十九日"
+      }
     },
     {
       "seq": 158,
@@ -1903,7 +3831,19 @@
       "dateIso": "1943-03-23",
       "bookStartPage": 621,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 658,
+        "pdfEndPage": 664,
+        "bookEndPage": 627,
+        "pdfPageCount": 7,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "在中央組織部招待第二次赴新疆工作同志茶會席上講",
+        "dateInText": "民國三十二年三月二十三日"
+      }
     },
     {
       "seq": 159,
@@ -1914,7 +3854,19 @@
       "dateIso": "1943-04-28",
       "bookStartPage": 627,
       "tocPdfPage": 37,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 664,
+        "pdfEndPage": 673,
+        "bookEndPage": 637,
+        "pdfPageCount": 10,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在第二次邊疆會報席上講",
+        "dateInText": "民國三十二年四月二十八日"
+      }
     },
     {
       "seq": 160,
@@ -1925,7 +3877,19 @@
       "dateIso": "1925-10-03",
       "bookStartPage": 637,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 673,
+        "pdfEndPage": 676,
+        "bookEndPage": 640,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國十四年十月三日"
+      }
     },
     {
       "seq": 161,
@@ -1936,7 +3900,19 @@
       "dateIso": "1931-01-19",
       "bookStartPage": 640,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 676,
+        "pdfEndPage": 679,
+        "bookEndPage": 643,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央大學紀念週講演",
+        "dateInText": "民國二十年一月十九日"
+      }
     },
     {
       "seq": 162,
@@ -1947,7 +3923,19 @@
       "dateIso": "1941",
       "bookStartPage": 643,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 679,
+        "pdfEndPage": 683,
+        "bookEndPage": 647,
+        "pdfPageCount": 5,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十年"
+      }
     },
     {
       "seq": 163,
@@ -1958,7 +3946,19 @@
       "dateIso": "1941-08",
       "bookStartPage": 647,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 683,
+        "pdfEndPage": 688,
+        "bookEndPage": 652,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "在中央陸軍軍官學校第七分校講詞",
+        "dateInText": "民國三十年八月"
+      }
     },
     {
       "seq": 164,
@@ -1969,7 +3969,19 @@
       "dateIso": "1947-01-04",
       "bookStartPage": 652,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 688,
+        "pdfEndPage": 690,
+        "bookEndPage": 654,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國三十六年一月四日"
+      }
     },
     {
       "seq": 165,
@@ -1980,7 +3992,19 @@
       "dateIso": "1947-03",
       "bookStartPage": 654,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 690,
+        "pdfEndPage": 693,
+        "bookEndPage": 657,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國三十六年三月"
+      }
     },
     {
       "seq": 166,
@@ -1992,7 +4016,19 @@
       "bookStartPage": 657,
       "tocPdfPage": 38,
       "status": "目次核對",
-      "note": "原書以拉丁字母印作 Keitel"
+      "note": "原書以拉丁字母印作 Keitel",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 693,
+        "pdfEndPage": 695,
+        "bookEndPage": 659,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國二十九年七月七日"
+      }
     },
     {
       "seq": 167,
@@ -2003,7 +4039,20 @@
       "dateIso": "1942-02-25",
       "bookStartPage": 659,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 695,
+        "pdfEndPage": 696,
+        "bookEndPage": 660,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "titleInText": "致英國克利浦斯爵士SirStaffordCripps書",
+        "dateInText": "民國三十一年二月二十五日"
+      }
     },
     {
       "seq": 168,
@@ -2014,7 +4063,20 @@
       "dateIso": "1942-09-25",
       "bookStartPage": 661,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 697,
+        "pdfEndPage": 697,
+        "bookEndPage": 661,
+        "pdfPageCount": 1,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "復美國陸軍部長史汀生先生函",
+        "dateInText": "民國三十一年九月二十五日"
+      }
     },
     {
       "seq": 169,
@@ -2026,7 +4088,20 @@
       "bookStartPage": 661,
       "tocPdfPage": 38,
       "status": "目次核對",
-      "note": "附錄，與前篇同頁接排；原書無日期"
+      "note": "附錄，與前篇同頁接排；原書無日期",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 697,
+        "pdfEndPage": 698,
+        "bookEndPage": 662,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "附美國陸軍部長史汀生氏來函譯文",
+        "note": "篇名與目次差距過大，位置由辨讀稿人工指定"
+      }
     },
     {
       "seq": 170,
@@ -2037,7 +4112,20 @@
       "dateIso": "1948-11-19",
       "bookStartPage": 662,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 698,
+        "pdfEndPage": 699,
+        "bookEndPage": 663,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "於南京",
+        "titleInText": "致美國蒲立德先生備忘錄",
+        "dateInText": "民國三十七年十一月十九日"
+      }
     },
     {
       "seq": 171,
@@ -2048,7 +4136,19 @@
       "dateIso": "1954-04-25",
       "bookStartPage": 664,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 700,
+        "pdfEndPage": 702,
+        "bookEndPage": 666,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十三年四月二十五日"
+      }
     },
     {
       "seq": 172,
@@ -2059,7 +4159,19 @@
       "dateIso": "1955-04-08",
       "bookStartPage": 666,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 702,
+        "pdfEndPage": 704,
+        "bookEndPage": 668,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十四年四月八日"
+      }
     },
     {
       "seq": 173,
@@ -2070,7 +4182,20 @@
       "dateIso": "1952-02-23",
       "bookStartPage": 668,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 704,
+        "pdfEndPage": 711,
+        "bookEndPage": 675,
+        "pdfPageCount": 8,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "titleInText": "復穆罕默德伊敏函",
+        "dateInText": "民國四十一年二月廿三日"
+      }
     },
     {
       "seq": 174,
@@ -2081,7 +4206,19 @@
       "dateIso": "1954-10-01",
       "bookStartPage": 675,
       "tocPdfPage": 38,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 711,
+        "pdfEndPage": 723,
+        "bookEndPage": 687,
+        "pdfPageCount": 13,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十三年十月一日"
+      }
     },
     {
       "seq": 175,
@@ -2092,7 +4229,19 @@
       "dateIso": "1957-07-30",
       "bookStartPage": 687,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 723,
+        "pdfEndPage": 732,
+        "bookEndPage": 697,
+        "pdfPageCount": 10,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十六年七月三十日"
+      }
     },
     {
       "seq": 176,
@@ -2103,7 +4252,19 @@
       "dateIso": "1933-10",
       "bookStartPage": 697,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 732,
+        "pdfEndPage": 733,
+        "bookEndPage": 698,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於南京",
+        "dateInText": "民國二十二年十月"
+      }
     },
     {
       "seq": 177,
@@ -2114,7 +4275,19 @@
       "dateIso": "1941-11-24",
       "bookStartPage": 698,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 733,
+        "pdfEndPage": 735,
+        "bookEndPage": 700,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十年十一月二十四日"
+      }
     },
     {
       "seq": 178,
@@ -2125,7 +4298,20 @@
       "dateIso": "1942-04-26",
       "bookStartPage": 701,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 736,
+        "pdfEndPage": 739,
+        "bookEndPage": 704,
+        "pdfPageCount": 4,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "titleInText": "戴季陶著青年之路再版序文",
+        "dateInText": "民國三十一年四月二十六日"
+      }
     },
     {
       "seq": 179,
@@ -2136,7 +4322,20 @@
       "dateIso": "1942-06",
       "bookStartPage": 704,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 739,
+        "pdfEndPage": 742,
+        "bookEndPage": 707,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "titleInText": "國立同濟大學測量系特刋序",
+        "dateInText": "民國三十一年六月"
+      }
     },
     {
       "seq": 180,
@@ -2147,7 +4346,20 @@
       "dateIso": "1942-08",
       "bookStartPage": 707,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 742,
+        "pdfEndPage": 744,
+        "bookEndPage": 709,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "titleInText": "王文新著師範教育概論序言",
+        "dateInText": "民國三十一年八月"
+      }
     },
     {
       "seq": 181,
@@ -2159,7 +4371,19 @@
       "bookStartPage": 709,
       "tocPdfPage": 39,
       "status": "目次核對",
-      "note": "蔡孑民即蔡元培（孑民為其號）"
+      "note": "蔡孑民即蔡元培（孑民為其號）",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 744,
+        "pdfEndPage": 745,
+        "bookEndPage": 710,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": "於重慶",
+        "dateInText": "民國三十一年九月十九日"
+      }
     },
     {
       "seq": 182,
@@ -2170,7 +4394,19 @@
       "dateIso": "1942-10-27",
       "bookStartPage": 711,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 746,
+        "pdfEndPage": 748,
+        "bookEndPage": 713,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年十月二十七日"
+      }
     },
     {
       "seq": 183,
@@ -2182,7 +4418,19 @@
       "bookStartPage": 713,
       "tocPdfPage": 39,
       "status": "目次核對",
-      "note": "與前篇同日，分屬地理組與測量組，非重複"
+      "note": "與前篇同日，分屬地理組與測量組，非重複",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 748,
+        "pdfEndPage": 750,
+        "bookEndPage": 715,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年十月二十七日"
+      }
     },
     {
       "seq": 184,
@@ -2193,7 +4441,20 @@
       "dateIso": "1944-04",
       "bookStartPage": 715,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 750,
+        "pdfEndPage": 751,
+        "bookEndPage": 716,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "titleInText": "葉祖灝著廢除不平等條約序言",
+        "dateInText": "民國三十三年四月"
+      }
     },
     {
       "seq": 185,
@@ -2204,7 +4465,19 @@
       "dateIso": "1948-10",
       "bookStartPage": 716,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 751,
+        "pdfEndPage": 752,
+        "bookEndPage": 717,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十七年十月"
+      }
     },
     {
       "seq": 186,
@@ -2215,7 +4488,19 @@
       "dateIso": "1951-04-14",
       "bookStartPage": 717,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 752,
+        "pdfEndPage": 754,
+        "bookEndPage": 719,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十年四月十四日"
+      }
     },
     {
       "seq": 187,
@@ -2226,7 +4511,19 @@
       "dateIso": "1954-05-11",
       "bookStartPage": 719,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 754,
+        "pdfEndPage": 757,
+        "bookEndPage": 723,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國四十三年五月十一日"
+      }
     },
     {
       "seq": 188,
@@ -2237,7 +4534,19 @@
       "dateIso": "1938-12-28",
       "bookStartPage": 723,
       "tocPdfPage": 39,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 757,
+        "pdfEndPage": 757,
+        "bookEndPage": 723,
+        "pdfPageCount": 1,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "重慶大公報",
+        "dateInText": "民國二十七年十二月二十八日"
+      }
     },
     {
       "seq": 189,
@@ -2249,7 +4558,19 @@
       "bookStartPage": 723,
       "tocPdfPage": 39,
       "status": "目次核對",
-      "note": "與前篇同頁接排；蔡孑民即蔡元培"
+      "note": "與前篇同頁接排；蔡孑民即蔡元培",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 757,
+        "pdfEndPage": 759,
+        "bookEndPage": 725,
+        "pdfPageCount": 3,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "重慶中央日報",
+        "dateInText": "民國二十九年三月二十四日"
+      }
     },
     {
       "seq": 190,
@@ -2261,7 +4582,19 @@
       "bookStartPage": 725,
       "tocPdfPage": 40,
       "status": "目次核對",
-      "note": "孑民即蔡元培"
+      "note": "孑民即蔡元培",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 759,
+        "pdfEndPage": 760,
+        "bookEndPage": 726,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國三十年三月五日"
+      }
     },
     {
       "seq": 191,
@@ -2272,7 +4605,19 @@
       "dateIso": "1942-08-11",
       "bookStartPage": 727,
       "tocPdfPage": 40,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 761,
+        "pdfEndPage": 763,
+        "bookEndPage": 729,
+        "pdfPageCount": 3,
+        "sharesStartPage": false,
+        "sharesEndPage": true,
+        "occasion": "於重慶",
+        "dateInText": "民國三十一年八月十一日"
+      }
     },
     {
       "seq": 192,
@@ -2283,7 +4628,19 @@
       "dateIso": "1942-09-19",
       "bookStartPage": 729,
       "tocPdfPage": 40,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 763,
+        "pdfEndPage": 766,
+        "bookEndPage": 732,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十一年九月十九日"
+      }
     },
     {
       "seq": 193,
@@ -2295,7 +4652,19 @@
       "bookStartPage": 732,
       "tocPdfPage": 40,
       "status": "目次核對",
-      "note": "蔡孑民即蔡元培"
+      "note": "蔡孑民即蔡元培",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 766,
+        "pdfEndPage": 767,
+        "bookEndPage": 733,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十二年三月五日"
+      }
     },
     {
       "seq": 194,
@@ -2307,7 +4676,19 @@
       "bookStartPage": 733,
       "tocPdfPage": 40,
       "status": "目次核對",
-      "note": "目次所載日期早於張靜江逝世之日；日期依目次照錄，待與正文原書頁 733 的題下日期核對"
+      "note": "目次所載日期早於張靜江逝世之日；日期依目次照錄，待與正文原書頁 733 的題下日期核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 767,
+        "pdfEndPage": 770,
+        "bookEndPage": 736,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": null,
+        "dateInText": "民國三十九年五月十九日"
+      }
     },
     {
       "seq": 195,
@@ -2318,7 +4699,19 @@
       "dateIso": "1951-02-12",
       "bookStartPage": 736,
       "tocPdfPage": 40,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 770,
+        "pdfEndPage": 775,
+        "bookEndPage": 741,
+        "pdfPageCount": 6,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於臺北",
+        "dateInText": "民國四十年二月十二日"
+      }
     },
     {
       "seq": 196,
@@ -2329,7 +4722,19 @@
       "dateIso": "1950-12-29",
       "bookStartPage": 741,
       "tocPdfPage": 40,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 775,
+        "pdfEndPage": 778,
+        "bookEndPage": 744,
+        "pdfPageCount": 4,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於臺北",
+        "dateInText": "民國三十九年十二月二十九日"
+      }
     },
     {
       "seq": 197,
@@ -2341,7 +4746,20 @@
       "bookStartPage": 744,
       "tocPdfPage": 40,
       "status": "目次核對",
-      "note": "附錄；原書無日期"
+      "note": "附錄；原書無日期",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 778,
+        "pdfEndPage": 779,
+        "bookEndPage": 745,
+        "pdfPageCount": 2,
+        "sharesStartPage": true,
+        "sharesEndPage": true,
+        "occasion": "於臺北",
+        "titleInText": "附紀念史語所傅故所長孟真五十六歲誕辰特刋序",
+        "dateInText": "民國四十年三月十日"
+      }
     },
     {
       "seq": 198,
@@ -2352,7 +4770,19 @@
       "dateIso": "1956-12",
       "bookStartPage": 745,
       "tocPdfPage": 40,
-      "status": "目次核對"
+      "status": "目次核對",
+      "textHead": {
+        "status": "待核",
+        "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
+        "pdfStartPage": 779,
+        "pdfEndPage": null,
+        "bookEndPage": null,
+        "pdfPageCount": null,
+        "sharesStartPage": true,
+        "sharesEndPage": false,
+        "occasion": null,
+        "dateInText": "民國四十五年十二月"
+      }
     }
   ]
 }
