@@ -6,12 +6,12 @@
   "bookPages": "637–640",
   "status": "未校辨讀稿",
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
-  "charCount": 1677,
+  "charCount": 1750,
   "noiseRemoved": 0,
   "missingBookPages": [],
   "paragraphs": [
     "錄自現代評論二卷四十三期",
-    "前天胡適之先生出示他所譯的四行葛德「彈竪琴人」（Goethe:Harfeuspieler),他譯的是：誰不曾含着眼淚咽他的飯,",
+    "前天胡適之先生出示他所譯的四行葛德「彈竪琴人」（Goethe: Harfeuspieler），他譯的是：誰不曾含着眼淚咽他的飯,",
     "誰不曾中夜嘆息，睡了又重起,",
     "淚汪汪地等候東方的復旦,",
     "偉大的天神呵，他不會認識你。",
@@ -25,15 +25,15 @@
     "獨自偎着他的枕衾幽歎,",
     "偉大的神明阿，他不認識你。",
     "閱讀之後，覺得興趣頗多，惟我對於作詩，素來是門外漢，要我批評，眞是有如造屋請教箍桶匠一樣。但是既承適之先生的美意，只得班門弄斧的下筆寫來。查葛德的原文是：",
-    "WernieseinBrotmitThränenass,",
-    "WerniediekummervollenNächte",
-    "AufseinemBetteweinendsass,",
-    "DerkenntEuchnicht,Ihrhimmlischenmächte！卡萊爾（ThomasCarlyle）的英譯是：",
-    "whoneveratehisbreadinsorrow.",
-    "whoneverspentthemidnighthours.",
-    "Weepingandwaitingforthemorrow,",
-    "Heknowsyounot,ye,heavenlypowers!",
-    "徐先生已經聲明他是根據卡萊爾的英譯。我看胡先生亦未免偏重英譯。讀卡萊爾的英譯，則與葛德原文，頗多不同之點，因其注重英文形式與音韻，已失葛德本意，例如insorrow（在憂愁中）原文本是withtears（和淚）之意。spent（消磨）一字爲原文所無的。midnighthours依照原文應譯：sorrowfulnight,並無中夜時間之意。weepingandwaitingforthemorrow,則完全是卡萊爾任意加入，爲原文所無。所以依照徐先生所說，就應該那是卡萊爾，不是葛德。徐先生說：「有的譯詩，專誠拘泥形式，原文的字數協韵等等，照樣寫出，但這末往往神味淺了；又有專注重神情的，結果往往是另寫了一首詩，竟許與原作差太遠了，那就不能叫譯。」這就是徐先生以適之那首「莪默」爲例的說法。又說「應該注意的是究竟怎樣譯法，才能把那偉大愴凉的情緒傳神一二」。徐胡兩先生譯文，依英譯視之，果然甚好。但徐先生的第二道改得比第一道更好，却仍不免斧鑿痕跡，似與原文不合。講到胡先生的譯文，思想很周密的，音韵亦頗自然，本是四行好詩，惟與原文依然有不同之處。故照志摩先生批評適之先生那首莪默說起來，能算是胡適與徐志摩，或者算是胡適與徐志摩譯卡萊爾的葛德，可不能說是葛德。何以見得，例如徐先生的第一道譯文中之第一行「誰不曾和着悲哀吞他的飯」，則悲哀兩字，似難替眼淚。第二行「誰又會半夜裏驚心起坐」，原文與英譯都沒有驚而起之意。第三行「淚滋滋的，東方的光明等待」係直翻英譯，本與原文純粹不同。第四行「他不曾認識你，阿，偉大的天父」，不會二字，非原文之意，卽天父兩字，亦不得當。至徐先生的第二道翻譯與胡先生之四行譯文，均在伯仲之間，都是好的。總之，翻譯是很難，譯詩更不容易。因受了胡先生的委託，現在姑用直譯的方法，直接把葛德「彈竪琴人」第三道之德文原作，完全翻出，以資參考。還請適之志摩兩先生批評。我譯的是：",
+    "Wer nie sein Brot mit Thränen ass,",
+    "Wer nie die kummervollen Nächte",
+    "Auf seinem Bette weinend sass,",
+    "Der kennt Euch nicht, Ihr himmlischen mächte！卡萊爾（Thomas Carlyle）的英譯是：",
+    "who never ate his bread in sorrow.",
+    "who never spent the midnight hours.",
+    "Weeping and waiting for the morrow,",
+    "He knows you not, ye, heavenly powers!",
+    "徐先生已經聲明他是根據卡萊爾的英譯。我看胡先生亦未免偏重英譯。讀卡萊爾的英譯，則與葛德原文，頗多不同之點，因其注重英文形式與音韻，已失葛德本意，例如in sorrow（在憂愁中）原文本是with tears（和淚）之意。spent（消磨）一字爲原文所無的。midnight hours依照原文應譯：sorrowfulnight，並無中夜時間之意。weeping and waiting for the morrow，則完全是卡萊爾任意加入，爲原文所無。所以依照徐先生所說，就應該那是卡萊爾，不是葛德。徐先生說：「有的譯詩，專誠拘泥形式，原文的字數協韵等等，照樣寫出，但這末往往神味淺了；又有專注重神情的，結果往往是另寫了一首詩，竟許與原作差太遠了，那就不能叫譯。」這就是徐先生以適之那首「莪默」爲例的說法。又說「應該注意的是究竟怎樣譯法，才能把那偉大愴凉的情緒傳神一二」。徐胡兩先生譯文，依英譯視之，果然甚好。但徐先生的第二道改得比第一道更好，却仍不免斧鑿痕跡，似與原文不合。講到胡先生的譯文，思想很周密的，音韵亦頗自然，本是四行好詩，惟與原文依然有不同之處。故照志摩先生批評適之先生那首莪默說起來，能算是胡適與徐志摩，或者算是胡適與徐志摩譯卡萊爾的葛德，可不能說是葛德。何以見得，例如徐先生的第一道譯文中之第一行「誰不曾和着悲哀吞他的飯」，則悲哀兩字，似難替眼淚。第二行「誰又會半夜裏驚心起坐」，原文與英譯都沒有驚而起之意。第三行「淚滋滋的，東方的光明等待」係直翻英譯，本與原文純粹不同。第四行「他不曾認識你，阿，偉大的天父」，不會二字，非原文之意，卽天父兩字，亦不得當。至徐先生的第二道翻譯與胡先生之四行譯文，均在伯仲之間，都是好的。總之，翻譯是很難，譯詩更不容易。因受了胡先生的委託，現在姑用直譯的方法，直接把葛德「彈竪琴人」第三道之德文原作，完全翻出，以資參考。還請適之志摩兩先生批評。我譯的是：",
     "誰從不曾含着眼淚吃過他的麵包,",
     "誰從不曾把充滿悲愁的夜裏",
     "在他的床上哭着坐過去了,",
@@ -42,10 +42,10 @@
     "你們使這苦惱的人們罪過,",
     "然後你們交給他痛苦憂患；",
     "因爲人間一切罪孽報應無差。我檢出了葛德後四行的原文：",
-    "IhrführtinsLebenunshinein.",
-    "Ihrlass'tdenArmenschuldigwerden,",
-    "Dannüberlass't,Ihrihnderpein;",
-    "DennalleschuldrächtsichaufErden."
+    "Ihr führt ins Leben uns hinein.",
+    "Ihr lass't den Armen schuldig werden,",
+    "Dann überlass't, Ihr ihn der pein;",
+    "Denn alle schuld rächt sich auf Erden."
   ],
   "pageBreaks": [
     {
@@ -61,7 +61,7 @@
     {
       "bookPage": 639,
       "para": 23,
-      "offset": 155
+      "offset": 158
     },
     {
       "bookPage": 640,

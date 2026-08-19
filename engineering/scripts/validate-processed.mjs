@@ -92,6 +92,22 @@ try {
 } catch {
   draftFiles = [];
 }
+// 書眉印的是部次名或節名，兩者都在目次裡；剝掉序數、頁碼與分隔符之後拿來比對。
+const HEAD_NAMES = new Set(
+  ['朱家驊先生言論集', ...tocIndex.items.flatMap((it) => [it.part, it.section, it.subsection])]
+    .filter(Boolean)
+    .map((raw) => (raw.includes('、') ? raw.split('、').slice(1).join('、') : raw))
+    .map((n) => n.replace(/敎/g, '教')),
+);
+const headKey = (t) =>
+  t
+    .replace(/[敎]/g, '教')
+    .replace(/[叄参]/g, '叁')
+    .replace(/[（(][一二三四五六七八九十]+[）)]/g, '')
+    .replace(/^[壹貳叁肆伍陸柒捌玖拾臺壺粜一二三四五六七八九十]{1,3}/, '')
+    .replace(/[〇一二三四五六七八九十百]+$/, '')
+    .replace(/[、,.．・\s【】\-—]/g, '');
+
 if (draftFiles.length) {
   const ids = new Set(tocIndex.items.map((it) => it.id));
   if (draftFiles.length !== ids.size) {
@@ -126,6 +142,22 @@ if (draftFiles.length) {
       const cn = String(brk.bookPage).split('').map((d) => CN[Number(d)]).join('');
       if (draft.paragraphs[brk.para].slice(brk.offset).startsWith(cn)) {
         throw new Error(`${file} 原書第 ${brk.bookPage} 頁的書根併進正文了`);
+      }
+    }
+    // 這道檢查先前只看該頁起頭的中文數字頁碼，於是整段的書眉（「叄敎育言論」「臺文化學術」）、
+    // 邊欄切出來的單字段（「直」「。」）與掃描髒點（110K、GDGY）一路綠燈上站。判準改成三條，
+    // 名稱一律取自目次，不用手寫的字面表——序數被認錯或整個掉了，剝掉序數照樣認得出來。
+    for (const [i, para] of draft.paragraphs.entries()) {
+      const t = para.trim();
+      if (t.length <= 16 && HEAD_NAMES.has(headKey(t))) {
+        throw new Error(`${file} 第 ${i} 段是書眉殘留：「${t}」`);
+      }
+      const cjk = /[\u4e00-\u9fff\uf900-\ufaff]/.test(t);
+      if (cjk && [...t].length === 1) {
+        throw new Error(`${file} 第 ${i} 段只有一個字「${t}」，正文沒有一個字自成一段，是邊欄碎片`);
+      }
+      if (!cjk && t.length < 12 && !/^[\u3000-\u303f\uff00-\uffef]+$/.test(t)) {
+        throw new Error(`${file} 第 ${i} 段不含漢字又短：「${t}」，是掃描髒點`);
       }
     }
     if (draft.missingBookPages?.length && !draft.missingNote) {

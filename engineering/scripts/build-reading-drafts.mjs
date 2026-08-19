@@ -71,7 +71,9 @@ const headAlternatives = [...new Set(toc.map((t) => t.part))]
   .map((part) => {
     const [ordinal, name] = part.split('、')
     const names = name.includes('教') ? [name, name.replace('教', '敎')] : [name]
-    return `【?${ordinal}】?[-—、,.\\s]{0,2}(?:${names.join('|')})`
+    // 序數的異體與常見誤認一併收：原書排叄而字元集寫叁，壹常被認成臺。
+    const ords = [...new Set([ordinal, ordinal.replace('叁', '叄'), ordinal.replace('壹', '臺')])]
+    return `【?(?:${ords.join('|')})】?[-—、,.\\s]{0,2}(?:${names.join('|')})`
   })
   .sort((a, b) => b.length - a.length)
 const HEAD_IN_LINE = new RegExp(`(?:${headAlternatives.join('|')})`)
@@ -87,6 +89,38 @@ const HEAD_IN_LINE = new RegExp(`(?:${headAlternatives.join('|')})`)
 // 回傳留下來的字，以及留下來的第一個字的頂端 y 與最右欄的 x——縮排判定與欄序都要用它。
 // 書眉是書名或部次名，書根是頁碼；兩者各自成行，辨讀稿裡的頁碼常認錯，只認長相
 const RUNNING_HEAD = /^(朱家驊先生言論集|[壹貳叁肆伍陸柒捌玖拾][、\s]?.{0,12})$/
+
+// 書眉印的是部次名或節名，兩者都在目次裡，所以認的是目次自己的字串，不是猜的字面。
+// 只按「序數字＋名稱」的長相認，漏掉三種：序數被認成別的字（壹→臺）、序數整個沒被認出
+// （只剩「教育言論」）、以及序數的異體（原書排的是叄，先前的字元集寫的是叁）。
+// 判準改成：整段除掉序數、頁碼與分隔符之後，剩下的正好是目次裡的一個名稱。
+const HEAD_NAMES = (() => {
+  const names = new Set(['朱家驊先生言論集'])
+  for (const t of toc) {
+    for (const raw of [t.part, t.section, t.subsection]) {
+      if (!raw) continue
+      names.add(raw.includes('、') ? raw.split('、').slice(1).join('、') : raw)
+    }
+  }
+  return new Set([...names].map((n) => n.replace(/[敎]/g, '教')))
+})()
+
+// 序數（中文數字與大寫數字）、頁碼的中文數字、以及分隔符都剝掉；辨讀常混的異體字先歸一。
+const headKey = (t) =>
+  t
+    .replace(/[敎]/g, '教')
+    .replace(/[叄参]/g, '叁')
+    .replace(/[（(][一二三四五六七八九十]+[）)]/g, '')
+    .replace(/^[壹貳叁肆伍陸柒捌玖拾臺壺粜一二三四五六七八九十]{1,3}/, '')
+    .replace(/[〇一二三四五六七八九十百]+$/, '')
+    .replace(/[、,.．・\s【】\-—]/g, '')
+
+const isRunningHead = (t) => {
+  const s = t.trim()
+  if (!s || s.length > 16) return false
+  const key = headKey(s)
+  return key.length >= 2 && HEAD_NAMES.has(key)
+}
 const PAGE_NUMBER = /^[〇一二三四五六七八九十百0-9\s.,·]{1,6}$/
 
 const COLUMN_TOLERANCE = 25
@@ -132,6 +166,19 @@ const dropMarginColumns = (syms) => {
   return { syms: syms.filter((s) => keep.has(s)), dropped }
 }
 
+// 詞距只補在拉丁字母、數字與它們的標點之間：直排的漢字之間辨識結果也常標 SPACE，
+// 照補就會把整段中文拆成一個字一個空格。
+const LATINISH = /[A-Za-z0-9À-ɏ.,;:'’\-]/
+const joinSyms = (list) => {
+  let out = ''
+  for (let i = 0; i < list.length; i += 1) {
+    out += list[i].text
+    const next = list[i + 1]
+    if (list[i].space && next && LATINISH.test(list[i].text.slice(-1)) && LATINISH.test(next.text[0])) out += ' '
+  }
+  return out
+}
+
 const readParagraph = (par) => {
   const syms = par.words.flatMap((w) =>
     w.symbols.map((sym) => {
@@ -140,15 +187,18 @@ const readParagraph = (par) => {
       const ys = v.map((q) => q.y ?? 0)
       return {
         text: sym.text,
+        // 拉丁文的詞距在辨識結果裡不是一個字元，是這個符號的 detectedBreak；只取符號的
+        // 文字就會把「Academia Sinica」黏成一個詞（歌德那首詩整行黏成一串也是這個原因）。
+        space: ['SPACE', 'EOL_SURE_SPACE'].includes(sym.property?.detectedBreak?.type ?? ''),
         cx: xs.length ? (Math.min(...xs) + Math.max(...xs)) / 2 : 0,
         top: ys.length ? Math.min(...ys) : null,
       }
     }),
   )
-  const raw = syms.map((s) => s.text).join('')
+  const raw = joinSyms(syms)
   // 先按座標丟整條邊欄，再按字面補一刀：書眉與正文擠在同一欄的少數頁靠後者
   let { syms: kept, dropped } = dropMarginColumns(syms)
-  const text0 = kept.map((s) => s.text).join('')
+  const text0 = joinSyms(kept)
   const m = text0.trim().length > 14 ? HEAD_IN_LINE.exec(text0) : null
   if (m) {
     const band = kept.slice(m.index, m.index + m[0].length).map((s) => s.cx)
@@ -168,7 +218,7 @@ const readParagraph = (par) => {
 const shapeParagraph = (kept) => {
   const tops = kept.map((s) => s.top).filter((y) => y !== null)
   return {
-    text: kept.map((s) => s.text).join('').trim(),
+    text: joinSyms(kept).trim(),
     firstTop: tops.length ? tops[0] : null,
     minTop: tops.length ? Math.min(...tops) : null,
     headX: kept.length ? Math.max(...kept.map((s) => s.cx)) : 0,
@@ -250,7 +300,11 @@ const widen = (t) => {
       if (!w) continue
       const left = CJK_CTX.test(out[i - 1] ?? '')
       const right = CJK_CTX.test(out[i + 1] ?? '')
-      if (BOTH_SIDES.has(out[i]) ? left && right : left || right) out[i] = w
+      // 句號與逗號預設要求兩邊都是漢字，免得動到「Bologna, Padua, Pisa」與
+      // 「F.J.M.Bourdrez」；但拉丁詞後面接漢字的那一個（「Academia Sinica，大家」）
+      // 原書排的是全形，只看右鄰。左鄰是數字的不算（1,000 元的千分位）。
+      const digitLeft = /[0-9]/.test(out[i - 1] ?? '')
+      if (BOTH_SIDES.has(out[i]) ? (left && right) || (right && !digitLeft) : left || right) out[i] = w
     }
   }
   return out.join('')
@@ -261,7 +315,7 @@ const widen = (t) => {
 // （實測全書 68 處全是污損與書根碎片），一併剔除。
 const NOISE = /[^　-〿぀-ヿ一-鿿豈-﫿＀-￯ -~À-ɏ]|[{}|]/g
 
-const chrome = (line) => !line || RUNNING_HEAD.test(line) || PAGE_NUMBER.test(line)
+const chrome = (line) => !line || RUNNING_HEAD.test(line) || PAGE_NUMBER.test(line) || isRunningHead(line)
 
 // 標題行在該頁的位置：拿正文那一行的原字去找，找不到就退回頁首
 const titleLineIndex = (pdfPage, titleInText) => {
@@ -316,7 +370,17 @@ for (let i = 0; i < heads.length; i += 1) {
       // 掃描件上的髒點被辨識成一兩個拉丁字母或符號，自成一段（實測原書 573、585、616
       // 三頁各留下一個 f、}、n）。不含漢字又短的整段丟掉；只有標點的那一段是上一段
       // 末尾被切出來的收尾符號（原書 481 的句號），留著但不讓它自成一段。
-      .filter((l) => l.text && (/[\u4e00-\u9fff\uf900-\ufaff]/.test(l.text) || l.text.length > 3 || /^[\u3000-\u303f\uff00-\uffef]+$/.test(l.text)))
+      // 邊欄與掃描髒點留下來的碎片，在剔過雜訊字元之後才看得出長相，所以這一關放在清理之後：
+      // 書眉與書根整段（上一關按原字判，遇到雜訊字元夾在中間就認不出來）、只剩一個漢字的
+      // 段（邊欄的字被切成一欄一字，正文沒有一個字自成一段）、以及不含漢字又短的段
+      // （110K、GDGY、Ol!! 這類髒點；歌德那幾行拉丁文詩每行都在十二字以上，不會被誤刪）。
+      .filter((l) => {
+        if (!l.text) return false
+        if (isRunningHead(l.text)) return false
+        const cjk = /[\u4e00-\u9fff\uf900-\ufaff]/.test(l.text)
+        if (!cjk) return l.text.length >= 12 || /^[\u3000-\u303f\uff00-\uffef]+$/.test(l.text)
+        return [...l.text].length > 1
+      })
       .map((l) => (/^[\u3000-\u303f\uff00-\uffef]+$/.test(l.text) ? { ...l, indented: false, tail: true } : l))
     if (!cleaned.length) continue
 
