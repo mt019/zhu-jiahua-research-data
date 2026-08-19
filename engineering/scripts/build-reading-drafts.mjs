@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync
 import { join } from 'node:path'
 
 const TXT_DIR = 'data/materials/speeches/gcv/txt'
+const JSON_DIR = 'data/materials/speeches/gcv/txt/json'
 const HEADS = 'data/derived/piece_heads.json'
 const TOC = 'data/derived/toc_index.json'
 const PAGE_MAP = 'data/derived/page_map.json'
@@ -59,16 +60,36 @@ for (const g of pageMap.gaps) {
   missingByPiece.set(owner.id, [...(missingByPiece.get(owner.id) ?? []), g.bookPage])
 }
 
+// 段落取自辨讀結果自己的 paragraph 結構：實測它與原書的分段一致（原書靠首行縮排分段，
+// 辨識引擎讀得到那個縮排）。純文字檔一行是一欄，接起來就沒有分段了，所以改讀 JSON。
 const pages = new Map()
-for (const f of readdirSync(TXT_DIR)) {
-  const n = Number(f.match(/(\d+)\.txt$/)?.[1])
+for (const f of readdirSync(JSON_DIR)) {
+  const n = Number(f.match(/(\d+)\.json$/)?.[1])
   if (!Number.isInteger(n) || pages.has(n)) continue
-  pages.set(n, readFileSync(join(TXT_DIR, f), 'utf8').split('\n').map((l) => l.trim()))
+  const doc = JSON.parse(readFileSync(join(JSON_DIR, f), 'utf8'))
+  const page = doc.fullTextAnnotation?.pages?.[0]
+  const paras = []
+  for (const b of page?.blocks ?? []) {
+    for (const par of b.paragraphs ?? []) {
+      const t = par.words.flatMap((w) => w.symbols.map((sym) => sym.text)).join('')
+      if (t.trim()) paras.push(t.trim())
+    }
+  }
+  pages.set(n, paras)
 }
 
 // 書眉是書名或部次名，書根是頁碼；兩者各自成行，辨讀稿裡的頁碼常認錯，只認長相
 const RUNNING_HEAD = /^(朱家驊先生言論集|[壹貳叁肆伍陸柒捌玖拾][、\s]?.{0,12})$/
 const PAGE_NUMBER = /^[〇一二三四五六七八九十百0-9\s.,·]{1,6}$/
+// 辨讀稿把全形逗號、冒號、問號讀成半形，原書排的是全形。夾在漢字之間的一律轉回全形。
+const widen = (t) =>
+  t
+    .replace(/([\u3000-\u9fff]),/g, '$1，')
+    .replace(/,([\u3000-\u9fff])/g, '，$1')
+    .replace(/([\u3000-\u9fff]):/g, '$1：')
+    .replace(/([\u3000-\u9fff]);/g, '$1；')
+    .replace(/([\u3000-\u9fff])\?/g, '$1？')
+    .replace(/([\u3000-\u9fff])!/g, '$1！')
 const NOISE = /[^\u3000-\u303f\u3040-\u30ff\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef\u0020-\u007e\u00c0-\u024f]/g
 
 const chrome = (line) => !line || RUNNING_HEAD.test(line) || PAGE_NUMBER.test(line)
@@ -116,16 +137,17 @@ for (let i = 0; i < heads.length; i += 1) {
     const body = lines.slice(from, to).filter((l) => !chrome(l))
     // 掃描件上的墨點、勾記與污損被辨識成 ⚫ ✓ ○ ① 這類符號，落到站上是一個畫不出來的字。
     // 漢字、假名、拉丁字母、數字與常用標點以外的一律剔除，剔掉幾個記在 noiseRemoved。
+    const paras = body.map((t) => widen(t.replace(NOISE, '')).trim()).filter(Boolean)
     const raw = body.join('')
-    const text = raw.replace(NOISE, '')
-    noiseRemoved += raw.length - text.length
+    const text = paras.join('')
+    noiseRemoved += raw.length - raw.replace(NOISE, '').length
     if (!text) continue
     // 原書頁碼由該篇目次所載的起頁往後數，不取 page_map 的推定值：目次那一欄逐欄核過，
     // 而 page_map 在讀不出頁碼的區段是拿相鄰頁的偏移推的，缺頁的位置一旦定得不準就整段偏一頁。
     // 兩者不一致時記下來，該頁的頁碼標為推定。
     const derived = meta ? meta.bookStartPage + (p - h.pdfPage) : null
     const fromMap = bookByPdf.get(p) ?? null
-    const page = { bookPage: derived ?? fromMap, text }
+    const page = { bookPage: derived ?? fromMap, paragraphs: paras, text }
     if (derived !== null && fromMap !== null && derived !== fromMap) {
       page.bookPageStatus = '推定'
       page.bookPageNote = `page_map 由相鄰頁推得 ${fromMap}，本檔取目次起頁往後數的 ${derived}`
