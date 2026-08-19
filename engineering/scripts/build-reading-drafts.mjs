@@ -336,7 +336,7 @@ const index = []
 let totalChars = 0
 let joined = 0
 let marginLeftovers = 0
-let strayMarks = 0
+let movedMarks = 0
 
 for (let i = 0; i < heads.length; i += 1) {
   const h = heads[i]
@@ -349,7 +349,7 @@ for (let i = 0; i < heads.length; i += 1) {
 
   const paragraphs = []
   const pageBreaks = []
-  let pendingTail = null
+  let pendingMark = null
   const bookPages = []
   let noiseRemoved = 0
   for (let p = h.pdfPage; p <= endPdf; p += 1) {
@@ -403,18 +403,23 @@ for (let i = 0; i < heads.length; i += 1) {
     for (let k = 0; k < cleaned.length; k += 1) {
       const line = { ...cleaned[k] }
       // 該頁第一段沒有縮排，表示它是上一頁那一段的下半截，接回去；篇的第一段不接
-      const continues = k === 0 && !line.indented && paragraphs.length > 0
-      // 頁末那個孤立的標點接在上一段之後，而上一段又被下一頁接續時，它就落在句子中間
-      // （原書 105 頁前後接成「發起組設中央研。究院籌備委員會」）。那一點是掃描件上的
-      // 污損，不是原書的句號，接續發生時剝掉。
-      if (continues && pendingTail === paragraphs.length - 1) {
-        paragraphs[pendingTail] = paragraphs[pendingTail].slice(0, -1)
-        strayMarks += 1
-        for (const brk of pageBreaks) {
-          if (brk.para === pendingTail && brk.offset > paragraphs[pendingTail].length) brk.offset = paragraphs[pendingTail].length
+      // 縮排是幾何判準，遇到整段低兩格的引文就會失效：原書 2 頁末「預薦足下擔任教職，將」
+      // 接 3 頁首「來當由翁兄逕行接洽之」，續頁首行的 y 落在縮排的位置，於是被判成新段。
+      // 中文的段落不會停在「將」「對陳君」這種字上，所以前一段結尾沒有標點時一律接回，
+      // 這一條比縮排可靠。
+      const unfinished = paragraphs.length > 0 && !/[。！？；：、，」』）]$/.test(paragraphs[paragraphs.length - 1])
+      const continues = k === 0 && paragraphs.length > 0 && (!line.indented || unfinished)
+      // 直排右起，一段的最後若只剩一個句號，它常被排到別的位置：辨讀稿有時把它切成
+      // 單獨一段（原書 481 頁），有時把它讀成次頁第一行的開頭（原書 105 頁）。兩種都
+      // 不能就地接上去——那一段可能還沒接完，接了就落在句子中間（「發起組設中央研。
+      // 究院籌備委員會」）。改成記著，等該段真的結束再補到段末。
+      if (continues && pendingMark && pendingMark.para === paragraphs.length - 1) {
+        paragraphs[pendingMark.para] = paragraphs[pendingMark.para].slice(0, -pendingMark.text.length)
+        for (const b of pageBreaks) {
+          if (b.para === pendingMark.para && b.offset > paragraphs[b.para].length) b.offset = paragraphs[b.para].length
         }
+        pendingMark = { ...pendingMark, para: null }
       }
-      pendingTail = null
       if (k === 0) {
         brk.para = continues ? paragraphs.length - 1 : paragraphs.length
         brk.offset = continues ? paragraphs[paragraphs.length - 1].length : 0
@@ -424,23 +429,42 @@ for (let i = 0; i < heads.length; i += 1) {
         // 續頁第一行若以標點開頭，那個標點是頁首的污損：直排鉛印避頭點，句號與逗號
         // 不排在行首（原書 104 頁末「⋯發起組設中央研」接 105 頁首，辨讀稿在「究院」
         // 前面多讀出一個句號）。
+        // 續頁第一行若以句號開頭，那個句號是上一段的結尾被排到這裡：直排鉛印避頭點，
+        // 句號不排在行首。頓號與逗號不動——原書 481 頁「講演、著述」的頓號也落在這個
+        // 位置，而它是句子中間真正的標點。
         const head = line.text[0]
-        // 只剝句號。頓號與逗號可能是原書上一頁末尾的標點被切到次頁首行（原書 481
-        // 頁「講演、著述」的頓號就落在這個位置），剝掉會改到原文。
         if (head && /[。.]/.test(head)) {
           line.text = line.text.slice(1)
-          strayMarks += 1
+          pendingMark = { text: '。', para: paragraphs.length - 1 }
         }
         paragraphs[paragraphs.length - 1] += line.text
         joined += 1
       } else if (line.tail && paragraphs.length) {
         paragraphs[paragraphs.length - 1] += line.text
-        pendingTail = paragraphs.length - 1
+        pendingMark = { text: line.text, para: paragraphs.length - 1 }
       } else if (k === 0 || line.indented) {
+        // 前一段到此結束：欠著的句號補到它的末尾（末尾已有標點就不補）
+        if (pendingMark && paragraphs.length) {
+          const prev = paragraphs.length - 1
+          if (!/[。！？」』）]$/.test(paragraphs[prev])) {
+            paragraphs[prev] += pendingMark.text
+            movedMarks += 1
+          }
+          pendingMark = null
+        }
         paragraphs.push(line.text)
       } else {
         paragraphs[paragraphs.length - 1] += line.text
       }
+    }
+  }
+
+  // 篇的最後一段也要補
+  if (pendingMark && paragraphs.length) {
+    const last = paragraphs.length - 1
+    if (!/[。！？」』）]$/.test(paragraphs[last])) {
+      paragraphs[last] += pendingMark.text
+      movedMarks += 1
     }
   }
 
@@ -519,5 +543,5 @@ writeFileSync(
 )
 console.log(`跨頁接回的段落 ${joined} 處`)
 console.log(`段落兩端的邊欄殘字 ${marginLeftovers} 處`)
-console.log(`卡在跨頁接續點上的孤立標點 ${strayMarks} 處`)
+console.log(`排錯位置的段末句號 ${movedMarks} 處已移回段尾`)
 console.log(`讀稿 ${index.length} 篇，合計 ${totalChars.toLocaleString('en-US')} 字，寫進 ${OUT_DIR}`)
