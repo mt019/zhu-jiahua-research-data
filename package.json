@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node engineering/scripts/validate-processed.mjs",
-    "sync": "npm run validate && node engineering/scripts/sync-to-canvas.mjs"
+    "validate": "node engineering/scripts/validate-processed.mjs && node engineering/scripts/check-materials.mjs",
+    "sync": "npm run validate && node engineering/scripts/sync-to-canvas.mjs",
+    "check:materials": "node engineering/scripts/check-materials.mjs"
   }
 }
