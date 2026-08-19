@@ -159,6 +159,20 @@ if (draftFiles.length) {
       if (!cjk && t.length < 12 && !/^[\u3000-\u303f\uff00-\uffef]+$/.test(t)) {
         throw new Error(`${file} 第 ${i} 段不含漢字又短：「${t}」，是掃描髒點`);
       }
+      // 原書排的是全形標點；辨讀稿讀成半形的，兩邊是漢字就該已轉回（build-reading-drafts
+      // 的 widen）。這裡查的是漏網的，判準與那一支相同，不另寫一份字面表。
+      const half = t.match(/[\u4e00-\u9fff][,.;:?!]([\u4e00-\u9fff]|$)/);
+      if (half) {
+        throw new Error(`${file} 第 ${i} 段有沒轉回全形的標點：「${half[0]}」`);
+      }
+      // 直排鉛印不連排兩個句號，也不把逗號、句號排在一段的開頭（避頭點）。兩者都是
+      // 辨讀稿的殘留：一個來自掃描的墨點與補了兩次的段末句號，一個來自被切開的段落。
+      if (/[。]{2}|，{2}|、{2}/.test(t)) {
+        throw new Error(`${file} 第 ${i} 段連排兩個句讀：「${t.match(/.{0,8}(?:[。]{2}|，{2}|、{2}).{0,8}/)[0]}」`);
+      }
+      if (/^[，、。；：？！]/.test(t)) {
+        throw new Error(`${file} 第 ${i} 段以標點起頭：「${t.slice(0, 16)}」，是上一段被切開了`);
+      }
     }
     if (draft.missingBookPages?.length && !draft.missingNote) {
       throw new Error(`${file} 有缺頁卻沒有寫明是哪一頁`);

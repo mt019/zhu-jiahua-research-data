@@ -304,10 +304,57 @@ const widen = (t) => {
       // 「F.J.M.Bourdrez」；但拉丁詞後面接漢字的那一個（「Academia Sinica，大家」）
       // 原書排的是全形，只看右鄰。左鄰是數字的不算（1,000 元的千分位）。
       const digitLeft = /[0-9]/.test(out[i - 1] ?? '')
-      if (BOTH_SIDES.has(out[i]) ? (left && right) || (right && !digitLeft) : left || right) out[i] = w
+      // 段末的標點沒有右鄰居（歌德那首譯詩每行收在一個逗號上，原書排的是全形）。
+      // 只認左鄰是漢字的，拉丁詩行的「Thränen ass,」左鄰是字母，照原書的半形留著。
+      const lineEnd = i === out.length - 1 && HAN.test(out[i - 1] ?? '')
+      if (BOTH_SIDES.has(out[i]) ? (left && right) || (right && !digitLeft) || lineEnd : left || right) out[i] = w
+    }
+  }
+  // 半形的左括號配著全形的右括號（「Galilei(1564-1642）」「(1）抗戰勝利」）：括號裡是
+  // 數字或拉丁字母，左右鄰居都不是漢字，上面那一關看不到它。原書排的是全形，右括號
+  // 已經認出全形就是證據。整段裡另有半形右括號時不動——那一對可能真的是半形。
+  if (!out.includes(')')) {
+    for (let i = 0; i < out.length; i += 1) {
+      if (out[i] !== '(') continue
+      if (out.indexOf('）', i) > i) out[i] = '（'
     }
   }
   return out.join('')
+}
+
+// 原書的刪節號排六個點，辨讀稿把它讀成一串句號與半形點（「十分進步..。。。。」，原書
+// 是「十分進步……」，已回原頁圖核過三處）。連著兩個句號則是重出——直排鉛印不會連排兩個
+// 句號，來源是掃描的墨點或被排到別處的段末句號補了第二次（原書 32 頁「七十噸以上者。」
+// 旁邊那一團墨點被讀成句號）。
+//
+// 六個點是刪節號自己的長度：超過六個的，多出來的是它前面真正的句號（原書 324 頁
+// 「猶未廢止或修改者。……」）。左右鄰居都不是漢字的整串不動——拉丁書目裡的
+// 「V.I...Gromov」是省略點不是刪節號。
+const HAN = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/
+const DOT_RUN = /[.。]{2,}|，{2,}|、{2,}/g
+const dotRunFix = (run, left, right) => {
+  if (!HAN.test(left) && !HAN.test(right)) return run
+  // 逗號與頓號同樣不連排，重出的只留一個（原書 78 頁「畬民宗譜之研究，浙南畬民⋯」）。
+  if (run[0] === '，' || run[0] === '、') return run[0]
+  if (run.length === 2) return '。'
+  return '。'.repeat(Math.max(0, run.length - 6)) + '⋯⋯'
+}
+// 回傳改好的字，以及舊字元位置對新位置的對照——頁碼記的是字元位置，改動點左邊的位置
+// 不動，右邊的要整批移。
+const dots = (t) => {
+  let out = ''
+  let cut = 0
+  const shifts = []
+  for (const m of t.matchAll(DOT_RUN)) {
+    const fixed = dotRunFix(m[0], t[m.index - 1] ?? '', t[m.index + m[0].length] ?? '')
+    if (fixed === m[0]) continue
+    out += t.slice(cut, m.index) + fixed
+    cut = m.index + m[0].length
+    shifts.push({ from: cut, delta: fixed.length - m[0].length })
+  }
+  out += t.slice(cut)
+  const at = (offset) => offset + shifts.reduce((d, s) => (offset >= s.from ? d + s.delta : d), 0)
+  return { text: out, at, changed: shifts.length }
 }
 
 // 掃描件上的墨點、勾記與污損被辨識成 ⚫ ✓ ○ ① 這類符號，落到站上是一個畫不出來的字。
@@ -337,6 +384,7 @@ let totalChars = 0
 let joined = 0
 let marginLeftovers = 0
 let movedMarks = 0
+let ellipses = 0
 
 for (let i = 0; i < heads.length; i += 1) {
   const h = heads[i]
@@ -446,7 +494,7 @@ for (let i = 0; i < heads.length; i += 1) {
         // 前一段到此結束：欠著的句號補到它的末尾（末尾已有標點就不補）
         if (pendingMark && paragraphs.length) {
           const prev = paragraphs.length - 1
-          if (!/[。！？」』）]$/.test(paragraphs[prev])) {
+          if (!/[。！？；：，、「『（）」』]$/.test(paragraphs[prev])) {
             paragraphs[prev] += pendingMark.text
             movedMarks += 1
           }
@@ -462,7 +510,7 @@ for (let i = 0; i < heads.length; i += 1) {
   // 篇的最後一段也要補
   if (pendingMark && paragraphs.length) {
     const last = paragraphs.length - 1
-    if (!/[。！？」』）]$/.test(paragraphs[last])) {
+    if (!/[。！？；：，、「『（）」』]$/.test(paragraphs[last])) {
       paragraphs[last] += pendingMark.text
       movedMarks += 1
     }
@@ -471,6 +519,30 @@ for (let i = 0; i < heads.length; i += 1) {
   // 行尾的標點在切行的當下看不到右鄰居（「⋯眞知眞理,」接下一行的「而不問其他。」），
   // 接完再走一次
   for (let k = 0; k < paragraphs.length; k += 1) paragraphs[k] = widen(paragraphs[k])
+
+  // 刪節號與重出的句號在接完之後才看得出長相（一串點常跨兩行）。這一關會改變段落的
+  // 長度，頁碼記的是字元位置，落在改動點之後的要跟著移。
+  for (let k = 0; k < paragraphs.length; k += 1) {
+    const fix = dots(paragraphs[k])
+    if (!fix.changed) continue
+    for (const b of pageBreaks) if (b.para === k) b.offset = fix.at(b.offset)
+    paragraphs[k] = fix.text
+    ellipses += fix.changed
+  }
+
+  // 直排鉛印避頭點：逗號、句號這一類不排在一行的開頭，更不會是一段的開頭。以標點起頭的
+  // 段落是上一段被切開了（原書 267 頁「⋯無事可幹呢」與它前面那半段），接回上一段。
+  // 縮排那一關看的是幾何位置，遇到該頁第一行剛好落在縮排的高度就會判成新段。
+  for (let k = paragraphs.length - 1; k > 0; k -= 1) {
+    if (!/^[，、。；：？！]/.test(paragraphs[k])) continue
+    const head = paragraphs[k - 1].length
+    paragraphs[k - 1] += paragraphs[k]
+    paragraphs.splice(k, 1)
+    for (const b of pageBreaks) {
+      if (b.para === k) { b.para = k - 1; b.offset += head } else if (b.para > k) b.para -= 1
+    }
+    joined += 1
+  }
 
   // 邊欄的字與正文擠在同一欄時，上面按座標的兩關都認不出來，剩下的殘字黏在段落的兩端：
   //
@@ -544,4 +616,5 @@ writeFileSync(
 console.log(`跨頁接回的段落 ${joined} 處`)
 console.log(`段落兩端的邊欄殘字 ${marginLeftovers} 處`)
 console.log(`排錯位置的段末句號 ${movedMarks} 處已移回段尾`)
+console.log(`刪節號與重出的句號 ${ellipses} 處已歸位`)
 console.log(`讀稿 ${index.length} 篇，合計 ${totalChars.toLocaleString('en-US')} 字，寫進 ${OUT_DIR}`)
