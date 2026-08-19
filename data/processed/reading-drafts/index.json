@@ -1,0 +1,1406 @@
+{
+  "generatedAt": "2026-08-19",
+  "status": "未校辨讀稿",
+  "count": 198,
+  "totalChars": 539403,
+  "items": [
+    {
+      "id": "ZJH-001",
+      "charCount": 475,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-002",
+      "charCount": 732,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-003",
+      "charCount": 763,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-004",
+      "charCount": 604,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-005",
+      "charCount": 612,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-006",
+      "charCount": 1200,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-007",
+      "charCount": 3185,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-008",
+      "charCount": 348,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-009",
+      "charCount": 983,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-010",
+      "charCount": 6453,
+      "noiseRemoved": 7,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-011",
+      "charCount": 1768,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-012",
+      "charCount": 2955,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-013",
+      "charCount": 6892,
+      "noiseRemoved": 1,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-014",
+      "charCount": 8287,
+      "noiseRemoved": 3,
+      "pageCount": 11,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-015",
+      "charCount": 6862,
+      "noiseRemoved": 2,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-016",
+      "charCount": 3185,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-017",
+      "charCount": 1316,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-018",
+      "charCount": 4039,
+      "noiseRemoved": 1,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-019",
+      "charCount": 2251,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-020",
+      "charCount": 1225,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-021",
+      "charCount": 644,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-022",
+      "charCount": 2462,
+      "noiseRemoved": 2,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-023",
+      "charCount": 4278,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-024",
+      "charCount": 811,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-025",
+      "charCount": 2058,
+      "noiseRemoved": 4,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-026",
+      "charCount": 1163,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-027",
+      "charCount": 1333,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-028",
+      "charCount": 2853,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-029",
+      "charCount": 1864,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-030",
+      "charCount": 3467,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-031",
+      "charCount": 913,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-032",
+      "charCount": 11405,
+      "noiseRemoved": 0,
+      "pageCount": 17,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-033",
+      "charCount": 2842,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": [
+        124
+      ]
+    },
+    {
+      "id": "ZJH-034",
+      "charCount": 5302,
+      "noiseRemoved": 1,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-035",
+      "charCount": 16538,
+      "noiseRemoved": 3,
+      "pageCount": 23,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-036",
+      "charCount": 1346,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-037",
+      "charCount": 1838,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-038",
+      "charCount": 4232,
+      "noiseRemoved": 1,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-039",
+      "charCount": 4363,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-040",
+      "charCount": 853,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-041",
+      "charCount": 1375,
+      "noiseRemoved": 2,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-042",
+      "charCount": 1845,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-043",
+      "charCount": 2482,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-044",
+      "charCount": 2596,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-045",
+      "charCount": 1664,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-046",
+      "charCount": 1908,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-047",
+      "charCount": 8086,
+      "noiseRemoved": 12,
+      "pageCount": 13,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-048",
+      "charCount": 2414,
+      "noiseRemoved": 8,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-049",
+      "charCount": 1009,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-050",
+      "charCount": 914,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-051",
+      "charCount": 1289,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-052",
+      "charCount": 4608,
+      "noiseRemoved": 6,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-053",
+      "charCount": 2641,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-054",
+      "charCount": 3377,
+      "noiseRemoved": 0,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-055",
+      "charCount": 7978,
+      "noiseRemoved": 0,
+      "pageCount": 11,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-056",
+      "charCount": 2351,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-057",
+      "charCount": 2541,
+      "noiseRemoved": 5,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-058",
+      "charCount": 4200,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-059",
+      "charCount": 2274,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-060",
+      "charCount": 7849,
+      "noiseRemoved": 11,
+      "pageCount": 12,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-061",
+      "charCount": 2129,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-062",
+      "charCount": 2215,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-063",
+      "charCount": 1781,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-064",
+      "charCount": 5169,
+      "noiseRemoved": 0,
+      "pageCount": 8,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-065",
+      "charCount": 726,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-066",
+      "charCount": 3851,
+      "noiseRemoved": 3,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-067",
+      "charCount": 1236,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-068",
+      "charCount": 1805,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-069",
+      "charCount": 949,
+      "noiseRemoved": 6,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-070",
+      "charCount": 1211,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-071",
+      "charCount": 4729,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-072",
+      "charCount": 1604,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-073",
+      "charCount": 3835,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-074",
+      "charCount": 3477,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-075",
+      "charCount": 3057,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-076",
+      "charCount": 2823,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-077",
+      "charCount": 2672,
+      "noiseRemoved": 3,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-078",
+      "charCount": 4129,
+      "noiseRemoved": 1,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-079",
+      "charCount": 4373,
+      "noiseRemoved": 5,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-080",
+      "charCount": 1919,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-081",
+      "charCount": 5657,
+      "noiseRemoved": 12,
+      "pageCount": 8,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-082",
+      "charCount": 4035,
+      "noiseRemoved": 7,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-083",
+      "charCount": 2873,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": [
+        350
+      ]
+    },
+    {
+      "id": "ZJH-084",
+      "charCount": 2410,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-085",
+      "charCount": 3276,
+      "noiseRemoved": 1,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-086",
+      "charCount": 1827,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-087",
+      "charCount": 4299,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-088",
+      "charCount": 2134,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-089",
+      "charCount": 1179,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-090",
+      "charCount": 2743,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-091",
+      "charCount": 1652,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-092",
+      "charCount": 939,
+      "noiseRemoved": 2,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-093",
+      "charCount": 1540,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-094",
+      "charCount": 1856,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-095",
+      "charCount": 1353,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-096",
+      "charCount": 948,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-097",
+      "charCount": 1041,
+      "noiseRemoved": 4,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-098",
+      "charCount": 1490,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-099",
+      "charCount": 1996,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-100",
+      "charCount": 1205,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-101",
+      "charCount": 1206,
+      "noiseRemoved": 2,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-102",
+      "charCount": 1089,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-103",
+      "charCount": 5614,
+      "noiseRemoved": 3,
+      "pageCount": 8,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-104",
+      "charCount": 4776,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-105",
+      "charCount": 4552,
+      "noiseRemoved": 1,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-106",
+      "charCount": 2755,
+      "noiseRemoved": 1,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-107",
+      "charCount": 2932,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-108",
+      "charCount": 1612,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": [
+        432
+      ]
+    },
+    {
+      "id": "ZJH-109",
+      "charCount": 2869,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-110",
+      "charCount": 654,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-111",
+      "charCount": 4713,
+      "noiseRemoved": 2,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-112",
+      "charCount": 1496,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-113",
+      "charCount": 3131,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-114",
+      "charCount": 2344,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-115",
+      "charCount": 2530,
+      "noiseRemoved": 2,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-116",
+      "charCount": 3776,
+      "noiseRemoved": 4,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-117",
+      "charCount": 754,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-118",
+      "charCount": 1208,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-119",
+      "charCount": 1254,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-120",
+      "charCount": 1955,
+      "noiseRemoved": 3,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-121",
+      "charCount": 3151,
+      "noiseRemoved": 2,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-122",
+      "charCount": 1736,
+      "noiseRemoved": 2,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-123",
+      "charCount": 2615,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-124",
+      "charCount": 3185,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-125",
+      "charCount": 510,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-126",
+      "charCount": 1689,
+      "noiseRemoved": 3,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-127",
+      "charCount": 3460,
+      "noiseRemoved": 2,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-128",
+      "charCount": 1250,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-129",
+      "charCount": 1824,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-130",
+      "charCount": 4814,
+      "noiseRemoved": 1,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-131",
+      "charCount": 6244,
+      "noiseRemoved": 7,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-132",
+      "charCount": 1767,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-133",
+      "charCount": 1373,
+      "noiseRemoved": 1,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-134",
+      "charCount": 6688,
+      "noiseRemoved": 13,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-135",
+      "charCount": 3749,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-136",
+      "charCount": 3969,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-137",
+      "charCount": 1313,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-138",
+      "charCount": 3552,
+      "noiseRemoved": 0,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-139",
+      "charCount": 6588,
+      "noiseRemoved": 4,
+      "pageCount": 9,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-140",
+      "charCount": 3501,
+      "noiseRemoved": 0,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-141",
+      "charCount": 2722,
+      "noiseRemoved": 1,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-142",
+      "charCount": 1724,
+      "noiseRemoved": 1,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-143",
+      "charCount": 819,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-144",
+      "charCount": 2412,
+      "noiseRemoved": 5,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-145",
+      "charCount": 1149,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-146",
+      "charCount": 2383,
+      "noiseRemoved": 6,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-147",
+      "charCount": 2472,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-148",
+      "charCount": 1667,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-149",
+      "charCount": 2123,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-150",
+      "charCount": 2043,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-151",
+      "charCount": 1794,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-152",
+      "charCount": 1127,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-153",
+      "charCount": 1425,
+      "noiseRemoved": 1,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-154",
+      "charCount": 5251,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-155",
+      "charCount": 9137,
+      "noiseRemoved": 0,
+      "pageCount": 12,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-156",
+      "charCount": 7305,
+      "noiseRemoved": 8,
+      "pageCount": 10,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-157",
+      "charCount": 4543,
+      "noiseRemoved": 4,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-158",
+      "charCount": 4853,
+      "noiseRemoved": 3,
+      "pageCount": 7,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-159",
+      "charCount": 5596,
+      "noiseRemoved": 2,
+      "pageCount": 10,
+      "missingBookPages": [
+        636
+      ]
+    },
+    {
+      "id": "ZJH-160",
+      "charCount": 1770,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-161",
+      "charCount": 2481,
+      "noiseRemoved": 1,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-162",
+      "charCount": 3265,
+      "noiseRemoved": 0,
+      "pageCount": 5,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-163",
+      "charCount": 3781,
+      "noiseRemoved": 0,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-164",
+      "charCount": 1157,
+      "noiseRemoved": 6,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-165",
+      "charCount": 1578,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-166",
+      "charCount": 1511,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-167",
+      "charCount": 1314,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-168",
+      "charCount": 248,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-169",
+      "charCount": 328,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-170",
+      "charCount": 1211,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-171",
+      "charCount": 1928,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-172",
+      "charCount": 1365,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-173",
+      "charCount": 5726,
+      "noiseRemoved": 12,
+      "pageCount": 8,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-174",
+      "charCount": 10044,
+      "noiseRemoved": 9,
+      "pageCount": 13,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-175",
+      "charCount": 6220,
+      "noiseRemoved": 23,
+      "pageCount": 9,
+      "missingBookPages": [
+        696
+      ]
+    },
+    {
+      "id": "ZJH-176",
+      "charCount": 1083,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-177",
+      "charCount": 1876,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-178",
+      "charCount": 2824,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-179",
+      "charCount": 1982,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-180",
+      "charCount": 1434,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-181",
+      "charCount": 1073,
+      "noiseRemoved": 8,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-182",
+      "charCount": 1517,
+      "noiseRemoved": 4,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-183",
+      "charCount": 1578,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-184",
+      "charCount": 1024,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-185",
+      "charCount": 657,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-186",
+      "charCount": 950,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-187",
+      "charCount": 2274,
+      "noiseRemoved": 1,
+      "pageCount": 3,
+      "missingBookPages": [
+        722
+      ]
+    },
+    {
+      "id": "ZJH-188",
+      "charCount": 388,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-189",
+      "charCount": 1083,
+      "noiseRemoved": 0,
+      "pageCount": 3,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-190",
+      "charCount": 1196,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-191",
+      "charCount": 1256,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-192",
+      "charCount": 2518,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-193",
+      "charCount": 271,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-194",
+      "charCount": 2582,
+      "noiseRemoved": 4,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-195",
+      "charCount": 3712,
+      "noiseRemoved": 0,
+      "pageCount": 6,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-196",
+      "charCount": 2174,
+      "noiseRemoved": 0,
+      "pageCount": 4,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-197",
+      "charCount": 995,
+      "noiseRemoved": 0,
+      "pageCount": 2,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-198",
+      "charCount": 42,
+      "noiseRemoved": 0,
+      "pageCount": 1,
+      "missingBookPages": []
+    }
+  ]
+}

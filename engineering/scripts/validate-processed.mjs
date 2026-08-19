@@ -83,6 +83,42 @@ for (const dir of ['../../data/derived/transcriptions', '../../data/derived/chro
   }
 }
 
+// 未校讀稿：全書辨讀底稿切成的 198 篇，2026-08-19 站主決定上站。它與校訂稿的差別要寫在
+// 每一篇自己身上，讀者看得到；沒有標示的讀稿等於把未校文字當成正文，這道檢查擋的是那件事。
+const DRAFT_DIR = new URL('../../data/processed/reading-drafts/', import.meta.url);
+let draftFiles = [];
+try {
+  draftFiles = (await readdir(DRAFT_DIR)).filter((f) => f.endsWith('.json') && f !== 'index.json');
+} catch {
+  draftFiles = [];
+}
+if (draftFiles.length) {
+  const ids = new Set(tocIndex.items.map((it) => it.id));
+  if (draftFiles.length !== ids.size) {
+    throw new Error(`讀稿 ${draftFiles.length} 篇，篇目 ${ids.size} 篇，兩者應一致`);
+  }
+  for (const file of draftFiles) {
+    const draft = JSON.parse(await readFile(new URL(file, DRAFT_DIR), 'utf8'));
+    if (!ids.has(draft.id)) throw new Error(`讀稿 ${file} 的 id 不在篇目索引裡`);
+    if (draft.status !== '未校辨讀稿') {
+      throw new Error(`${file} 的 status 是「${draft.status}」，讀稿一律標未校辨讀稿`);
+    }
+    if (!draft.statusNote || !draft.statusNote.includes('未經逐字人工校訂')) {
+      throw new Error(`${file} 沒有寫明未經逐字人工校訂`);
+    }
+    if (!Array.isArray(draft.pages) || draft.pages.length === 0) {
+      throw new Error(`${file} 沒有正文`);
+    }
+    if (draft.missingBookPages?.length && !draft.missingNote) {
+      throw new Error(`${file} 有缺頁卻沒有寫明是哪一頁`);
+    }
+    const text = JSON.stringify(draft);
+    for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library']) {
+      if (text.includes(forbidden)) throw new Error(`${file} 含禁止字串：${forbidden}`);
+    }
+  }
+}
+
 const serialized = JSON.stringify(data);
 for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library', '1lib.sk', 'z-lib.sk']) {
   if (serialized.includes(forbidden)) throw new Error(`公開資料含禁止字串：${forbidden}`);
