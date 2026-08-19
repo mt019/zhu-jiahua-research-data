@@ -7,9 +7,9 @@ date_iso: 1947-06-27
 occasion: 第三次法律教育會議講詞
 pdf_pages: [347, 348, 349, 350, 351]
 book_pages: [308, 309, 310, 311, 312]
-transcription_status: 待複核
-verification_note: 待複核：2026-08-19 以 Google Cloud Vision 辨讀稿逐字對照，已回原頁圖確認七處校訂稿與原書不符（如原書 305「却又不多」校訂稿作「亦復不多」）。本篇底稿為 tesseract 輸出，該引擎在本書認錯率 7.36%。全部差異的複核尚未做完。
-verified_at: 2026-07-27
+transcription_status: 已複核
+verification_note: 已複核：2026-08-19 以 Google Cloud Vision 辨讀稿與校訂稿逐字對齊，差異逐處回原頁圖判讀。本篇未見與原書不符之處；三處差異是辨讀稿的字錯（漏「之」、「又」誤作「召」、「曾」誤作「實」）。
+verified_at: 2026-08-19
 glyph_policy: 未定
 glyph_note: 兩形並存（爲25／為3；眞2／真0；敎0／教32；卽0／即4），偏向原書字形；全書字形政策待定，見 engineering/LOG.md 2026-08-19
 ---

@@ -5,7 +5,7 @@
   "dateOriginal": "民國二十二年四月二十八日",
   "bookPages": "154–156",
   "status": "未校辨讀稿",
-  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。量尺三頁上的總字錯率 0.70%、認錯率 0.25%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 1334,
   "noiseRemoved": 0,
   "missingBookPages": [],

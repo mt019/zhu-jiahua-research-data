@@ -8,7 +8,7 @@
 // 每一頁單獨成一段並帶原書頁碼，讀者要回頭核原書時指得到位置。原書的分段靠首行縮排表示，
 // 辨讀稿沒有留下縮排，所以段落還原不了，這裡不猜。
 //
-// 產物一律標著未校：字錯率見 LOG 2026-08-19（量尺三頁上總字錯率 0.70%、認錯率 0.25%）。
+// 產物一律標著未校：字錯率見 LOG 2026-08-19（複核過的七篇 32 頁 20,828 字上 26 處，0.125%）。
 // 逐頁人工校訂完成的篇另存 data/derived/transcriptions/，前端以那一份為準。
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
@@ -62,7 +62,50 @@ for (const g of pageMap.gaps) {
 
 // 段落取自辨讀結果自己的 paragraph 結構：實測它與原書的分段一致（原書靠首行縮排分段，
 // 辨識引擎讀得到那個縮排）。純文字檔一行是一欄，接起來就沒有分段了，所以改讀 JSON。
+// 部次名照原書的書眉寫法（沒有頓號），教／敎兩形都收；部次與部名之間辨讀稿有時多出
+// 一兩個字元（【叁】教育言論、拾肆-追念師友），一併容許。
+const headAlternatives = [...new Set(toc.map((t) => t.part))]
+  .map((part) => {
+    const [ordinal, name] = part.split('、')
+    const names = name.includes('教') ? [name, name.replace('教', '敎')] : [name]
+    return `【?${ordinal}】?[-—、,.\\s]{0,2}(?:${names.join('|')})`
+  })
+  .sort((a, b) => b.length - a.length)
+const HEAD_IN_LINE = new RegExp(`(?:${headAlternatives.join('|')})`)
+
+// 書眉與書根印在版心外的邊欄，辨識引擎有時把它們併進正文那一段。併進來的那幾個字，
+// x 座標落在邊欄，與同段正文差得很遠：先按文字找到「部次＋部名」，再把同一段裡座標
+// 落在同一條邊欄的字一併去掉——書根的頁碼就是這樣連帶去掉的。
+// 部次那個字被認錯（壹讀成壺、柒讀成粜）時這一關過不了，殘留數見 engineering/LOG.md。
+const stripMargin = (par) => {
+  const syms = par.words.flatMap((w) =>
+    w.symbols.map((sym) => {
+      const v = sym.boundingBox?.vertices ?? []
+      const xs = v.map((q) => q.x ?? 0)
+      return { text: sym.text, cx: xs.length ? (Math.min(...xs) + Math.max(...xs)) / 2 : null }
+    }),
+  )
+  const text = syms.map((s) => s.text).join('')
+  const m = HEAD_IN_LINE.exec(text)
+  if (!m) return text
+  const band = syms
+    .slice(m.index, m.index + m[0].length)
+    .map((s) => s.cx)
+    .filter((x) => x !== null)
+  if (!band.length) return text
+  const lo = Math.min(...band) - 60
+  const hi = Math.max(...band) + 60
+  return syms
+    .filter((s, i) => {
+      if (i >= m.index && i < m.index + m[0].length) return false
+      return s.cx === null || s.cx < lo || s.cx > hi
+    })
+    .map((s) => s.text)
+    .join('')
+}
+
 const pages = new Map()
+let marginStripped = 0
 for (const f of readdirSync(JSON_DIR)) {
   const n = Number(f.match(/(\d+)\.json$/)?.[1])
   if (!Number.isInteger(n) || pages.has(n)) continue
@@ -71,12 +114,16 @@ for (const f of readdirSync(JSON_DIR)) {
   const paras = []
   for (const b of page?.blocks ?? []) {
     for (const par of b.paragraphs ?? []) {
-      const t = par.words.flatMap((w) => w.symbols.map((sym) => sym.text)).join('')
+      const raw = par.words.flatMap((w) => w.symbols.map((sym) => sym.text)).join('')
+      // 自成一段的書眉在下面 chrome() 那裡整段丟掉，這裡只處理併進正文的
+      const t = raw.trim().length > 14 ? stripMargin(par) : raw
+      if (t !== raw) marginStripped += 1
       if (t.trim()) paras.push(t.trim())
     }
   }
   pages.set(n, paras)
 }
+console.log(`書眉或書根併進正文段的 ${marginStripped} 段已剔除邊欄的字`)
 
 // 書眉是書名或部次名，書根是頁碼；兩者各自成行，辨讀稿裡的頁碼常認錯，只認長相
 const RUNNING_HEAD = /^(朱家驊先生言論集|[壹貳叁肆伍陸柒捌玖拾][、\s]?.{0,12})$/
@@ -165,7 +212,7 @@ for (let i = 0; i < heads.length; i += 1) {
     bookPages: out.length ? `${out[0].bookPage ?? '?'}–${out.at(-1).bookPage ?? '?'}` : null,
     status: '未校辨讀稿',
     statusNote:
-      'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。量尺三頁上的總字錯率 0.70%、認錯率 0.25%（engineering/LOG.md 2026-08-19）。引用前請核對原書。',
+      'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。',
     charCount: chars,
     noiseRemoved,
     missingBookPages: missingByPiece.get(h.id) ?? [],
