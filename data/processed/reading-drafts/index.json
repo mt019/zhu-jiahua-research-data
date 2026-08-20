@@ -1,9 +1,25 @@
 {
-  "generatedAt": "2026-08-19",
+  "generatedAt": "2026-08-20",
   "status": "未校辨讀稿",
-  "count": 198,
-  "totalChars": 533816,
+  "count": 200,
+  "totalChars": 539855,
   "items": [
+    {
+      "id": "ZJH-FM-001",
+      "charCount": 3080,
+      "noiseRemoved": 0,
+      "pageCount": 7,
+      "paragraphCount": 17,
+      "missingBookPages": []
+    },
+    {
+      "id": "ZJH-FM-002",
+      "charCount": 2959,
+      "noiseRemoved": 2,
+      "pageCount": 6,
+      "paragraphCount": 9,
+      "missingBookPages": []
+    },
     {
       "id": "ZJH-001",
       "charCount": 472,

@@ -44,7 +44,15 @@ const norm = (s) =>
     .map((ch) => fold.get(ch) ?? ch)
     .join('')
 
-const heads = JSON.parse(readFileSync(HEADS, 'utf8')).items
+// 卷首的獻詞（萬紹章）與緣起（王聿均）也是全書的一部分，只是不在目次的 198 篇裡：
+// 兩篇都沒有篇名行可切（切篇靠 piece_heads.json 從辨讀稿抽出的標題行），起訖頁在這裡
+// 直接寫明。前置的頁碼另起一套，各自從第 1 頁數起，與正文那 745 頁不相干。
+const FRONT_MATTER = [
+  { id: 'ZJH-FM-001', title: '獻詞', author: '萬紹章', pdfPage: 2, endPdfPage: 8, bookStartPage: 1, frontMatter: true },
+  { id: 'ZJH-FM-002', title: '緣起', author: '王聿均', pdfPage: 9, endPdfPage: 14, bookStartPage: 1, frontMatter: true },
+]
+
+const heads = [...FRONT_MATTER, ...JSON.parse(readFileSync(HEADS, 'utf8')).items]
 const toc = JSON.parse(readFileSync(TOC, 'utf8')).items
 const pageMap = JSON.parse(readFileSync(PAGE_MAP, 'utf8'))
 const bookByPdf = new Map()
@@ -390,7 +398,9 @@ for (let i = 0; i < heads.length; i += 1) {
   const h = heads[i]
   const next = heads[i + 1]
   const meta = byId.get(h.id)
-  const startIdx = titleLineIndex(h.pdfPage, h.titleInText)
+  // 前置兩篇沒有篇名行，從該頁第一段起；直排的大字篇名被辨讀成一個字一段，
+  // 底下那道「只有一個漢字的段落丟掉」的關卡會把它們清掉。
+  const startIdx = h.frontMatter ? -1 : titleLineIndex(h.pdfPage, h.titleInText)
   const endPdf = h.endPdfPage ?? h.pdfPage
   const endIdx =
     next && next.pdfPage === endPdf ? titleLineIndex(next.pdfPage, next.titleInText) : Infinity
@@ -438,8 +448,10 @@ for (let i = 0; i < heads.length; i += 1) {
     // 原書頁碼由該篇目次所載的起頁往後數，不取 page_map 的推定值：目次那一欄逐欄核過，
     // 而 page_map 在讀不出頁碼的區段是拿相鄰頁的偏移推的，缺頁的位置一旦定得不準就整段偏一頁。
     // 兩者不一致時記下來，該頁的頁碼標為推定。
-    const derived = meta ? meta.bookStartPage + (p - h.pdfPage) : null
-    const fromMap = bookByPdf.get(p) ?? null
+    const base = meta?.bookStartPage ?? h.bookStartPage ?? null
+    const derived = base === null ? null : base + (p - h.pdfPage)
+    // 前置的頁碼自成一套，page_map 記的是正文那一套，兩者不能互相對照
+    const fromMap = h.frontMatter ? null : (bookByPdf.get(p) ?? null)
     const bookPage = derived ?? fromMap
     bookPages.push(bookPage)
     const brk = { bookPage, para: 0, offset: 0 }
@@ -578,6 +590,16 @@ for (let i = 0; i < heads.length; i += 1) {
     if (typeof para === 'string' && brk.offset > para.length) brk.offset = para.length
   }
 
+  // 獻詞的署名（萬紹章）在原書排在篇名底下，辨讀稿把它讀成正文的第一段。
+  // 署名是題下資訊，改記在 author 一欄，不留在正文裡。
+  if (h.frontMatter && h.author && paragraphs[0] && paragraphs[0].replace(/\s/g, '') === h.author) {
+    paragraphs.shift()
+    for (const b of pageBreaks) {
+      if (b.para === 0) b.offset = 0
+      else b.para -= 1
+    }
+  }
+
   const chars = paragraphs.reduce((n, t) => n + t.length, 0)
   totalChars += chars
   const draft = {
@@ -585,6 +607,9 @@ for (let i = 0; i < heads.length; i += 1) {
     title: meta?.title ?? h.title,
     part: meta?.part ?? null,
     dateOriginal: meta?.dateOriginal ?? null,
+    // 卷首兩篇才有這兩欄；198 篇的作者都是朱家驊，不逐篇重寫一次
+    author: h.author ?? undefined,
+    frontMatter: h.frontMatter ? true : undefined,
     bookPages: bookPages.length ? `${bookPages[0] ?? '?'}–${bookPages.at(-1) ?? '?'}` : null,
     status: '未校辨讀稿',
     statusNote:

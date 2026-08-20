@@ -110,12 +110,24 @@ const headKey = (t) =>
 
 if (draftFiles.length) {
   const ids = new Set(tocIndex.items.map((it) => it.id));
-  if (draftFiles.length !== ids.size) {
-    throw new Error(`讀稿 ${draftFiles.length} 篇，篇目 ${ids.size} 篇，兩者應一致`);
-  }
+  // 卷首的獻詞與緣起不在目次的 198 篇裡，各自一份讀稿，用 frontMatter 一欄標出來。
+  const drafts = [];
   for (const file of draftFiles) {
-    const draft = JSON.parse(await readFile(new URL(file, DRAFT_DIR), 'utf8'));
-    if (!ids.has(draft.id)) throw new Error(`讀稿 ${file} 的 id 不在篇目索引裡`);
+    drafts.push([file, JSON.parse(await readFile(new URL(file, DRAFT_DIR), 'utf8'))]);
+  }
+  const front = drafts.filter(([, d]) => d.frontMatter);
+  if (drafts.length - front.length !== ids.size) {
+    throw new Error(`讀稿 ${drafts.length - front.length} 篇，篇目 ${ids.size} 篇，兩者應一致`);
+  }
+  if (front.length !== 2) {
+    throw new Error(`卷首讀稿應為獻詞與緣起兩篇，實得 ${front.length} 篇`);
+  }
+  for (const [file, draft] of front) {
+    if (!draft.author) throw new Error(`${file} 是卷首的文字，要寫明作者是誰`);
+    if (draft.part !== null) throw new Error(`${file} 不屬於原書的十四個部次，part 應為 null`);
+  }
+  for (const [file, draft] of drafts) {
+    if (!draft.frontMatter && !ids.has(draft.id)) throw new Error(`讀稿 ${file} 的 id 不在篇目索引裡`);
     if (draft.status !== '未校辨讀稿') {
       throw new Error(`${file} 的 status 是「${draft.status}」，讀稿一律標未校辨讀稿`);
     }
@@ -181,6 +193,70 @@ if (draftFiles.length) {
     for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library']) {
       if (text.includes(forbidden)) throw new Error(`${file} 含禁止字串：${forbidden}`);
     }
+  }
+}
+
+// ── 年表 ────────────────────────────────────────────────────────────────────
+// 底本是胡頌平的年譜，著作權存續至 2038 年底，公開的條件是標明出處；材料性質（口述紀錄
+// 為主、成書倉促）與尚未校訂的五十頁也要寫在資料裡，前端才印得出來。
+let chronology = null;
+try {
+  chronology = JSON.parse(
+    await readFile(new URL('../../data/processed/chronology.json', import.meta.url), 'utf8'),
+  );
+} catch {
+  chronology = null;
+}
+if (chronology) {
+  for (const key of ['source', 'rights', 'materialNature', 'transcription', 'untranscribed', 'errata', 'years']) {
+    if (!(key in chronology)) throw new Error(`chronology.json 缺少必要欄位：${key}`);
+  }
+  if (!chronology.source.url) throw new Error('chronology.json 沒有官方全文連結');
+  if (!chronology.rights.includes('胡頌平')) throw new Error('chronology.json 的著作權說明沒有指名作者');
+  if (chronology.years.length !== chronology.stats.yearCount) {
+    throw new Error('chronology.json 的 stats.yearCount 與實際年目數不符');
+  }
+  const pieceIds = new Set(tocIndex.items.map((it) => it.id));
+  for (let i = 0; i < chronology.years.length; i += 1) {
+    const y = chronology.years[i];
+    const prev = chronology.years[i - 1];
+    if (prev && y.ce <= prev.ce) throw new Error(`年目未依年遞增：${y.ce}`);
+    if (prev && y.bookPage < prev.bookPage) throw new Error(`年目起頁未依原書遞增：${y.ce}`);
+    // 民國紀年與西元必須相差 1911；原書誤植的兩處已在建置時以民國紀年為準改正
+    const roc = /民國 (\d+) 年/.exec(y.rocLabel);
+    const before = /民前 (\d+) 年/.exec(y.rocLabel);
+    const implied = y.rocLabel === '民國元年' ? 1912
+      : roc ? Number(roc[1]) + 1911
+        : before ? 1912 - Number(before[1]) : null;
+    if (implied === null) throw new Error(`年目的民國紀年寫法認不出來：${y.rocLabel}`);
+    if (implied !== y.ce) throw new Error(`${y.rocLabel} 換算應為 ${implied}，年目寫的是 ${y.ce}`);
+    for (const piece of y.pieces ?? []) {
+      if (!pieceIds.has(piece.id)) throw new Error(`${y.ce} 年掛的篇目 ${piece.id} 不在篇目索引裡`);
+      if (Number(piece.dateIso.slice(0, 4)) !== y.ce) {
+        throw new Error(`${piece.id} 的日期是 ${piece.dateIso}，卻掛在 ${y.ce} 年`);
+      }
+    }
+    if (!y.text) continue;
+    const joined = y.text.paragraphs.join('');
+    if (joined.length !== y.text.charCount) throw new Error(`${y.ce} 年的字數與正文不符`);
+    if (!joined.length) throw new Error(`${y.ce} 年有 text 卻沒有正文`);
+    for (const brk of y.text.pageBreaks) {
+      const para = y.text.paragraphs[brk.para];
+      if (typeof para !== 'string' || brk.offset > para.length) {
+        throw new Error(`${y.ce} 年的頁碼位置 ${JSON.stringify(brk)} 指不到正文`);
+      }
+    }
+    // 只有一截在已校訂範圍內的年，要寫明缺的是哪一段；不寫就等於把半年當成全年
+    if (y.text.coverage === '部分' && !y.text.coverageNote) {
+      throw new Error(`${y.ce} 年的正文只有一部分，卻沒有寫明缺哪一段`);
+    }
+    if (y.text.printedHeading && !y.text.printedHeadingNote) {
+      throw new Error(`${y.ce} 年的原書抬頭有誤植，卻沒有寫明錯在哪裡`);
+    }
+  }
+  const chronText = JSON.stringify(chronology);
+  for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library']) {
+    if (chronText.includes(forbidden)) throw new Error(`chronology.json 含禁止字串：${forbidden}`);
   }
 }
 

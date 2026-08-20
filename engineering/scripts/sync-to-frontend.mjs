@@ -15,7 +15,13 @@ await mkdir(dirname(target), { recursive: true });
 await copyFile(source, target);
 console.log(`已同步公開快照：${target}`);
 
-// 198 篇未校讀稿一篇一檔，前端按需載入。整份塞進快照會讓 /zhujiahua 一開就拉五十幾萬字。
+// 年表另存一份：71 個年目與其中十二年的校訂全文，只有 /zhujiahua/chronology 讀它。
+const chronologySource = resolve(here, '../../data/processed/chronology.json');
+const chronologyTarget = resolve(dirname(target), 'zhuJiahuaChronology.json');
+await copyFile(chronologySource, chronologyTarget);
+console.log(`已同步年表：${chronologyTarget}`);
+
+// 讀稿一篇一檔，前端按需載入。整份塞進快照會讓 /zhujiahua 一開就拉五十幾萬字。
 const draftSource = resolve(here, '../../data/processed/reading-drafts');
 const draftTarget = resolve(dirname(target), 'zhuJiahua/drafts');
 let files = [];

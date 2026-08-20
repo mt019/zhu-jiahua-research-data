@@ -427,18 +427,24 @@
     "frontMatter": [
       {
         "title": "獻詞",
-        "bookStartPage": 1,
-        "tocPdfPage": 27
+        "id": "ZJH-FM-001",
+        "author": "萬紹章",
+        "bookPages": "1–7",
+        "charCount": 3080,
+        "status": "未校辨讀稿"
       },
       {
         "title": "緣起",
-        "bookStartPage": 1,
-        "tocPdfPage": 27
+        "id": "ZJH-FM-002",
+        "author": "王聿均",
+        "bookPages": "1–6",
+        "charCount": 2959,
+        "status": "未校辨讀稿"
       },
       {
         "title": "圖片",
-        "bookStartPage": 1,
-        "tocPdfPage": 27
+        "status": "影像未轉錄",
+        "note": "原書的圖版與圖說，本站尚未轉成文字。"
       }
     ],
     "parts": [
