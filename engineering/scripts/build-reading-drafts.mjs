@@ -22,6 +22,7 @@ const HEADS = 'data/derived/piece_heads.json'
 const TOC = 'data/derived/toc_index.json'
 const PAGE_MAP = 'data/derived/page_map.json'
 const OUT_DIR = 'data/processed/reading-drafts'
+const CORR_DIR = 'data/materials/speeches/corrections'
 const VARIANTS = `${process.env.HOME}/.claude/skills/cjk-print-ocr/variants.tsv`
 
 // 縮排判定的門檻：續頁接續段與版心上緣的落差實測在 10 以內，縮排段在 110 以上。
@@ -383,6 +384,51 @@ const titleLineIndex = (pdfPage, titleInText) => {
   return loose >= 0 ? loose : 0
 }
 
+// 人工校訂表：一篇一檔，每行「誤 TAB 正 TAB 原書頁 TAB 註記」。年譜早有這一層
+// （data/materials/chronology/corrections/pg-NN.tsv），言論集的讀稿先前沒有——回原頁圖
+// 核出來的錯字沒有地方記，也改不進去。單位是篇不是頁，所以檔名用篇號，核對所依的
+// 原書頁另記一欄。表在切完篇、跑完所有自動清理之後才套用，第一欄寫的因此是站上那個樣子。
+const readCorrections = (id) => {
+  const file = join(CORR_DIR, `${id}.tsv`)
+  if (!existsSync(file)) return []
+  const out = []
+  readFileSync(file, 'utf8').split('\n').forEach((raw, i) => {
+    const line = raw.replace(/\r$/, '')
+    if (!line.trim() || line.startsWith('#')) return
+    const [wrong, right, page, note] = line.split('\t')
+    if (!wrong || right === undefined || !page) {
+      throw new Error(`${file}:${i + 1} 格式不對，應為「誤<TAB>正<TAB>原書頁<TAB>註記」`)
+    }
+    out.push({ wrong, right, bookPage: Number(page), note, at: `${file}:${i + 1}` })
+  })
+  return out
+}
+
+// 一條校訂在該篇的哪一段、哪個字元位置。命中零次或多次都中止：安靜地改錯地方，
+// 比不改更難發現。
+const locate = (paragraphs, wrong) => {
+  const hits = []
+  paragraphs.forEach((para, k) => {
+    let from = 0
+    for (;;) {
+      const at = para.indexOf(wrong, from)
+      if (at < 0) break
+      hits.push({ para: k, offset: at })
+      from = at + 1
+    }
+  })
+  return hits
+}
+
+// 命中的位置落在哪一頁：pageBreaks 記著每一頁從哪一段的哪個字元起。
+const pageAt = (pageBreaks, para, offset) => {
+  let cur = null
+  for (const b of pageBreaks) {
+    if (b.para < para || (b.para === para && b.offset <= offset)) cur = b
+  }
+  return cur?.bookPage ?? null
+}
+
 rmSync(OUT_DIR, { recursive: true, force: true })
 mkdirSync(OUT_DIR, { recursive: true })
 
@@ -393,6 +439,7 @@ let joined = 0
 let marginLeftovers = 0
 let movedMarks = 0
 let ellipses = 0
+let corrected = 0
 
 for (let i = 0; i < heads.length; i += 1) {
   const h = heads[i]
@@ -600,6 +647,31 @@ for (let i = 0; i < heads.length; i += 1) {
     }
   }
 
+  // 人工校訂表最後套用，套在自動清理之後：表裡第一欄寫的是站上讀得到的那個樣子。
+  const corrections = readCorrections(h.id)
+  for (const c of corrections) {
+    const hits = locate(paragraphs, c.wrong)
+    if (hits.length !== 1) {
+      throw new Error(`${c.at}「${c.wrong}」在 ${h.id} 命中 ${hits.length} 次，須剛好 1 次`)
+    }
+    const { para, offset } = hits[0]
+    const onPage = pageAt(pageBreaks, para, offset)
+    if (onPage !== c.bookPage) {
+      throw new Error(
+        `${c.at}「${c.wrong}」落在原書第 ${onPage} 頁，表上記的核對頁是 ${c.bookPage}`,
+      )
+    }
+    paragraphs[para] =
+      paragraphs[para].slice(0, offset) + c.right + paragraphs[para].slice(offset + c.wrong.length)
+    const delta = c.right.length - c.wrong.length
+    for (const b of pageBreaks) {
+      if (b.para !== para) continue
+      if (b.offset >= offset + c.wrong.length) b.offset += delta
+      else if (b.offset > offset) b.offset = offset
+    }
+    corrected += 1
+  }
+
   const chars = paragraphs.reduce((n, t) => n + t.length, 0)
   totalChars += chars
   const draft = {
@@ -613,9 +685,13 @@ for (let i = 0; i < heads.length; i += 1) {
     bookPages: bookPages.length ? `${bookPages[0] ?? '?'}–${bookPages.at(-1) ?? '?'}` : null,
     status: '未校辨讀稿',
     statusNote:
-      'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。',
+      'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。' +
+      (corrections.length
+        ? `本篇另有 ${corrections.length} 處回原頁圖核過的錯字已改，校訂表在 ${CORR_DIR}/${h.id}.tsv。`
+        : ''),
     charCount: chars,
     noiseRemoved,
+    manualCorrections: corrections.length || undefined,
     missingBookPages: missingByPiece.get(h.id) ?? [],
     paragraphs,
     pageBreaks,
@@ -642,4 +718,5 @@ console.log(`跨頁接回的段落 ${joined} 處`)
 console.log(`段落兩端的邊欄殘字 ${marginLeftovers} 處`)
 console.log(`排錯位置的段末句號 ${movedMarks} 處已移回段尾`)
 console.log(`刪節號與重出的句號 ${ellipses} 處已歸位`)
+console.log(`人工校訂表改掉 ${corrected} 處`)
 console.log(`讀稿 ${index.length} 篇，合計 ${totalChars.toLocaleString('en-US')} 字，寫進 ${OUT_DIR}`)

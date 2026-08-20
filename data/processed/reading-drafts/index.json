@@ -2,7 +2,7 @@
   "generatedAt": "2026-08-20",
   "status": "未校辨讀稿",
   "count": 200,
-  "totalChars": 539855,
+  "totalChars": 539856,
   "items": [
     {
       "id": "ZJH-FM-001",
@@ -134,7 +134,7 @@
     },
     {
       "id": "ZJH-015",
-      "charCount": 6816,
+      "charCount": 6817,
       "noiseRemoved": 4,
       "pageCount": 9,
       "paragraphCount": 17,
@@ -1068,7 +1068,7 @@
     },
     {
       "id": "ZJH-131",
-      "charCount": 6168,
+      "charCount": 6167,
       "noiseRemoved": 7,
       "pageCount": 9,
       "paragraphCount": 19,
@@ -1284,7 +1284,7 @@
     },
     {
       "id": "ZJH-158",
-      "charCount": 4763,
+      "charCount": 4764,
       "noiseRemoved": 4,
       "pageCount": 7,
       "paragraphCount": 18,

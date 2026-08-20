@@ -1,4 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises';
+import { checkDrafts } from '@phenomcanvas/prose-rules/ocr';
 
 const target = new URL('../../data/processed/zhu-jiahua-app.json', import.meta.url);
 const data = JSON.parse(await readFile(target, 'utf8'));
@@ -115,6 +116,15 @@ if (draftFiles.length) {
   for (const file of draftFiles) {
     drafts.push([file, JSON.parse(await readFile(new URL(file, DRAFT_DIR), 'utf8'))]);
   }
+  // 嚴重度「擋」的形狀是機器判得出對錯的，命中就中止；「待核」要回原頁圖看，
+  // 由 audit-drafts.mjs 列出來，不在這裡擋。
+  const { results } = checkDrafts(drafts.map(([file, d]) => ({ path: file, paragraphs: d.paragraphs })));
+  for (const r of results) {
+    for (const f of r.findings) {
+      if (f.severity !== '擋') continue;
+      throw new Error(`${r.path} 第 ${f.paragraph} 段是辨讀稿殘留（${f.rule}）：「${f.sample}」`);
+    }
+  }
   const front = drafts.filter(([, d]) => d.frontMatter);
   if (drafts.length - front.length !== ids.size) {
     throw new Error(`讀稿 ${drafts.length - front.length} 篇，篇目 ${ids.size} 篇，兩者應一致`);
@@ -156,34 +166,14 @@ if (draftFiles.length) {
         throw new Error(`${file} 原書第 ${brk.bookPage} 頁的書根併進正文了`);
       }
     }
-    // 這道檢查先前只看該頁起頭的中文數字頁碼，於是整段的書眉（「叄敎育言論」「臺文化學術」）、
-    // 邊欄切出來的單字段（「直」「。」）與掃描髒點（110K、GDGY）一路綠燈上站。判準改成三條，
-    // 名稱一律取自目次，不用手寫的字面表——序數被認錯或整個掉了，剝掉序數照樣認得出來。
+    // 辨讀稿的殘留形狀在共用層判（~/.claude/skills/cjk-print-ocr/ocr_shapes.py，經
+    // @phenomcanvas/prose-rules/ocr 呼叫），本檔不再抄一份 regex：陳寅恪、德川、iias、
+    // court 幾個倉讀的是同一份，共用層加一條形狀，各倉下一次執行就吃得到。
+    // 書眉那一條留在這裡，它要拿本書的目次才判得出來。
     for (const [i, para] of draft.paragraphs.entries()) {
       const t = para.trim();
       if (t.length <= 16 && HEAD_NAMES.has(headKey(t))) {
         throw new Error(`${file} 第 ${i} 段是書眉殘留：「${t}」`);
-      }
-      const cjk = /[\u4e00-\u9fff\uf900-\ufaff]/.test(t);
-      if (cjk && [...t].length === 1) {
-        throw new Error(`${file} 第 ${i} 段只有一個字「${t}」，正文沒有一個字自成一段，是邊欄碎片`);
-      }
-      if (!cjk && t.length < 12 && !/^[\u3000-\u303f\uff00-\uffef]+$/.test(t)) {
-        throw new Error(`${file} 第 ${i} 段不含漢字又短：「${t}」，是掃描髒點`);
-      }
-      // 原書排的是全形標點；辨讀稿讀成半形的，兩邊是漢字就該已轉回（build-reading-drafts
-      // 的 widen）。這裡查的是漏網的，判準與那一支相同，不另寫一份字面表。
-      const half = t.match(/[\u4e00-\u9fff][,.;:?!]([\u4e00-\u9fff]|$)/);
-      if (half) {
-        throw new Error(`${file} 第 ${i} 段有沒轉回全形的標點：「${half[0]}」`);
-      }
-      // 直排鉛印不連排兩個句號，也不把逗號、句號排在一段的開頭（避頭點）。兩者都是
-      // 辨讀稿的殘留：一個來自掃描的墨點與補了兩次的段末句號，一個來自被切開的段落。
-      if (/[。]{2}|，{2}|、{2}/.test(t)) {
-        throw new Error(`${file} 第 ${i} 段連排兩個句讀：「${t.match(/.{0,8}(?:[。]{2}|，{2}|、{2}).{0,8}/)[0]}」`);
-      }
-      if (/^[，、。；：？！]/.test(t)) {
-        throw new Error(`${file} 第 ${i} 段以標點起頭：「${t.slice(0, 16)}」，是上一段被切開了`);
       }
     }
     if (draft.missingBookPages?.length && !draft.missingNote) {
