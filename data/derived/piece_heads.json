@@ -3575,7 +3575,11 @@
       "occasion": null,
       "sharesStartPage": true,
       "impliedOffset": 34,
-      "offsetInBand": true
+      "offsetInBand": true,
+      "endPdfPage": 784,
+      "sharesEndPage": false,
+      "endBookPage": 750,
+      "pdfPageCount": 6
     }
   ]
 }

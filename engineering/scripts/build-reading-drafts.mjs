@@ -150,6 +150,20 @@ const columnsOf = (syms) => {
   return cols
 }
 
+// 幾何上像邊欄的欄，內容帶句讀的不丟：書眉是部次名、書根是頁碼，兩者都不帶句讀。
+// 原書 256 頁「使哲學『活』起來。」的「起來。」自成段末一欄，距鄰欄 103.5px、欄距
+// 中位數 89.9，比值 1.1512 剛好壓過門檻，整欄被當書根丟掉——而 p-517 真書根「四八〇」
+// 的比值也只有 1.28，純幾何分不開這兩種。這道否決不看字認得對不對，只看有沒有句讀，
+// 部次的字被認錯照樣攔得住，原設計不變。
+const MARGIN_VETO = /[。！？；，、：」』]/
+const colText = (col) => col.items.map((s) => s.text).join('')
+// 段末溢到下一欄的半條欄不是書根。原書 237 頁的「學。」自成一欄（GCV 把句號斷進另一個
+// block，欄裡只剩一個「學」），距鄰欄 105.4px、欄距中位數 88.5，比值 1.19 壓過門檻，
+// 整欄連同段末那個字一起被丟，段末的句號跟著不見。判準與跨頁接回那一關相同：中文的
+// 段落不會停在「復」「將」這種字上，前面幾欄的末字沒有句讀時，最後那一欄是這一段的
+// 下半截，不是書根。前面幾欄已經以句讀收尾的（原書 137 頁小標「六　注重專科學校」
+// 前面那一段），照舊按幾何丟。
+const TAIL_CLOSED = /[。！？；：、，」』）]$/
 const dropMarginColumns = (syms) => {
   let cols = columnsOf(syms)
   if (cols.length < 3) return { syms, dropped: 0 }
@@ -161,12 +175,23 @@ const dropMarginColumns = (syms) => {
     if (!pitch) break
     const head = cols[0]
     const tail = cols[cols.length - 1]
-    if (head.items.length <= MARGIN_MAX_SYMBOLS && gaps[0] > pitch * MARGIN_GAP_RATIO) {
+    if (head.items.length <= MARGIN_MAX_SYMBOLS && gaps[0] > pitch * MARGIN_GAP_RATIO
+      && !MARGIN_VETO.test(widen(colText(head)))) {
       dropped += head.items.length
       cols = cols.slice(1)
       continue
     }
-    if (tail.items.length <= MARGIN_MAX_SYMBOLS && gaps[gaps.length - 1] > pitch * MARGIN_GAP_RATIO) {
+    // 直排一欄之內的閱讀順序是由上往下，而 columnsOf 收字的順序跟著辨識結果走，
+    // 整欄接起來的字串末尾不是讀到的最後一個字。前一欄真正的末字要按 y 取。
+    const prev = cols[cols.length - 2]
+    const lastRead = [...prev.items].sort((a, b) => (a.top ?? 0) - (b.top ?? 0)).at(-1)
+    const kept = widen(lastRead?.text ?? '')
+    // 段末的下半截從欄頂起排，小標與書根低幾個字（原書 137 頁的「六　注重專科學校」）。
+    const topOf = (list) => Math.min(...list.map((s) => s.top ?? Infinity))
+    const continued = topOf(tail.items) <= topOf(cols.slice(0, -1).flatMap((c) => c.items)) + INDENT_MIN
+    if (tail.items.length <= MARGIN_MAX_SYMBOLS && gaps[gaps.length - 1] > pitch * MARGIN_GAP_RATIO
+      && (TAIL_CLOSED.test(kept) || !continued)
+      && !MARGIN_VETO.test(widen(colText(tail)))) {
       dropped += tail.items.length
       cols = cols.slice(0, -1)
       continue
@@ -233,6 +258,7 @@ const shapeParagraph = (kept) => {
     firstTop: tops.length ? tops[0] : null,
     minTop: tops.length ? Math.min(...tops) : null,
     headX: kept.length ? Math.max(...kept.map((s) => s.cx)) : 0,
+    tailX: kept.length ? Math.min(...kept.map((s) => s.cx)) : 0,
   }
 }
 
@@ -285,7 +311,19 @@ for (const f of readdirSync(JSON_DIR)) {
   }
   // 直排右起：辨識結果的段落順序不可靠（實測 p-518 有一個單獨的「。」排在整頁最前面），
   // 依每段最右一欄的 x 由大到小重排，就是原書的閱讀順序。
-  paras.sort((a, b) => b.headX - a.headX)
+  // 同一條欄被辨識結果切成兩段時（原書 238 頁的「第一、調整院系⋯⋯及實施二部制教學」與
+  // 「專科以上學校在地理上的分佈，已乘復員的時」排在同一欄），兩段的 headX 只差幾個像素，
+  // 光比 x 定不出先後，後半段會排到下一欄之後，接出來的句子從中間斷開（「二部制教學侯，
+  // 做了一番調整的工作」）。x 落在同一欄的，改比欄內的起點高度。
+  // 欄內的高度只拿來分同一條欄裡的兩段，而且兩段都要整段落在那一條欄上：跨欄的段落
+  // 起點高度是它最右一欄的高度，拿去跟一條窄欄比，會把小標與表格欄排到別人中間
+  // （原書 35 頁的「六　注重專科學校」曾被接到前一段的末尾）。只有標點的那一段也不參加，
+  // 它落在哪一欄由排版決定，拿它的高度去比會把「！。」這種連用的收尾符號推到下一段開頭。
+  const oneColumn = (p) => Math.abs(p.headX - p.tailX) <= COLUMN_TOLERANCE
+    && /[\u4e00-\u9fff\uf900-\ufaff]/.test(p.text)
+  paras.sort((a, b) => (Math.abs(b.headX - a.headX) <= COLUMN_TOLERANCE && oneColumn(a) && oneColumn(b)
+    ? (a.minTop ?? 0) - (b.minTop ?? 0)
+    : b.headX - a.headX))
   // 版心上緣：全頁留下來的字裡最高的那一個。書眉在外側邊欄、書根在版心下方，
   // 兩者的頂端都比正文低，不會把這條線拉上去。
   const tops = paras.map((p) => p.minTop).filter((y) => y !== null)
@@ -339,6 +377,12 @@ const readCorrections = (id) => {
 // 正文的版本代號：拿全篇正文算一個短雜湊。內容一樣就一樣，改一個字就換一個。
 const textVersion = (paragraphs) =>
   createHash('sha256').update(paragraphs.join('\u0000')).digest('hex').slice(0, 12)
+
+// 校訂跨段用「¶」標出段界。辨識稿在換欄處掉掉頭一兩個字時（原書 508 頁「變陣地戰爲運動
+// 戰，形勢迥異」掉了「戰，」），掉字的位置正好是判斷分段的依據——後面那一欄的第一個字
+// 因此看起來像縮排，一句話被切成兩段。這種校訂的誤欄寫成「爲運動¶形勢迥異」，正欄寫成
+// 「爲運動戰，形勢迥異」，套用時兩段接回一段。
+const PARA_MARK = '¶'
 
 // 一條校訂在該篇的哪一段、哪個字元位置。命中零次或多次都中止：安靜地改錯地方，
 // 比不改更難發現。
@@ -587,6 +631,56 @@ for (let i = 0; i < heads.length; i += 1) {
   const corrections = readCorrections(h.id)
   const applied = []
   for (const c of corrections) {
+    if (c.wrong.includes(PARA_MARK)) {
+      const joinedText = paragraphs.join(PARA_MARK)
+      const spots = []
+      for (let from = 0; ; ) {
+        const at = joinedText.indexOf(c.wrong, from)
+        if (at < 0) break
+        spots.push(at)
+        from = at + 1
+      }
+      if (spots.length !== 1) {
+        throw new Error(`${c.at}「${c.wrong}」在 ${h.id} 命中 ${spots.length} 次，須剛好 1 次`)
+      }
+      const pos = spots[0]
+      const posOf = (para, offset) =>
+        paragraphs.slice(0, para).reduce((n, t) => n + t.length + 1, 0) + offset
+      const marks = pageBreaks.map((b) => ({ b, at: posOf(b.para, b.offset) }))
+      let head = 0
+      let startPara = 0
+      while (startPara < paragraphs.length && head + paragraphs[startPara].length < pos) {
+        head += paragraphs[startPara].length + 1
+        startPara += 1
+      }
+      const onPage = pageAt(pageBreaks, startPara, pos - head)
+      if (onPage !== c.bookPage) {
+        throw new Error(
+          `${c.at}「${c.wrong}」落在原書第 ${onPage} 頁，表上記的核對頁是 ${c.bookPage}`,
+        )
+      }
+      const after = joinedText.slice(0, pos) + c.right + joinedText.slice(pos + c.wrong.length)
+      const rebuilt = after.split(PARA_MARK)
+      const delta = c.right.length - c.wrong.length
+      for (const { b, at } of marks) {
+        let moved = at
+        if (at >= pos + c.wrong.length) moved = at + delta
+        else if (at > pos) moved = pos
+        let acc = 0
+        let k = 0
+        while (k < rebuilt.length - 1 && acc + rebuilt[k].length < moved) {
+          acc += rebuilt[k].length + 1
+          k += 1
+        }
+        b.para = k
+        b.offset = Math.max(0, Math.min(rebuilt[k].length, moved - acc))
+      }
+      paragraphs.length = 0
+      paragraphs.push(...rebuilt)
+      applied.push({ para: startPara, at: pos - head, from: c.wrong, to: c.right, bookPage: c.bookPage })
+      corrected += 1
+      continue
+    }
     const hits = locate(paragraphs, c.wrong)
     if (hits.length !== 1) {
       throw new Error(`${c.at}「${c.wrong}」在 ${h.id} 命中 ${hits.length} 次，須剛好 1 次`)

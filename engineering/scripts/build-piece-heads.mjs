@@ -203,6 +203,24 @@ for (let i = 0; i < items.length; i += 1) {
   cur.pdfPageCount = cur.endPdfPage - cur.pdfPage + 1
 }
 
+// 最後一篇沒有下一篇可推訖頁，止於全書最後一個印著自己頁碼的頁：再往後是版權頁與英文
+// 書名頁。缺了這一條，末篇只收到起頁那一頁——《丁文江與中央研究院》原書 745–750，
+// 讀稿一度只有 745 那一頁。
+const lastBodyPdfPage = Math.max(
+  ...pageMap.items.filter((it) => it.bookPage !== null).map((it) => it.pdfPage),
+)
+for (let i = items.length - 1; i >= 0; i -= 1) {
+  const last = items[i]
+  if (!last.matched) continue
+  if (last.endPdfPage === undefined && last.pdfPage <= lastBodyPdfPage) {
+    last.endPdfPage = lastBodyPdfPage
+    last.sharesEndPage = false
+    last.endBookPage = pdfToBook.get(last.endPdfPage) ?? null
+    last.pdfPageCount = last.endPdfPage - last.pdfPage + 1
+  }
+  break
+}
+
 const matched = items.filter((i) => i.matched).length
 const offBand = items.filter((i) => i.matched && !i.offsetInBand)
 writeFileSync(

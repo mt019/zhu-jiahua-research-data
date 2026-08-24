@@ -2,11 +2,11 @@
   "generatedAt": "2026-08-24",
   "status": "未校辨讀稿",
   "count": 200,
-  "totalChars": 539856,
+  "totalChars": 543990,
   "items": [
     {
       "id": "ZJH-FM-001",
-      "charCount": 3080,
+      "charCount": 3081,
       "noiseRemoved": 0,
       "pageCount": 7,
       "paragraphCount": 17,
@@ -110,7 +110,7 @@
     },
     {
       "id": "ZJH-012",
-      "charCount": 2911,
+      "charCount": 2912,
       "noiseRemoved": 1,
       "pageCount": 5,
       "paragraphCount": 7,
@@ -126,15 +126,15 @@
     },
     {
       "id": "ZJH-014",
-      "charCount": 8237,
+      "charCount": 8236,
       "noiseRemoved": 3,
       "pageCount": 11,
-      "paragraphCount": 21,
+      "paragraphCount": 20,
       "missingBookPages": []
     },
     {
       "id": "ZJH-015",
-      "charCount": 6817,
+      "charCount": 6818,
       "noiseRemoved": 4,
       "pageCount": 9,
       "paragraphCount": 17,
@@ -158,7 +158,7 @@
     },
     {
       "id": "ZJH-018",
-      "charCount": 4025,
+      "charCount": 4027,
       "noiseRemoved": 1,
       "pageCount": 6,
       "paragraphCount": 16,
@@ -198,7 +198,7 @@
     },
     {
       "id": "ZJH-023",
-      "charCount": 4263,
+      "charCount": 4266,
       "noiseRemoved": 3,
       "pageCount": 7,
       "paragraphCount": 27,
@@ -206,7 +206,7 @@
     },
     {
       "id": "ZJH-024",
-      "charCount": 808,
+      "charCount": 809,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 2,
@@ -238,7 +238,7 @@
     },
     {
       "id": "ZJH-028",
-      "charCount": 2819,
+      "charCount": 2820,
       "noiseRemoved": 0,
       "pageCount": 5,
       "paragraphCount": 20,
@@ -270,7 +270,7 @@
     },
     {
       "id": "ZJH-032",
-      "charCount": 11357,
+      "charCount": 11355,
       "noiseRemoved": 3,
       "pageCount": 16,
       "paragraphCount": 62,
@@ -296,7 +296,7 @@
     },
     {
       "id": "ZJH-035",
-      "charCount": 16402,
+      "charCount": 16413,
       "noiseRemoved": 5,
       "pageCount": 22,
       "paragraphCount": 54,
@@ -304,7 +304,7 @@
     },
     {
       "id": "ZJH-036",
-      "charCount": 1343,
+      "charCount": 1346,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 26,
@@ -320,7 +320,7 @@
     },
     {
       "id": "ZJH-038",
-      "charCount": 4207,
+      "charCount": 4209,
       "noiseRemoved": 1,
       "pageCount": 6,
       "paragraphCount": 10,
@@ -328,7 +328,7 @@
     },
     {
       "id": "ZJH-039",
-      "charCount": 4304,
+      "charCount": 4328,
       "noiseRemoved": 0,
       "pageCount": 7,
       "paragraphCount": 19,
@@ -336,7 +336,7 @@
     },
     {
       "id": "ZJH-040",
-      "charCount": 835,
+      "charCount": 848,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 8,
@@ -352,7 +352,7 @@
     },
     {
       "id": "ZJH-042",
-      "charCount": 1839,
+      "charCount": 1840,
       "noiseRemoved": 2,
       "pageCount": 3,
       "paragraphCount": 7,
@@ -368,7 +368,7 @@
     },
     {
       "id": "ZJH-044",
-      "charCount": 2581,
+      "charCount": 2585,
       "noiseRemoved": 1,
       "pageCount": 4,
       "paragraphCount": 7,
@@ -392,7 +392,7 @@
     },
     {
       "id": "ZJH-047",
-      "charCount": 8009,
+      "charCount": 8020,
       "noiseRemoved": 14,
       "pageCount": 13,
       "paragraphCount": 59,
@@ -400,7 +400,7 @@
     },
     {
       "id": "ZJH-048",
-      "charCount": 2383,
+      "charCount": 2394,
       "noiseRemoved": 8,
       "pageCount": 4,
       "paragraphCount": 10,
@@ -440,7 +440,7 @@
     },
     {
       "id": "ZJH-053",
-      "charCount": 2613,
+      "charCount": 2614,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 14,
@@ -456,7 +456,7 @@
     },
     {
       "id": "ZJH-055",
-      "charCount": 7892,
+      "charCount": 7903,
       "noiseRemoved": 1,
       "pageCount": 11,
       "paragraphCount": 36,
@@ -464,7 +464,7 @@
     },
     {
       "id": "ZJH-056",
-      "charCount": 2323,
+      "charCount": 2324,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 13,
@@ -472,10 +472,10 @@
     },
     {
       "id": "ZJH-057",
-      "charCount": 2521,
+      "charCount": 2527,
       "noiseRemoved": 5,
       "pageCount": 5,
-      "paragraphCount": 14,
+      "paragraphCount": 13,
       "missingBookPages": []
     },
     {
@@ -488,7 +488,7 @@
     },
     {
       "id": "ZJH-059",
-      "charCount": 2228,
+      "charCount": 2238,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 14,
@@ -496,10 +496,10 @@
     },
     {
       "id": "ZJH-060",
-      "charCount": 7749,
+      "charCount": 7770,
       "noiseRemoved": 11,
       "pageCount": 12,
-      "paragraphCount": 61,
+      "paragraphCount": 62,
       "missingBookPages": []
     },
     {
@@ -512,7 +512,7 @@
     },
     {
       "id": "ZJH-062",
-      "charCount": 2208,
+      "charCount": 2210,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 16,
@@ -523,12 +523,12 @@
       "charCount": 1749,
       "noiseRemoved": 0,
       "pageCount": 3,
-      "paragraphCount": 3,
+      "paragraphCount": 2,
       "missingBookPages": []
     },
     {
       "id": "ZJH-064",
-      "charCount": 5132,
+      "charCount": 5133,
       "noiseRemoved": 0,
       "pageCount": 8,
       "paragraphCount": 12,
@@ -544,7 +544,7 @@
     },
     {
       "id": "ZJH-066",
-      "charCount": 3814,
+      "charCount": 3815,
       "noiseRemoved": 3,
       "pageCount": 6,
       "paragraphCount": 17,
@@ -560,7 +560,7 @@
     },
     {
       "id": "ZJH-068",
-      "charCount": 1789,
+      "charCount": 1790,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 6,
@@ -576,7 +576,7 @@
     },
     {
       "id": "ZJH-070",
-      "charCount": 1187,
+      "charCount": 1188,
       "noiseRemoved": 2,
       "pageCount": 3,
       "paragraphCount": 7,
@@ -600,7 +600,7 @@
     },
     {
       "id": "ZJH-073",
-      "charCount": 3791,
+      "charCount": 3794,
       "noiseRemoved": 3,
       "pageCount": 6,
       "paragraphCount": 13,
@@ -608,7 +608,7 @@
     },
     {
       "id": "ZJH-074",
-      "charCount": 3453,
+      "charCount": 3454,
       "noiseRemoved": 1,
       "pageCount": 5,
       "paragraphCount": 17,
@@ -624,7 +624,7 @@
     },
     {
       "id": "ZJH-076",
-      "charCount": 2789,
+      "charCount": 2790,
       "noiseRemoved": 0,
       "pageCount": 5,
       "paragraphCount": 10,
@@ -640,7 +640,7 @@
     },
     {
       "id": "ZJH-078",
-      "charCount": 4054,
+      "charCount": 4058,
       "noiseRemoved": 1,
       "pageCount": 6,
       "paragraphCount": 6,
@@ -648,7 +648,7 @@
     },
     {
       "id": "ZJH-079",
-      "charCount": 4297,
+      "charCount": 4312,
       "noiseRemoved": 5,
       "pageCount": 6,
       "paragraphCount": 7,
@@ -656,7 +656,7 @@
     },
     {
       "id": "ZJH-080",
-      "charCount": 1894,
+      "charCount": 1895,
       "noiseRemoved": 1,
       "pageCount": 4,
       "paragraphCount": 8,
@@ -672,15 +672,15 @@
     },
     {
       "id": "ZJH-082",
-      "charCount": 3986,
+      "charCount": 4006,
       "noiseRemoved": 7,
       "pageCount": 6,
-      "paragraphCount": 12,
+      "paragraphCount": 13,
       "missingBookPages": []
     },
     {
       "id": "ZJH-083",
-      "charCount": 2835,
+      "charCount": 2846,
       "noiseRemoved": 3,
       "pageCount": 6,
       "paragraphCount": 10,
@@ -690,7 +690,7 @@
     },
     {
       "id": "ZJH-084",
-      "charCount": 2389,
+      "charCount": 2390,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 4,
@@ -698,7 +698,7 @@
     },
     {
       "id": "ZJH-085",
-      "charCount": 3255,
+      "charCount": 3257,
       "noiseRemoved": 2,
       "pageCount": 5,
       "paragraphCount": 11,
@@ -706,7 +706,7 @@
     },
     {
       "id": "ZJH-086",
-      "charCount": 1812,
+      "charCount": 1813,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 5,
@@ -714,10 +714,10 @@
     },
     {
       "id": "ZJH-087",
-      "charCount": 4248,
+      "charCount": 4252,
       "noiseRemoved": 2,
       "pageCount": 6,
-      "paragraphCount": 9,
+      "paragraphCount": 7,
       "missingBookPages": []
     },
     {
@@ -770,10 +770,10 @@
     },
     {
       "id": "ZJH-094",
-      "charCount": 1850,
+      "charCount": 1851,
       "noiseRemoved": 2,
       "pageCount": 3,
-      "paragraphCount": 6,
+      "paragraphCount": 5,
       "missingBookPages": []
     },
     {
@@ -802,7 +802,7 @@
     },
     {
       "id": "ZJH-098",
-      "charCount": 1474,
+      "charCount": 1490,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 9,
@@ -810,7 +810,7 @@
     },
     {
       "id": "ZJH-099",
-      "charCount": 1984,
+      "charCount": 1985,
       "noiseRemoved": 2,
       "pageCount": 4,
       "paragraphCount": 9,
@@ -818,7 +818,7 @@
     },
     {
       "id": "ZJH-100",
-      "charCount": 1195,
+      "charCount": 1197,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 8,
@@ -826,7 +826,7 @@
     },
     {
       "id": "ZJH-101",
-      "charCount": 1180,
+      "charCount": 1181,
       "noiseRemoved": 2,
       "pageCount": 2,
       "paragraphCount": 8,
@@ -834,7 +834,7 @@
     },
     {
       "id": "ZJH-102",
-      "charCount": 1061,
+      "charCount": 1071,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 14,
@@ -842,7 +842,7 @@
     },
     {
       "id": "ZJH-103",
-      "charCount": 5580,
+      "charCount": 5583,
       "noiseRemoved": 1,
       "pageCount": 8,
       "paragraphCount": 25,
@@ -858,7 +858,7 @@
     },
     {
       "id": "ZJH-105",
-      "charCount": 4482,
+      "charCount": 4485,
       "noiseRemoved": 3,
       "pageCount": 9,
       "paragraphCount": 87,
@@ -874,7 +874,7 @@
     },
     {
       "id": "ZJH-107",
-      "charCount": 2905,
+      "charCount": 2917,
       "noiseRemoved": 1,
       "pageCount": 4,
       "paragraphCount": 7,
@@ -892,7 +892,7 @@
     },
     {
       "id": "ZJH-109",
-      "charCount": 2843,
+      "charCount": 2845,
       "noiseRemoved": 1,
       "pageCount": 4,
       "paragraphCount": 8,
@@ -916,7 +916,7 @@
     },
     {
       "id": "ZJH-112",
-      "charCount": 1487,
+      "charCount": 1488,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 6,
@@ -924,7 +924,7 @@
     },
     {
       "id": "ZJH-113",
-      "charCount": 3115,
+      "charCount": 3116,
       "noiseRemoved": 1,
       "pageCount": 5,
       "paragraphCount": 9,
@@ -940,7 +940,7 @@
     },
     {
       "id": "ZJH-115",
-      "charCount": 2473,
+      "charCount": 2483,
       "noiseRemoved": 2,
       "pageCount": 4,
       "paragraphCount": 8,
@@ -948,10 +948,10 @@
     },
     {
       "id": "ZJH-116",
-      "charCount": 3743,
+      "charCount": 3746,
       "noiseRemoved": 4,
       "pageCount": 6,
-      "paragraphCount": 17,
+      "paragraphCount": 16,
       "missingBookPages": []
     },
     {
@@ -1004,7 +1004,7 @@
     },
     {
       "id": "ZJH-123",
-      "charCount": 2578,
+      "charCount": 2580,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 11,
@@ -1012,7 +1012,7 @@
     },
     {
       "id": "ZJH-124",
-      "charCount": 3134,
+      "charCount": 3135,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 10,
@@ -1036,7 +1036,7 @@
     },
     {
       "id": "ZJH-127",
-      "charCount": 3427,
+      "charCount": 3428,
       "noiseRemoved": 2,
       "pageCount": 5,
       "paragraphCount": 8,
@@ -1044,7 +1044,7 @@
     },
     {
       "id": "ZJH-128",
-      "charCount": 1241,
+      "charCount": 1243,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 6,
@@ -1060,7 +1060,7 @@
     },
     {
       "id": "ZJH-130",
-      "charCount": 4755,
+      "charCount": 4756,
       "noiseRemoved": 2,
       "pageCount": 7,
       "paragraphCount": 15,
@@ -1068,10 +1068,10 @@
     },
     {
       "id": "ZJH-131",
-      "charCount": 6167,
+      "charCount": 6181,
       "noiseRemoved": 7,
       "pageCount": 9,
-      "paragraphCount": 19,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
@@ -1092,15 +1092,15 @@
     },
     {
       "id": "ZJH-134",
-      "charCount": 6609,
+      "charCount": 6615,
       "noiseRemoved": 14,
       "pageCount": 9,
-      "paragraphCount": 19,
+      "paragraphCount": 18,
       "missingBookPages": []
     },
     {
       "id": "ZJH-135",
-      "charCount": 3717,
+      "charCount": 3720,
       "noiseRemoved": 2,
       "pageCount": 6,
       "paragraphCount": 17,
@@ -1108,7 +1108,7 @@
     },
     {
       "id": "ZJH-136",
-      "charCount": 3916,
+      "charCount": 3918,
       "noiseRemoved": 3,
       "pageCount": 6,
       "paragraphCount": 9,
@@ -1132,7 +1132,7 @@
     },
     {
       "id": "ZJH-139",
-      "charCount": 6535,
+      "charCount": 6536,
       "noiseRemoved": 7,
       "pageCount": 9,
       "paragraphCount": 23,
@@ -1143,7 +1143,7 @@
       "charCount": 3473,
       "noiseRemoved": 3,
       "pageCount": 6,
-      "paragraphCount": 9,
+      "paragraphCount": 8,
       "missingBookPages": []
     },
     {
@@ -1164,7 +1164,7 @@
     },
     {
       "id": "ZJH-143",
-      "charCount": 814,
+      "charCount": 815,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 1,
@@ -1172,7 +1172,7 @@
     },
     {
       "id": "ZJH-144",
-      "charCount": 2396,
+      "charCount": 2404,
       "noiseRemoved": 7,
       "pageCount": 4,
       "paragraphCount": 11,
@@ -1188,7 +1188,7 @@
     },
     {
       "id": "ZJH-146",
-      "charCount": 2364,
+      "charCount": 2368,
       "noiseRemoved": 7,
       "pageCount": 4,
       "paragraphCount": 15,
@@ -1236,7 +1236,7 @@
     },
     {
       "id": "ZJH-152",
-      "charCount": 1115,
+      "charCount": 1116,
       "noiseRemoved": 1,
       "pageCount": 3,
       "paragraphCount": 5,
@@ -1252,15 +1252,15 @@
     },
     {
       "id": "ZJH-154",
-      "charCount": 5185,
+      "charCount": 5187,
       "noiseRemoved": 2,
       "pageCount": 7,
-      "paragraphCount": 14,
+      "paragraphCount": 13,
       "missingBookPages": []
     },
     {
       "id": "ZJH-155",
-      "charCount": 9025,
+      "charCount": 9027,
       "noiseRemoved": 4,
       "pageCount": 12,
       "paragraphCount": 23,
@@ -1268,7 +1268,7 @@
     },
     {
       "id": "ZJH-156",
-      "charCount": 7244,
+      "charCount": 7254,
       "noiseRemoved": 8,
       "pageCount": 10,
       "paragraphCount": 17,
@@ -1276,7 +1276,7 @@
     },
     {
       "id": "ZJH-157",
-      "charCount": 4482,
+      "charCount": 4483,
       "noiseRemoved": 4,
       "pageCount": 6,
       "paragraphCount": 13,
@@ -1284,15 +1284,15 @@
     },
     {
       "id": "ZJH-158",
-      "charCount": 4764,
+      "charCount": 4769,
       "noiseRemoved": 4,
       "pageCount": 7,
-      "paragraphCount": 18,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
       "id": "ZJH-159",
-      "charCount": 5553,
+      "charCount": 5554,
       "noiseRemoved": 2,
       "pageCount": 9,
       "paragraphCount": 29,
@@ -1310,7 +1310,7 @@
     },
     {
       "id": "ZJH-161",
-      "charCount": 2395,
+      "charCount": 2398,
       "noiseRemoved": 2,
       "pageCount": 4,
       "paragraphCount": 1,
@@ -1318,15 +1318,15 @@
     },
     {
       "id": "ZJH-162",
-      "charCount": 3212,
+      "charCount": 3214,
       "noiseRemoved": 0,
       "pageCount": 5,
-      "paragraphCount": 7,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-163",
-      "charCount": 3740,
+      "charCount": 3755,
       "noiseRemoved": 0,
       "pageCount": 6,
       "paragraphCount": 14,
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "ZJH-164",
-      "charCount": 1144,
+      "charCount": 1145,
       "noiseRemoved": 6,
       "pageCount": 3,
       "paragraphCount": 4,
@@ -1342,7 +1342,7 @@
     },
     {
       "id": "ZJH-165",
-      "charCount": 1571,
+      "charCount": 1572,
       "noiseRemoved": 1,
       "pageCount": 3,
       "paragraphCount": 10,
@@ -1406,7 +1406,7 @@
     },
     {
       "id": "ZJH-173",
-      "charCount": 5633,
+      "charCount": 5634,
       "noiseRemoved": 12,
       "pageCount": 8,
       "paragraphCount": 9,
@@ -1414,7 +1414,7 @@
     },
     {
       "id": "ZJH-174",
-      "charCount": 9832,
+      "charCount": 9848,
       "noiseRemoved": 9,
       "pageCount": 13,
       "paragraphCount": 49,
@@ -1422,17 +1422,17 @@
     },
     {
       "id": "ZJH-175",
-      "charCount": 6127,
+      "charCount": 6165,
       "noiseRemoved": 23,
       "pageCount": 8,
-      "paragraphCount": 34,
+      "paragraphCount": 32,
       "missingBookPages": [
         696
       ]
     },
     {
       "id": "ZJH-176",
-      "charCount": 1082,
+      "charCount": 1089,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 1,
@@ -1448,7 +1448,7 @@
     },
     {
       "id": "ZJH-178",
-      "charCount": 2793,
+      "charCount": 2797,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 6,
@@ -1456,7 +1456,7 @@
     },
     {
       "id": "ZJH-179",
-      "charCount": 1957,
+      "charCount": 1961,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 7,
@@ -1480,7 +1480,7 @@
     },
     {
       "id": "ZJH-182",
-      "charCount": 1504,
+      "charCount": 1509,
       "noiseRemoved": 4,
       "pageCount": 3,
       "paragraphCount": 6,
@@ -1496,7 +1496,7 @@
     },
     {
       "id": "ZJH-184",
-      "charCount": 1001,
+      "charCount": 1011,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 4,
@@ -1512,7 +1512,7 @@
     },
     {
       "id": "ZJH-186",
-      "charCount": 935,
+      "charCount": 941,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 3,
@@ -1520,7 +1520,7 @@
     },
     {
       "id": "ZJH-187",
-      "charCount": 2234,
+      "charCount": 2240,
       "noiseRemoved": 1,
       "pageCount": 3,
       "paragraphCount": 10,
@@ -1538,7 +1538,7 @@
     },
     {
       "id": "ZJH-189",
-      "charCount": 1072,
+      "charCount": 1073,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 7,
@@ -1554,7 +1554,7 @@
     },
     {
       "id": "ZJH-191",
-      "charCount": 1251,
+      "charCount": 1253,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 10,
@@ -1562,7 +1562,7 @@
     },
     {
       "id": "ZJH-192",
-      "charCount": 2492,
+      "charCount": 2495,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 8,
@@ -1578,7 +1578,7 @@
     },
     {
       "id": "ZJH-194",
-      "charCount": 2569,
+      "charCount": 2571,
       "noiseRemoved": 4,
       "pageCount": 4,
       "paragraphCount": 13,
@@ -1586,7 +1586,7 @@
     },
     {
       "id": "ZJH-195",
-      "charCount": 3656,
+      "charCount": 3657,
       "noiseRemoved": 0,
       "pageCount": 6,
       "paragraphCount": 10,
@@ -1605,15 +1605,15 @@
       "charCount": 991,
       "noiseRemoved": 0,
       "pageCount": 2,
-      "paragraphCount": 7,
+      "paragraphCount": 6,
       "missingBookPages": []
     },
     {
       "id": "ZJH-198",
-      "charCount": 42,
+      "charCount": 3707,
       "noiseRemoved": 0,
-      "pageCount": 1,
-      "paragraphCount": 1,
+      "pageCount": 6,
+      "paragraphCount": 6,
       "missingBookPages": []
     }
   ]
