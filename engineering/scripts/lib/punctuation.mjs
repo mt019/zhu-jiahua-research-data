@@ -21,8 +21,9 @@ export const widen = (t) => {
       // 原書排的是全形，只看右鄰。左鄰是數字的不算（1,000 元的千分位）。
       const digitLeft = /[0-9]/.test(out[i - 1] ?? '')
       // 段末的標點沒有右鄰居（歌德那首譯詩每行收在一個逗號上，原書排的是全形）。
-      // 只認左鄰是漢字的，拉丁詩行的「Thränen ass,」左鄰是字母，照原書的半形留著。
-      const lineEnd = i === out.length - 1 && HAN.test(out[i - 1] ?? '')
+      // 左鄰是漢字或全形標點的都算——「蔣復璁（慰堂），」收在全形括號上（原書 358 頁，
+      // 2026-08-24 核過）；拉丁詩行的「Thränen ass,」左鄰是字母，照原書的半形留著。
+      const lineEnd = i === out.length - 1 && CJK_CTX.test(out[i - 1] ?? '')
       if (BOTH_SIDES.has(out[i]) ? (left && right) || (right && !digitLeft) || lineEnd : left || right) out[i] = w
     }
   }
@@ -33,6 +34,23 @@ export const widen = (t) => {
     for (let i = 0; i < out.length; i += 1) {
       if (out[i] !== '(') continue
       if (out.indexOf('）', i) > i) out[i] = '（'
+    }
+  }
+  // 括號的寬度照這一對的內容定，兩邊一致（站主 2026-08-24 令「禁止標點中西 mismatch」）。
+  // 原書的排法：括號裡是拉丁文的排半形（「(Zeche Holland)」「(Sir Robert-Colder
+  // Marshall)」，356、372 頁核過），括號裡含漢字的排全形（「（慰堂）」「（志希）」）。
+  // 鄰居判斷一次看一邊，「城（Gelsenkirche)」這種一邊貼漢字一邊貼字母的就會各轉各的；
+  // 這裡把每一對配起來，照內容把兩邊改成同一種寬度。配不成對的（跨行的引文括號）不動。
+  const stack = []
+  for (let i = 0; i < out.length; i += 1) {
+    if (out[i] === '(' || out[i] === '（') stack.push(i)
+    else if (out[i] === ')' || out[i] === '）') {
+      const j = stack.pop()
+      if (j === undefined) continue
+      const inner = out.slice(j + 1, i).join('')
+      const wide = HAN.test(inner)
+      out[j] = wide ? '（' : '('
+      out[i] = wide ? '）' : ')'
     }
   }
   return out.join('')
@@ -48,6 +66,15 @@ export const cornerQuotes = (t) => {
     const w = CURLY[out[i]]
     if (!w) continue
     if (CJK_CTX.test(out[i - 1] ?? '') || CJK_CTX.test(out[i + 1] ?? '')) out[i] = w
+  }
+  // 閉引號另會被讀成直的半形撇（「張黃事變'」「香港的見聞'」，2026-08-24 掃出八處，
+  // 樣態一致）：行內已有未閉合的「，後面出現的 ' 就是它的閉引號。d'Alembert 的撇號
+  // 兩側是拉丁字母、行內也沒有未閉合的「，不動。
+  let open = 0
+  for (let i = 0; i < out.length; i += 1) {
+    if (out[i] === '「') open += 1
+    else if (out[i] === '」') open -= 1
+    else if (out[i] === "'" && open > 0) { out[i] = '」'; open -= 1 }
   }
   return out.join('')
 }
