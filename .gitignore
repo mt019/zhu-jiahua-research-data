@@ -19,5 +19,14 @@ data/materials/chronology/*
 !data/materials/speeches/
 data/materials/speeches/*
 !data/materials/speeches/corrections/
+!data/materials/speeches/coverage-exceptions.json
 notes/*
 !notes/.gitkeep
+
+# 段末句讀批次的裁圖與接觸表由 engineering/tail-punct-batch/crop-tails.py 從頁圖再生，
+# 判讀記錄（verdicts.tsv）與清單本身進版控。
+engineering/tail-punct-batch/tails/
+engineering/tail-punct-batch/tails-sheet-*.png
+engineering/tail-punct-batch/pending/
+engineering/tail-punct-batch/pending-pages/
+engineering/tail-punct-batch/next-col/

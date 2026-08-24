@@ -184,6 +184,131 @@ if (draftFiles.length) {
       if (text.includes(forbidden)) throw new Error(`${file} 含禁止字串：${forbidden}`);
     }
   }
+
+  // ── 全書對帳 ──────────────────────────────────────────────────────────────
+  // 上面各條看的是單篇內部。三道對帳跨篇看整本書：2026-08-24 那次，末篇的訖頁是空的，
+  // ZJH-198 原書 745–750 只收到 745 那一頁、少掉 3,674 字，而每一道既有檢查都是綠的。
+  // 例外寫在 data/materials/speeches/coverage-exceptions.json，不寫死在這裡。
+  const pageMap = JSON.parse(
+    await readFile(new URL('../../data/derived/page_map.json', import.meta.url), 'utf8'),
+  );
+  const pieceHeads = JSON.parse(
+    await readFile(new URL('../../data/derived/piece_heads.json', import.meta.url), 'utf8'),
+  );
+  const exceptions = JSON.parse(
+    await readFile(new URL('../../data/materials/speeches/coverage-exceptions.json', import.meta.url), 'utf8'),
+  );
+  const skipPdf = exceptions.items.filter((e) => e.check === '篇目涵蓋');
+  const skipPage = exceptions.items.filter((e) => e.check === '逐頁字數');
+
+  // 一、正文頁全被篇目涵蓋。這一道不靠 endPdfPage 算得對，反過來查它。
+  const covered = new Set();
+  for (const h of pieceHeads.items) {
+    const to = h.endPdfPage ?? h.pdfPage;
+    for (let p = h.pdfPage; p <= to; p += 1) covered.add(p);
+  }
+  const orphans = pageMap.items
+    .filter((it) => it.bookPage !== null || it.bookPageInferred !== null)
+    .map((it) => it.pdfPage)
+    .filter((p) => !covered.has(p))
+    .filter((p) => !skipPdf.some((e) => p >= e.pdfFrom && p <= e.pdfTo));
+  if (orphans.length) {
+    throw new Error(
+      `PDF 第 ${orphans.join('、')} 頁有正文卻不屬於任何一篇：某一篇的起訖頁算錯了，`
+      + '或例外清單少登記一段（data/materials/speeches/coverage-exceptions.json）',
+    );
+  }
+
+  // 二、篇中間頁的字數對帳。首頁與末頁不算，篇從頁中起、末頁讓給下一篇，本來只佔半頁。
+  // 差額的底是書眉八字加部次名：實測 395 個中間頁，中位數 10、平均 9.4，門檻取 20。
+  // 讀稿的頁碼與 page_map 由相鄰頁推得的頁碼在六處差一（page_map.json 的 caveats 有記），
+  // 所以哪一頁對哪一張辨讀稿不按頁碼配，按內容配：拿該頁正文開頭的字去該篇的頁區間裡找。
+  const PAGE_CHAR_GAP = 20;
+  const CJK_ALL = /[\u4e00-\u9fff\uf900-\ufaff]/g;
+  const cjkCount = (t) => (t.match(CJK_ALL) ?? []).length;
+  const cjkOnly = (t) => (t.match(CJK_ALL) ?? []).join('');
+  const GCV_TXT = new URL('../../data/materials/speeches/gcv/txt/', import.meta.url);
+  const gcvPrefix = '朱家驊先生言論集 (王聿均,孫斌合编)-';
+  const pageText = new Map();
+  const readPage = async (pdfPage) => {
+    if (pageText.has(pdfPage)) return pageText.get(pdfPage);
+    const name = `${gcvPrefix}${String(pdfPage).padStart(3, '0')}.txt`;
+    let raw;
+    try {
+      raw = await readFile(new URL(encodeURIComponent(name), GCV_TXT), 'utf8');
+    } catch {
+      throw new Error(
+        `讀不到辨讀稿 ${name}：逐頁字數對帳跑不了。辨讀稿不進版控，`
+        + '要先把 data/materials/speeches/gcv/txt/ 補齊再驗',
+      );
+    }
+    pageText.set(pdfPage, raw);
+    return raw;
+  };
+  const headById = new Map(pieceHeads.items.map((h) => [h.id, h]));
+  const thin = [];
+  const unaligned = [];
+  let reconciled = 0;
+  for (const [file, draft] of drafts) {
+    if (draft.frontMatter) continue;
+    const h = headById.get(draft.id);
+    if (!h) continue;
+    const brks = draft.pageBreaks;
+    if (brks.length < 3) continue;
+    const at = (b) => draft.paragraphs.slice(0, b.para).reduce((n, t) => n + t.length, 0) + b.offset;
+    const marks = brks.map(at).concat(draft.paragraphs.reduce((n, t) => n + t.length, 0));
+    const whole = draft.paragraphs.join('');
+    const lastPdf = h.endPdfPage ?? h.pdfPage;
+    let cursor = h.pdfPage;
+    for (let i = 1; i < brks.length - 1; i += 1) {
+      const bookPage = brks[i].bookPage;
+      const segment = cjkOnly(whole.slice(marks[i], marks[i + 1]));
+      // 該頁開頭的字去辨讀稿裡找；GCV 在換欄處偶爾掉頭一兩個字，所以備三個位置的鑰匙
+      const keys = [segment.slice(0, 8), segment.slice(16, 24), segment.slice(40, 48)]
+        .filter((k) => k.length === 8);
+      let pdfPage = null;
+      for (let p = cursor; p <= lastPdf && pdfPage === null; p += 1) {
+        const raw = cjkOnly(await readPage(p));
+        if (keys.some((k) => raw.includes(k))) pdfPage = p;
+      }
+      if (pdfPage === null) {
+        if (draft.missingBookPages?.includes(bookPage)) continue;
+        unaligned.push(`${draft.id} 原書第 ${bookPage} 頁：正文開頭在 PDF ${cursor}–${lastPdf} 都找不到`);
+        continue;
+      }
+      cursor = pdfPage + 1;
+      if (skipPage.some((e) => e.pieceId === draft.id && bookPage >= e.bookFrom && bookPage <= e.bookTo)) continue;
+      reconciled += 1;
+      const drafted = segment.length;
+      const recognised = cjkCount(await readPage(pdfPage));
+      if (recognised - drafted > PAGE_CHAR_GAP) {
+        thin.push(`${draft.id} 原書第 ${bookPage} 頁（PDF ${pdfPage}）讀稿 ${drafted} 字、辨讀稿 ${recognised} 字，差 ${recognised - drafted}`);
+      }
+    }
+  }
+  if (unaligned.length) {
+    throw new Error(`有 ${unaligned.length} 頁對不到辨讀稿，逐頁字數無從核起：\n  ${unaligned.join('\n  ')}`);
+  }
+  if (thin.length) {
+    throw new Error(`逐頁字數對不上，${thin.length} 頁：\n  ${thin.join('\n  ')}`);
+  }
+
+  // 三、篇的頁數與 pageBreaks 數對得上。共用起頁（該頁只排得下標題行）與共用訖頁
+  // （末頁讓給下一篇）各准少一個。
+  for (const [file, draft] of drafts) {
+    if (draft.frontMatter) continue;
+    const h = headById.get(draft.id);
+    if (!h) continue;
+    const span = (h.endPdfPage ?? h.pdfPage) - h.pdfPage + 1;
+    const allowed = span - (h.sharesStartPage ? 1 : 0) - (h.sharesEndPage ? 1 : 0);
+    if (draft.pageBreaks.length < allowed) {
+      throw new Error(
+        `${file} 佔 ${span} 個 PDF 頁，讀稿只記到 ${draft.pageBreaks.length} 頁`
+        + `（共用起頁 ${Boolean(h.sharesStartPage)}、共用訖頁 ${Boolean(h.sharesEndPage)}，至少該有 ${allowed} 頁）`,
+      );
+    }
+  }
+  console.log(`全書對帳：正文頁 0 孤兒、逐頁字數核過 ${reconciled} 頁、篇的頁數 ${drafts.length - 2} 篇對得上。`);
 }
 
 // ── 年表 ────────────────────────────────────────────────────────────────────
@@ -241,6 +366,7 @@ if (chronology) {
     }
   }
   const pieceIds = new Set(tocIndex.items.map((it) => it.id));
+  const punctIssues = [];
   for (let i = 0; i < chronology.years.length; i += 1) {
     const y = chronology.years[i];
     const prev = chronology.years[i - 1];
@@ -277,6 +403,50 @@ if (chronology) {
     if (y.text.printedHeading && !y.text.printedHeadingNote) {
       throw new Error(`${y.ce} 年的原書抬頭有誤植，卻沒有寫明錯在哪裡`);
     }
+    // 標點糾察（站主 2026-08-24 令，起因是「首都革命」缺閉引號、「地質學概論'」的半形撇、
+    // 「各地旅行」段末無句讀）。年目是完整的敘事單位，引號括號在年內不成對就是辨讀錯——
+    // 原書跨段引文的兩半各在同一年的兩段裡，join 起來仍然成對。一次收齊全部再報，
+    // 修正走 corrections/pg-NN.tsv，逐處回原頁圖。
+    for (const [open, close] of [['「', '」'], ['『', '』'], ['（', '）']]) {
+      const no = joined.split(open).length - 1;
+      const nc = joined.split(close).length - 1;
+      if (no !== nc) punctIssues.push(`${y.ce} 年的 ${open}${close} 不成對：${no} 對 ${nc}`);
+    }
+    // 貼著漢字的半形撇、引號、角括號與半形括號——中西成對符號各取一半（「巴達帕斯特
+    // （Budapest)」）就在這裡現形。拉丁文自己的半形括號（「(Zeche Hollandine)」）與
+    // d'Alembert 的撇號兩側都不是漢字，原書就那樣排，不報。成對且括號裡沒有漢字的
+    // 半形括號即使貼著漢字也不報——括號的寬度照這一對的內容定（lib/punctuation.mjs 的
+    // 定寬規則），原書拉丁人名的括號就排半形（「將軍 (General Faupel)，」，19、50 頁核過）。
+    const latinParen = new Set();
+    {
+      const stack = [];
+      for (let i = 0; i < joined.length; i += 1) {
+        if (joined[i] === '(') stack.push(i);
+        else if (joined[i] === ')' && stack.length) {
+          const j = stack.pop();
+          if (!/[一-鿿]/.test(joined.slice(j + 1, i))) { latinParen.add(j); latinParen.add(i); }
+        }
+      }
+    }
+    for (const m of joined.matchAll(/(?<=[一-鿿。，「」（）])['"<>()]|['"<>()](?=[一-鿿。，「」（）])/g)) {
+      if (latinParen.has(m.index)) continue;
+      punctIssues.push(`${y.ce} 年正文有散的半形字元「${m[0]}」：…${joined.slice(Math.max(0, m.index - 8), m.index + 9)}…`);
+    }
+    // 夾在漢字或全形標點之間的半形標點（widen 的鄰居判斷漏掉的）
+    for (const m of joined.matchAll(/[一-鿿。，；：」』）][,.;:!?][一-鿿「『（]/g)) {
+      punctIssues.push(`${y.ce} 年正文夾著半形標點：…${joined.slice(Math.max(0, m.index - 6), m.index + 9)}…`);
+    }
+    // 段末要有句讀（GCV 會掉段末句號：「⋯各地旅行」）。收在冒號上的段是引起下段的引文，
+    // 照留；碑文落款（1963 年墓表的「陸翰芹敬書」）原書就沒有句讀，也照留。
+    for (const para of y.text.paragraphs) {
+      const t = para.trim();
+      if (t && !/[。！？：，；」』）…⋯]$/.test(t) && !/敬書$|敬立$|拜撰$/.test(t)) {
+        punctIssues.push(`${y.ce} 年有一段收在「${t.slice(-8)}」，段末無句讀`);
+      }
+    }
+  }
+  if (punctIssues.length) {
+    throw new Error(`年譜標點糾察 ${punctIssues.length} 處：\n  ${punctIssues.join('\n  ')}`);
   }
   const chronText = JSON.stringify(chronology);
   for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library']) {
