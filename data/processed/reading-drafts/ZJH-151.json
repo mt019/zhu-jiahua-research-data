@@ -8,6 +8,7 @@
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 1772,
   "noiseRemoved": 0,
+  "textVersion": "3e32cc8b3971",
   "missingBookPages": [],
   "paragraphs": [
     "這次本人奉命視察西北黨務，並便道視察管理中英庚款董事會所辦的科學教育館及學校，費時五十餘日，行經甘、靑、寧、陝、豫五省，沿途感想殊多，玆擇要向諸同志報告：",

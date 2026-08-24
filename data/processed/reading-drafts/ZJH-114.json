@@ -8,6 +8,7 @@
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 2336,
   "noiseRemoved": 0,
+  "textVersion": "b27d957268cb",
   "missingBookPages": [],
   "paragraphs": [
     "以這次歐戰爲例來說，給予我們的教訓太多了！這些教訓，一方面啓發了我們的猛省和警惕，另方面證實了我們四個年代的抗戰，是如何的正確而有力！",

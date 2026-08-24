@@ -8,6 +8,7 @@
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 2041,
   "noiseRemoved": 4,
+  "textVersion": "bca3549e021c",
   "missingBookPages": [],
   "paragraphs": [
     "評議員諸先生：中央研究院評議會第二屆第二次年會，在抗戰第八年擧行，我們懷念我國學術事業將隨抗戰勝利而開展。瞻望前途的宏遠，實有無限的興奮。各位先生遠道與會，實深感幸。",

@@ -198,13 +198,47 @@ try {
   chronology = null;
 }
 if (chronology) {
-  for (const key of ['source', 'rights', 'materialNature', 'transcription', 'untranscribed', 'errata', 'years']) {
+  for (const key of ['source', 'rights', 'materialNature', 'transcription', 'unreviewedOcr', 'errata', 'years']) {
     if (!(key in chronology)) throw new Error(`chronology.json 缺少必要欄位：${key}`);
   }
   if (!chronology.source.url) throw new Error('chronology.json 沒有官方全文連結');
   if (!chronology.rights.includes('胡頌平')) throw new Error('chronology.json 的著作權說明沒有指名作者');
   if (chronology.years.length !== chronology.stats.yearCount) {
     throw new Error('chronology.json 的 stats.yearCount 與實際年目數不符');
+  }
+  // 71 個年目全部存在，且每一個都有正文（無來源缺口）
+  if (chronology.years.length !== 71) throw new Error(`chronology.json 應有 71 個年目，實得 ${chronology.years.length}`);
+  for (const y of chronology.years) {
+    if (!y.text) throw new Error(`${y.ce} 年沒有正文，也沒有明確的來源缺口說明`);
+  }
+  // 1893 與 1963 兩端年目要看得到正文
+  const first = chronology.years.find((y) => y.ce === 1893);
+  const last = chronology.years.find((y) => y.ce === 1963);
+  if (!first?.text?.charCount) throw new Error('1893 年沒有正文');
+  if (!last?.text?.charCount) throw new Error('1963 年沒有正文');
+  // 1937 不得再以跨頁殘句開頭：第一段須以年目抬頭語（歲數）或日期起頭，不是承接前頁的半句
+  const y1937 = chronology.years.find((y) => y.ce === 1937);
+  if (y1937?.text && /^的/.test(y1937.text.paragraphs[0])) {
+    throw new Error('1937 年正文第一段疑似跨頁殘句（以「的」開頭）');
+  }
+  // 377–393 頁（人工逐頁校訂範圍）落在的年目，transcriptionStatus 必須是 verified 或 mixed，不能被 gcv 蓋掉
+  for (const y of chronology.years) {
+    if (!y.text) continue;
+    const touchesVerifiedRange = y.text.pageBreaks.some((b) => b.bookPage >= 377 && b.bookPage <= 393);
+    if (touchesVerifiedRange && !['verified', 'mixed'].includes(y.text.transcriptionStatus)) {
+      throw new Error(`${y.ce} 年的內容落在原書 377–393 頁，transcriptionStatus 卻是 ${y.text.transcriptionStatus}`);
+    }
+    if (!['verified', 'gcv', 'mixed'].includes(y.text.transcriptionStatus)) {
+      throw new Error(`${y.ce} 年的 transcriptionStatus 不是已知值：${y.text.transcriptionStatus}`);
+    }
+    for (const b of y.text.pageBreaks) {
+      if (b.bookPage >= 377 && b.bookPage <= 393 && b.source !== 'verified') {
+        throw new Error(`${y.ce} 年原書第 ${b.bookPage} 頁落在人工校訂範圍，pageBreak 的 source 卻是 ${b.source}`);
+      }
+      if ((b.bookPage < 377 || b.bookPage > 393) && b.source !== 'gcv') {
+        throw new Error(`${y.ce} 年原書第 ${b.bookPage} 頁在人工校訂範圍外，pageBreak 的 source 卻是 ${b.source}`);
+      }
+    }
   }
   const pieceIds = new Set(tocIndex.items.map((it) => it.id));
   for (let i = 0; i < chronology.years.length; i += 1) {

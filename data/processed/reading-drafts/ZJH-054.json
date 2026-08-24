@@ -8,6 +8,7 @@
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 3341,
   "noiseRemoved": 1,
+  "textVersion": "76fedcc640c1",
   "missingBookPages": [],
   "paragraphs": [
     "今天報告的是「三十三年度教育工作概況」，因爲本人係於去年十二月七日到部，現在三十四年又已過了三個半月有餘，所以本人的報告，不免隨時牽涉到今年的情形，想必也是諸位願意知道的。",

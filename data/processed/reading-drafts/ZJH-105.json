@@ -5,10 +5,20 @@
   "dateOriginal": null,
   "bookPages": "413–421",
   "status": "未校辨讀稿",
-  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。本篇另有 1 處回原頁圖核過的錯字已改，校訂表在 data/materials/speeches/corrections/ZJH-105.tsv。",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。本篇另有 1 處回原頁圖核過的錯字已改。",
   "charCount": 4482,
   "noiseRemoved": 3,
+  "textVersion": "e360033ecd96",
   "manualCorrections": 1,
+  "corrections": [
+    {
+      "para": 6,
+      "at": 58,
+      "from": "三】五瓩",
+      "to": "三‧五瓩",
+      "bookPage": 415
+    }
+  ],
   "missingBookPages": [],
   "paragraphs": [
     "電政部份一、郵電合設",

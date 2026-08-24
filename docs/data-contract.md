@@ -26,3 +26,22 @@
 `methodPlan`、`riskRegister`、`immediateNextWork`、`contentProgress`、`materialSegments`
 
 同理，`toc_index.json` 裡「待核」「待與正文核對」這類流程註記在投影時就要濾掉，只留讀者用得上的觀察（如「蔡孑民即蔡元培」「正文題名與目次不同」）。
+
+## `data/processed/chronology.json`
+
+《朱家驊先生年譜簡編》1893–1963 共 71 個年目，由 `engineering/scripts/build-chronology.mjs` 產生，不手改。`schemaVersion: '2.0'` 起，71 個年目全部帶 `text`，材料分兩層，兩層在同一份正文裡逐段並存：
+
+- 原書 377–393 頁（民國 27–37 年，1938–1948）：人工逐頁對照原頁圖校訂，`data/derived/chronology/transcriptions/p*.md`，最高優先，任何情況下不得被 OCR 覆蓋。
+- 其餘原書 353–376、394–417 頁：Google Cloud Vision（DOCUMENT_TEXT_DETECTION，languageHints: zh-Hant）辨讀稿，`data/materials/chronology/gcv/txt/`，只做書眉、頁碼與版面雜訊的結構性剔除，未經逐頁人工校對，不套用任何字形或標點正規化。418 頁起是後記，不在年目正文範圍內。
+
+每個年目必要欄位：
+
+- `text.coverage`：`全年`｜`部分`。只有 1963 年（條目續至 417 頁以後的後記與附錄）是「部分」。
+- `text.transcriptionStatus`：`verified`｜`gcv`｜`mixed`。`mixed` 專指條目橫跨兩種材料交界的年目（1937、1948），這種情況下 `text.pageBreaks[].source` 逐段標明各段落分別出自校訂稿還是辨讀稿。
+- `text.transcriptionStatusLabel`：對應的繁體中文說明，前端直接印。
+- `text.pageBreaks`：每筆帶 `bookPage`、`para`、`offset`、`source`。
+- `text.coverageNote`：`coverage` 為「部分」，或 `transcriptionStatus` 為 `mixed` 時必填，寫明缺哪一段或交界在哪裡。
+
+年目的先後順序以 `page_index.csv` 的 71 列位置為準，不靠辨讀稿裡的民國紀年數字（那串數字在未校頁面可能就是機器誤讀）；建置時逐年比對「偵測到的年目抬頭數」與「索引列數」相等，不等就中止。
+
+`unreviewedOcr` 欄位交代辨讀引擎、涵蓋頁碼與「未抽樣、不宣稱準確率」的限度；讀者要看到才算數，不得以前端文案掩飾這批材料未經校對。

@@ -8,6 +8,7 @@
   "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。",
   "charCount": 1187,
   "noiseRemoved": 2,
+  "textVersion": "e00205dbc050",
   "missingBookPages": [],
   "paragraphs": [
     "今天中央大學第二十七屆畢業典禮，正當抗戰建國屆滿兩週年的時候，兄弟忝襄中央黨務並以前任校長的地位，來和畢業諸君說幾句話：",
