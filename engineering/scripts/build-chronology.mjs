@@ -112,8 +112,11 @@ const linesFromGcv = (pdfPage, bookPage) => {
   const applyCorrections = (file, label, requireHit) => {
     if (!existsSync(file)) return
     for (const row of readFileSync(file, 'utf8').split('\n')) {
-      const t = row.trim()
-      if (!t || t.startsWith('#')) continue
+      // 正欄留空＝刪去該串（辨讀稿把一欄的字排到頁尾去了，原位另有一條把它接回）。
+      // 因此先切欄再看內容，不先 trim——trim 會把行末那個 TAB 一併吃掉，空的正欄
+      // 就變成只有一欄的壞格式。
+      const t = row.replace(/\r$/, '')
+      if (!t.trim() || t.trimStart().startsWith('#')) continue
       const [wrong, right] = t.split('\t')
       if (!wrong || right === undefined) fail(`${file}：格式須為「誤 TAB 正」，讀到「${t}」`)
       const hits = lines.reduce((n, l) => n + l.split(wrong).length - 1, 0)
