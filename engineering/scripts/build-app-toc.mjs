@@ -66,7 +66,7 @@ app.tableOfContents.frontMatter = toc.frontMatter.map((entry) => {
         pdfPage: plate.pdfPage,
       }
       if (plate.dateLabel) one.dateLabel = plate.dateLabel
-      if (platesPublic && plate.rotate !== null) one.image = `/zhujiahua/plates/${plate.id}.jpg`
+      if (platesPublic && plate.rotate !== null) one.image = `/zhujiahua-plates/${plate.id}.jpg`
       return one
     })
     return out

@@ -41,7 +41,7 @@ if (files.length) {
 // 所以圖檔不進版控也不進線上建置，只在 ZJH_PLATES=1 時搬過去看本機的版面。
 if (process.env.ZJH_PLATES === '1') {
   const plateSource = resolve(here, '../../data/derived/plates');
-  const plateTarget = resolve(dirname(target), '../../public/zhujiahua/plates');
+  const plateTarget = resolve(dirname(target), '../../public/zhujiahua-plates');
   let plateFiles = [];
   try {
     plateFiles = (await readdir(plateSource)).filter((f) => f.endsWith('.jpg'));
