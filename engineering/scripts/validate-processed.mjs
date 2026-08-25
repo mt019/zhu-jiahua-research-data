@@ -111,6 +111,11 @@ const headKey = (t) =>
 
 if (draftFiles.length) {
   const ids = new Set(tocIndex.items.map((it) => it.id));
+  const reviewedById = new Map(
+    JSON.parse(
+      await readFile(new URL('../../data/materials/speeches/reviewed.json', import.meta.url), 'utf8'),
+    ).items.map((r) => [r.pieceId, r]),
+  );
   // 卷首的獻詞與緣起不在目次的 198 篇裡，各自一份讀稿，用 frontMatter 一欄標出來。
   const drafts = [];
   for (const file of draftFiles) {
@@ -138,11 +143,26 @@ if (draftFiles.length) {
   }
   for (const [file, draft] of drafts) {
     if (!draft.frontMatter && !ids.has(draft.id)) throw new Error(`讀稿 ${file} 的 id 不在篇目索引裡`);
-    if (draft.status !== '未校辨讀稿') {
-      throw new Error(`${file} 的 status 是「${draft.status}」，讀稿一律標未校辨讀稿`);
-    }
-    if (!draft.statusNote || !draft.statusNote.includes('未經逐字人工校訂')) {
-      throw new Error(`${file} 沒有寫明未經逐字人工校訂`);
+    // 讀稿的狀態只有兩種：未校，或全篇逐頁核過。核過的要在 reviewed.json 有一條，
+    // 而且那一條記的起訖頁要與該篇的頁範圍相同——「改了幾個字」與「每一頁都比對過」
+    // 是兩件事，光看校訂表的條數分不出來。
+    const review = reviewedById.get(draft.id) ?? null;
+    if (draft.status === '逐頁核過的辨讀稿') {
+      if (!review) throw new Error(`${file} 標成逐頁核過，而 reviewed.json 裡沒有這一篇`);
+      const want = `${review.bookFrom}–${review.bookTo}`;
+      if (draft.bookPages !== want) {
+        throw new Error(`${file} 的頁範圍是 ${draft.bookPages}，reviewed.json 記的是 ${want}，核過的不是整篇`);
+      }
+      if (!draft.statusNote || !draft.statusNote.includes('逐欄回原頁圖核過')) {
+        throw new Error(`${file} 沒有寫明怎麼核的`);
+      }
+    } else if (draft.status !== '未校辨讀稿') {
+      throw new Error(`${file} 的 status 是「${draft.status}」，讀稿只有未校辨讀稿與逐頁核過的辨讀稿兩種`);
+    } else {
+      if (review) throw new Error(`${file} 在 reviewed.json 裡有一條，而讀稿還標著未校`);
+      if (!draft.statusNote || !draft.statusNote.includes('未經逐字人工校訂')) {
+        throw new Error(`${file} 沒有寫明未經逐字人工校訂`);
+      }
     }
     if (!Array.isArray(draft.paragraphs) || draft.paragraphs.length === 0) {
       throw new Error(`${file} 沒有正文`);

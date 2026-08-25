@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25",
+  "source": "原書排成詩行的段落：一行一欄，行末不接下一行。build-reading-drafts.mjs 據此寫 verseParas，前端照它排版",
+  "note": "一組一條，記該組第一行的原文與行數。第一行在該篇命中不是剛好一次、或行數超出段數，建置中止。原文改了字，這裡也要跟著改——兩邊都是站上讀得到的那個樣子。",
+  "items": [
+    {
+      "pieceId": "ZJH-160",
+      "why": "原書 637–640：胡適的譯詩、徐志摩的兩道譯文、葛德德文原作、卡萊爾英譯、朱家驊自譯的兩段，各行在原書各起一欄",
+      "stanzas": [
+        { "first": "誰不曾含着眼淚咽他的飯，", "lines": 4, "what": "胡適譯，原書 637" },
+        { "first": "誰不曾和着悲哀吞他的飯，", "lines": 4, "what": "徐志摩第一道，原書 637" },
+        { "first": "誰不曾和着悲淚吞他的飯，", "lines": 4, "what": "徐志摩第二道，原書 638" },
+        { "first": "Wer nie sein Brot mit Thränen ass,", "lines": 4, "what": "葛德原作前四行，原書 638" },
+        { "first": "who never ate his bread in sorrow.", "lines": 4, "what": "卡萊爾英譯，原書 638" },
+        { "first": "誰從不曾含着眼淚吃過他的麵包，", "lines": 4, "what": "朱家驊直譯前四行，原書 639" },
+        { "first": "你們引導我們進塵寰，", "lines": 4, "what": "朱家驊直譯後四行，原書 640" },
+        { "first": "Ihr führt ins Leben uns hinein.", "lines": 4, "what": "葛德原作後四行，原書 640" }
+      ]
+    }
+  ]
+}

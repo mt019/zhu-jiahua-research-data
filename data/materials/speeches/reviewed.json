@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25",
+  "source": "逐頁回原頁圖核過的篇；build-reading-drafts.mjs 據此寫 status，validate-processed.mjs 查所記的頁與該篇的起訖頁相符",
+  "note": "一篇進這裡的條件是它的每一頁都逐欄比對過原頁圖。只改過幾處錯字的篇不進來——那些寫在 corrections/ZJH-NNN.tsv 就夠了。",
+  "items": [
+    {
+      "pieceId": "ZJH-160",
+      "bookFrom": 637,
+      "bookTo": 640,
+      "date": "2026-08-25",
+      "how": "四頁各以 1200 dpi 裁切逐欄比對；曾與會兩字另拿別頁確定的『委員會』『曾經』當樣本逐字比對",
+      "found": "錯字四處、跨頁接錯的拉丁詞一處、譯詩分行四處",
+      "auditKept": "audit-drafts 的段末無句讀兩處照原書留：第 0 段「錄自現代評論二卷四十三期」、第 28 段「誰從不曾把充滿悲愁的夜裏」（下一行接「在他的床上哭着坐過去了，」）"
+    }
+  ]
+}

@@ -25,6 +25,8 @@ const TOC = 'data/derived/toc_index.json'
 const PAGE_MAP = 'data/derived/page_map.json'
 const OUT_DIR = 'data/processed/reading-drafts'
 const CORR_DIR = 'data/materials/speeches/corrections'
+const REVIEWED = 'data/materials/speeches/reviewed.json'
+const VERSE = 'data/materials/speeches/verse.json'
 const VARIANTS = `${process.env.HOME}/.claude/skills/cjk-print-ocr/variants.tsv`
 
 // 縮排判定的門檻：續頁接續段與版心上緣的落差實測在 10 以內，縮排段在 110 以上。
@@ -358,6 +360,37 @@ const titleLineIndex = (pdfPage, titleInText) => {
 // （data/materials/chronology/corrections/pg-NN.tsv），言論集的讀稿先前沒有——回原頁圖
 // 核出來的錯字沒有地方記，也改不進去。單位是篇不是頁，所以檔名用篇號，核對所依的
 // 原書頁另記一欄。表在切完篇、跑完所有自動清理之後才套用，第一欄寫的因此是站上那個樣子。
+// 逐頁核過的篇：登記在 reviewed.json，一篇一條，記核過的起訖頁與作法。狀態由這份清單
+// 決定，不由校訂表的條數推——改了幾個字與「每一頁都比對過」是兩件事。
+const reviewed = new Map(
+  JSON.parse(readFileSync(REVIEWED, 'utf8')).items.map((r) => [r.pieceId, r]),
+)
+
+// 原書排成詩行的段落：ZJH-160 半篇是譯詩，每一行在原書各起一欄，接排下去就成了散文。
+// 哪幾段是詩行記在 verse.json，一組記第一行的原文與行數；這裡換算成段號寫進讀稿。
+// 用原文而不用段號當鑰匙：校訂表切段會改變段號，原文不會。
+const verseGroups = new Map(
+  JSON.parse(readFileSync(VERSE, 'utf8')).items.map((v) => [v.pieceId, v.stanzas]),
+)
+
+const verseParagraphs = (id, paragraphs) => {
+  const stanzas = verseGroups.get(id)
+  if (!stanzas) return undefined
+  const out = []
+  for (const st of stanzas) {
+    const hits = paragraphs.reduce((acc, t, k) => (t === st.first ? [...acc, k] : acc), [])
+    if (hits.length !== 1) {
+      throw new Error(`${VERSE}：${id}「${st.first}」命中 ${hits.length} 段，須剛好 1 段`)
+    }
+    const from = hits[0]
+    if (from + st.lines > paragraphs.length) {
+      throw new Error(`${VERSE}：${id}「${st.first}」往下 ${st.lines} 行超出全篇段數`)
+    }
+    for (let k = from; k < from + st.lines; k += 1) out.push(k)
+  }
+  return out.sort((a, b) => a - b)
+}
+
 const readCorrections = (id) => {
   const file = join(CORR_DIR, `${id}.tsv`)
   if (!existsSync(file)) return []
@@ -382,6 +415,11 @@ const textVersion = (paragraphs) =>
 // 戰，形勢迥異」掉了「戰，」），掉字的位置正好是判斷分段的依據——後面那一欄的第一個字
 // 因此看起來像縮排，一句話被切成兩段。這種校訂的誤欄寫成「爲運動¶形勢迥異」，正欄寫成
 // 「爲運動戰，形勢迥異」，套用時兩段接回一段。
+//
+// 反過來把一段切成兩段也用同一個記號，寫在正欄：ZJH-160 的譯詩每一行在原書各起一欄，
+// 而引語「他譯的是：」與第一行之間辨讀稿沒有分段，誤欄寫「誰不曾含着眼淚咽他的飯，」、
+// 正欄寫「¶誰不曾含着眼淚咽他的飯，」。兩欄任一欄帶記號，套用的程序就相同：把全篇接成
+// 一個字串再改，接段與切段都在那個字串上完成。
 const PARA_MARK = '¶'
 
 // 一條校訂在該篇的哪一段、哪個字元位置。命中零次或多次都中止：安靜地改錯地方，
@@ -629,9 +667,10 @@ for (let i = 0; i < heads.length; i += 1) {
 
   // 人工校訂表最後套用，套在自動清理之後：表裡第一欄寫的是站上讀得到的那個樣子。
   const corrections = readCorrections(h.id)
+  const reviewedHere = reviewed.get(h.id) ?? null
   const applied = []
   for (const c of corrections) {
-    if (c.wrong.includes(PARA_MARK)) {
+    if (c.wrong.includes(PARA_MARK) || c.right.includes(PARA_MARK)) {
       const joinedText = paragraphs.join(PARA_MARK)
       const spots = []
       for (let from = 0; ; ) {
@@ -721,12 +760,13 @@ for (let i = 0; i < heads.length; i += 1) {
     author: h.author ?? undefined,
     frontMatter: h.frontMatter ? true : undefined,
     bookPages: bookPages.length ? `${bookPages[0] ?? '?'}–${bookPages.at(-1) ?? '?'}` : null,
-    status: '未校辨讀稿',
-    statusNote:
-      'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。' +
-      (corrections.length
-        ? `本篇另有 ${corrections.length} 處回原頁圖核過的錯字已改。`
-        : ''),
+    status: reviewedHere ? '逐頁核過的辨讀稿' : '未校辨讀稿',
+    statusNote: reviewedHere
+      ? `Google Cloud Vision 的辨讀結果，${reviewedHere.date} 全篇 ${reviewedHere.bookFrom}–${reviewedHere.bookTo} 頁逐欄回原頁圖核過（${reviewedHere.how}），改正 ${corrections.length} 處。`
+      : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。' +
+        (corrections.length
+          ? `本篇另有 ${corrections.length} 處回原頁圖核過的錯字已改。`
+          : ''),
     charCount: chars,
     noiseRemoved,
     // 正文的版本：閱讀標記記著自己建立時的版本，落後就照 corrections 重放，
@@ -735,6 +775,8 @@ for (let i = 0; i < heads.length; i += 1) {
     manualCorrections: corrections.length || undefined,
     corrections: applied.length ? applied : undefined,
     missingBookPages: missingByPiece.get(h.id) ?? [],
+    // 詩行的段號：前端照它把一組行排成一節，行與行之間不留段距，也不左右對齊
+    verseParas: verseParagraphs(h.id, paragraphs),
     paragraphs,
     pageBreaks,
   }
@@ -744,6 +786,7 @@ for (let i = 0; i < heads.length; i += 1) {
   writeFileSync(join(OUT_DIR, `${h.id}.json`), `${JSON.stringify(draft, null, 2)}\n`)
   index.push({
     id: h.id,
+    reviewed: reviewedHere ? true : undefined,
     charCount: chars,
     noiseRemoved,
     pageCount: bookPages.length,
@@ -754,7 +797,7 @@ for (let i = 0; i < heads.length; i += 1) {
 
 writeFileSync(
   join(OUT_DIR, 'index.json'),
-  `${JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), status: '未校辨讀稿', count: index.length, totalChars, items: index }, null, 2)}\n`,
+  `${JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), status: '未校辨讀稿', count: index.length, reviewedCount: index.filter((it) => it.reviewed).length, totalChars, items: index }, null, 2)}\n`,
 )
 console.log(`跨頁接回的段落 ${joined} 處`)
 console.log(`段落兩端的邊欄殘字 ${marginLeftovers} 處`)
