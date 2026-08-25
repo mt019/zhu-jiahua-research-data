@@ -430,7 +430,7 @@
         "id": "ZJH-FM-001",
         "author": "萬紹章",
         "bookPages": "1–7",
-        "charCount": 3080,
+        "charCount": 3081,
         "status": "未校辨讀稿"
       },
       {
@@ -438,13 +438,76 @@
         "id": "ZJH-FM-002",
         "author": "王聿均",
         "bookPages": "1–6",
-        "charCount": 2959,
+        "charCount": 2962,
         "status": "未校辨讀稿"
       },
       {
         "title": "圖片",
-        "status": "影像未轉錄",
-        "note": "原書的圖版與圖說，本站尚未轉成文字。"
+        "plateCount": 11,
+        "plates": [
+          {
+            "id": "PL-015",
+            "caption": "任中央研究院院長時的朱家驊先生",
+            "pdfPage": 15
+          },
+          {
+            "id": "PL-016",
+            "caption": "中央研究院成立第二十週年紀念會暨第一次院士會議攝影（下為出席院士姓名表）",
+            "pdfPage": 16,
+            "dateLabel": "民國三十七年"
+          },
+          {
+            "id": "PL-018",
+            "caption": "傅孟眞先生逝世週年紀念日送葬後攝於墓前（四十年十二月二十日）",
+            "pdfPage": 18,
+            "dateLabel": "民國四十年十二月二十日"
+          },
+          {
+            "id": "PL-019",
+            "caption": "偕董作賓溥心畬兩先生應邀訪韓，在漢城機場接受歡迎者獻花（四十四年五月）",
+            "pdfPage": 19,
+            "dateLabel": "民國四十四年五月"
+          },
+          {
+            "id": "PL-020",
+            "caption": "訪問韓國，與韓國前國會議長申翼熙前國務總理李範奭合影（四十四年五月）",
+            "pdfPage": 20,
+            "dateLabel": "民國四十四年五月"
+          },
+          {
+            "id": "PL-021",
+            "caption": "聯合國日酒會朱先生伉儷與陳副總統合影（四十八年十月廿四日）",
+            "pdfPage": 21,
+            "dateLabel": "民國四十八年十月廿四日"
+          },
+          {
+            "id": "PL-022",
+            "caption": "聯合國酒會與胡適之先生合影（四十八年十月廿四日）",
+            "pdfPage": 22,
+            "dateLabel": "民國四十八年十月廿四日"
+          },
+          {
+            "id": "PL-023",
+            "caption": "聯合國日酒會與胡適之蔣緯國兩先生合影（四十八年十月廿四日）",
+            "pdfPage": 23,
+            "dateLabel": "民國四十八年十月廿四日"
+          },
+          {
+            "id": "PL-024",
+            "caption": "朱先生馬前攝影",
+            "pdfPage": 24
+          },
+          {
+            "id": "PL-025",
+            "caption": "家庭生活：夜讀",
+            "pdfPage": 25
+          },
+          {
+            "id": "PL-026",
+            "caption": "家庭生活：休息",
+            "pdfPage": 26
+          }
+        ]
       }
     ],
     "parts": [

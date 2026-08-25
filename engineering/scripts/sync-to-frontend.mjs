@@ -36,3 +36,21 @@ if (files.length) {
   for (const f of files) await copyFile(resolve(draftSource, f), resolve(draftTarget, f));
   console.log(`已同步未校讀稿 ${files.length} 檔：${draftTarget}`);
 }
+
+// 圖版的圖檔：攝影著作的權利狀態未查（見 data/materials/plates/plates.json 的 rights），
+// 所以圖檔不進版控也不進線上建置，只在 ZJH_PLATES=1 時搬過去看本機的版面。
+if (process.env.ZJH_PLATES === '1') {
+  const plateSource = resolve(here, '../../data/derived/plates');
+  const plateTarget = resolve(dirname(target), '../../public/zhujiahua/plates');
+  let plateFiles = [];
+  try {
+    plateFiles = (await readdir(plateSource)).filter((f) => f.endsWith('.jpg'));
+  } catch {
+    plateFiles = [];
+  }
+  if (plateFiles.length) {
+    await mkdir(plateTarget, { recursive: true });
+    for (const f of plateFiles) await copyFile(resolve(plateSource, f), resolve(plateTarget, f));
+    console.log(`已同步圖版 ${plateFiles.length} 件（本機預覽用，不進版控）：${plateTarget}`);
+  }
+}

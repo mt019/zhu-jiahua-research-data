@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25",
+  "source": "《朱家驊先生言論集》前置的圖版，原書排在獻詞、緣起與目次之間（PDF 15–26）。",
+  "note": "圖說逐字照原書那一行，2026-08-25 逐頁回原頁圖核過。crop 是照片在頁圖（data/materials/speeches/gcv/pages）裡的方框，由 engineering/scripts/build-plates.mjs 依它裁切；rotate 記原書把橫幅照片轉印在直式頁面上時要轉回幾度，2026-08-25 逐張看頁圖判定。",
+  "rights": {
+    "status": "pending",
+    "why": "正文的著作財產權已消滅（朱家驊 1963 年歿），照片的攝影人另有其人，PL-025 的畫面上還印著照相館的名字。攝影著作的保護期間未查，圖檔在查清楚之前不進建置產物。",
+    "decidedBy": "站主 2026-08-25 指示先做資料層與版面"
+  },
+  "items": [
+    {
+      "id": "PL-015",
+      "pdfPage": 15,
+      "caption": "任中央研究院院長時的朱家驊先生",
+      "captionPlacement": "below",
+      "crop": {
+        "x": 255,
+        "y": 435,
+        "w": 1572,
+        "h": 2352,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 0
+    },
+    {
+      "id": "PL-016",
+      "pdfPage": 16,
+      "caption": "中央研究院成立第二十週年紀念會暨第一次院士會議攝影（下為出席院士姓名表）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 405,
+        "y": 447,
+        "w": 1794,
+        "h": 2265,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國三十七年",
+      "note": "次頁 PDF 17 印出席院士姓名表，位置與照片中各人相對應，尚未轉錄",
+      "companionPdfPage": 17
+    },
+    {
+      "id": "PL-018",
+      "pdfPage": 18,
+      "caption": "傅孟眞先生逝世週年紀念日送葬後攝於墓前（四十年十二月二十日）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 471,
+        "y": 357,
+        "w": 1653,
+        "h": 2508,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國四十年十二月二十日"
+    },
+    {
+      "id": "PL-019",
+      "pdfPage": 19,
+      "caption": "偕董作賓溥心畬兩先生應邀訪韓，在漢城機場接受歡迎者獻花（四十四年五月）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 216,
+        "y": 420,
+        "w": 1710,
+        "h": 2568,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國四十四年五月"
+    },
+    {
+      "id": "PL-020",
+      "pdfPage": 20,
+      "caption": "訪問韓國，與韓國前國會議長申翼熙前國務總理李範奭合影（四十四年五月）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 333,
+        "y": 324,
+        "w": 1818,
+        "h": 2784,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 0,
+      "dateLabel": "民國四十四年五月"
+    },
+    {
+      "id": "PL-021",
+      "pdfPage": 21,
+      "caption": "聯合國日酒會朱先生伉儷與陳副總統合影（四十八年十月廿四日）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 237,
+        "y": 453,
+        "w": 1797,
+        "h": 2295,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國四十八年十月廿四日"
+    },
+    {
+      "id": "PL-022",
+      "pdfPage": 22,
+      "caption": "聯合國酒會與胡適之先生合影（四十八年十月廿四日）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 339,
+        "y": 516,
+        "w": 1815,
+        "h": 2307,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國四十八年十月廿四日"
+    },
+    {
+      "id": "PL-023",
+      "pdfPage": 23,
+      "caption": "聯合國日酒會與胡適之蔣緯國兩先生合影（四十八年十月廿四日）",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 174,
+        "y": 459,
+        "w": 1806,
+        "h": 2283,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "dateLabel": "民國四十八年十月廿四日"
+    },
+    {
+      "id": "PL-024",
+      "pdfPage": 24,
+      "caption": "朱先生馬前攝影",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 330,
+        "y": 486,
+        "w": 1806,
+        "h": 2358,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270
+    },
+    {
+      "id": "PL-025",
+      "pdfPage": 25,
+      "caption": "家庭生活：夜讀",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 207,
+        "y": 504,
+        "w": 1818,
+        "h": 2301,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270,
+      "note": "照片右下角印著照相館的名字 TAIWAN ART PHOTO"
+    },
+    {
+      "id": "PL-026",
+      "pdfPage": 26,
+      "caption": "家庭生活：休息",
+      "captionPlacement": "left",
+      "crop": {
+        "x": 198,
+        "y": 450,
+        "w": 1794,
+        "h": 2286,
+        "pageW": 2240,
+        "pageH": 3148
+      },
+      "rotate": 270
+    }
+  ]
+}

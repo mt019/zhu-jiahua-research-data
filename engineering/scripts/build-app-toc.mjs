@@ -49,12 +49,26 @@ app.tableOfContents.items = toc.items.map((item) => {
 // 卷首三項不在 198 篇裡，另記一份：獻詞與緣起已切成讀稿，圖片頁只有影像。
 // id 對得上 data/processed/reading-drafts 的檔名，前端照它去載正文。
 const FRONT_MATTER_DRAFTS = { 獻詞: 'ZJH-FM-001', 緣起: 'ZJH-FM-002' }
+// 圖版（PDF 15–26）：圖說逐字錄在 data/materials/plates/plates.json。照片本身要等
+// 攝影著作的權利狀態查清楚，rights.status 是 public 才把圖檔的路徑寫進來；
+// 本機預覽用 ZJH_PLATES=1 帶進去看版面。
+const plates = JSON.parse(readFileSync('data/materials/plates/plates.json', 'utf8'))
+const platesPublic = plates.rights.status === 'public' || process.env.ZJH_PLATES === '1'
 app.tableOfContents.frontMatter = toc.frontMatter.map((entry) => {
   const id = FRONT_MATTER_DRAFTS[entry.title] ?? null
   const out = { title: entry.title }
   if (!id) {
-    out.status = '影像未轉錄'
-    out.note = '原書的圖版與圖說，本站尚未轉成文字。'
+    out.plateCount = plates.items.length
+    out.plates = plates.items.map((plate) => {
+      const one = {
+        id: plate.id,
+        caption: plate.caption,
+        pdfPage: plate.pdfPage,
+      }
+      if (plate.dateLabel) one.dateLabel = plate.dateLabel
+      if (platesPublic && plate.rotate !== null) one.image = `/zhujiahua/plates/${plate.id}.jpg`
+      return one
+    })
     return out
   }
   const draft = JSON.parse(readFileSync(`data/processed/reading-drafts/${id}.json`, 'utf8'))

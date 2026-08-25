@@ -24,6 +24,9 @@ data/materials/speeches/*
 # 重做要有人再看一次原頁圖。
 !data/materials/speeches/reviewed.json
 !data/materials/speeches/verse.json
+# 圖版的圖說是逐頁核過原頁圖抄下來的，裁切框與轉向也是人工判定；圖檔本身由
+# build-plates.mjs 從頁圖再生，不進版控（見下方 data/derived/plates）。
+!data/materials/plates/
 notes/*
 !notes/.gitkeep
 
@@ -34,3 +37,6 @@ engineering/tail-punct-batch/tails-sheet-*.png
 engineering/tail-punct-batch/pending/
 engineering/tail-punct-batch/pending-pages/
 engineering/tail-punct-batch/next-col/
+
+# 圖版裁切產物：權利狀態未查，不進版控
+data/derived/plates/
