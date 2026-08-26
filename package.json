@@ -10,6 +10,6 @@
     "build:editorial-notes": "node engineering/scripts/build-editorial-notes.mjs"
   },
   "dependencies": {
-    "@phenomcanvas/prose-rules": "file:../phenom-standards"
+    "@phenomcanvas/prose-rules": "file:../phenom-ops/packages/prose-rules"
   }
 }
