@@ -6,10 +6,13 @@ data/raw/web/*
 !data/raw/web/.gitkeep
 data/raw/articles/*
 !data/raw/articles/.gitkeep
+!data/raw/articles/index.md
 data/raw/reports/*
 !data/raw/reports/.gitkeep
 data/materials/*
 !data/materials/.gitkeep
+# 編輯體例的正文是人工寫的母本，前端凡例頁渲染的就是它。
+!data/materials/editorial-notes.md
 # 校訂表是逐頁對照原頁圖做出來的人工判讀，重做一次的代價與原件掃描不同一個量級，
 # 而 data/materials 其餘的部分（1.2 GB 的頁圖與辨讀稿）從原 PDF 再跑一次就有。
 # 兩個目錄各自從被排除的路徑上重新收進來。

@@ -3,7 +3,7 @@
   "status": "未校辨讀稿",
   "count": 200,
   "reviewedCount": 1,
-  "totalChars": 543994,
+  "totalChars": 543990,
   "items": [
     {
       "id": "ZJH-FM-001",
@@ -337,7 +337,7 @@
     },
     {
       "id": "ZJH-040",
-      "charCount": 848,
+      "charCount": 847,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 8,
@@ -561,7 +561,7 @@
     },
     {
       "id": "ZJH-068",
-      "charCount": 1790,
+      "charCount": 1789,
       "noiseRemoved": 0,
       "pageCount": 3,
       "paragraphCount": 6,
@@ -641,7 +641,7 @@
     },
     {
       "id": "ZJH-078",
-      "charCount": 4058,
+      "charCount": 4059,
       "noiseRemoved": 1,
       "pageCount": 6,
       "paragraphCount": 6,
@@ -771,7 +771,7 @@
     },
     {
       "id": "ZJH-094",
-      "charCount": 1851,
+      "charCount": 1850,
       "noiseRemoved": 2,
       "pageCount": 3,
       "paragraphCount": 5,
@@ -933,7 +933,7 @@
     },
     {
       "id": "ZJH-114",
-      "charCount": 2336,
+      "charCount": 2337,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 14,
@@ -941,7 +941,7 @@
     },
     {
       "id": "ZJH-115",
-      "charCount": 2483,
+      "charCount": 2484,
       "noiseRemoved": 2,
       "pageCount": 4,
       "paragraphCount": 8,
@@ -1013,7 +1013,7 @@
     },
     {
       "id": "ZJH-124",
-      "charCount": 3135,
+      "charCount": 3134,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 10,
@@ -1037,7 +1037,7 @@
     },
     {
       "id": "ZJH-127",
-      "charCount": 3428,
+      "charCount": 3427,
       "noiseRemoved": 2,
       "pageCount": 5,
       "paragraphCount": 8,
@@ -1416,7 +1416,7 @@
     },
     {
       "id": "ZJH-174",
-      "charCount": 9848,
+      "charCount": 9847,
       "noiseRemoved": 9,
       "pageCount": 13,
       "paragraphCount": 49,
@@ -1424,7 +1424,7 @@
     },
     {
       "id": "ZJH-175",
-      "charCount": 6165,
+      "charCount": 6164,
       "noiseRemoved": 23,
       "pageCount": 8,
       "paragraphCount": 32,

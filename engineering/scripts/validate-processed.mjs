@@ -1,5 +1,6 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { checkDrafts } from '@phenomcanvas/prose-rules/ocr';
+import { buildEditorialNotes } from '@phenomcanvas/prose-rules/editorial-notes';
 
 const target = new URL('../../data/processed/zhu-jiahua-app.json', import.meta.url);
 const data = JSON.parse(await readFile(target, 'utf8'));
@@ -366,6 +367,21 @@ if (chronology) {
   if (y1937?.text && /^的/.test(y1937.text.paragraphs[0])) {
     throw new Error('1937 年正文第一段疑似跨頁殘句（以「的」開頭）');
   }
+  // 年表的正文與言論集的讀稿走同一套辨讀稿殘留形狀。先前這道閘只掃 reading-drafts，
+  // 年表 50,501 字沒有任何東西在看：2026-08-25 那批標點糾察裡，年譜 356 頁的「。。」與
+  // 360 頁的「！。」是臨時寫的腳本才找到的，不是閘報出來的。
+  {
+    const items = chronology.years
+      .filter((y) => y.text && y.text.paragraphs)
+      .map((y) => ({ path: `${y.ce} 年`, paragraphs: y.text.paragraphs }));
+    const { results } = checkDrafts(items);
+    for (const r of results) {
+      for (const f of r.findings) {
+        if (f.severity !== '擋') continue;
+        throw new Error(`年表 ${r.path} 第 ${f.paragraph} 段是辨讀稿殘留（${f.rule}）：「${f.sample}」`);
+      }
+    }
+  }
   // 377–393 頁（人工逐頁校訂範圍）落在的年目，transcriptionStatus 必須是 verified 或 mixed，不能被 gcv 蓋掉
   for (const y of chronology.years) {
     if (!y.text) continue;
@@ -471,6 +487,53 @@ if (chronology) {
   const chronText = JSON.stringify(chronology);
   for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library']) {
     if (chronText.includes(forbidden)) throw new Error(`chronology.json 含禁止字串：${forbidden}`);
+  }
+}
+
+// 編輯體例頁：前端渲染的是 data/processed/editorial-notes.json，而它的母本是
+// data/materials/editorial-notes.md。這裡拿母本重組一次跟產物比對——只驗「檔案在不在」的話，
+// 母本改了而沒重跑 build 的情形照樣全綠，讀者看到的仍是舊的體例。
+{
+  const markdown = await readFile(new URL('../../data/materials/editorial-notes.md', import.meta.url), 'utf8');
+  const fresh = buildEditorialNotes({ markdown, label: 'data/materials/editorial-notes.md' });
+  let built;
+  try {
+    built = JSON.parse(await readFile(new URL('../../data/processed/editorial-notes.json', import.meta.url), 'utf8'));
+  } catch {
+    throw new Error('editorial-notes.json 不在，跑 build-editorial-notes.mjs');
+  }
+  if (JSON.stringify(built) !== JSON.stringify(fresh)) {
+    throw new Error('editorial-notes.json 與母本對不上，跑 build-editorial-notes.mjs 重建');
+  }
+  if (!built.intro.length || built.sections.some((s) => !s.paragraphs.length)) {
+    throw new Error('editorial-notes.json 有一節沒有正文');
+  }
+}
+
+// 前端印得出來的散文不准帶工程語言（站主 2026-08-26：「工程語言禁上前端」）。核對過程用的
+// 辨讀引擎、解析度、建置與腳本，是維護的紀錄，家在 engineering/LOG.md 與校訂表；讀者要的是
+// 這一篇改了哪幾處。校訂全文的 statusNote 留著當內部紀錄，前端印的是 correctionNote。
+const FRONTEND_FORBIDDEN = [
+  'Google Cloud Vision', 'GCV', 'OCR', 'dpi', '腳本', '建置', 'commit', 'validate', 'JSON',
+];
+{
+  const notes = JSON.parse(
+    await readFile(new URL('../../data/processed/editorial-notes.json', import.meta.url), 'utf8'),
+  );
+  const prose = [
+    ...data.verifiedTexts.map((v) => [`${v.id} correctionNote`, v.correctionNote ?? '']),
+    ...notes.intro.map((para, i) => [`editorial-notes 引言第 ${i + 1} 段`, para]),
+    ...notes.sections.flatMap((s) => s.paragraphs.map((para) => [`editorial-notes「${s.heading}」`, para])),
+  ];
+  for (const [where, text] of prose) {
+    for (const word of FRONTEND_FORBIDDEN) {
+      if (text.includes(word)) throw new Error(`${where} 帶工程語言「${word}」，那一句不上前端`);
+    }
+  }
+  for (const v of data.verifiedTexts) {
+    if (v.statusNote && !v.correctionNote) {
+      throw new Error(`${v.id} 有 statusNote 而沒有 correctionNote，前端會退回沒有內容的說明`);
+    }
   }
 }
 

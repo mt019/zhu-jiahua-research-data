@@ -51,7 +51,15 @@ app.verifiedTexts = FILES.map((id) => {
     status: meta.transcription_status,
     paragraphs: lines,
   }
-  if (meta.verification_note) entry.statusNote = meta.verification_note
+  if (meta.verification_note) {
+    entry.statusNote = meta.verification_note
+    // 前端印的是 correctionNote：statusNote 開頭那一句寫的是怎麼核的（辨讀引擎、dpi、對齊
+    // 方式），那是維護的紀錄，不上前端；讀者要的是這一篇改了哪幾處。切在第一個句號之後。
+    const at = meta.verification_note.indexOf('。')
+    const rest = at < 0 ? '' : meta.verification_note.slice(at + 1).trim()
+    if (!rest) throw new Error(`${id} 的 verification_note 只有一句核對過程，沒有寫改了什麼`)
+    entry.correctionNote = rest
+  }
   const prev = before.get(id)
   for (const field of ['title', 'dateLine', 'bookPages']) {
     if (prev && prev[field] !== entry[field]) {

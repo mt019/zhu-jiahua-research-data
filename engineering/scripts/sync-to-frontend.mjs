@@ -21,6 +21,11 @@ const chronologyTarget = resolve(dirname(target), 'zhuJiahuaChronology.json');
 await copyFile(chronologySource, chronologyTarget);
 console.log(`已同步年表：${chronologyTarget}`);
 
+// 編輯體例：凡例頁讀它。前端用靜態 import，這一份漏帶了建置就紅，不會安靜地少一頁。
+const notesTarget = resolve(dirname(target), 'zhuJiahuaEditorialNotes.json');
+await copyFile(resolve(here, '../../data/processed/editorial-notes.json'), notesTarget);
+console.log(`已同步編輯體例：${notesTarget}`);
+
 // 讀稿一篇一檔，前端按需載入。整份塞進快照會讓 /zhujiahua 一開就拉五十幾萬字。
 const draftSource = resolve(here, '../../data/processed/reading-drafts');
 const draftTarget = resolve(dirname(target), 'zhuJiahua/drafts');

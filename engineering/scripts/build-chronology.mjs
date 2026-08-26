@@ -189,6 +189,10 @@ for (const line of stream) {
   if (lastMark.bookPage !== line.bookPage || lastMark.source !== line.source) {
     current.marks.push({ bookPage: line.bookPage, offset: current.text.length, source: line.source })
   }
+  // 原書的硬換行在漢字之間不留痕跡，接起來就是連續的正文；拉丁詞不同——一個詞組被
+  // 換行切開時（原書第 368 頁「General Oberst / Von Secket」），直接相接會黏成
+  // 「OberstVon」。前一行結尾與這一行開頭都是拉丁字母時補一個半形空格。
+  if (/[A-Za-z]$/.test(current.text) && /^[A-Za-z]/.test(line.text)) current.text += ' '
   current.text += line.text
 }
 if (runsArr.length !== index.length) fail(`偵測到 ${runsArr.length} 個年目抬頭，年目索引記了 ${index.length} 個，兩者須相等`)
