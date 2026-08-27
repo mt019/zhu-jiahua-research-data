@@ -81,7 +81,16 @@ const WINDOW_LO = Math.min(...OFFSETS) - 1
 const WINDOW_HI = Math.max(...OFFSETS) + 1
 
 // 題下的日期絕大多數是民國紀年，〈牛頓與近代科學〉這種對外的講詞用西元
-const DATE_RE = /(?:民國)?[〇一二三四五六七八九十廿卅百0-9]{2,4}年(?:[〇一二三四五六七八九十百0-9]{1,3}月)?(?:[〇一二三四五六七八九十廿卅百0-9]{1,3}日)?[春夏秋冬]?/
+const DATE_RE = /(?:民國)?[〇一二三四五六七八九十廿卅百0-9]{2,4}年(?:[〇一二三四五六七八九十百0-9]{1,3}月)?(?:[〇一二三四五六七八九十廿卅百0-9]{1,3}日)?[春夏秋冬]?/g
+// 「三十年來的中央研究院」「六十年來中國教育與　蔣主席」這兩個篇名自己以「N十年」起首，
+// 只取第一個命中會把篇名的頭幾個字當成日期。年號或月份缺一不可，兩者皆無的命中跳過。
+const matchDate = (line) => {
+  DATE_RE.lastIndex = 0
+  for (const m of line.matchAll(DATE_RE)) {
+    if (/^(?:民國|西元)/.test(m[0]) || m[0].includes('月')) return m
+  }
+  return null
+}
 const CHROME = /^(朱家驊先生言論集|[壹貳叁肆伍陸柒捌玖拾]\s|[〇一二三四五六七八九0-9\s.,:：|｜【】[\]']+$)/
 // 場合單獨成行時很短，而且不是完整的句子：「在中央紀念週講」「於重慶」「對全國廣播」
 const OCCASION_LINE = /^[在於對向與代答覆復][^。]{1,22}$|^[^。]{2,16}(講|講演|演講|演說|詞|辭|廣播|訓話|報告|談話|書面|典禮)$/
@@ -113,7 +122,7 @@ const collect = (title, lo, hi, expected) => {
     for (let i = 0; i < lines.length; i += 1) {
       const line = norm(lines[i])
       if (CHROME.test(lines[i])) continue
-      const m = line.match(DATE_RE)
+      const m = matchDate(line)
       const titlePart = m && m.index > 0 ? line.slice(0, m.index) : line
       if (titlePart.length > key.length * 2 + 8) continue
       const ratio = similarity(key, titlePart)

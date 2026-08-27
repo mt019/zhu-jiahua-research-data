@@ -785,9 +785,8 @@
         "pdfPageCount": 17,
         "sharesStartPage": true,
         "sharesEndPage": true,
-        "occasion": "來的中央研究院民國四十七年六月九日／在中央研究院三十週年紀念致詞",
-        "titleInText": "三十年來的中央研究院民國四十七年六月九日",
-        "dateInText": "三十年"
+        "occasion": "在中央研究院三十週年紀念致詞",
+        "dateInText": "民國四十七年六月九日"
       }
     },
     {
@@ -1758,14 +1757,14 @@
       "id": "ZJH-072",
       "part": "叁、教育言論",
       "title": "電函丁文淵校長賀國立同濟大學三十五週年校慶",
-      "dateOriginal": "民國三十五年五月十日",
-      "dateIso": "1946-05-10",
+      "dateOriginal": "民國三十一年五月十日",
+      "dateIso": "1942-05-10",
       "bookStartPage": 296,
       "tocPdfPage": 32,
       "status": "目次核對",
       "section": "三、各大學演講詞",
       "subsection": "（三）國立同濟大學",
-      "note": "原書以「電」「函」二字並排於同一字格起首，其下文字置中共用；可能表示「電…」「函…」兩件併列，亦可能為單一篇名。待正文原書頁 296 核",
+      "note": "本篇收電、函兩件：原書 296 頁篇端作「電丁校長」，298 頁作「函丁校長」，日期同為民國三十一年五月十日。目次把「電」「函」二字並排於同一字格，其下「丁文淵校長賀國立同濟大學三十五週年校慶」由兩件共用。目次所載日期作民國三十五年五月十日；電文自書「中華民國三十一年五月二十日爲國立同濟大學成立三十五週年紀念日」，同濟自 1907 年創校起算，三十五週年在民國三十一年，本站日期依正文。",
       "textHead": {
         "status": "待核",
         "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
@@ -1986,7 +1985,8 @@
         "occasion": "教師節",
         "titleInText": "教師節之感想",
         "dateInText": "民國三十四年九月二十八日"
-      }
+      },
+      "note": "目次作「教師節之感言」，原書 330 頁篇端作「教師節之感想」。"
     },
     {
       "seq": 81,
@@ -2009,9 +2009,8 @@
         "pdfPageCount": 8,
         "sharesStartPage": true,
         "sharesEndPage": true,
-        "occasion": "來中國教育與蔣主席民國三十五年十月二十八日",
-        "titleInText": "六十年來中國教育與蔣主席民國三十五年十月二十八日",
-        "dateInText": "六十年"
+        "occasion": null,
+        "dateInText": "民國三十五年十月二十八日"
       }
     },
     {
@@ -2897,8 +2896,8 @@
       "id": "ZJH-119",
       "part": "捌、抗戰言論",
       "title": "以獻身國家來紀念「九一八」",
-      "dateOriginal": "民國二十七年九月十八日",
-      "dateIso": "1938-09-18",
+      "dateOriginal": "民國二十七年九月二十日",
+      "dateIso": "1938-09-20",
       "bookStartPage": 465,
       "tocPdfPage": 35,
       "status": "目次核對",
@@ -2914,7 +2913,8 @@
         "sharesEndPage": true,
         "occasion": "於漢口",
         "dateInText": "民國二十七年九月二十日"
-      }
+      },
+      "note": "目次所載日期作民國二十七年九月十八日，與篇名的「九一八」相同；原書 465 頁篇端作「民國二十七年九月二十日於漢口」，本站日期依正文。"
     },
     {
       "seq": 120,
@@ -3062,7 +3062,8 @@
         "occasion": null,
         "titleInText": "致留在上海的文化界人士一封短筒",
         "dateInText": "民國三十年一月一日"
-      }
+      },
+      "note": "原書 484 頁篇端在篇名之外另排一行「刋上海大美晚報」。"
     },
     {
       "seq": 126,
@@ -4076,7 +4077,8 @@
         "occasion": null,
         "titleInText": "復美國陸軍部長史汀生先生函",
         "dateInText": "民國三十一年九月二十五日"
-      }
+      },
+      "note": "目次作「復美國陸軍部長史汀生書」，原書 661 頁篇端作「復美國陸軍部長史汀生先生函」。"
     },
     {
       "seq": 169,
@@ -4125,7 +4127,8 @@
         "occasion": "於南京",
         "titleInText": "致美國蒲立德先生備忘錄",
         "dateInText": "民國三十七年十一月十九日"
-      }
+      },
+      "note": "目次作「致美國蒲利德先生備忘錄」，原書 662 頁篇端作「致美國蒲立德先生備忘錄」。"
     },
     {
       "seq": 171,
@@ -4195,7 +4198,8 @@
         "occasion": null,
         "titleInText": "復穆罕默德伊敏函",
         "dateInText": "民國四十一年二月廿三日"
-      }
+      },
+      "note": "目次的副題「論所謂「新疆問題」」不見於正文，原書 668 頁篇端只排「復穆罕默德伊敏函」一行。"
     },
     {
       "seq": 174,
@@ -4218,7 +4222,8 @@
         "sharesEndPage": true,
         "occasion": null,
         "dateInText": "民國四十三年十月一日"
-      }
+      },
+      "note": "原書 675 頁篇端的副題作「二論新疆問題」，目次於「新疆問題」加引號。"
     },
     {
       "seq": 175,
@@ -4775,9 +4780,9 @@
         "status": "待核",
         "source": "Google Cloud Vision 辨讀稿的正文標題行，見 data/derived/piece_heads.json",
         "pdfStartPage": 779,
-        "pdfEndPage": null,
-        "bookEndPage": null,
-        "pdfPageCount": null,
+        "pdfEndPage": 784,
+        "bookEndPage": 750,
+        "pdfPageCount": 6,
         "sharesStartPage": true,
         "sharesEndPage": false,
         "occasion": null,
