@@ -44,6 +44,8 @@ const severityOf = new Map(catalog.map(([name, sev]) => [name, sev]));
 const counts = new Map(catalog.map(([name]) => [name, 0]));
 counts.set('書眉整段', 0);
 let pageFoot = 0;
+let midRun = 0;
+const tocById = new Map(toc.items.map((it) => [it.id, it]));
 
 for (const [i, draft] of drafts.entries()) {
   for (const f of results[i].findings) {
@@ -57,6 +59,21 @@ for (const [i, draft] of drafts.entries()) {
     if (t.length <= 16 && HEAD_NAMES.has(headKey(t))) {
       counts.set('書眉整段', counts.get('書眉整段') + 1);
       console.log(`擋\t書眉整段\t${draft.id}\t第 ${k} 段\t${t.slice(0, 40)}`);
+    }
+  }
+  // 第三條：書眉或書根夾在段落中間。換頁處的書名、部次與頁碼被接進正文，讀起來像正文的一部分，
+  // 而「書眉整段」只認得整段就是書眉的情形。ZJH-176 的「取法乎拾參、書六九七上」是這一類。
+  {
+    const partPrefix = (tocById.get(draft.id)?.part ?? '').split('、')[0];
+    const alts = ['朱家驊先生言論集'];
+    if (partPrefix) alts.push(`${partPrefix}、[^\n]{0,3}?[〇一二三四五六七八九十百]{2,4}`);
+    const re = new RegExp(alts.join('|'), 'g');
+    for (const [k, para] of draft.paragraphs.entries()) {
+      for (const m of para.matchAll(re)) {
+        if (m.index === 0 && m[0].length === para.trim().length) continue;
+        midRun += 1;
+        console.log(`擋\t書眉或書根夾在段中\t${draft.id}\t第 ${k} 段\t${para.slice(Math.max(0, m.index - 8), m.index + m[0].length + 8)}`);
+      }
     }
   }
   for (const brk of draft.pageBreaks ?? []) {
@@ -73,4 +90,5 @@ for (const [i, draft] of drafts.entries()) {
 console.log('---');
 for (const [name, n] of counts) console.log(`${severityOf.get(name) ?? '擋'}　${name}：${n}`);
 console.log(`擋　書根黏在頁首：${pageFoot}`);
+console.log(`擋　書眉或書根夾在段中：${midRun}`);
 console.log(`掃過 ${drafts.length} 篇`);

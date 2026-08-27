@@ -10,7 +10,7 @@
 // 落在版心上緣 y≈314，縮排的段落落在 y≈430）。跨頁的段落因此接得回去，頁碼改記成
 // pageBreaks 的字元位置，前端在對應的位置標頁碼。
 //
-// 產物一律標著未校：字錯率見 LOG 2026-08-19（複核過的七篇 32 頁 20,828 字上 26 處，0.125%）。
+// 產物一律標著未校：字錯率見 LOG 2026-08-27（隨機 10 頁 6,786 字上 22 處，0.32%）。
 // 逐頁人工校訂完成的篇另存 data/derived/transcriptions/，前端以那一份為準。
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
@@ -763,7 +763,7 @@ for (let i = 0; i < heads.length; i += 1) {
     status: reviewedHere ? '逐頁核過的辨讀稿' : '未校辨讀稿',
     statusNote: reviewedHere
       ? `Google Cloud Vision 的辨讀結果，${reviewedHere.date} 全篇 ${reviewedHere.bookFrom}–${reviewedHere.bookTo} 頁逐欄回原頁圖核過（${reviewedHere.how}），改正 ${corrections.length} 處。`
-      : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。以複核過的七篇（32 頁、20,828 字）為量尺，辨讀稿有 26 處與原書不符：誤認 16 字、漏 8 字、衍 1 字、一處欄序錯置，合 0.125%（engineering/LOG.md 2026-08-19）。引用前請核對原書。' +
+      : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。2026-08-27 在未校的各篇裡隨機抽 10 頁、6,786 字回原頁圖逐字核，22 處與原書不符：誤認 9 處、漏字或漏標點 11 處、書眉與頁碼混進正文 1 處、小標與正文黏在一起 1 處，合 0.32%；文言的序跋一頁就佔 8 處。引用前請核對原書。' +
         (corrections.length
           ? `本篇另有 ${corrections.length} 處回原頁圖核過的錯字已改。`
           : ''),

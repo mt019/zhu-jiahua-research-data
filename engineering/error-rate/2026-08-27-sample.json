@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-27",
+  "question": "未經人工複核的辨讀稿，每千字有幾處與原書不符",
+  "population": "未複核的各篇（扣除 ZJH-001、ZJH-LE-001–006 七篇校訂全文與逐頁核過的 ZJH-160），且該頁讀稿滿 300 字、頁圖存在（扣掉掃描件缺的 124、636 兩頁）：733 頁、513,097 字",
+  "draw": "random.Random(20260827).sample(pool,10)，pool 依篇號與書頁排序後抽",
+  "method": "每頁把讀稿（讀者在站上看到的那一份）與 200 dpi 原頁圖逐欄比對，拿不準的字裁 600–1200 dpi 再看；判定的單位是一處連續的不符",
+  "sample": [
+    {
+      "id": "ZJH-023",
+      "bookPage": 81,
+      "pdfPage": 121,
+      "chars": 635,
+      "found": 2
+    },
+    {
+      "id": "ZJH-044",
+      "bookPage": 180,
+      "pdfPage": 219,
+      "chars": 527,
+      "found": 1
+    },
+    {
+      "id": "ZJH-058",
+      "bookPage": 244,
+      "pdfPage": 283,
+      "chars": 798,
+      "found": 2
+    },
+    {
+      "id": "ZJH-079",
+      "bookPage": 326,
+      "pdfPage": 365,
+      "chars": 832,
+      "found": 0
+    },
+    {
+      "id": "ZJH-090",
+      "bookPage": 373,
+      "pdfPage": 411,
+      "chars": 816,
+      "found": 0
+    },
+    {
+      "id": "ZJH-103",
+      "bookPage": 400,
+      "pdfPage": 438,
+      "chars": 796,
+      "found": 3
+    },
+    {
+      "id": "ZJH-134",
+      "bookPage": 521,
+      "pdfPage": 558,
+      "chars": 772,
+      "found": 2
+    },
+    {
+      "id": "ZJH-146",
+      "bookPage": 568,
+      "pdfPage": 605,
+      "chars": 605,
+      "found": 3
+    },
+    {
+      "id": "ZJH-147/148",
+      "bookPage": 572,
+      "pdfPage": 609,
+      "chars": 597,
+      "found": 1
+    },
+    {
+      "id": "ZJH-176",
+      "bookPage": 697,
+      "pdfPage": 732,
+      "chars": 629,
+      "found": 8
+    }
+  ],
+  "result": {
+    "chars": 6786,
+    "found": 22,
+    "rate": 0.0032,
+    "byKind": {
+      "誤認": 9,
+      "漏字或漏標點": 11,
+      "書眉與頁碼混進正文": 1,
+      "小標與正文黏在一起": 1
+    },
+    "poisson95": [
+      0.0019,
+      0.0045
+    ]
+  },
+  "notes": [
+    "22 處全部寫進 data/materials/speeches/corrections/ 的校訂表，讀稿已改。",
+    "先前 LOG 2026-08-19 記的 0.125%（複核過的七篇 32 頁 20,828 字上 26 處）落在本次的信賴區間之外；那七篇不是隨機抽的。",
+    "分佈不均：文言的序跋（ZJH-176，原書 697）一頁佔 8 處，白話的講詞有兩頁 0 處。",
+    "未判定：原書 572 頁「堅決袪除」的袪，1200 dpi 仍分不出衣部與示部，未計入。",
+    "原書自身的排版偶然一處未計入：原書 81 頁「畬民宗譜之研究，，浙南」印了兩個逗號，辨讀稿只有一個。"
+  ]
+}

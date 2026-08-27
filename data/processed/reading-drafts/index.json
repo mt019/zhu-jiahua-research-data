@@ -3,7 +3,7 @@
   "status": "未校辨讀稿",
   "count": 200,
   "reviewedCount": 1,
-  "totalChars": 543990,
+  "totalChars": 543975,
   "items": [
     {
       "id": "ZJH-FM-001",
@@ -199,7 +199,7 @@
     },
     {
       "id": "ZJH-023",
-      "charCount": 4266,
+      "charCount": 4259,
       "noiseRemoved": 3,
       "pageCount": 7,
       "paragraphCount": 27,
@@ -369,7 +369,7 @@
     },
     {
       "id": "ZJH-044",
-      "charCount": 2585,
+      "charCount": 2587,
       "noiseRemoved": 1,
       "pageCount": 4,
       "paragraphCount": 7,
@@ -484,7 +484,7 @@
       "charCount": 4156,
       "noiseRemoved": 0,
       "pageCount": 7,
-      "paragraphCount": 16,
+      "paragraphCount": 17,
       "missingBookPages": []
     },
     {
@@ -843,7 +843,7 @@
     },
     {
       "id": "ZJH-103",
-      "charCount": 5583,
+      "charCount": 5584,
       "noiseRemoved": 1,
       "pageCount": 8,
       "paragraphCount": 25,
@@ -1189,15 +1189,15 @@
     },
     {
       "id": "ZJH-146",
-      "charCount": 2368,
+      "charCount": 2371,
       "noiseRemoved": 7,
       "pageCount": 4,
-      "paragraphCount": 15,
+      "paragraphCount": 16,
       "missingBookPages": []
     },
     {
       "id": "ZJH-147",
-      "charCount": 2454,
+      "charCount": 2455,
       "noiseRemoved": 0,
       "pageCount": 4,
       "paragraphCount": 7,
@@ -1336,7 +1336,7 @@
     },
     {
       "id": "ZJH-164",
-      "charCount": 1145,
+      "charCount": 1138,
       "noiseRemoved": 6,
       "pageCount": 3,
       "paragraphCount": 4,
@@ -1344,7 +1344,7 @@
     },
     {
       "id": "ZJH-165",
-      "charCount": 1572,
+      "charCount": 1565,
       "noiseRemoved": 1,
       "pageCount": 3,
       "paragraphCount": 10,
@@ -1434,7 +1434,7 @@
     },
     {
       "id": "ZJH-176",
-      "charCount": 1089,
+      "charCount": 1088,
       "noiseRemoved": 0,
       "pageCount": 2,
       "paragraphCount": 1,
