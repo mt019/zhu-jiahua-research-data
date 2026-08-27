@@ -3,7 +3,7 @@
   "status": "未校辨讀稿",
   "count": 200,
   "reviewedCount": 1,
-  "totalChars": 544004,
+  "totalChars": 543990,
   "items": [
     {
       "id": "ZJH-FM-001",
@@ -271,10 +271,10 @@
     },
     {
       "id": "ZJH-032",
-      "charCount": 11355,
+      "charCount": 11341,
       "noiseRemoved": 3,
       "pageCount": 16,
-      "paragraphCount": 62,
+      "paragraphCount": 61,
       "missingBookPages": []
     },
     {
