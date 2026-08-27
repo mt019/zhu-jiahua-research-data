@@ -20,6 +20,7 @@ import { widen, dots } from './lib/punctuation.mjs'
 
 const TXT_DIR = 'data/materials/speeches/gcv/txt'
 const JSON_DIR = 'data/materials/speeches/gcv/txt/json'
+const DUPES = 'data/materials/speeches/gcv-duplicate-pages.json'
 const HEADS = 'data/derived/piece_heads.json'
 const TOC = 'data/derived/toc_index.json'
 const PAGE_MAP = 'data/derived/page_map.json'
@@ -264,11 +265,26 @@ const shapeParagraph = (kept) => {
   }
 }
 
-const pages = new Map()
-let marginStripped = 0
+// PDF 342–346 各有兩份辨讀結果，取哪一份登記在 duplicate-pages.json，裁圖那幾支程式讀的是
+// 同一份。先前這裡靠 readdirSync 的順序挑，挑到的與裁圖那邊不是同一個檔。
+const canonicalJson = new Map(
+  JSON.parse(readFileSync(DUPES, 'utf8')).items.map((d) => [d.pdfPage, d.canonical]),
+)
+const pageFiles = new Map()
 for (const f of readdirSync(JSON_DIR)) {
   const n = Number(f.match(/(\d+)\.json$/)?.[1])
-  if (!Number.isInteger(n) || pages.has(n)) continue
+  if (!Number.isInteger(n)) continue
+  if (canonicalJson.has(n)) {
+    if (f === canonicalJson.get(n)) pageFiles.set(n, f)
+    continue
+  }
+  if (pageFiles.has(n)) throw new Error(`PDF ${n} 有兩份辨讀結果而 ${DUPES} 沒有登記：${pageFiles.get(n)}／${f}`)
+  pageFiles.set(n, f)
+}
+
+const pages = new Map()
+let marginStripped = 0
+for (const [n, f] of [...pageFiles].sort((a, b) => a[0] - b[0])) {
   const doc = JSON.parse(readFileSync(join(JSON_DIR, f), 'utf8'))
   const page = doc.fullTextAnnotation?.pages?.[0]
   const read = []

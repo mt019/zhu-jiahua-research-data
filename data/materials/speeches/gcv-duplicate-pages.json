@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "note": "同一個 PDF 頁在 gcv/txt/json 底下有兩份辨讀結果：長檔名那份出自全書批次，p-34N.json 是補跑的一批。逐字比對過，符號序列完全相同，只有每字的信心值略有出入（同頁兩輪的差至多 0.034）。canonical 一律取全書批次那份，與 tail-punct-batch 底下五支裁圖程式所讀的同一份；讀稿建置與信心值分析都從這裡取檔名，不靠 readdirSync 的順序。",
+  "items": [
+    {
+      "pdfPage": 342,
+      "canonical": "朱家驊先生言論集 (王聿均,孫斌合编)-342.json",
+      "duplicate": "p-342.json"
+    },
+    {
+      "pdfPage": 343,
+      "canonical": "朱家驊先生言論集 (王聿均,孫斌合编)-343.json",
+      "duplicate": "p-343.json"
+    },
+    {
+      "pdfPage": 344,
+      "canonical": "朱家驊先生言論集 (王聿均,孫斌合编)-344.json",
+      "duplicate": "p-344.json"
+    },
+    {
+      "pdfPage": 345,
+      "canonical": "朱家驊先生言論集 (王聿均,孫斌合编)-345.json",
+      "duplicate": "p-345.json"
+    },
+    {
+      "pdfPage": 346,
+      "canonical": "朱家驊先生言論集 (王聿均,孫斌合编)-346.json",
+      "duplicate": "p-346.json"
+    }
+  ]
+}

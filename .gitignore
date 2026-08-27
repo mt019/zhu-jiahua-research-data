@@ -23,6 +23,8 @@ data/materials/chronology/*
 data/materials/speeches/*
 !data/materials/speeches/corrections/
 !data/materials/speeches/coverage-exceptions.json
+# PDF 342–346 各有兩份辨讀結果，取哪一份是人工比對過的判定，讀稿建置與信心值分析共讀這一份。
+!data/materials/speeches/gcv-duplicate-pages.json
 # 逐頁核過的篇（reviewed）與原書排成詩行的段落（verse）也是人工判讀的結果，
 # 重做要有人再看一次原頁圖。
 !data/materials/speeches/reviewed.json
