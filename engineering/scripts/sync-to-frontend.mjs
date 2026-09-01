@@ -59,3 +59,47 @@ if (process.env.ZJH_PLATES === '1') {
     console.log(`已同步圖版 ${plateFiles.length} 件（本機預覽用，不進版控）：${plateTarget}`);
   }
 }
+
+// 書外文獻：快照一份、讀稿一件一檔，案頁與總覽頁讀前者、正文按需載入後者。
+const relatedSource = resolve(here, '../../data/processed/related-documents.json');
+const relatedTarget = resolve(dirname(target), 'zhuJiahuaRelated.json');
+await copyFile(relatedSource, relatedTarget);
+console.log(`已同步書外文獻快照：${relatedTarget}`);
+const extSource = resolve(here, '../../data/processed/external-drafts');
+const extTarget = resolve(dirname(target), 'zhuJiahua/related');
+let extFiles = [];
+try {
+  extFiles = (await readdir(extSource)).filter((f) => f.endsWith('.json'));
+} catch {
+  extFiles = [];
+}
+if (extFiles.length) {
+  await rm(extTarget, { recursive: true, force: true });
+  await mkdir(extTarget, { recursive: true });
+  for (const f of extFiles) await copyFile(resolve(extSource, f), resolve(extTarget, f));
+  console.log(`已同步書外文獻讀稿 ${extFiles.length} 檔：${extTarget}`);
+}
+
+// 書外文獻的原頁圖：兩件來源的權利狀態都是 pending（rights 見 data/derived/sources.json），
+// 圖檔不進版控也不進線上建置，只在 ZJH_SCANS=1 時搬過去看本機的版面，作法照 ZJH_PLATES。
+if (process.env.ZJH_SCANS === '1') {
+  const sources = JSON.parse(
+    await (await import('node:fs/promises')).readFile(resolve(here, '../../data/derived/sources.json'), 'utf8'),
+  ).sources.filter((s) => !s.primaryPending);
+  const scanTarget = resolve(dirname(target), '../../public/zhujiahua-scans');
+  let copied = 0;
+  for (const s of sources) {
+    const pagesDir = resolve(here, '../../data/materials/external', s.id, 'pages');
+    let pageFiles = [];
+    try {
+      pageFiles = (await readdir(pagesDir)).filter((f) => f.endsWith('.png'));
+    } catch {
+      pageFiles = [];
+    }
+    if (!pageFiles.length) continue;
+    await mkdir(resolve(scanTarget, s.id), { recursive: true });
+    for (const f of pageFiles) await copyFile(resolve(pagesDir, f), resolve(scanTarget, s.id, f));
+    copied += pageFiles.length;
+  }
+  if (copied) console.log(`已同步書外文獻頁圖 ${copied} 張（本機預覽用，不進版控）：${scanTarget}`);
+}

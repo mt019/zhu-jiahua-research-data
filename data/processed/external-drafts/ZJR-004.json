@@ -1,0 +1,21 @@
+{
+  "id": "ZJR-004",
+  "sourceId": "SRC-gaizheng-tiaoyue-hui-fukan",
+  "title": "心史按語",
+  "status": "未校辨讀稿",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。",
+  "charCount": 103,
+  "textVersion": "acca01f93d61",
+  "manualCorrections": 0,
+  "corrections": [],
+  "paragraphs": [
+    "心史按德以改正條約在先。吾國人方謀分別待遇，於國際間特加親善以存公道。而德乃受華會各國之誘。自抛其訂定中德協約之初旨。良可惋惜。朱君防遏於幾先。與彼國學者作深切之討論。至爲兩國間重要關係。願國人無忽視之也。"
+  ],
+  "pageBreaks": [
+    {
+      "sourcePage": 36,
+      "para": 0,
+      "offset": 0
+    }
+  ]
+}

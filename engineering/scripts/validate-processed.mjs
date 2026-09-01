@@ -94,6 +94,13 @@ try {
 } catch {
   draftFiles = [];
 }
+// 書外文獻的讀稿（ZJR-）家在 data/processed/external-drafts/，由 validate-related.mjs 管；
+// 放進本目錄會被下面的 198 對帳當成言論集的篇，先擋在門口。
+for (const f of draftFiles) {
+  if (!/^ZJH-/.test(f)) {
+    throw new Error(`reading-drafts/${f} 放錯目錄：本目錄只收言論集的 ZJH- 讀稿，書外文獻在 external-drafts/`);
+  }
+}
 // 書眉印的是部次名或節名，兩者都在目次裡；剝掉序數、頁碼與分隔符之後拿來比對。
 const HEAD_NAMES = new Set(
   ['朱家驊先生言論集', ...tocIndex.items.flatMap((it) => [it.part, it.section, it.subsection])]

@@ -1,0 +1,21 @@
+{
+  "id": "ZJR-006",
+  "sourceId": "SRC-gaizheng-tiaoyue-hui-fukan",
+  "title": "米松林來書之後的按語",
+  "status": "未校辨讀稿",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。",
+  "charCount": 51,
+  "textVersion": "d3c584a1819c",
+  "manualCorrections": 0,
+  "corrections": [],
+  "paragraphs": [
+    "按米氏復函中口吻。純執條文以爲辯論，儼若政府對外之外交談話。殊無國民友誼之覺悟。用再駁覆之。特附於後。"
+  ],
+  "pageBreaks": [
+    {
+      "sourcePage": 35,
+      "para": 0,
+      "offset": 0
+    }
+  ]
+}

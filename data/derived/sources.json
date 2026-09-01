@@ -1,0 +1,99 @@
+{
+  "note": "書外文獻的來源登記：一件刊物一筆，記書目、權利與這份材料為什麼收在本倉。原件的絕對路徑、sha256 與位元組數不寫在這裡，寫在 data/materials/holdings/<id>.json（不入版控）。rights.status 為 pending 或 restricted 者，其原頁圖不進建置產物。 primaryPending 為 true 者是本倉尚未收得原刊、暫據他本或轉述的來源，固定檢查每次執行都列出。",
+  "idPrefix": "SRC",
+  "sources": [
+    {
+      "id": "SRC-gaizheng-tiaoyue-hui-fukan",
+      "kind": "期刊附刊",
+      "title": "改正條約會附刊",
+      "issue": "關於中德關係的討論",
+      "issueNote": "刊期與卷次在所見三頁未見，版心只印刊名。",
+      "bookPages": "34-36",
+      "pages": 3,
+      "language": "zh-Hant",
+      "script": "直排鉛印",
+      "digitisation": {
+        "colour": "1-bit",
+        "pixels": "2519x3548 至 2557x3574",
+        "note": "頁面是一位元二值影像，館藏紅印是頁面之外另一個彩色物件，pdfimages 抽出的頁面不帶印。強調處用黑體字排。"
+      },
+      "rights": {
+        "status": "pending",
+        "why": "朱家驊 1963 年歿，其自撰與自譯部分的著作財產權已消滅；米松林與編者的卒年未查。",
+        "decidedBy": "待站主裁定"
+      },
+      "access": "private-user-held",
+      "capturedAt": "2026-08-31",
+      "whyHere": "頁 34 至 36 連載三件文獻與一則編者按語。朱家驊民國十五年一月二十八日寄德國福郞克府爾脫報與柏林世界晚報的〈德國竟與帝國主義者協謀中國〉、德國法學博士米松林的論辯書（朱家驊自德文譯出）、朱家驊的覆信，《朱家驊先生言論集》一件都沒有收。"
+    },
+    {
+      "id": "SRC-xiandai-pinglun-2-50",
+      "kind": "期刊",
+      "title": "現代評論",
+      "volume": 2,
+      "number": 50,
+      "issue": "第二卷第五十期",
+      "bookPages": "15-17",
+      "bookPagesRunning": "423-425",
+      "pages": 3,
+      "dateIso": null,
+      "dateNote": "版心印第二卷第五十期，未印出刊日。篇首署「九月十六日稿於西齋」，是撰稿日。正文引朱家驊的批評載於本刊第二卷第四十三期。公眾號轉錄本於文末記「原載：民國十四年十一月二十一日《現代評論》第二卷第五十期」，該日期待原刊核（見 leads.json 的 LEAD-001）。",
+      "language": "zh-Hant",
+      "script": "直排鉛印",
+      "digitisation": {
+        "colour": "rgb",
+        "ppi": 300,
+        "pixels": "2003x2853 至 2015x2851",
+        "note": "300 ppi 彩色照相掃描，館藏紅印壓在版面上，頁面輕微歪斜。人名左側排直線、篇名左側排波浪線。"
+      },
+      "rights": {
+        "status": "pending",
+        "why": "李競何的生卒年未查。",
+        "decidedBy": "待站主裁定"
+      },
+      "access": "private-user-held",
+      "capturedAt": "2026-08-31",
+      "whyHere": "李競何逐句評徐志摩、胡適、朱家驊三人的哥德四行詩譯文。同一場論爭裡朱家驊自己的一篇收在《言論集》，即 ZJH-160〈關於一個譯詩問題的批評〉。"
+    },
+    {
+      "id": "SRC-xiandai-pinglun-2-38",
+      "kind": "期刊",
+      "title": "現代評論",
+      "volume": 2,
+      "number": 38,
+      "issue": "第二卷第三十八期",
+      "language": "zh-Hant",
+      "script": "直排鉛印",
+      "primaryPending": true,
+      "primaryPendingNote": "原刊未收得。手上只有一則公眾號轉錄（見 leads.json 的 LEAD-001），轉錄不作出處。",
+      "rights": {
+        "status": "pending",
+        "why": "原刊未收得，權利未判。",
+        "decidedBy": "待站主裁定"
+      },
+      "access": "not-held",
+      "whyHere": "徐志摩〈一個譯詩問題〉刊此期，是哥德四行詩論爭的起點。",
+      "dateNote": "出刊日未考。公眾號轉錄本記為民國十四年八月二十九日，待原刊核。"
+    },
+    {
+      "id": "SRC-xiandai-pinglun-2-43",
+      "kind": "期刊",
+      "title": "現代評論",
+      "volume": 2,
+      "number": 43,
+      "issue": "第二卷第四十三期",
+      "language": "zh-Hant",
+      "script": "直排鉛印",
+      "primaryPending": true,
+      "primaryPendingNote": "原刊未收得。本倉所據是《朱家驊先生言論集》所收本。",
+      "rights": {
+        "status": "pending",
+        "why": "原刊未收得，權利未判。",
+        "decidedBy": "待站主裁定"
+      },
+      "access": "not-held",
+      "whyHere": "朱家驊〈關於一個譯詩問題的批評〉刊此期，《言論集》收為 ZJH-160。",
+      "dateNote": "出刊日未考。公眾號轉錄本記為民國十四年十月三日，與《言論集》繫 ZJH-160 的日期相同，兩者待原刊核。"
+    }
+  ]
+}

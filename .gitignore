@@ -4,6 +4,8 @@ data/raw/books/*
 !data/raw/books/.gitkeep
 data/raw/web/*
 !data/raw/web/.gitkeep
+# 外部網頁的留痕清單：原始 HTML 與純文字不進版控，這一份清單進。
+!data/raw/web/index.md
 data/raw/articles/*
 !data/raw/articles/.gitkeep
 !data/raw/articles/index.md
@@ -32,6 +34,11 @@ data/materials/speeches/*
 # 圖版的圖說是逐頁核過原頁圖抄下來的，裁切框與轉向也是人工判定；圖檔本身由
 # build-plates.mjs 從頁圖再生，不進版控（見下方 data/derived/plates）。
 !data/materials/plates/
+# 書外文獻：切件與版面參數、校訂表、側記號是人工對原頁圖做的判定，進版控；
+# 頁圖與 GCV 辨讀稿由 build-external-pages.mjs／build-external-gcv.mjs 從原 PDF 再生，不進。
+!data/materials/external/
+data/materials/external/*/pages/
+data/materials/external/*/gcv/
 notes/*
 !notes/.gitkeep
 

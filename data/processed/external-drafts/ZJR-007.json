@@ -1,0 +1,21 @@
+{
+  "id": "ZJR-007",
+  "sourceId": "SRC-xiandai-pinglun-2-50",
+  "title": "記者附記",
+  "status": "未校辨讀稿",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。",
+  "charCount": 31,
+  "textVersion": "dcd75181c18f",
+  "manualCorrections": 0,
+  "corrections": [],
+  "paragraphs": [
+    "此稿在記者手中已逾一月，因稿件擁擠，未得早日登出深爲抱歉記者。"
+  ],
+  "pageBreaks": [
+    {
+      "sourcePage": 17,
+      "para": 0,
+      "offset": 0
+    }
+  ]
+}

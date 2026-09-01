@@ -45,3 +45,11 @@
 年目的先後順序以 `page_index.csv` 的 71 列位置為準，不靠辨讀稿裡的民國紀年數字（那串數字在未校頁面可能就是機器誤讀）；建置時逐年比對「偵測到的年目抬頭數」與「索引列數」相等，不等就中止。
 
 `unreviewedOcr` 欄位交代辨讀引擎、涵蓋頁碼與「未抽樣、不宣稱準確率」的限度；讀者要看到才算數，不得以前端文案掩飾這批材料未經校對。
+
+## 書外文獻（`data/processed/related-documents.json` 與 `data/processed/external-drafts/`）
+
+《朱家驊先生言論集》以外的文獻層。三種 id：SRC-（來源，一件刊物一筆）、ZJR-（文獻，一件一筆的平表）、ZJC-（文獻案，一場往還或論爭）。母本在 `data/derived/` 的 `sources.json`、`related_index.json`、`cases.json`；`cases.json` 的 `documents[]` 是權威，`related_index.json` 的 `caseId` 是它的投影，`validate-related.mjs` 對帳。聚合（案、刊物、作者、年份）都從平表組出來，不寫死在文獻本身。
+
+`related-documents.json` 由 `build-related.mjs` 產生，不手改；來源只投影書目欄位，權利判定、取得途徑、掃描參數與收錄來歷留在 derived。讀稿一件一檔在 `external-drafts/ZJR-NNN.json`，由 `build-external-drafts.mjs` 從 GCV 原始回應在符號層重建直排閱讀序產生，欄位形狀照 `reading-drafts/`，另帶 `sourceId`、`pageBreaks[].sourcePage`（原刊頁碼）與哥德件的 `sideMarks[]`（`para`＋`from`／`to`＋`kind`＋`text`，kind 是專名號或書名號，`text` 與正文切片逐字驗）。人工判定收在 `data/materials/external/<SRC-id>/` 的 `segmentation.json`（界內窗、分層線、接段、分段、剔除、起收錨）、`corrections/pg-NN.tsv`（誤／正兩欄，全流命中剛好一次且落在記的那一頁）與 `side-marks.tsv`；三者進版控，頁圖與辨讀稿由原 PDF 再生，不進。
+
+查證線索在 `data/derived/leads.json`，是工程紀錄，永不 sync 到前端；讀者該知道的未定事項寫在 `cases.json` 的 `openQuestions`。新收一件材料只動 JSON／TSV 與 external-drafts，程式與常數表一行不必改（第 3 件材料進來時以此為回歸判準）。

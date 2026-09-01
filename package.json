@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node engineering/scripts/validate-processed.mjs && node engineering/scripts/check-materials.mjs",
+    "validate": "node engineering/scripts/validate-processed.mjs && node engineering/scripts/validate-related.mjs && node engineering/scripts/check-materials.mjs",
     "sync": "npm run validate && node engineering/scripts/sync-to-frontend.mjs",
     "check:materials": "node engineering/scripts/check-materials.mjs",
     "audit": "node engineering/scripts/audit-drafts.mjs",

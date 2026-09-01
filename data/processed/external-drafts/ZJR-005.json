@@ -1,0 +1,514 @@
+{
+  "id": "ZJR-005",
+  "sourceId": "SRC-xiandai-pinglun-2-50",
+  "title": "關於哥德四行詩問題的商榷",
+  "status": "未校辨讀稿",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。",
+  "charCount": 2197,
+  "textVersion": "b951797675e3",
+  "manualCorrections": 27,
+  "corrections": [
+    {
+      "sourcePage": 15,
+      "from": "稿於西",
+      "to": "稿於西齋"
+    },
+    {
+      "sourcePage": 15,
+      "from": "就是這。朱家驊先生",
+      "to": "就是這種的例子。朱家驊先生"
+    },
+    {
+      "sourcePage": 15,
+      "from": "思想誤會所以這回",
+      "to": "思想誤會，所以這回"
+    },
+    {
+      "sourcePage": 15,
+      "from": "ThomasCarlyle",
+      "to": "Thomas Carlyle"
+    },
+    {
+      "sourcePage": 15,
+      "from": "IhrführtinsLebenunshinein,",
+      "to": "Ihr führt ins Leben uns hinein,"
+    },
+    {
+      "sourcePage": 15,
+      "from": "Ihrlass'tdenarmenschuldigwerden,",
+      "to": "Ihr lass't den armen schuldig werden,"
+    },
+    {
+      "sourcePage": 15,
+      "from": "Dannüberlass'tIhrihnderPein,",
+      "to": "Dann überlass't Ihr ihn der Pein,"
+    },
+    {
+      "sourcePage": 15,
+      "from": "DennalleSchuldrächtSichaufErden.",
+      "to": "Denn alle Schuld rächt sich auf Erden."
+    },
+    {
+      "sourcePage": 16,
+      "from": "少少了了一一個個「「們們」」字字的的恰恰好好",
+      "to": "少了一個「們」字的恰好"
+    },
+    {
+      "sourcePage": 16,
+      "from": "1哥德原文",
+      "to": "1.哥德原文"
+    },
+    {
+      "sourcePage": 16,
+      "from": "3朱先生把",
+      "to": "3.朱先生把"
+    },
+    {
+      "sourcePage": 16,
+      "from": "弘哥德的",
+      "to": "5.哥德的"
+    },
+    {
+      "sourcePage": 16,
+      "from": ".6朱先生譯文",
+      "to": "6.朱先生譯文"
+    },
+    {
+      "sourcePage": 16,
+      "from": "「我譯的是：",
+      "to": "我譯的是："
+    },
+    {
+      "sourcePage": 16,
+      "from": "insLebenbinein",
+      "to": "ins Leben hinein"
+    },
+    {
+      "sourcePage": 16,
+      "from": "譯作「選塵寰」",
+      "to": "譯作「進塵寰」"
+    },
+    {
+      "sourcePage": 16,
+      "from": "是poor,卽是",
+      "to": "是poor，卽是"
+    },
+    {
+      "sourcePage": 16,
+      "from": "哥德的derPein",
+      "to": "哥德的der Pein"
+    },
+    {
+      "sourcePage": 16,
+      "from": "是indirectobject，所以",
+      "to": "是indirect object，所以"
+    },
+    {
+      "sourcePage": 16,
+      "from": "the3rdcase:thedative",
+      "to": "the 3rd case: the dative"
+    },
+    {
+      "sourcePage": 16,
+      "from": "是）directobject，所以",
+      "to": "是direct object，所以"
+    },
+    {
+      "sourcePage": 16,
+      "from": "the4thcase:theaccusative今依",
+      "to": "the 4th case: the accusative。今依"
+    },
+    {
+      "sourcePage": 16,
+      "from": "ihn變成indirectobject,derPein變成directobject",
+      "to": "ihn變成indirect object,der Pein變成direct object"
+    },
+    {
+      "sourcePage": 16,
+      "from": "把aufErden",
+      "to": "把auf Erden"
+    },
+    {
+      "sourcePage": 17,
+      "from": "·的思想",
+      "to": "的思想"
+    },
+    {
+      "sourcePage": 17,
+      "from": "以爲自一己能",
+      "to": "以爲自己能"
+    },
+    {
+      "sourcePage": 17,
+      "from": "這個觀|點",
+      "to": "這個觀點"
+    }
+  ],
+  "paragraphs": [
+    "九月十六日稿於西齋",
+    "李競何",
+    "（一）對於胡徐二先生譯文的意見",
+    "譯書難，譯詩更不容易。因爲譯詩不但要對於外國文有精深的研究，而且要明白了解原著者的感情和思想。否則常常有陷入錯誤之處。胡適之和徐志摩二先生翻譯的哥德四行詩，就是這種的例子。朱家驊先生對於二先生譯文的批評（見本刊第二卷第四十三期）眞是不錯，可惜他可以說是只對於卡萊爾(Thomas Carlyle)的英譯下了批評，沒有把二先生真正的錯誤明白指了出寒。我覺得這個錯誤非同小可，能夠令人把哥德根本的思想誤會，所以這回特地寫出來，以資商榷。",
+    "沒有寫出二先生的錯誤以先，可把哥德的宇宙觀說一說。哥德是不相信上帝的人，他是一位泛神主義者。我們在他的文章裏面到處可看出他是一位進化論家，雖然當時拉馬克和達爾文還沒有發表他們進化學說的論文。他的這篇彈竪琴人（四行詩之名）也所以表現他的泛神學說。他所說的himinlicheuächte是指各種自然力而言，井不是他所反對的上帝。英譯爲heavenlypowers（注意power後邊的『s''）還不失他的原意，但是徐胡二先生把這字從英文譯出來就不同了。哥德所說的力（各種自然力）是無量數的，胡先生譯的「偉大的天神」，徐先生譯的「偉大的天父和「偉大的神明」雖然沒有把數量寫出，可是既經容易令人推想這個天父（或天神或神明）只有一個了。及從這句以後（或以前）的「他不會認識你」或「他不（會）認識你」那句上的「你」字（原文作ihr完全不能譯成單數的「你」英譯作ye，雖然不甚明顯，然從「heavenlypowers上面看去就知其意是指多數的你們了）看去，則完全明曉胡徐二先生把哥德所說的heavenlypowers認作獨一」的了。這獨一的天父（或神明，或天神）不是上帝是誰呢？所以二先生的譯文好像把哥德根本的宇宙觀改了似的。朱先生譯時用「你們」二字確能改正這個錯誤，他用「蒼天的威力」一辭確比「天父「天神」「神明」等等字樣好得多，不過沒有寫出徐胡二先生的錯誤就是了。",
+    "（二）對於朱先生譯文的意見",
+    "朱先生譯文的第一段，確是很好的，不過第二段的翻譯我却不很滿意了。查第二段的原文是：",
+    "Ihr führt ins Leben uns hinein,",
+    "Ihr lass't den armen schuldig werden,",
+    "Dann überlass't Ihr ihn der Pein,",
+    "Denn alle Schuld rächt sich auf Erden.",
+    "朱先生的譯文是：",
+    "你們引導我們進塵寰，",
+    "你們使這苦惱的人們罪過，",
+    "然後你們交給他痛苦憂患，",
+    "因爲人間一切罪惡報應無差。",
+    "1.哥德原文的ins Leben hinein是「入生命界裏」的意思，朱先生譯作「進塵寰」，我以爲不很恰切。",
+    "2.朱先生把arm譯作苦惱，也不恰切，因爲這個字譯成英文就是poor，卽是「可憐」的意思，并無苦惱的意思涵在裏邊。",
+    "3.朱先生把denarmen譯作「苦惱的人們」，多了一個「們」字，與胡徐二先生譯heavenlypowers，少了一個「們」字的恰好相反，但是錯誤是一樣的。因爲這裏若是多數，則下行的ihn（就是英文的him）指的是那一個字呢？",
+    "4.朱先生對於thedefinitearticle的繙譯，也不免有小小的錯誤。Thedefinitearticle通常加在公名上過，並沒有「這」字的意義，如thepencil譯出來就是「鉛筆」，并不是「這支鉛筆」；若是譯成這支鉛筆，則將原字變成thispencil了。這裏的denarmen（譯成英文就是thepoor）亦然，朱先生把牠譯成「這苦惱的（實在是可憐的）人們」，不是把原字改成diesearme(thesepoors)了嗎？",
+    "5.哥德的der Pein（朱先生譯爲痛苦憂患）是indirect object，所以放在第三格(the 3rd case: the dative),ihn(him)是direct object，所以放在第四格（the 4th case: the accusative。今依朱先生的譯文：「然後你們交給他痛苦憂患」看來，則簡直把哥德的ihn變成indirect object,der Pein變成direct object」了。這雖然於哥德的意思沒有違背，但我覺得繳不很妥當。",
+    "6.朱先生譯文的第四行把人間作爲形容一切罪孽的字，看作無緊要，可是哥德則把auf Erden（在世間上）放在本行的末項作爲本行最要緊的字，因此兩人的意思完全不同；哥德的意思是「一切罪愆都報應在這世間」，以明報應不在無稽的天堂地獄的；朱光生的「人間一切罪孽報應無差，」就很容易令人想到地獄裏邊的報應去了。",
+    "（三）我的哥德四行詩後段的繙譯和討論的結果。",
+    "我譯的是：",
+    "你們引導我們進生命界裏，",
+    "你們使可憐的人千犯罪愆，",
+    "然後你們把他交給苦慮；",
+    "因爲一切罪愆都報應在這世間。",
+    "胡徐朱三先生對於外國文都有特別的研究，所以翻譯還不龟有錯誤的緣故，就是不明哥德的宇宙觀或疏忽所致。各個著作家的思想都要明瞭，和譯繙要無處疏忽是很不容易的，所以繙譯的錯誤或不確，是很無須驚異的事情。現在國人批評譯文的很多，雖是一種好現象，但多數屬於漫駡的性質。他們的意思，以爲自己能指摘出譯者的錯誤，自己的學問儼然高一等的樣子。這個觀點，完全錯誤，完全夠不上批評的資格。這回現代評論胡徐朱三先生用討論式忠厚的互相批評，眞可爲批評譯文界的模範，我覺得很滿意，所以免不得也出來說一說。至於我的繙譯還望三位先生參考英譯加以指正。"
+  ],
+  "pageBreaks": [
+    {
+      "sourcePage": 15,
+      "para": 0,
+      "offset": 0
+    },
+    {
+      "sourcePage": 16,
+      "para": 11,
+      "offset": 0
+    },
+    {
+      "sourcePage": 17,
+      "para": 28,
+      "offset": 57
+    }
+  ],
+  "sideMarks": [
+    {
+      "para": 2,
+      "from": 5,
+      "to": 7,
+      "kind": "專名號",
+      "text": "胡徐"
+    },
+    {
+      "para": 3,
+      "from": 59,
+      "to": 62,
+      "kind": "專名號",
+      "text": "胡適之"
+    },
+    {
+      "para": 3,
+      "from": 63,
+      "to": 66,
+      "kind": "專名號",
+      "text": "徐志摩"
+    },
+    {
+      "para": 3,
+      "from": 72,
+      "to": 74,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 3,
+      "from": 86,
+      "to": 89,
+      "kind": "專名號",
+      "text": "朱家驊"
+    },
+    {
+      "para": 3,
+      "from": 129,
+      "to": 132,
+      "kind": "專名號",
+      "text": "卡萊爾"
+    },
+    {
+      "para": 3,
+      "from": 191,
+      "to": 193,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 15,
+      "to": 17,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 25,
+      "to": 27,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 73,
+      "to": 76,
+      "kind": "專名號",
+      "text": "拉馬克"
+    },
+    {
+      "para": 4,
+      "from": 77,
+      "to": 80,
+      "kind": "專名號",
+      "text": "達爾文"
+    },
+    {
+      "para": 4,
+      "from": 99,
+      "to": 103,
+      "kind": "書名號",
+      "text": "彈竪琴人"
+    },
+    {
+      "para": 4,
+      "from": 206,
+      "to": 208,
+      "kind": "專名號",
+      "text": "徐胡"
+    },
+    {
+      "para": 4,
+      "from": 225,
+      "to": 227,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 244,
+      "to": 245,
+      "kind": "專名號",
+      "text": "胡"
+    },
+    {
+      "para": 4,
+      "from": 257,
+      "to": 258,
+      "kind": "專名號",
+      "text": "徐"
+    },
+    {
+      "para": 4,
+      "from": 427,
+      "to": 429,
+      "kind": "專名號",
+      "text": "胡徐"
+    },
+    {
+      "para": 4,
+      "from": 433,
+      "to": 435,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 494,
+      "to": 496,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 4,
+      "from": 507,
+      "to": 508,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 4,
+      "from": 566,
+      "to": 568,
+      "kind": "專名號",
+      "text": "徐胡"
+    },
+    {
+      "para": 5,
+      "from": 5,
+      "to": 6,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 6,
+      "from": 0,
+      "to": 1,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 11,
+      "from": 0,
+      "to": 1,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 16,
+      "from": 2,
+      "to": 4,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 16,
+      "from": 35,
+      "to": 36,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 17,
+      "from": 2,
+      "to": 3,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 18,
+      "from": 2,
+      "to": 3,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 18,
+      "from": 34,
+      "to": 36,
+      "kind": "專名號",
+      "text": "胡徐"
+    },
+    {
+      "para": 19,
+      "from": 2,
+      "to": 3,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 19,
+      "from": 163,
+      "to": 164,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 20,
+      "from": 2,
+      "to": 4,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 20,
+      "from": 14,
+      "to": 15,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 20,
+      "from": 137,
+      "to": 138,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 20,
+      "from": 164,
+      "to": 166,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 20,
+      "from": 218,
+      "to": 220,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 21,
+      "from": 2,
+      "to": 3,
+      "kind": "專名號",
+      "text": "朱"
+    },
+    {
+      "para": 21,
+      "from": 33,
+      "to": 35,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 21,
+      "from": 81,
+      "to": 83,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 21,
+      "from": 116,
+      "to": 117,
+      "kind": "專名號",
+      "text": "朱",
+      "note": "原書排「朱光生」，光字或係誤排，照錄不改；線只圈朱"
+    },
+    {
+      "para": 22,
+      "from": 5,
+      "to": 7,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 28,
+      "from": 0,
+      "to": 3,
+      "kind": "專名號",
+      "text": "胡徐朱"
+    },
+    {
+      "para": 28,
+      "from": 37,
+      "to": 39,
+      "kind": "專名號",
+      "text": "哥德"
+    },
+    {
+      "para": 28,
+      "from": 186,
+      "to": 190,
+      "kind": "書名號",
+      "text": "現代評論"
+    },
+    {
+      "para": 28,
+      "from": 190,
+      "to": 193,
+      "kind": "專名號",
+      "text": "胡徐朱"
+    }
+  ],
+  "sideMarksNote": "原刊在字的左側加直線標人名、加波浪線標篇名與刊名，逐處對原頁圖判讀。"
+}

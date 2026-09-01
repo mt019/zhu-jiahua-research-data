@@ -1,5 +1,26 @@
 # 工程紀錄
 
+## 2026-09-01｜書外文獻層落地：兩件掃描七件文獻進資料層，前端開總覽與案頁
+
+站主 2026-08-31 交兩件掃描（《改正條約會附刊》頁 34 至 36 的中德往還三篇與兩則按語、
+《現代評論》第二卷第五十期李競何〈關於哥德四行詩問題的商榷〉與記者附記），依核定計畫
+落成書外文獻層。資料層：`data/derived/` 的 sources（4 筆，含兩筆 primaryPending 掛帳）、
+related_index（7 件的平表）、cases（2 案）、leads（9 條）；辨讀產線
+`build-external-pages.mjs`（一位元掃描走 pdfimages 並按像素數濾掉印章物件，rgb 掃描走
+紅色版壓館藏印）、`build-external-gcv.mjs`、`build-external-drafts.mjs`（從 GCV 符號層
+重建直排閱讀序）；人工判定收在 `data/materials/external/<SRC>/`（segmentation、16 條
+校訂、45 處側記號，全部對過 400 dpi 裁圖）；`validate-related.mjs` 十五道檢查接進
+`npm run validate`，負向測試 10 項。快照 `related-documents.json` 由 `build-related.mjs`
+產生，`sync-to-frontend.mjs` 送快照與七件讀稿到前端，頁圖只在 `ZJH_SCANS=1` 時搬
+（權利狀態 pending，不進線上建置）。前端（phenom-zhujiahua，migration-main）：tab
+`/zhujiahua/related-documents` 與案頁 `/zhujiahua/case/:caseSlug`，DraftBody 以
+pageBreaks＋sideMarks 合併切點渲染專名號與書名號，每個片段帶 data-p 與 data-o，按
+data-o 重組驗過等於原段落；seo 與 routes 補成 29 條，validate-tab-routes 對資料層的
+案清單雙向對帳。報名「福郞克府爾脫報」與「米松林」是原刊自排的音譯，逐處裁原頁圖
+核過；Frankfurter Zeitung 今譯《法蘭克福報》已補進 ZJC-01 考述，柏林世界晚報的德文
+報名記入 LEAD-009 待查。逐輪細節在 my-canvas-lab 的
+`.claude/history/HISTORY.zhu-jiahua.md` 2026-08-31 六條。
+
 ## 2026-08-27｜回寫閘的失敗率 8%，換一個切法降到 2%；四種收錯作法排成一張表
 
 信心值篩出來的格子要進校訂表，第一欄得是一段在該篇裡只出現一次的上下文，這是
