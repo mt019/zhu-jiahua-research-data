@@ -1,5 +1,25 @@
 # 工程紀錄
 
+## 2026-09-10（第三輪）｜檢索線的運維待辦：文件落點改對、npm test、三份手填清單對帳、異體字表的閘
+
+`docs/sync-model.md` 寫的落點還是 `my-canvas-lab`，08-19 那三週的白工就是照它做出來的；改成
+`phenom-zhujiahua`，並把語料的重產時機（改過母本先 `build:search-corpus`，validate 與 sync 兩處擋）
+與上線的路寫進去。`engineering/README.md` 同步改。本倉加 `npm test`（跑 validate）；CI 沒接，
+`validate-processed.mjs` 讀 `file:../phenom-ops/packages/prose-rules`，Actions 的 checkout 裡沒有那個倉，
+要接得先有一個能拉私有倉的 token，待站主決定。
+
+前端 `validate-tab-routes.mjs` 多一段：資料層的 `textPath`、`ZhuJiahua.jsx` 的 `TEXTS`、`seo.js` 的
+`ZJH_TAB_SLUGS` 三份手填清單逐篇對齊，7 篇通過；把 ZJH-075 的 textPath 改成不存在的 slug 實測，
+兩條各報一次。檢索頁的載入提示改成無論有沒有輸入都印，寫明六十萬字、壓縮後不到 1 MB。
+拆站抄來的 `validate-cloudflare-artifact.mjs` 刪掉，它第 8 行斷言 canvas 的 origin，跑必失敗，
+也沒有接在任何一支 script 串裡。
+
+phenom-ops 新增 `scripts/check-variants-table.mjs`（`check:variants-table`，run-checks 自動發現）：
+`variants.tsv` 每一形都是單一字元、一組至少兩形、同一形不出現在兩組；16 組 34 形通過，塞一組
+「甲乙 丙」報第 37 行。這條判準先前只在本倉的 `build-search-corpus.mjs` 與 `validate-processed.mjs`
+裡，表頭現在寫明理由。phenom-ops 的 `npm test` 另有 `check:remote-watchers` 紅，是
+`watch-availability.yml` 的排程遲了 2.9 小時，與這一批改動無關。
+
 ## 2026-09-10（第二輪）｜三輪各自提交並上線，前端快照對資料倉的 sha256 對帳，著作權標示
 
 資料倉三個 commit 按內容拆開：`56056a2` 是 08-27 到 08-28 的字框間距校訂批次（57 處漏字寫進
