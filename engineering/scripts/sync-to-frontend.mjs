@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readdir, rm } from 'node:fs/promises';
+import { copyFile, mkdir, readdir, readFile, rm } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -59,6 +59,24 @@ if (process.env.ZJH_PLATES === '1') {
     console.log(`已同步圖版 ${plateFiles.length} 件（本機預覽用，不進版控）：${plateTarget}`);
   }
 }
+
+// 語料過期就不要搬。`npm run sync` 前面串著 validate，直接跑這支腳本沒有——而讀稿是一件一檔
+// 逐檔搬的，語料是整份搬的，兩者不同步的長相是讀者在讀稿頁看得到某一段、在檢索頁搜不到。
+{
+  const { buildSearchCorpus, OUT } = await import('./build-search-corpus.mjs');
+  const { supersededTocIds, ...fresh } = buildSearchCorpus();
+  const { generatedAt, ...stored } = JSON.parse(await readFile(OUT, 'utf8'));
+  if (JSON.stringify(stored) !== JSON.stringify(fresh)) {
+    throw new Error('search-corpus.json 與母本對不上，先跑 build-search-corpus.mjs 再同步');
+  }
+}
+
+// 全文檢索的語料：四類材料與異體字對照一份 1.8 MB 的檔，只有 /zhujiahua/search 讀它，
+// 進到那一頁才載（形式同年表）。落在 src/data 第一層，與其他快照同一層——前端的
+// validate:synced 的筆數基線只收那一層，放進子目錄就沒有東西在看它縮不縮水。
+const searchTarget = resolve(dirname(target), 'zhuJiahuaSearchCorpus.json');
+await copyFile(resolve(here, '../../data/processed/search-corpus.json'), searchTarget);
+console.log(`已同步檢索語料：${searchTarget}`);
 
 // 書外文獻：快照一份、讀稿一件一檔，案頁與總覽頁讀前者、正文按需載入後者。
 const relatedSource = resolve(here, '../../data/processed/related-documents.json');

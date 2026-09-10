@@ -553,6 +553,148 @@ const FRONTEND_FORBIDDEN = [
   }
 }
 
+// ── 全文檢索的語料 ────────────────────────────────────────────────────────
+// 三件事分開查，因為它們的下一步不同：檔在不在（沒產）、與母本一不一致（母本改了沒重產）、
+// 覆蓋範圍對不對（來源目錄的形狀變了，而建置與驗證會一起錯過同一批檔）。
+// 一致性用重建比對，判準只有 build-search-corpus.mjs 那一份——驗證器不另寫一遍怎麼收。
+{
+  const { buildSearchCorpus, OUT, TYPES, REVIEWS } = await import('./build-search-corpus.mjs');
+  let onDisk;
+  try {
+    onDisk = JSON.parse(await readFile(OUT, 'utf8'));
+  } catch {
+    throw new Error('search-corpus.json 不在，跑 build-search-corpus.mjs');
+  }
+
+  const { supersededTocIds, ...fresh } = buildSearchCorpus();
+  const { generatedAt, ...stored } = onDisk;
+  if (JSON.stringify(stored) !== JSON.stringify(fresh)) {
+    throw new Error('search-corpus.json 與母本對不上，跑 build-search-corpus.mjs 重建');
+  }
+
+  // 來源各自數一次，數的是各層的登記表，不是目錄裡的檔。照建置那支的 glob 再數一遍是不行的：
+  // glob 哪天不再匹配，建置與驗證會一起漏掉同一批檔，而數目照樣相等。
+  const verified = toc.items.filter((item) => item.textPath).length;
+  const chronologyYears = JSON.parse(
+    await readFile(new URL('../../data/processed/chronology.json', import.meta.url), 'utf8'),
+  ).years.length;
+  const relatedDocs = JSON.parse(
+    await readFile(new URL('../../data/processed/related-documents.json', import.meta.url), 'utf8'),
+  ).documents.length;
+  const expected = {
+    verified,
+    draft: toc.items.length - verified,
+    'front-matter': data.tableOfContents.frontMatter.filter((entry) => entry.id).length,
+    chronology: chronologyYears,
+    external: relatedDocs,
+  };
+  for (const type of TYPES) {
+    const got = stored.stats.byType[type];
+    if (got !== expected[type]) {
+      throw new Error(`語料的 ${type} 收了 ${got} 筆，來源實數是 ${expected[type]} 筆`);
+    }
+    if (!got) throw new Error(`語料的 ${type} 一筆都沒有——來源目錄空了或收錄的形狀變了`);
+  }
+
+  const blank = stored.records.filter((record) => !record.text?.trim());
+  if (blank.length) throw new Error(`語料有 ${blank.length} 筆正文是空的：${blank.slice(0, 5).map((r) => r.id).join('、')}`);
+  const ids = new Set(stored.records.map((record) => record.id));
+  if (ids.size !== stored.records.length) throw new Error('語料的 id 有重複');
+
+  // 分類的筆數加起來要等於總筆數。TYPES 少一個字串，那一類就同時從 byType、建置的空類檢查
+  // 與上面那圈覆蓋檢查裡消失，三處一起瞎掉而總筆數不動。
+  const typeSum = TYPES.reduce((sum, type) => sum + (stored.stats.byType[type] ?? 0), 0);
+  if (typeSum !== stored.records.length) {
+    throw new Error(`語料分類的筆數合計 ${typeSum}，總筆數 ${stored.records.length}——有一類不在 TYPES 裡`);
+  }
+
+  // ── 正文有沒有被截掉 ──────────────────────────────────────────────────
+  // 上面那道重建比對問的是「產物是不是這支建置的最新輸出」，不是「這支建置讀對了沒有」。
+  // 抽取本身寫錯時兩邊一起錯，等式照樣成立。以下四項都拿別支腳本的產物當對照。
+  const recordById = Object.fromEntries(stored.records.map((record) => [record.id, record]));
+
+  // 讀稿、卷首與年譜：字數對回各自母本記的 charCount（段落以換行相接，故差 段數 − 1）。
+  const chronology = JSON.parse(
+    await readFile(new URL('../../data/processed/chronology.json', import.meta.url), 'utf8'),
+  );
+  const draftIndex = JSON.parse(
+    await readFile(new URL('../../data/processed/reading-drafts/index.json', import.meta.url), 'utf8'),
+  );
+  // 已有校訂稿的那幾篇，語料收的是校訂稿，字數本來就與讀稿不同——比對只對還走讀稿的那些做。
+  const charCountOf = [
+    ...draftIndex.items.map((item) => [item.id, item.charCount, ['draft', 'front-matter']]),
+    ...chronology.years.map((year) => [`year-${year.ce}`, year.text.charCount, ['chronology']]),
+  ];
+  const truncated = [];
+  for (const [id, want, types] of charCountOf) {
+    const record = recordById[id];
+    if (!record || !types.includes(record.type)) continue;
+    const chars = [...record.text].length - (record.text.split('\n').length - 1);
+    if (chars !== want) truncated.push(`${id} 語料 ${chars} 字、母本 ${want} 字`);
+  }
+  if (truncated.length) {
+    throw new Error(`語料的正文與母本字數不符（${truncated.length} 筆）：${truncated.slice(0, 5).join('；')}`);
+  }
+
+  // 校訂稿與書外文獻沒有可比的字數欄，改查每一段都還在。校訂稿的正文靠一行 --- 切掉校訂記錄，
+  // 排印件的水平線落在正文中段就會把後面整段切掉，而筆數與空正文檢查都看不到。
+  const missing = [];
+  for (const verified of data.verifiedTexts) {
+    const record = recordById[verified.id];
+    if (!record) { missing.push(`${verified.id} 不在語料裡`); continue; }
+    for (const para of verified.paragraphs) {
+      if (!record.text.includes(para.trim())) missing.push(`${verified.id}「${para.trim().slice(0, 16)}⋯」`);
+    }
+  }
+  for (const record of stored.records.filter((row) => row.type === 'external')) {
+    const source = JSON.parse(
+      await readFile(new URL(`../../data/processed/external-drafts/${record.id}.json`, import.meta.url), 'utf8'),
+    );
+    for (const para of source.paragraphs) {
+      const text = para.trim();
+      if (text && !record.text.includes(text)) missing.push(`${record.id}「${text.slice(0, 16)}⋯」`);
+    }
+  }
+  if (missing.length) {
+    throw new Error(`語料漏掉母本的段落（${missing.length} 處）：${missing.slice(0, 5).join('；')}`);
+  }
+
+  // 欄位改名不會報錯，只會讓那一欄靜靜變成 null（建置端一律 ?? null）。日期是其中最容易
+  // 掉的一欄，拿篇目登記的日期筆數對它。
+  const datedPieces = toc.items.filter((item) => item.date).length;
+  const datedRecords = stored.records.filter(
+    (record) => (record.type === 'draft' || record.type === 'verified') && record.dateOriginal,
+  ).length;
+  if (datedRecords !== datedPieces) {
+    throw new Error(`語料帶日期的 ${datedRecords} 筆，篇目登記有日期的 ${datedPieces} 篇——母本的欄位可能改名了`);
+  }
+
+  // 母本的狀態欄帶著辨讀引擎的名字，讀者看到的那句話由前端照代碼給；語料裡留下自由文字，
+  // 遲早有一天會被原樣印到頁面上（站主 2026-08-26：「工程語言禁上前端」）。
+  const stray = stored.records.filter((record) => !REVIEWS.includes(record.review) || 'status' in record);
+  if (stray.length) {
+    throw new Error(`語料的校訂狀態欄不合規：${stray.slice(0, 5).map((r) => r.id).join('、')}`);
+  }
+
+  const forms = Object.entries(stored.variants);
+  // 只查非空的話，對照表從 18 組砍到 1 組照樣通過，而寬鬆模式會安靜地退化。下限往上調是加組，
+  // 往下調要有人動這個數字——刻意撤掉某一組時連同這裡一起改。
+  const VARIANT_FLOOR = 18;
+  if (forms.length < VARIANT_FLOOR) {
+    throw new Error(`語料的異體字只有 ${forms.length} 形，少於下限 ${VARIANT_FLOOR}——對照表被砍過，或者讀到的不是正本`);
+  }
+  for (const [from, to] of forms) {
+    if ([...from].length !== 1 || [...to].length !== 1) {
+      throw new Error(`異體字對照「${from}→${to}」不是單一字元對單一字元，命中位置會與原文對不上`);
+    }
+  }
+  console.log(
+    `檢索語料：${stored.stats.records} 筆、${stored.stats.chars.toLocaleString('en-US')} 字（`
+    + TYPES.map((type) => `${type} ${stored.stats.byType[type]}`).join('、')
+    + `），異體字 ${forms.length} 形`,
+  );
+}
+
 const serialized = JSON.stringify(data);
 for (const forbidden of ['/Users/', 'Documents/NTU', 'z-library', '1lib.sk', 'z-lib.sk']) {
   if (serialized.includes(forbidden)) throw new Error(`公開資料含禁止字串：${forbidden}`);
