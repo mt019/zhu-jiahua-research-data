@@ -72,7 +72,7 @@ const cells = []
 for (const [pdfPage, file] of [...files].sort((a, b) => a[0] - b[0])) {
   const syms = symbolsOf(file)
   syms.forEach((s, i) => {
-    if (s.conf < THRESHOLD) cells.push({ pdfPage, file, index: i })
+    if (s.conf < THRESHOLD) cells.push({ pdfPage, file, index: i, char: s.text })
   })
 }
 console.log(`信心值 < ${THRESHOLD} 共 ${cells.length} 格`)
@@ -159,6 +159,45 @@ console.log(`回寫閘失敗率 ${(fail / rows.length * 100).toFixed(0)}%（${fa
 const retryFail = rows.filter((r) => r.retry !== '唯一命中').length
 console.log(`改試每一種切法之後 ${(retryFail / rows.length * 100).toFixed(0)}%（${retryFail}/${rows.length}）`)
 
+// 母體本身的兩項描述，隨門檻重算：落在 198 篇起訖範圍之外的格子沒有讀稿可寫回；
+// 字類分三種，看的是這個門檻收到的是哪一種符號
+const offPiece = cells.filter((c) => !pieceOf(c.pdfPage)).length
+const KIND = (ch) => (/[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/.test(ch) ? '漢字'
+  : /[0-9A-Za-z\uff10-\uff19\uff21-\uff3a\uff41-\uff5a\u00c0-\u024f]/.test(ch) ? '拉丁字母與數字'
+  : '標點與符號')
+const kinds = { 漢字: 0, 標點與符號: 0, 拉丁字母與數字: 0 }
+for (const c of cells) kinds[KIND(c.char)] += 1
+console.log(`其中 ${offPiece} 格落在 198 篇的起訖範圍之外；漢字 ${kinds['漢字']}、標點與符號 ${kinds['標點與符號']}、拉丁字母與數字 ${kinds['拉丁字母與數字']}`)
+
+// Clopper-Pearson 兩側區間：以二項分布 CDF 二分求解，不外借套件
+const binomCdf = (k, n, p) => {
+  let acc = 0
+  for (let i = 0; i <= k; i += 1) {
+    let logc = 0
+    for (let j = 1; j <= i; j += 1) logc += Math.log((n - i + j) / j)
+    acc += Math.exp(logc + i * Math.log(p || Number.MIN_VALUE) + (n - i) * Math.log(1 - p))
+  }
+  return acc
+}
+const bisect = (f, lo, hi) => {
+  const rising = f(hi) > f(lo)
+  for (let i = 0; i < 200; i += 1) {
+    const mid = (lo + hi) / 2
+    if ((f(mid) > 0) === rising) hi = mid
+    else lo = mid
+  }
+  return (lo + hi) / 2
+}
+const clopperPearson = (k, n) => {
+  const lo = k === 0 ? 0 : bisect((p) => 1 - binomCdf(k - 1, n, p) - 0.025, 0, 1)
+  const hi = k === n ? 1 : bisect((p) => binomCdf(k, n, p) - 0.025, 0, 1)
+  return [lo, hi]
+}
+const ci = clopperPearson(fail, rows.length)
+const ciRetry = clopperPearson(retryFail, rows.length)
+const pct = (x) => `${(x * 100).toFixed(1)}%`
+console.log(`Clopper-Pearson 95%：${pct(ci[0])}–${pct(ci[1])}；換切法之後 ${pct(ciRetry[0])}–${pct(ciRetry[1])}`)
+
 const out = process.env.ZJH_OUT
 if (out) {
   writeFileSync(out, `${JSON.stringify({
@@ -171,9 +210,9 @@ if (out) {
     tally,
     failureRate: Number((fail / rows.length).toFixed(3)),
     failureRateWithRetry: Number((retryFail / rows.length).toFixed(3)),
-    confidenceInterval: '4/50 的 Clopper-Pearson 95% 區間 2.2%–19.2%；換切法之後 1/50 為 0.1%–10.6%',
-    offPieceCells: '全書 4,751 格裡 161 格落在 198 篇的起訖範圍之外（前置、部次隔頁、卷末），這一類沒有讀稿可寫回',
-    charKinds: '4,751 格裡漢字 4,041、標點與符號 610、拉丁字母與數字 100',
+    confidenceInterval: `${fail}/${rows.length} 的 Clopper-Pearson 95% 區間 ${pct(ci[0])}–${pct(ci[1])}；換切法之後 ${retryFail}/${rows.length} 為 ${pct(ciRetry[0])}–${pct(ciRetry[1])}`,
+    offPieceCells: `全書 ${cells.length} 格裡 ${offPiece} 格落在 198 篇的起訖範圍之外（前置、部次隔頁、卷末），這一類沒有讀稿可寫回`,
+    charKinds: `${cells.length} 格裡漢字 ${kinds['漢字']}、標點與符號 ${kinds['標點與符號']}、拉丁字母與數字 ${kinds['拉丁字母與數字']}`,
     rows,
   }, null, 2)}\n`)
   console.log(`寫入 ${out}`)

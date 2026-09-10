@@ -52,3 +52,8 @@ engineering/tail-punct-batch/next-col/
 
 # 圖版裁切產物：權利狀態未查，不進版控
 data/derived/plates/
+
+# 字框間距批次的裁圖與判讀頁由 engineering/gap-batch/make-sheet.py 從原 PDF 再生，
+# 清單（pending.tsv、batch-NN.tsv、page-cap.tsv）與判定（batch-NN-verdicts.tsv）進版控。
+engineering/gap-batch/sheet/
+engineering/gap-batch/batch-*/
