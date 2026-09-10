@@ -10,7 +10,7 @@
 // 落在版心上緣 y≈314，縮排的段落落在 y≈430）。跨頁的段落因此接得回去，頁碼改記成
 // pageBreaks 的字元位置，前端在對應的位置標頁碼。
 //
-// 產物一律標著未校：字錯率見 LOG 2026-08-27（隨機 10 頁 6,786 字上 22 處，0.32%）。
+// 產物一律標著未校：字錯率見 LOG 2026-08-27（隨機 10 頁 7,007 字上 24 處，0.34%）。
 // 逐頁人工校訂完成的篇另存 data/derived/transcriptions/，前端以那一份為準。
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
@@ -218,8 +218,8 @@ const joinSyms = (list) => {
   return out
 }
 
-const readParagraph = (par) => {
-  const syms = par.words.flatMap((w) =>
+const symbolsOf = (par) =>
+  par.words.flatMap((w) =>
     w.symbols.map((sym) => {
       const v = sym.boundingBox?.vertices ?? []
       const xs = v.map((q) => q.x ?? 0)
@@ -234,9 +234,81 @@ const readParagraph = (par) => {
       }
     }),
   )
+
+// 書眉與書根按整頁的欄位判，不按辨識結果分出來的段判。上面 dropMarginColumns 是一段一段看的，
+// 兩種情形它看不到：段裡只有兩欄（原書 80 頁節名「四、地質研究所」與書眉「朱家驊先生言論集」
+// 被併成一段，欄數不足三就整段跳過），以及書眉帶頓號（「拾壹、專論」的頓號被 MARGIN_VETO 當成
+// 句讀，整欄留下）。這裡先把全頁的字按 x 分欄，版心取字數二十以上的欄；版心兩側最外的欄，
+// 字數在 MARGIN_MAX_SYMBOLS 以內、離版心超過欄距的 1.15 倍、而且從版心上緣以下起排的
+// （續段的下半截一律從版心上緣起排，書眉低兩三格、書根在頁底），再看字面是不是邊欄才會有的
+// 長相：書名、大寫序數起頭的部次名（正文的節次用一二三或甲乙丙，大寫序數只出現在書眉）、
+// 或落在頁面下半的頁碼。節名「四、地質研究所」與書眉離版心的距離差不多（各 1.5 與 1.75 個
+// 欄距），單靠幾何分不開，字面這一道是必要的。
+//
+// 2026-09-10 補這一道判定之前，這一族靠五篇的人工校訂表逐條改（ZJH-023、032、164、165、176），
+// 每一條都是站主在站上讀到才發現的。
+const UPPER_ORDINAL = /^[壹貳叁叄參参肆伍陸柒捌玖拾臺壺粜]{1,2}[、\s]?/
+const BOOK_TITLE = /^朱家.先生言.集/
+const FOLIO = /^[〇一二三四五六七八九十百0-9]{1,4}[^〇一二三四五六七八九十百0-9]?$/
+const HEAD_INITIALS = new Set([...HEAD_NAMES].map((n) => n[0]))
+const marginColumnSymbols = (syms, page) => {
+  const banned = new Set()
+  const cols = columnsOf(syms)
+  const dense = cols.filter((c) => c.items.length >= 20)
+  if (cols.length < 3 || dense.length < 2) return banned
+  const gaps = dense.slice(1).map((c, i) => dense[i].cx - c.cx)
+  const pitch = [...gaps].sort((a, b) => a - b)[Math.floor(gaps.length / 2)]
+  const pageTop = Math.min(...dense.flatMap((c) => c.items.map((s) => s.top ?? Infinity)))
+  const height = page?.height ?? 3148
+  const right = dense[0].cx
+  const left = dense[dense.length - 1].cx
+  const debug = (process.env.ZJH_MARGIN_DEBUG ?? '').split(',').map(Number).includes(page?.__n ?? -1)
+  // 書根比書眉往版心縮二三十像素（實測六頁都是 98–102，門檻 101–102），同一側已經認出
+  // 一條邊欄之後，與它相距 60 以內的下一欄視同同一條邊欄，不再看離版心多遠。
+  const isMargin = (col, why, anchor) => {
+    const items = [...col.items].sort((a, b) => (a.top ?? 0) - (b.top ?? 0))
+    const top = items[0].top ?? 0
+    const text = widen(items.map((s) => s.text).join('')).trim()
+    const beyond = col.cx > right ? col.cx - right : left - col.cx
+    const sameBand = anchor !== null && Math.abs(col.cx - anchor) <= 60
+    const verdict = (() => {
+      if (col.items.length > MARGIN_MAX_SYMBOLS) return '字數超過邊欄上限'
+      if (!sameBand && beyond < pitch * MARGIN_GAP_RATIO) return `離版心 ${beyond.toFixed(0)} 不到欄距 ${pitch.toFixed(1)} 的 1.15 倍`
+      if (top <= pageTop + INDENT_MIN) return '從版心上緣起排，是續段的下半截'
+      if (BOOK_TITLE.test(text)) return true
+      if (FOLIO.test(text) && top > height / 2) return true
+      const m = UPPER_ORDINAL.exec(text)
+      if (m) {
+        const rest = text.slice(m[0].length)
+        return rest.length === 0 || HEAD_INITIALS.has(rest[0]) ? true : '大寫序數之後不是部名'
+      }
+      if (isRunningHead(text.replace(/[〇一二三四五六七八九十百0-9]+$/, ''))) return true
+      return '字面不像書眉、書根或頁碼'
+    })()
+    if (debug) console.error(`  ${why} x=${col.cx.toFixed(0)} n=${col.items.length} top=${top} 「${text}」 → ${verdict === true ? '邊欄' : verdict}`)
+    return verdict === true
+  }
+  if (debug) console.error(`p-${page.__n} 版心 ${left.toFixed(0)}–${right.toFixed(0)} 欄距 ${pitch.toFixed(1)} 上緣 ${pageTop}`)
+  // 兩側各從最外那一欄往內看，最多兩欄；碰到不是邊欄的（節名）就停
+  const sides = [cols.filter((c) => c.cx > right), cols.filter((c) => c.cx < left).reverse()]
+  for (const side of sides) {
+    let anchor = null
+    for (const col of side.slice(0, 2)) {
+      if (!isMargin(col, side === sides[0] ? '右側' : '左側', anchor)) break
+      for (const s of col.items) banned.add(s)
+      anchor = col.cx
+    }
+  }
+  return banned
+}
+
+const readParagraph = (syms, banned) => {
   const raw = joinSyms(syms)
-  // 先按座標丟整條邊欄，再按字面補一刀：書眉與正文擠在同一欄的少數頁靠後者
-  let { syms: kept, dropped } = dropMarginColumns(syms)
+  const afterPage = syms.filter((s) => !banned.has(s))
+  // 先按整頁的欄位丟邊欄，再按段內的座標丟整條邊欄，最後按字面補一刀：書眉與正文擠在
+  // 同一欄的少數頁靠後者
+  let { syms: kept, dropped } = dropMarginColumns(afterPage)
+  dropped += syms.length - afterPage.length
   const text0 = joinSyms(kept)
   const m = text0.trim().length > 14 ? HEAD_IN_LINE.exec(text0) : null
   if (m) {
@@ -287,12 +359,13 @@ let marginStripped = 0
 for (const [n, f] of [...pageFiles].sort((a, b) => a[0] - b[0])) {
   const doc = JSON.parse(readFileSync(join(JSON_DIR, f), 'utf8'))
   const page = doc.fullTextAnnotation?.pages?.[0]
+  const parSyms = (page?.blocks ?? []).flatMap((b) => (b.paragraphs ?? []).map(symbolsOf))
+  if (page) page.__n = n
+  const banned = marginColumnSymbols(parSyms.flat(), page)
   const read = []
-  for (const b of page?.blocks ?? []) {
-    for (const par of b.paragraphs ?? []) {
-      const p = readParagraph(par)
-      if (p.syms.length) read.push(p)
-    }
+  for (const syms of parSyms) {
+    const p = readParagraph(syms, banned)
+    if (p.syms.length) read.push(p)
   }
   // 書眉與書根各自成段時，它們的 x 就把這一頁的邊欄位置指出來了；同一條欄上的字，
   // 不管落在哪一段，都是邊欄。上面按欄距判的那一關漏掉的（欄距差得不夠遠）由這一關收。
@@ -696,7 +769,9 @@ for (let i = 0; i < heads.length; i += 1) {
         from = at + 1
       }
       if (spots.length !== 1) {
-        throw new Error(`${c.at}「${c.wrong}」在 ${h.id} 命中 ${spots.length} 次，須剛好 1 次`)
+        const msg = `${c.at}「${c.wrong}」在 ${h.id} 命中 ${spots.length} 次，須剛好 1 次`
+        if (process.env.ZJH_CORR_REPORT) { console.error(`[校訂對不上] ${msg}`); continue }
+        throw new Error(msg)
       }
       const pos = spots[0]
       const posOf = (para, offset) =>
@@ -738,7 +813,10 @@ for (let i = 0; i < heads.length; i += 1) {
     }
     const hits = locate(paragraphs, c.wrong)
     if (hits.length !== 1) {
-      throw new Error(`${c.at}「${c.wrong}」在 ${h.id} 命中 ${hits.length} 次，須剛好 1 次`)
+      const msg = `${c.at}「${c.wrong}」在 ${h.id} 命中 ${hits.length} 次，須剛好 1 次`
+      // ZJH_CORR_REPORT=1 時只列不中止：整批校訂表對新產物逐條核時用，正式建置不設它
+      if (process.env.ZJH_CORR_REPORT) { console.error(`[校訂對不上] ${msg}`); continue }
+      throw new Error(msg)
     }
     const { para, offset } = hits[0]
     const onPage = pageAt(pageBreaks, para, offset)
@@ -779,7 +857,7 @@ for (let i = 0; i < heads.length; i += 1) {
     status: reviewedHere ? '逐頁核過的辨讀稿' : '未校辨讀稿',
     statusNote: reviewedHere
       ? `Google Cloud Vision 的辨讀結果，${reviewedHere.date} 全篇 ${reviewedHere.bookFrom}–${reviewedHere.bookTo} 頁逐欄回原頁圖核過（${reviewedHere.how}），改正 ${corrections.length} 處。`
-      : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。2026-08-27 在未校的各篇裡隨機抽 10 頁、6,786 字回原頁圖逐字核，22 處與原書不符：誤認 9 處、漏字或漏標點 11 處、書眉與頁碼混進正文 1 處、小標與正文黏在一起 1 處，合 0.32%；文言的序跋一頁就佔 8 處。引用前請核對原書。' +
+      : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。2026-08-27 在未校的各篇裡隨機抽 10 頁、7,007 字回原頁圖逐字核，24 處與原書不符：誤認 9 處、漏字或漏標點 13 處、書眉與頁碼混進正文 1 處、小標與正文黏在一起 1 處，合 0.34%；文言的序跋一頁就佔 8 處。引用前請核對原書。' +
         (corrections.length
           ? `本篇另有 ${corrections.length} 處回原頁圖核過的錯字已改。`
           : ''),

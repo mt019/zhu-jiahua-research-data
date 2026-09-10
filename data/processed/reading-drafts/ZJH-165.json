@@ -5,25 +5,18 @@
   "dateOriginal": "民國三十六年三月",
   "bookPages": "654–656",
   "status": "未校辨讀稿",
-  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。2026-08-27 在未校的各篇裡隨機抽 10 頁、6,786 字回原頁圖逐字核，22 處與原書不符：誤認 9 處、漏字或漏標點 11 處、書眉與頁碼混進正文 1 處、小標與正文黏在一起 1 處，合 0.32%；文言的序跋一頁就佔 8 處。引用前請核對原書。本篇另有 2 處回原頁圖核過的錯字已改。",
+  "statusNote": "Google Cloud Vision 的辨讀結果，未經逐字人工校訂。2026-08-27 在未校的各篇裡隨機抽 10 頁、7,007 字回原頁圖逐字核，24 處與原書不符：誤認 9 處、漏字或漏標點 13 處、書眉與頁碼混進正文 1 處、小標與正文黏在一起 1 處，合 0.34%；文言的序跋一頁就佔 8 處。引用前請核對原書。本篇另有 1 處回原頁圖核過的錯字已改。",
   "charCount": 1565,
   "noiseRemoved": 1,
   "textVersion": "16ce5855a7f9",
-  "manualCorrections": 2,
+  "manualCorrections": 1,
   "corrections": [
     {
       "para": 7,
-      "at": 216,
+      "at": 209,
       "from": "倍於今日",
       "to": "倍於今日。",
       "bookPage": 656
-    },
-    {
-      "para": 7,
-      "at": 41,
-      "from": "抗戰拾壹、專六五五期間",
-      "to": "抗戰期間",
-      "bookPage": 655
     }
   ],
   "missingBookPages": [],
@@ -53,7 +46,7 @@
     {
       "bookPage": 656,
       "para": 7,
-      "offset": 41
+      "offset": 43
     }
   ]
 }

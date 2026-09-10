@@ -198,10 +198,19 @@ if (draftFiles.length) {
     // @phenomcanvas/prose-rules/ocr 呼叫），本檔不再抄一份 regex：陳寅恪、德川、iias、
     // court 幾個倉讀的是同一份，共用層加一條形狀，各倉下一次執行就吃得到。
     // 書眉那一條留在這裡，它要拿本書的目次才判得出來。
+    const titleInBody = (t) => t.length > 16 && /朱家.先生言.集/.test(t);
+    if (!titleInBody('朱家驊先生言論集四、地質研究所該所自遷移以來') || titleInBody('四、地質研究所該所自遷移以來，卽着重輔助')) {
+      throw new Error('書名書眉的檢查自測失敗：該報的沒報，或不該報的報了');
+    }
     for (const [i, para] of draft.paragraphs.entries()) {
       const t = para.trim();
       if (t.length <= 16 && HEAD_NAMES.has(headKey(t))) {
         throw new Error(`${file} 第 ${i} 段是書眉殘留：「${t}」`);
+      }
+      // 書名那一種書眉黏在段裡（原書 80 頁「朱家驊先生言論集四、地質研究所」）：本書正文
+      // 不會寫出自己的書名，卷首兩篇提到時只寫「言論集」。共用層認不得書名，留在這裡。
+      if (titleInBody(t)) {
+        throw new Error(`${file} 第 ${i} 段夾著書眉的書名：「${t.slice(0, 30)}」`);
       }
     }
     if (draft.missingBookPages?.length && !draft.missingNote) {
