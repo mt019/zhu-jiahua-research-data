@@ -80,6 +80,11 @@ app.tableOfContents.frontMatter = toc.frontMatter.map((entry) => {
   return out
 })
 
+// 著作權標示：讀稿頁右欄、單篇頁與卷首頁的頁末印的短句，母本在 data/materials/rights.json；
+// note 欄寫給維護的人看，不進快照。
+const { note: _rightsNote, ...rights } = JSON.parse(readFileSync('data/materials/rights.json', 'utf8'))
+app.rights = rights
+
 app.tableOfContents.itemCount = app.tableOfContents.items.length
 app.tableOfContents.readableCount = app.tableOfContents.items.filter((i) => i.textPath).length
 app.generatedAt = toc.updatedAt

@@ -13,11 +13,18 @@ const required = [
   'researchQuestions',
   'tableOfContents',
   'verifiedTexts',
+  'rights',
 ];
 
 for (const key of required) {
   if (!(key in data)) throw new Error(`缺少必要欄位：${key}`);
 }
+
+// 著作權標示：五句各印在讀者這一端的一個位置，任一句空著，那個位置就印成空白而建置照樣綠。
+for (const key of ['author', 'edition', 'transcription', 'frontMatter', 'verifiedFooter']) {
+  if (typeof data.rights[key] !== 'string' || !data.rights[key].trim()) throw new Error(`rights.${key} 是空的——看 data/materials/rights.json`);
+}
+if ('note' in data.rights) throw new Error('rights.note 是寫給維護的人的，不進公開快照');
 
 // 研究流程紀錄留在資料倉（engineering/LOG.md 與 data/derived），不進公開快照。
 // 這條是使用者的全局規則：canvas 公開面連未渲染的 JSON 欄位都不放工程作業語言。

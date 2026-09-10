@@ -1,5 +1,6 @@
-import { copyFile, mkdir, readdir, readFile, rm } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { copyFile, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -11,19 +12,29 @@ const target = process.argv[2]
   ? resolve(process.cwd(), process.argv[2])
   : resolve(here, '../../../phenom-zhujiahua/src/data/zhuJiahua.json');
 
+// 搬過去的每一個檔記 sha256，寫成 zhuJiahua.sync.json；前端的 validate:synced 拿它對帳，
+// 前端那邊手改過、或者資料倉改了而沒有重跑 sync，都會被報出來。2026-08-27 一條校訂在資料倉裡
+// 兩週而站上仍是舊稿，就是先前沒有這一份。圖版與頁圖走 public/，不進版控，不列。
+const frontendRoot = resolve(dirname(target), '../..');
+const manifest = { source: 'zhu-jiahua-research-data，npm run sync', generatedAt: new Date().toISOString().slice(0, 10), files: {} };
+async function copyTracked(from, to) {
+  await copyFile(from, to);
+  manifest.files[relative(frontendRoot, to)] = createHash('sha256').update(await readFile(to)).digest('hex');
+}
+
 await mkdir(dirname(target), { recursive: true });
-await copyFile(source, target);
+await copyTracked(source, target);
 console.log(`已同步公開快照：${target}`);
 
 // 年表另存一份：71 個年目與其中十二年的校訂全文，只有 /zhujiahua/chronology 讀它。
 const chronologySource = resolve(here, '../../data/processed/chronology.json');
 const chronologyTarget = resolve(dirname(target), 'zhuJiahuaChronology.json');
-await copyFile(chronologySource, chronologyTarget);
+await copyTracked(chronologySource, chronologyTarget);
 console.log(`已同步年表：${chronologyTarget}`);
 
 // 編輯體例：凡例頁讀它。前端用靜態 import，這一份漏帶了建置就紅，不會安靜地少一頁。
 const notesTarget = resolve(dirname(target), 'zhuJiahuaEditorialNotes.json');
-await copyFile(resolve(here, '../../data/processed/editorial-notes.json'), notesTarget);
+await copyTracked(resolve(here, '../../data/processed/editorial-notes.json'), notesTarget);
 console.log(`已同步編輯體例：${notesTarget}`);
 
 // 讀稿一篇一檔，前端按需載入。整份塞進快照會讓 /zhujiahua 一開就拉五十幾萬字。
@@ -38,7 +49,7 @@ try {
 if (files.length) {
   await rm(draftTarget, { recursive: true, force: true });
   await mkdir(draftTarget, { recursive: true });
-  for (const f of files) await copyFile(resolve(draftSource, f), resolve(draftTarget, f));
+  for (const f of files) await copyTracked(resolve(draftSource, f), resolve(draftTarget, f));
   console.log(`已同步未校讀稿 ${files.length} 檔：${draftTarget}`);
 }
 
@@ -75,13 +86,13 @@ if (process.env.ZJH_PLATES === '1') {
 // 進到那一頁才載（形式同年表）。落在 src/data 第一層，與其他快照同一層——前端的
 // validate:synced 的筆數基線只收那一層，放進子目錄就沒有東西在看它縮不縮水。
 const searchTarget = resolve(dirname(target), 'zhuJiahuaSearchCorpus.json');
-await copyFile(resolve(here, '../../data/processed/search-corpus.json'), searchTarget);
+await copyTracked(resolve(here, '../../data/processed/search-corpus.json'), searchTarget);
 console.log(`已同步檢索語料：${searchTarget}`);
 
 // 書外文獻：快照一份、讀稿一件一檔，案頁與總覽頁讀前者、正文按需載入後者。
 const relatedSource = resolve(here, '../../data/processed/related-documents.json');
 const relatedTarget = resolve(dirname(target), 'zhuJiahuaRelated.json');
-await copyFile(relatedSource, relatedTarget);
+await copyTracked(relatedSource, relatedTarget);
 console.log(`已同步書外文獻快照：${relatedTarget}`);
 const extSource = resolve(here, '../../data/processed/external-drafts');
 const extTarget = resolve(dirname(target), 'zhuJiahua/related');
@@ -94,7 +105,7 @@ try {
 if (extFiles.length) {
   await rm(extTarget, { recursive: true, force: true });
   await mkdir(extTarget, { recursive: true });
-  for (const f of extFiles) await copyFile(resolve(extSource, f), resolve(extTarget, f));
+  for (const f of extFiles) await copyTracked(resolve(extSource, f), resolve(extTarget, f));
   console.log(`已同步書外文獻讀稿 ${extFiles.length} 檔：${extTarget}`);
 }
 
@@ -121,3 +132,7 @@ if (process.env.ZJH_SCANS === '1') {
   }
   if (copied) console.log(`已同步書外文獻頁圖 ${copied} 張（本機預覽用，不進版控）：${scanTarget}`);
 }
+
+const manifestTarget = resolve(dirname(target), 'zhuJiahua.sync.json');
+await writeFile(manifestTarget, `${JSON.stringify(manifest, null, 2)}\n`);
+console.log(`已寫對帳清單 ${Object.keys(manifest.files).length} 檔：${manifestTarget}`);

@@ -57,3 +57,6 @@ data/derived/plates/
 # 清單（pending.tsv、batch-NN.tsv、page-cap.tsv）與判定（batch-NN-verdicts.tsv）進版控。
 engineering/gap-batch/sheet/
 engineering/gap-batch/batch-*/
+
+# 著作權標示的母本，build-app-toc.mjs 合進公開快照
+!data/materials/rights.json
