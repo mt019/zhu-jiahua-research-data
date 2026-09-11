@@ -114,6 +114,22 @@
       "sourcePages": "17",
       "caseId": "ZJC-02",
       "inBook": null
+    },
+    {
+      "id": "ZJR-008",
+      "sourceId": "SRC-jacar-c13050247000",
+      "seqInSource": 1,
+      "title": "中國工程師學會蘭州年會賀電",
+      "titleInSource": "工程学会に対する朱家驊の祝電",
+      "author": "朱家驊",
+      "authorNote": "賀電出朱家驊，以中央研究院院長代理的名義致；記錄由日本陸軍的監聽者寫成，電文是日譯。",
+      "relation": "論及",
+      "dateIso": "1942-07-31",
+      "dateNote": "記錄的日期。所記的放送在七月三十日，賀電本身的發出日記錄未載。",
+      "language": "ja",
+      "sourcePages": "1-2",
+      "caseId": "ZJC-03",
+      "inBook": null
     }
   ]
 }

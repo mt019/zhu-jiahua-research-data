@@ -53,3 +53,7 @@
 `related-documents.json` 由 `build-related.mjs` 產生，不手改；來源只投影書目欄位，權利判定、取得途徑、掃描參數與收錄來歷留在 derived。讀稿一件一檔在 `external-drafts/ZJR-NNN.json`，由 `build-external-drafts.mjs` 從 GCV 原始回應在符號層重建直排閱讀序產生，欄位形狀照 `reading-drafts/`，另帶 `sourceId`、`pageBreaks[].sourcePage`（原刊頁碼）與哥德件的 `sideMarks[]`（`para`＋`from`／`to`＋`kind`＋`text`，kind 是專名號或書名號，`text` 與正文切片逐字驗）。人工判定收在 `data/materials/external/<SRC-id>/` 的 `segmentation.json`（界內窗、分層線、接段、分段、剔除、起收錨）、`corrections/pg-NN.tsv`（誤／正兩欄，全流命中剛好一次且落在記的那一頁）與 `side-marks.tsv`；三者進版控，頁圖與辨讀稿由原 PDF 再生，不進。
 
 查證線索在 `data/derived/leads.json`，是工程紀錄，永不 sync 到前端；讀者該知道的未定事項寫在 `cases.json` 的 `openQuestions`。新收一件材料只動 JSON／TSV 與 external-drafts，程式與常數表一行不必改（第 3 件材料進來時以此為回歸判準）。
+
+手寫件的讀稿改由轉錄檔供給：`segmentation.json` 宣告 `transcript`（status、statusNote、sourceUrl 與各件的檔名）時，`build-external-drafts.mjs` 讀 `data/materials/external/<SRC-id>/transcript/<ZJR-id>.txt`，不碰 GCV，也不套標點歸位。轉錄檔的體例是 `#` 開頭為註解、空行分段、`@pg N` 宣告以下各段起於第 N 頁。
+
+第 3 件材料（JACAR C13050247000，2026-09-11）的回歸結果：資料層四份 JSON 與 holdings、轉錄檔照既有形狀填即可，`validate-related.mjs` 一行未改。程式與常數表動了三處：`build-external-drafts.mjs` 加轉錄檔這條路（原件是手寫行草，Google Cloud Vision 以 zh-Hant、ja 與不給提示各跑一次都只讀到表格的印刷欄名，字框重建沒有輸入可用）；前端 `src/pages/_zhu-jiahua/seo.js` 的 `CASE_PAGES` 是寫死的案清單，新增一案要補一筆，否則 `cases.js` 載入當下擲錯；前端 `CaseFlow.jsx` 右欄的正文狀態原本寫死「未校辨讀稿」，改讀讀稿自己的 `status`。

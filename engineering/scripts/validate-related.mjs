@@ -107,6 +107,9 @@ for (const f of draftFiles) {
   if (d.charCount !== text.replace(/\s/g, '').length) fail(`${d.id} 的 charCount 與正文對不上`)
   if (d.textVersion !== createHash('sha256').update(text).digest('hex').slice(0, 12)) fail(`${d.id} 的 textVersion 與正文對不上`)
   if (d.manualCorrections !== (d.corrections?.length ?? 0)) fail(`${d.id} 的 manualCorrections 與 corrections 筆數不同`)
+  // 正文不出自本倉辨讀的（手寫件走轉錄檔那條路），要指得出它抄自哪裡。
+  if (d.status !== '未校辨讀稿' && !d.transcriptSource) fail(`${d.id} 的讀稿狀態是「${d.status}」而沒有 transcriptSource`)
+  if (d.transcriptSource && !/^https?:\/\//.test(d.transcriptSource)) fail(`${d.id} 的 transcriptSource 不是網址：${d.transcriptSource}`)
   // 頁界落在段落範圍內，原刊頁落在平表宣告的頁範圍內。
   const [pLo, pHi] = String(rel.sourcePages).split('-').map(Number)
   for (const b of d.pageBreaks) {
@@ -206,6 +209,8 @@ if (rootAt < 0) {
     ['related_index 不在', (t) => renameSync(join(t, 'data/derived/related_index.json'), join(t, 'data/derived/related_index.json.away'))],
     ['快照與 derived 不同步', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.documents.pop() })],
     ['工作用語進快照', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].account += '待站主裁定。' })],
+    ['他館翻刻的讀稿沒有出處', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { delete j.transcriptSource })],
+    ['轉錄出處不是網址', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { j.transcriptSource = 'JACAR' })],
   ]
   const edit = (t, rel, mutate) => {
     const p = join(t, rel)

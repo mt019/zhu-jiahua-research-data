@@ -21,6 +21,12 @@
 //
 // 讀稿的定位與全書那批相同：索引與切段的依據，不是權威正文。要引用的句子回原頁圖逐字核。
 //
+// 手寫件走另一條路：segmentation.json 宣告 transcript 時，讀稿改由
+// data/materials/external/<SRC-id>/transcript/<ZJR-id>.txt 供給，不碰 GCV。2026-09-11 收 JACAR
+// C13050247000 時加的——那兩頁是行草手寫，Google Cloud Vision 三次辨讀（語言提示 zh-Hant、ja、
+// 不給）只讀到表格的印刷欄名，手寫本文一字未出，字框重建這條路沒有輸入可用。轉錄檔的體例：
+// # 開頭是註解，空行分段，「@pg N」宣告以下各段起於第 N 頁；正文照錄，不套標點歸位。
+//
 // --dump <SRC-id>：只印重建出來的流（帶頁與段界），供人工定錨與核對原頁圖，不寫檔。
 
 import { createHash } from 'node:crypto'
@@ -140,6 +146,69 @@ for (const src of sources) {
   if (!existsSync(segPath) && dumpId !== src.id) fail(`${src.id}：找不到 segmentation.json（先用 --dump ${src.id} 看流再定錨）`)
   const seg = existsSync(segPath) ? JSON.parse(readFileSync(segPath, 'utf8')) : null
   if (dumpId && dumpId !== src.id) continue
+
+  // 轉錄檔供給的讀稿（手寫件）：一件一檔，不走字框重建，也不套標點歸位（正文照錄他館的翻刻）。
+  if (seg?.transcript) {
+    const t = seg.transcript
+    const docsHere = relatedDocs.filter((d) => d.sourceId === src.id)
+    const declared = t.documents ?? []
+    if (declared.length !== docsHere.length ||
+        declared.some((d) => !docsHere.find((r) => r.id === d.docId)))
+      fail(`${src.id}：transcript 的 documents 與 related_index 對不上（${declared.map((d) => d.docId)} vs ${docsHere.map((d) => d.id)}）`)
+    if (!t.status || !t.statusNote) fail(`${src.id}：transcript 要寫 status 與 statusNote（正文出自哪裡、限度在哪）`)
+    const declaredPages = new Set((seg.pages ?? []).map((s) => s.sourcePage ?? s.page))
+    for (const d of declared) {
+      const file = join(base, 'transcript', d.file)
+      if (!existsSync(file)) fail(`${src.id} ${d.docId}：找不到轉錄檔 ${file}`)
+      const rel = docsHere.find((r) => r.id === d.docId)
+      const paras = []
+      const pageBreaks = []
+      let page = null
+      let blank = true
+      for (const [i, raw] of readFileSync(file, 'utf8').split('\n').entries()) {
+        const line = raw.replace(/\r$/, '')
+        if (line.startsWith('#')) continue
+        const pg = line.match(/^@pg\s+(\d+)$/)
+        if (pg) {
+          page = Number(pg[1])
+          if (!declaredPages.has(page)) fail(`${src.id} ${d.file}:${i + 1}：@pg ${page} 不在 segmentation 的 pages 裡`)
+          blank = true
+          continue
+        }
+        if (!line.trim()) { blank = true; continue }
+        if (page === null) fail(`${src.id} ${d.file}:${i + 1}：正文出現在任何 @pg 之前`)
+        if (blank) {
+          pageBreaks.push({ sourcePage: page, para: paras.length, offset: 0 })
+          paras.push(line)
+          blank = false
+        } else paras[paras.length - 1] += line
+      }
+      if (!paras.length) fail(`${src.id} ${d.docId}：轉錄檔裡沒有正文`)
+      // 頁界只留每一頁第一次出現的位置，與字框那條路同一個判準。
+      const seen = new Set()
+      const breaks = pageBreaks.filter((b) => (seen.has(b.sourcePage) ? false : seen.add(b.sourcePage)))
+      const text = paras.join('\n')
+      const doc = {
+        id: d.docId,
+        sourceId: src.id,
+        title: rel.title,
+        status: t.status,
+        statusNote: t.statusNote,
+        charCount: text.replace(/\s/g, '').length,
+        textVersion: createHash('sha256').update(text).digest('hex').slice(0, 12),
+        manualCorrections: 0,
+        corrections: [],
+        paragraphs: paras,
+        pageBreaks: breaks,
+      }
+      if (t.sourceUrl) doc.transcriptSource = t.sourceUrl
+      writeFileSync(join(outDir, `${d.docId}.json`), `${JSON.stringify(doc, null, 2)}\n`)
+      written.add(`${d.docId}.json`)
+      console.log(`${d.docId}（${rel.title}）：轉錄稿 ${paras.length} 段 ${doc.charCount} 字，原刊頁 ${breaks.map((b) => b.sourcePage).join('、')}`)
+      totalDocs += 1
+    }
+    continue
+  }
 
   // 1. 逐頁重建，收成帶頁籤的段落流。paragraph = { pieces: [{ text, page }] }
   const pageSpecs = seg?.pages ?? readdirSync(join(base, 'gcv/json'))
