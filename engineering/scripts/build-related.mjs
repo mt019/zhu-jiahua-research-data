@@ -26,6 +26,37 @@ const sources = read('data/derived/sources.json').sources.map((s) => {
 const related = read('data/derived/related_index.json')
 const cases = read('data/derived/cases.json')
 
+// 總覽頁的視圖欄位：件的年份、刊物標籤、作者標籤，案的年代標籤，四個篩選器的選項與計數。
+// 這些都算得出來，照前端行數上限的規矩搬進資料層，JSX 只挑著印。
+const sourceLabel = (id) => {
+  const src = sources.find((s) => s.id === id)
+  return src.issue && src.kind !== '期刊附刊' ? `《${src.title}》${src.issue}` : `《${src.title}》`
+}
+const yearOf = (d) => (d.dateIso ? d.dateIso.slice(0, 4) : null)
+const facet = (values, allLabel) => {
+  const counts = new Map()
+  for (const v of values) if (v != null) counts.set(v, (counts.get(v) ?? 0) + 1)
+  return [{ value: 'all', label: allLabel, hint: String(values.length) },
+    ...[...counts].map(([value, count]) => ({ value, label: value, hint: String(count) }))]
+}
+const docs = related.documents
+const view = {
+  documents: Object.fromEntries(docs.map((d) => [d.id, {
+    year: yearOf(d), sourceLabel: sourceLabel(d.sourceId), authorLabel: d.author ?? '未署名',
+  }])),
+  cases: Object.fromEntries(cases.cases.map((c) => {
+    const from = c.dateFrom ? c.dateFrom.slice(0, 4) : null
+    const to = c.dateTo ? c.dateTo.slice(0, 4) : null
+    return [c.id, { yearsLabel: !from ? '—' : to && to !== from ? `${from}–${to}` : from }]
+  })),
+  facets: {
+    relation: facet(docs.map((d) => d.relation), '全部關係'),
+    year: facet(docs.map(yearOf), '全部年代'),
+    source: facet(docs.map((d) => sourceLabel(d.sourceId)), '全部刊物'),
+    author: facet(docs.map((d) => d.author ?? '未署名'), '全部作者'),
+  },
+}
+
 const snapshot = {
   schemaVersion: 1,
   generatedAt: new Date().toISOString(),
@@ -34,6 +65,7 @@ const snapshot = {
   sources,
   documents: related.documents,
   cases: cases.cases,
+  view,
 }
 const target = join(root, 'data/processed/related-documents.json')
 writeFileSync(target, `${JSON.stringify(snapshot, null, 2)}\n`)

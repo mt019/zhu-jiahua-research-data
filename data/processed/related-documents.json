@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T17:20:57.602Z",
+  "generatedAt": "2026-09-20T17:28:47.107Z",
   "idPrefixes": {
     "source": "SRC",
     "document": "ZJR",
@@ -345,5 +345,183 @@
         "講演的日期與該班的期次，封面與正文都未記，只印「民國三十三年二月印」。"
       ]
     }
-  ]
+  ],
+  "view": {
+    "documents": {
+      "ZJR-001": {
+        "year": "1926",
+        "sourceLabel": "《改正條約會附刊》",
+        "authorLabel": "朱家驊"
+      },
+      "ZJR-002": {
+        "year": null,
+        "sourceLabel": "《改正條約會附刊》",
+        "authorLabel": "米松林"
+      },
+      "ZJR-006": {
+        "year": null,
+        "sourceLabel": "《改正條約會附刊》",
+        "authorLabel": "未署名"
+      },
+      "ZJR-003": {
+        "year": "1926",
+        "sourceLabel": "《改正條約會附刊》",
+        "authorLabel": "朱家驊"
+      },
+      "ZJR-004": {
+        "year": null,
+        "sourceLabel": "《改正條約會附刊》",
+        "authorLabel": "心史"
+      },
+      "ZJR-005": {
+        "year": null,
+        "sourceLabel": "《現代評論》第二卷第五十期",
+        "authorLabel": "李競何"
+      },
+      "ZJR-007": {
+        "year": null,
+        "sourceLabel": "《現代評論》第二卷第五十期",
+        "authorLabel": "未署名"
+      },
+      "ZJR-008": {
+        "year": "1942",
+        "sourceLabel": "《工程学会に対する朱家驊の祝電　華文放送　昭和一七年七月三一日》重慶側資料第一四〇號「西北經濟」日華文資料合訂本　技術者（工程師）學會　昭和一七年一〇月",
+        "authorLabel": "朱家驊"
+      },
+      "ZJR-009": {
+        "year": "1944",
+        "sourceLabel": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
+        "authorLabel": "朱家驊"
+      }
+    },
+    "cases": {
+      "ZJC-01": {
+        "yearsLabel": "1926"
+      },
+      "ZJC-02": {
+        "yearsLabel": "1925"
+      },
+      "ZJC-03": {
+        "yearsLabel": "1942"
+      },
+      "ZJC-04": {
+        "yearsLabel": "1944"
+      }
+    },
+    "facets": {
+      "relation": [
+        {
+          "value": "all",
+          "label": "全部關係",
+          "hint": "9"
+        },
+        {
+          "value": "自撰",
+          "label": "自撰",
+          "hint": "2"
+        },
+        {
+          "value": "致他",
+          "label": "致他",
+          "hint": "1"
+        },
+        {
+          "value": "同案並列",
+          "label": "同案並列",
+          "hint": "3"
+        },
+        {
+          "value": "覆他",
+          "label": "覆他",
+          "hint": "1"
+        },
+        {
+          "value": "論及",
+          "label": "論及",
+          "hint": "2"
+        }
+      ],
+      "year": [
+        {
+          "value": "all",
+          "label": "全部年代",
+          "hint": "9"
+        },
+        {
+          "value": "1926",
+          "label": "1926",
+          "hint": "2"
+        },
+        {
+          "value": "1942",
+          "label": "1942",
+          "hint": "1"
+        },
+        {
+          "value": "1944",
+          "label": "1944",
+          "hint": "1"
+        }
+      ],
+      "source": [
+        {
+          "value": "all",
+          "label": "全部刊物",
+          "hint": "9"
+        },
+        {
+          "value": "《改正條約會附刊》",
+          "label": "《改正條約會附刊》",
+          "hint": "5"
+        },
+        {
+          "value": "《現代評論》第二卷第五十期",
+          "label": "《現代評論》第二卷第五十期",
+          "hint": "2"
+        },
+        {
+          "value": "《工程学会に対する朱家驊の祝電　華文放送　昭和一七年七月三一日》重慶側資料第一四〇號「西北經濟」日華文資料合訂本　技術者（工程師）學會　昭和一七年一〇月",
+          "label": "《工程学会に対する朱家驊の祝電　華文放送　昭和一七年七月三一日》重慶側資料第一四〇號「西北經濟」日華文資料合訂本　技術者（工程師）學會　昭和一七年一〇月",
+          "hint": "1"
+        },
+        {
+          "value": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
+          "label": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
+          "hint": "1"
+        }
+      ],
+      "author": [
+        {
+          "value": "all",
+          "label": "全部作者",
+          "hint": "9"
+        },
+        {
+          "value": "朱家驊",
+          "label": "朱家驊",
+          "hint": "4"
+        },
+        {
+          "value": "米松林",
+          "label": "米松林",
+          "hint": "1"
+        },
+        {
+          "value": "未署名",
+          "label": "未署名",
+          "hint": "2"
+        },
+        {
+          "value": "心史",
+          "label": "心史",
+          "hint": "1"
+        },
+        {
+          "value": "李競何",
+          "label": "李競何",
+          "hint": "1"
+        }
+      ]
+    }
+  }
 }

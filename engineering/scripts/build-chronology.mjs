@@ -261,9 +261,24 @@ const STATUS_LABEL = {
   mixed: '人工逐頁校訂與 Google Cloud Vision 未校辨讀稿並存（本年條目跨越兩種材料的交界）',
 }
 
+// 人生階段：左欄年目樹的另一種分組（站主 2026-09-21 指出按十年分沒有意義）。分期是編輯判斷，
+// 收在 data/materials/chronology/stages.json；這裡只驗它把 71 年切成頭尾相接、不重不漏的幾段。
+const stagesFile = JSON.parse(readFileSync(join(root, 'data/materials/chronology/stages.json'), 'utf8'))
+const stages = stagesFile.stages
+const first = index[0].ce
+const last = index.at(-1).ce
+stages.forEach((s, i) => {
+  if (!(Number.isInteger(s.from) && Number.isInteger(s.to) && s.from <= s.to)) fail(`階段 ${s.id} 的起訖年不對：${s.from}–${s.to}`)
+  if (!s.label || !s.basis) fail(`階段 ${s.id} 缺 label 或 basis`)
+  const expectFrom = i === 0 ? first : stages[i - 1].to + 1
+  if (s.from !== expectFrom) fail(`階段 ${s.id} 起於 ${s.from}，應接在前一段之後起於 ${expectFrom}`)
+})
+if (stages.at(-1).to !== last) fail(`最後一個階段止於 ${stages.at(-1).to}，年目到 ${last}`)
+
 // ── 組出年目 ────────────────────────────────────────────────────────────────
 const transcribedFirst = 353 // PDF 1，全書年目正文的起點
 const transcribedLast = 417 // PDF 65；418 頁起是後記，不算年目正文
+const maxPieces = Math.max(...[...piecesByCe.values()].map((l) => l.length))
 const years = index.map((entry, i) => {
   const text = textByCe.get(entry.ce)
   const next = index[i + 1]
@@ -274,8 +289,20 @@ const years = index.map((entry, i) => {
     age: entry.ce - 1893,
   }
   if (entry.note) out.indexNote = entry.note
+  // 左欄年目樹的分組標籤由資料層給，前端只挑一種印（十年是原書自己的刻度，人生階段見 stages）
+  const stage = stages.find((s) => entry.ce >= s.from && entry.ce <= s.to)
+  out.groups = {
+    stage: `${stage.from}–${stage.to}　${stage.label}`,
+    decade: `${Math.floor(entry.ce / 10) * 10} 年代`,
+  }
   const pieces = piecesByCe.get(entry.ce) ?? []
   if (pieces.length) out.pieces = pieces
+  // 左欄樹的一列：標籤、提示與列尾墨色小方塊的深淺（篇數對全書單年最大篇數線性映到 0.25–0.85）
+  out.tree = {
+    title: `${entry.ce}　${entry.rocLabel}`,
+    hint: pieces.length ? `本年收入《言論集》${pieces.length} 篇` : null,
+    mark: pieces.length ? 0.25 + 0.6 * (pieces.length / maxPieces) : null,
+  }
   if (text) {
     // 只有最後一年（1963）會被切斷：條目續至 417 頁以後的後記與附錄，本站止於 417 頁
     const tailCut = next ? next.bookPage > transcribedLast : true
@@ -294,20 +321,6 @@ const years = index.map((entry, i) => {
   }
   return out
 })
-
-// 人生階段：左欄年目樹的另一種分組（站主 2026-09-21 指出按十年分沒有意義）。分期是編輯判斷，
-// 收在 data/materials/chronology/stages.json；這裡只驗它把 71 年切成頭尾相接、不重不漏的幾段。
-const stagesFile = JSON.parse(readFileSync(join(root, 'data/materials/chronology/stages.json'), 'utf8'))
-const stages = stagesFile.stages
-const first = years[0].ce
-const last = years.at(-1).ce
-stages.forEach((s, i) => {
-  if (!(Number.isInteger(s.from) && Number.isInteger(s.to) && s.from <= s.to)) fail(`階段 ${s.id} 的起訖年不對：${s.from}–${s.to}`)
-  if (!s.label || !s.basis) fail(`階段 ${s.id} 缺 label 或 basis`)
-  const expectFrom = i === 0 ? first : stages[i - 1].to + 1
-  if (s.from !== expectFrom) fail(`階段 ${s.id} 起於 ${s.from}，應接在前一段之後起於 ${expectFrom}`)
-})
-if (stages.at(-1).to !== last) fail(`最後一個階段止於 ${stages.at(-1).to}，年目到 ${last}`)
 
 const withText = years.filter((y) => y.text)
 const totalChars = withText.reduce((n, y) => n + y.text.charCount, 0)
@@ -371,6 +384,7 @@ const doc = {
     },
   },
   stages: stages.map(({ id, label, from, to, basis }) => ({ id, label, from, to, basis })),
+  groupings: [{ id: 'stage', label: '人生階段' }, { id: 'decade', label: '十年' }, { id: 'flat', label: '不分組' }],
   stats: {
     yearCount: years.length,
     yearsWithText: withText.length,
