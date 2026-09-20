@@ -225,7 +225,12 @@ if (rootAt < 0) {
       cpSync(join(root, rel), join(t, rel), { recursive: true })
     }
     mutate(t)
-    const run = spawnSync(process.execPath, [selfPath, '--root', t], { encoding: 'utf8' })
+    // stdin 明確給 ignore：這支負向測試起的副本自己還會再起共用層的 ocr_check.py，
+    // 孫行程繼承呼叫端的 stdio 時會停在讀 stdin 上（2026-09-21 實測，整條鏈不動而 CPU 用量是零）。
+    const run = spawnSync(process.execPath, [selfPath, '--root', t], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    })
     rmSync(t, { recursive: true, force: true })
     if (run.status === 0) fail(`負向測試「${name}」沒有被抓到`)
     passed += 1
