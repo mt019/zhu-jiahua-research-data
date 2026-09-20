@@ -7,6 +7,9 @@
 //          按像素數濾掉（改正條約會附刊的印是 262×265，頁面是 2519×3548 起跳）。
 //   rgb  ：走 pdftoppm，再取紅色版當灰階值——紅印在紅色版是高值而被壓成接近白，
 //          黑字三個色版都是低值。灰階換算會把紅印留成中灰，壓在字上就影響辨讀。
+// digitisation.ocrScale 大於 1 的來源，取圖之後再以 sips 放大該倍數（只放大，不重新取樣資訊）：
+// 《黨的組織與領導》的 300 ppi 一位元掃描字小，GCV 在原尺寸整欄漏讀（pg-04 一欄 38 字只讀到 15 字），
+// 放大兩倍後讀全（2026-09-21 實測）。segmentation.json 的 bodyX 量的是放大後的座標。
 // 個別件要改判準時寫進 OVERRIDES，一件一列。
 //
 // 已有輸出的頁面跳過；--force 重做。頁數與 holdings 記的不符一律中止。
@@ -41,7 +44,7 @@ const recipeFor = (src) => {
   const base = colour === '1-bit'
     ? { method: 'pdfimages', minPixels: 1_000_000 }
     : { method: 'pdftoppm', dpi: src.digitisation?.ppi || 300, channel: 'r' }
-  return { ...base, ...(OVERRIDES[src.id] || {}) }
+  return { ...base, scale: src.digitisation?.ocrScale ?? 1, ...(OVERRIDES[src.id] || {}) }
 }
 
 let total = 0
@@ -93,6 +96,12 @@ for (const src of held) {
         if (ppm.length !== 1) fail(`${src.id} 第 ${p} 頁：pdftoppm 產出 ${ppm.length} 個 PPM，應為 1 個`)
         writeFileSync(out, ppmToGrayPng(readFileSync(join(tmp, ppm[0])), recipe.channel))
       }
+      if (recipe.scale > 1) {
+        const g = execFileSync('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', out], { encoding: 'utf8' })
+        const w = Number(/pixelWidth: (\d+)/.exec(g)[1])
+        const h = Number(/pixelHeight: (\d+)/.exec(g)[1])
+        execFileSync('sips', ['-z', String(h * recipe.scale), String(w * recipe.scale), out], { stdio: 'pipe' })
+      }
     } finally {
       rmSync(tmp, { recursive: true, force: true })
     }
@@ -104,7 +113,7 @@ for (const src of held) {
     fail(`${src.id}：頁圖 ${made.length} 張，holdings 記原件 ${pageCount} 頁，不相符`)
   }
   console.log(`${src.id}：${made.length} 張（${recipe.method}`
-    + `${recipe.method === 'pdftoppm' ? `，${recipe.dpi} dpi，取 ${recipe.channel} 色版` : `，濾掉像素數低於 ${recipe.minPixels.toLocaleString('en-US')} 的物件`}）→ ${pagesDir.replace(root + '/', '')}`)
+    + `${recipe.method === 'pdftoppm' ? `，${recipe.dpi} dpi，取 ${recipe.channel} 色版` : `，濾掉像素數低於 ${recipe.minPixels.toLocaleString('en-US')} 的物件`}${recipe.scale > 1 ? `，放大 ${recipe.scale} 倍` : ''}）→ ${pagesDir.replace(root + '/', '')}`)
 }
 
 console.log(`本次新產 ${total} 張，沿用既有 ${skipped} 張。`)

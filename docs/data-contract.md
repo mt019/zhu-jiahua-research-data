@@ -57,3 +57,10 @@
 手寫件的讀稿改由轉錄檔供給：`segmentation.json` 宣告 `transcript`（status、statusNote、sourceUrl 與各件的檔名）時，`build-external-drafts.mjs` 讀 `data/materials/external/<SRC-id>/transcript/<ZJR-id>.txt`，不碰 GCV，也不套標點歸位。轉錄檔的體例是 `#` 開頭為註解、空行分段、`@pg N` 宣告以下各段起於第 N 頁。
 
 第 3 件材料（JACAR C13050247000，2026-09-11）的回歸結果：資料層四份 JSON 與 holdings、轉錄檔照既有形狀填即可，`validate-related.mjs` 一行未改。程式與常數表動了三處：`build-external-drafts.mjs` 加轉錄檔這條路（原件是手寫行草，Google Cloud Vision 以 zh-Hant、ja 與不給提示各跑一次都只讀到表格的印刷欄名，字框重建沒有輸入可用）；前端 `src/pages/_zhu-jiahua/seo.js` 的 `CASE_PAGES` 是寫死的案清單，新增一案要補一筆，否則 `cases.js` 載入當下擲錯；前端 `CaseFlow.jsx` 右欄的正文狀態原本寫死「未校辨讀稿」，改讀讀稿自己的 `status`。
+
+第 4 件材料（中央訓練團講演錄《黨的組織與領導》，2026-09-21）是七十四頁的整本書，回歸結果：資料層
+四份 JSON、holdings、`segmentation.json` 與校訂表照既有形狀填，驗證器一行未改。程式動了三處，都是
+整本書才有的事：`build-external-pages.mjs` 讀 `digitisation.ocrScale`，取圖後放大再辨讀（小字一位元
+掃描在原尺寸整欄漏字）；`build-external-gcv.mjs` 讀 `segmentation.json` 的 `blankPages`，宣告過的
+空白頁才准辨讀成空；新增 `propose-external-layout.mjs` 從辨讀稿量出每頁的 `bodyX` 印成草案，
+七十四頁不逐頁手量。前端 `seo.js` 的 `CASE_PAGES` 照舊要補一筆。

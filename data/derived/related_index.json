@@ -130,6 +130,20 @@
       "sourcePages": "1-2",
       "caseId": "ZJC-03",
       "inBook": null
+    },
+    {
+      "id": "ZJR-009",
+      "sourceId": "SRC-nlc-dang-de-zuzhi-yu-lingdao-1944",
+      "seqInSource": 1,
+      "title": "黨的組織與領導",
+      "titleInSource": "黨的組織與領導",
+      "author": "朱家驊",
+      "relation": "自撰",
+      "dateIso": "1944-02",
+      "dateNote": "封面所印的印行年月；講演的日期封面與正文都未記。",
+      "sourcePages": "1-74",
+      "caseId": "ZJC-04",
+      "inBook": null
     }
   ]
 }

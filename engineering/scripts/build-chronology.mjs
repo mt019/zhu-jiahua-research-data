@@ -246,6 +246,11 @@ for (const item of toc) {
     bookStartPage: item.bookStartPage,
   }])
 }
+// 年內的篇按原文日期排，同日再按原書頁次；目次的順序是部次，讀年表的人要的是這一年裡的先後
+// （站主 2026-09-21 指出年內篇目沒按時間排）。dateIso 有只到年或月的，字串比較讓短的排在前。
+for (const list of piecesByCe.values()) {
+  list.sort((a, b) => (a.dateIso < b.dateIso ? -1 : a.dateIso > b.dateIso ? 1 : a.bookStartPage - b.bookStartPage))
+}
 const datedPieces = toc.filter((t) => t.dateIso).length
 const placed = [...piecesByCe.values()].reduce((n, list) => n + list.length, 0)
 if (placed !== datedPieces) fail(`帶日期的 ${datedPieces} 篇裡只掛上 ${placed} 篇`)
@@ -289,6 +294,20 @@ const years = index.map((entry, i) => {
   }
   return out
 })
+
+// 人生階段：左欄年目樹的另一種分組（站主 2026-09-21 指出按十年分沒有意義）。分期是編輯判斷，
+// 收在 data/materials/chronology/stages.json；這裡只驗它把 71 年切成頭尾相接、不重不漏的幾段。
+const stagesFile = JSON.parse(readFileSync(join(root, 'data/materials/chronology/stages.json'), 'utf8'))
+const stages = stagesFile.stages
+const first = years[0].ce
+const last = years.at(-1).ce
+stages.forEach((s, i) => {
+  if (!(Number.isInteger(s.from) && Number.isInteger(s.to) && s.from <= s.to)) fail(`階段 ${s.id} 的起訖年不對：${s.from}–${s.to}`)
+  if (!s.label || !s.basis) fail(`階段 ${s.id} 缺 label 或 basis`)
+  const expectFrom = i === 0 ? first : stages[i - 1].to + 1
+  if (s.from !== expectFrom) fail(`階段 ${s.id} 起於 ${s.from}，應接在前一段之後起於 ${expectFrom}`)
+})
+if (stages.at(-1).to !== last) fail(`最後一個階段止於 ${stages.at(-1).to}，年目到 ${last}`)
 
 const withText = years.filter((y) => y.text)
 const totalChars = withText.reduce((n, y) => n + y.text.charCount, 0)
@@ -351,6 +370,7 @@ const doc = {
       ],
     },
   },
+  stages: stages.map(({ id, label, from, to, basis }) => ({ id, label, from, to, basis })),
   stats: {
     yearCount: years.length,
     yearsWithText: withText.length,

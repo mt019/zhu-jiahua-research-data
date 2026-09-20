@@ -1,0 +1,691 @@
+{
+  "note": "整本書的版面：正文十六欄，書眉「黨的組織與領導」與漢字頁碼在格外的邊欄——PDF 奇數頁在右緣、偶數頁在左緣，首頁的大字篇題在右緣頂端，書眉照樣在左緣底端；書眉的辨讀多有錯字或缺字。各頁的 bodyX（放大兩倍後的座標）由 engineering/scripts/propose-external-layout.mjs 從辨讀稿的欄座標量出（邊欄以文字像書眉、只有數字或拉丁字母、或落在第十七格判定），頁碼可讀的十來頁與 PDF 頁次逐一相符，未見缺頁與重頁。書頁九（pg-12）右半是「兩種不同的整體」對照表（整體與集體各五格），表格的字不進流，bodyX 收到表左為止。段首低二格，節標低三格以上，都由段首縮排判成新段。 書頁十二（pg-15）正文中間排一個小圖（本質的整體、原始的整體），辨讀成兩串亂字，用 ignores 剔除。",
+  "blankPages": [
+    78
+  ],
+  "pages": [
+    {
+      "page": 4,
+      "sourcePage": 1,
+      "bodyX": [
+        553,
+        2570
+      ]
+    },
+    {
+      "page": 5,
+      "sourcePage": 2,
+      "bodyX": [
+        555,
+        2559
+      ]
+    },
+    {
+      "page": 6,
+      "sourcePage": 3,
+      "bodyX": [
+        723,
+        2710
+      ]
+    },
+    {
+      "page": 7,
+      "sourcePage": 4,
+      "bodyX": [
+        528,
+        2503
+      ]
+    },
+    {
+      "page": 8,
+      "sourcePage": 5,
+      "bodyX": [
+        698,
+        2670
+      ]
+    },
+    {
+      "page": 9,
+      "sourcePage": 6,
+      "bodyX": [
+        528,
+        2515
+      ]
+    },
+    {
+      "page": 10,
+      "sourcePage": 7,
+      "bodyX": [
+        704,
+        2677
+      ]
+    },
+    {
+      "page": 11,
+      "sourcePage": 8,
+      "bodyX": [
+        480,
+        2467
+      ]
+    },
+    {
+      "page": 12,
+      "sourcePage": 9,
+      "bodyX": [
+        684,
+        1740
+      ]
+    },
+    {
+      "page": 13,
+      "sourcePage": 10,
+      "bodyX": [
+        527,
+        2512
+      ]
+    },
+    {
+      "page": 14,
+      "sourcePage": 11,
+      "bodyX": [
+        661,
+        2651
+      ]
+    },
+    {
+      "page": 15,
+      "sourcePage": 12,
+      "bodyX": [
+        484,
+        2484
+      ]
+    },
+    {
+      "page": 16,
+      "sourcePage": 13,
+      "bodyX": [
+        679,
+        2654
+      ]
+    },
+    {
+      "page": 17,
+      "sourcePage": 14,
+      "bodyX": [
+        516,
+        2484
+      ]
+    },
+    {
+      "page": 18,
+      "sourcePage": 15,
+      "bodyX": [
+        714,
+        2716
+      ]
+    },
+    {
+      "page": 19,
+      "sourcePage": 16,
+      "bodyX": [
+        544,
+        2536
+      ]
+    },
+    {
+      "page": 20,
+      "sourcePage": 17,
+      "bodyX": [
+        637,
+        2645
+      ]
+    },
+    {
+      "page": 21,
+      "sourcePage": 18,
+      "bodyX": [
+        532,
+        2502
+      ]
+    },
+    {
+      "page": 22,
+      "sourcePage": 19,
+      "bodyX": [
+        618,
+        2606
+      ]
+    },
+    {
+      "page": 23,
+      "sourcePage": 20,
+      "bodyX": [
+        448,
+        2462
+      ]
+    },
+    {
+      "page": 24,
+      "sourcePage": 21,
+      "bodyX": [
+        647,
+        2671
+      ]
+    },
+    {
+      "page": 25,
+      "sourcePage": 22,
+      "bodyX": [
+        489,
+        2466
+      ]
+    },
+    {
+      "page": 26,
+      "sourcePage": 23,
+      "bodyX": [
+        676,
+        2675
+      ]
+    },
+    {
+      "page": 27,
+      "sourcePage": 24,
+      "bodyX": [
+        490,
+        2469
+      ]
+    },
+    {
+      "page": 28,
+      "sourcePage": 25,
+      "bodyX": [
+        667,
+        2665
+      ]
+    },
+    {
+      "page": 29,
+      "sourcePage": 26,
+      "bodyX": [
+        480,
+        2510
+      ]
+    },
+    {
+      "page": 30,
+      "sourcePage": 27,
+      "bodyX": [
+        676,
+        2688
+      ]
+    },
+    {
+      "page": 31,
+      "sourcePage": 28,
+      "bodyX": [
+        523,
+        2512
+      ]
+    },
+    {
+      "page": 32,
+      "sourcePage": 29,
+      "bodyX": [
+        720,
+        2691
+      ]
+    },
+    {
+      "page": 33,
+      "sourcePage": 30,
+      "bodyX": [
+        512,
+        2516
+      ]
+    },
+    {
+      "page": 34,
+      "sourcePage": 31,
+      "bodyX": [
+        756,
+        2745
+      ]
+    },
+    {
+      "page": 35,
+      "sourcePage": 32,
+      "bodyX": [
+        480,
+        2496
+      ]
+    },
+    {
+      "page": 36,
+      "sourcePage": 33,
+      "bodyX": [
+        651,
+        2639
+      ]
+    },
+    {
+      "page": 37,
+      "sourcePage": 34,
+      "bodyX": [
+        514,
+        2489
+      ]
+    },
+    {
+      "page": 38,
+      "sourcePage": 35,
+      "bodyX": [
+        758,
+        2746
+      ]
+    },
+    {
+      "page": 39,
+      "sourcePage": 36,
+      "bodyX": [
+        515,
+        2505
+      ]
+    },
+    {
+      "page": 40,
+      "sourcePage": 37,
+      "bodyX": [
+        713,
+        2708
+      ]
+    },
+    {
+      "page": 41,
+      "sourcePage": 38,
+      "bodyX": [
+        519,
+        2496
+      ]
+    },
+    {
+      "page": 42,
+      "sourcePage": 39,
+      "bodyX": [
+        761,
+        2755
+      ]
+    },
+    {
+      "page": 43,
+      "sourcePage": 40,
+      "bodyX": [
+        531,
+        2514
+      ]
+    },
+    {
+      "page": 44,
+      "sourcePage": 41,
+      "bodyX": [
+        782,
+        2765
+      ]
+    },
+    {
+      "page": 45,
+      "sourcePage": 42,
+      "bodyX": [
+        478,
+        2472
+      ]
+    },
+    {
+      "page": 46,
+      "sourcePage": 43,
+      "bodyX": [
+        684,
+        2694
+      ]
+    },
+    {
+      "page": 47,
+      "sourcePage": 44,
+      "bodyX": [
+        468,
+        2474
+      ]
+    },
+    {
+      "page": 48,
+      "sourcePage": 45,
+      "bodyX": [
+        715,
+        2709
+      ]
+    },
+    {
+      "page": 49,
+      "sourcePage": 46,
+      "bodyX": [
+        472,
+        2481
+      ]
+    },
+    {
+      "page": 50,
+      "sourcePage": 47,
+      "bodyX": [
+        735,
+        2709
+      ]
+    },
+    {
+      "page": 51,
+      "sourcePage": 48,
+      "bodyX": [
+        486,
+        2477
+      ]
+    },
+    {
+      "page": 52,
+      "sourcePage": 49,
+      "bodyX": [
+        732,
+        2718
+      ]
+    },
+    {
+      "page": 53,
+      "sourcePage": 50,
+      "bodyX": [
+        503,
+        2459
+      ]
+    },
+    {
+      "page": 54,
+      "sourcePage": 51,
+      "bodyX": [
+        630,
+        2606
+      ]
+    },
+    {
+      "page": 55,
+      "sourcePage": 52,
+      "bodyX": [
+        517,
+        2504
+      ]
+    },
+    {
+      "page": 56,
+      "sourcePage": 53,
+      "bodyX": [
+        675,
+        2650
+      ]
+    },
+    {
+      "page": 57,
+      "sourcePage": 54,
+      "bodyX": [
+        542,
+        2532
+      ]
+    },
+    {
+      "page": 58,
+      "sourcePage": 55,
+      "bodyX": [
+        776,
+        2786
+      ]
+    },
+    {
+      "page": 59,
+      "sourcePage": 56,
+      "bodyX": [
+        481,
+        2479
+      ]
+    },
+    {
+      "page": 60,
+      "sourcePage": 57,
+      "bodyX": [
+        674,
+        2648
+      ]
+    },
+    {
+      "page": 61,
+      "sourcePage": 58,
+      "bodyX": [
+        517,
+        2499
+      ]
+    },
+    {
+      "page": 62,
+      "sourcePage": 59,
+      "bodyX": [
+        730,
+        2713
+      ]
+    },
+    {
+      "page": 63,
+      "sourcePage": 60,
+      "bodyX": [
+        489,
+        2470
+      ]
+    },
+    {
+      "page": 64,
+      "sourcePage": 61,
+      "bodyX": [
+        748,
+        2723
+      ]
+    },
+    {
+      "page": 65,
+      "sourcePage": 62,
+      "bodyX": [
+        468,
+        2444
+      ]
+    },
+    {
+      "page": 66,
+      "sourcePage": 63,
+      "bodyX": [
+        655,
+        2635
+      ]
+    },
+    {
+      "page": 67,
+      "sourcePage": 64,
+      "bodyX": [
+        499,
+        2508
+      ]
+    },
+    {
+      "page": 68,
+      "sourcePage": 65,
+      "bodyX": [
+        674,
+        2660
+      ]
+    },
+    {
+      "page": 69,
+      "sourcePage": 66,
+      "bodyX": [
+        648,
+        2510
+      ]
+    },
+    {
+      "page": 70,
+      "sourcePage": 67,
+      "bodyX": [
+        692,
+        2684
+      ]
+    },
+    {
+      "page": 71,
+      "sourcePage": 68,
+      "bodyX": [
+        450,
+        2430
+      ]
+    },
+    {
+      "page": 72,
+      "sourcePage": 69,
+      "bodyX": [
+        727,
+        2693
+      ]
+    },
+    {
+      "page": 73,
+      "sourcePage": 70,
+      "bodyX": [
+        497,
+        2496
+      ]
+    },
+    {
+      "page": 74,
+      "sourcePage": 71,
+      "bodyX": [
+        683,
+        2684
+      ]
+    },
+    {
+      "page": 75,
+      "sourcePage": 72,
+      "bodyX": [
+        507,
+        2497
+      ]
+    },
+    {
+      "page": 76,
+      "sourcePage": 73,
+      "bodyX": [
+        564,
+        2674
+      ]
+    },
+    {
+      "page": 77,
+      "sourcePage": 74,
+      "bodyX": [
+        1345,
+        2590
+      ]
+    }
+  ],
+  "ignores": [
+    {
+      "text": "本本質的原原始的",
+      "why": "書頁十二的小圖，辨讀成亂字"
+    },
+    {
+      "text": "整集整",
+      "why": "同上"
+    }
+  ],
+  "documents": [
+    {
+      "docId": "ZJR-009",
+      "start": "本黨是我國唯一的政黨"
+    }
+  ],
+  "leadingNote": "流頭是首頁版心右側的北平圖書館藏印碎字與篇題「黨的組織與領導」，篇題 titleInSource 已收；節標「一、前言」辨讀未讀出。",
+  "joins": [
+    {
+      "head": "，從新又產生了一穰新的關係",
+      "why": "欄頂「的要求」辨讀漏掉，欄因此像低了格"
+    },
+    {
+      "head": "角宛如中流砥柱",
+      "why": "書頁二三欄頂的字漏讀，欄像低了格"
+    },
+    {
+      "head": "74",
+      "why": "書頁二五兩欄之間的髒點被讀成數字，自成一段"
+    },
+    {
+      "head": "遠不變的，要大家",
+      "why": "同上，接回「永」"
+    },
+    {
+      "head": "·而不是「機械的集體」",
+      "why": "欄頂的「」黨」讀進前一段，句讀落到本欄頂"
+    },
+    {
+      "head": "，是應該作如何",
+      "why": "欄頂「權制」辨讀漏掉"
+    },
+    {
+      "head": "理鑒於民元一部分同志",
+      "why": "欄頂「總」辨讀漏掉"
+    },
+    {
+      "head": "、能力、資望與配備",
+      "why": "欄頂的字辨讀漏掉，句讀落到欄頂"
+    },
+    {
+      "head": "。每一個黨員都納於組織之中",
+      "why": "欄頂「靜」辨讀漏掉"
+    },
+    {
+      "head": "全國一、九五〇",
+      "why": "接回「揆」"
+    },
+    {
+      "head": "來者不拒，一拉奏",
+      "why": "接回「倘」"
+    },
+    {
+      "head": "，凡我同志，當以親愛精誠",
+      "why": "欄頂「庭」辨讀漏掉"
+    },
+    {
+      "head": "，凡我同志，當恪守紀律",
+      "why": "欄頂的字辨讀漏掉"
+    },
+    {
+      "head": "，並不是以省主任委員",
+      "why": "欄頂的字辨讀漏掉"
+    },
+    {
+      "head": "…",
+      "why": "書頁六八兩欄之間的髒點被讀成刪節號，自成一段"
+    },
+    {
+      "head": "的第一要着",
+      "why": "同上，接回「思想領導」"
+    },
+    {
+      "head": "W",
+      "why": "書頁七四兩欄之間的髒點被讀成拉丁字母，自成一段"
+    },
+    {
+      "head": "一個綱要而已",
+      "why": "同上，接回「不過是」"
+    }
+  ]
+}

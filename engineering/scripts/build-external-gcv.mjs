@@ -8,7 +8,9 @@
 //
 // 底稿的定位與全書那批相同：索引與切段的依據，不是權威正文。要引用的句子回原頁圖逐字核。
 // 已有輸出的頁面由 gcv_ocr.py 自己跳過，中斷重跑即接續，不重複計費。
-// 兩件合計 6 頁，在每月前 1,000 單位的免費額度內。
+// 整本書的掃描件有封面之外的空白頁（2026-09-21 收《黨的組織與領導》，末葉空白）：
+// segmentation.json 的 blankPages 逐頁宣告，宣告了才開 --allow-empty，辨讀完核對空的那幾頁
+// 與宣告的一致；沒宣告的來源仍是一頁空白就中止。
 
 import { spawnSync } from 'node:child_process'
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmdirSync } from 'node:fs'
@@ -43,8 +45,11 @@ for (const src of sources) {
   mkdirSync(txtDir, { recursive: true })
   mkdirSync(jsonDir, { recursive: true })
 
+  const segPath = join(base, 'segmentation.json')
+  const blank = new Set(existsSync(segPath) ? (JSON.parse(readFileSync(segPath, 'utf8')).blankPages ?? []) : [])
   // gcv_ocr.py 把 json 寫在 --out/json/，本專案要 gcv/txt 與 gcv/json 兩層平行，跑完搬一層
-  const r = spawnSync('python3', [gcvScript, '--out', txtDir, pagesDir], { stdio: 'inherit' })
+  const args = [gcvScript, '--out', txtDir, pagesDir, ...(blank.size ? ['--allow-empty'] : [])]
+  const r = spawnSync('python3', args, { stdio: 'inherit' })
   if (r.status !== 0) fail(`${src.id}：gcv_ocr.py 以非零狀態結束（${r.status}），辨讀未跑完`)
 
   const tmpJson = join(txtDir, 'json')
@@ -57,8 +62,13 @@ for (const src of sources) {
   const json = readdirSync(jsonDir).filter((f) => /^pg-\d+\.json$/.test(f))
   if (txt.length !== pages.length) fail(`${src.id}：純文字 ${txt.length} 份，頁圖 ${pages.length} 張，不相符`)
   if (json.length !== pages.length) fail(`${src.id}：原始回應 ${json.length} 份，頁圖 ${pages.length} 張，不相符`)
-  const empty = txt.filter((f) => readFileSync(join(txtDir, f), 'utf8').trim().length === 0)
-  if (empty.length) fail(`${src.id}：${empty.join('、')} 辨讀結果是空的，這兩件沒有空白頁，空白必是故障`)
+  // 空白頁放大之後偶爾讀出一兩個髒點字（pg-78 在兩倍時讀到 1 字），三字以內視同空白
+  const empty = txt.filter((f) => readFileSync(join(txtDir, f), 'utf8').replace(/\s/g, '').length <= 3)
+    .map((f) => Number(f.match(/\d+/)[0]))
+  const undeclared = empty.filter((p) => !blank.has(p))
+  const notEmpty = [...blank].filter((p) => !empty.includes(p))
+  if (undeclared.length) fail(`${src.id}：pg-${undeclared.join('、pg-')} 辨讀結果是空的，而 segmentation.json 的 blankPages 沒有宣告它，空白必是故障`)
+  if (notEmpty.length) fail(`${src.id}：blankPages 宣告 pg-${notEmpty.join('、pg-')} 空白，辨讀卻讀到字`)
 
   console.log(`${src.id}：${txt.length} 頁純文字與原始回應 → ${base.replace(root + '/', '')}/gcv/`)
   done += txt.length

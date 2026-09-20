@@ -2,6 +2,7 @@
 node_modules/
 data/raw/books/*
 !data/raw/books/.gitkeep
+!data/raw/books/index.md
 data/raw/web/*
 !data/raw/web/.gitkeep
 # 外部網頁的留痕清單：原始 HTML 與純文字不進版控，這一份清單進。
@@ -21,6 +22,8 @@ data/materials/*
 !data/materials/chronology/
 data/materials/chronology/*
 !data/materials/chronology/corrections/
+# 年表左欄的人生階段分組是編輯判斷，進版控
+!data/materials/chronology/stages.json
 !data/materials/speeches/
 data/materials/speeches/*
 !data/materials/speeches/corrections/
