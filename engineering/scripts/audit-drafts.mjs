@@ -1,4 +1,6 @@
-// 讀稿殘留的批量糾察。200 篇一次掃完，按類別印出篇號、段號與原字，供逐條回原頁圖判讀。
+// 讀稿殘留的批量糾察。言論集的 reading-drafts 與書外文獻的 external-drafts 一次掃完，
+// 按類別印出篇號、段號與原字，供逐條回原頁圖判讀。兩個目錄都要有稿，空的就中止——
+// 本程式原先只讀 reading-drafts，書外文獻九件從收進來就沒有任何東西在掃它們。
 //
 // 判準不寫在這裡：辨讀稿的殘留形狀是共用層的
 // ~/.claude/skills/cjk-print-ocr/ocr_shapes.py，經 @phenomcanvas/prose-rules/ocr 呼叫。
@@ -12,6 +14,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { checkDrafts } from '@phenomcanvas/prose-rules/ocr';
 
 const DIR = new URL('../../data/processed/reading-drafts/', import.meta.url);
+const EXTERNAL_DIR = new URL('../../data/processed/external-drafts/', import.meta.url);
 const toc = JSON.parse(await readFile(new URL('../../data/derived/toc_index.json', import.meta.url), 'utf8'));
 
 const HEAD_NAMES = new Set(
@@ -31,11 +34,21 @@ const headKey = (t) =>
 
 const CN_DIGIT = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
 
-const files = (await readdir(DIR)).filter((f) => f.endsWith('.json') && f !== 'index.json');
-const drafts = [];
-for (const file of files.sort()) {
-  drafts.push(JSON.parse(await readFile(new URL(file, DIR), 'utf8')));
-}
+const load = async (dir, what) => {
+  const names = (await readdir(dir)).filter((f) => f.endsWith('.json') && f !== 'index.json');
+  if (!names.length) {
+    console.error(`✗ ${what}：一份稿都沒讀到（${dir.pathname}），先跑建置`);
+    process.exit(1);
+  }
+  const out = [];
+  for (const file of names.sort()) out.push(JSON.parse(await readFile(new URL(file, dir), 'utf8')));
+  return out;
+};
+const bookDrafts = await load(DIR, '言論集');
+const externalDrafts = await load(EXTERNAL_DIR, '書外文獻');
+// 書眉、書根、部次那三條要用《言論集》自己的目次與頁碼，書外文獻沒有目次，只跑共用層。
+const bookIds = new Set(bookDrafts.map((d) => d.id));
+const drafts = [...bookDrafts, ...externalDrafts];
 
 const { results, catalog } = checkDrafts(
   drafts.map((d) => ({ path: d.id, paragraphs: d.paragraphs })),
@@ -54,6 +67,7 @@ for (const [i, draft] of drafts.entries()) {
     console.log(`${f.severity}\t${f.rule}\t${draft.id}\t第 ${f.paragraph} 段\t${para.trim().slice(0, 40)}`);
   }
   // 本書專屬的兩條。
+  if (!bookIds.has(draft.id)) continue;
   for (const [k, para] of draft.paragraphs.entries()) {
     const t = para.trim();
     if (t.length <= 16 && HEAD_NAMES.has(headKey(t))) {
@@ -91,4 +105,4 @@ console.log('---');
 for (const [name, n] of counts) console.log(`${severityOf.get(name) ?? '擋'}　${name}：${n}`);
 console.log(`擋　書根黏在頁首：${pageFoot}`);
 console.log(`擋　書眉或書根夾在段中：${midRun}`);
-console.log(`掃過 ${drafts.length} 篇`);
+console.log(`掃過 ${drafts.length} 篇（言論集 ${bookDrafts.length}、書外文獻 ${externalDrafts.length}）`);

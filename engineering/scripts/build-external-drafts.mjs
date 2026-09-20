@@ -8,6 +8,10 @@
 // 符號按 x 聚成欄、欄按 x 由大到小、欄內按 y 由小到大——這就是直排右起的閱讀序。
 //
 // 人工判定全部收在 data/materials/external/<SRC-id>/segmentation.json（進版控）：
+//   paragraphMark  段落靠什麼標示。columnBreak（預設，報刊）段首不低格，段落換在欄的
+//               交界上；indent（書）段首低格，低幾格算段首由 indentCells 定，欄排滿與否
+//               不作數。《黨的組織與領導》段首低二格，量出來的縮排落在 1.75–2.9 格，接續欄
+//               落在 -0.4–1.27 格，門檻取 1.3。
 //   pages[]     每頁的界內窗（bodyX、bodyY）、分層線（bandSplitY）、原刊頁碼。
 //               界外是版心、頁碼與欄外篇目（pg-01 右緣的「關於中德關係的討論　朱家驊博士」
 //               這種邊欄是篇目資料，不是正文）。數值從符號座標量出，逐頁對過原頁圖。
@@ -86,7 +90,7 @@ const symbolsOf = (gcv) => {
 // 層頂與層底不取極值取中位數（只算排滿的欄）——旋轉的拉丁字母字距小、字框零碎，
 // 極值會被它拉走，pg-02 的 Frankfurter Zeitung 一欄就把整層的頂線拉高了一格。
 const PUNCT = new Set(['。', '，', '、', '；', '：', '？', '！', '」', '』', '）', ')', '.', ','])
-const bandUnits = (syms, charW, indentCells) => {
+const bandUnits = (syms, charW, indentCells, byIndent) => {
   const sorted = [...syms].sort((a, b) => b.cx - a.cx)
   const cols = []
   for (const s of sorted) {
@@ -114,18 +118,29 @@ const bandUnits = (syms, charW, indentCells) => {
   }
   const maxN = Math.max(...cols.map((c) => c.items.length))
   const full = cols.filter((c) => c.items.length >= Math.max(8, maxN * 0.5))
-  const topLine = median((full.length ? full : cols).map((c) => c.top))
-  const botLine = median((full.length ? full : cols).map((c) => c.bottom))
+  const src = full.length ? full : cols
+  // 頂線在 byIndent 的刊物取四分位而不取中位數：辨讀漏掉欄頂的字是這一批的常態，
+  // pg-22 十六欄有一半漏了頭一兩個字，中位數因此被往下拉一格半，於是沒漏字的那八欄
+  // 量出負的縮排，真正低二格的那一欄反而量成低 7.3 格。低分位數釘在沒漏字的那一群上。
+  const quant = (xs, q) => { const a = [...xs].sort((x, y) => x - y); return a[Math.min(a.length - 1, Math.floor(a.length * q))] }
+  const topLine = byIndent ? quant(src.map((c) => c.top), 0.25) : median(src.map((c) => c.top))
+  const botLine = byIndent ? quant(src.map((c) => c.bottom), 0.75) : median(src.map((c) => c.bottom))
   const indented = (c) => c.top - topLine > vpitch * indentCells
   const endsShort = (c) => botLine - c.bottom > vpitch * 1.0
   // 篇端註記與按語的小字接欄（縮排的整塊，欄與欄之間段落沒斷）幾何上與新段分不開
   // ——GCV 的字框量不出鉛字的號數。這一類由 segmentation.json 的 joins 逐處宣告。
+  // byIndent 的刊物另要前一欄的收尾佐證：欄頂掉字會讓接續欄看起來縮排（pg-04 的
+  // 「着——」漏讀，整欄低了 2.84 格），而前一欄排滿到層底、末字又不是句讀時，句子顯然
+  // 還沒說完，那一欄無論低幾格都是同一段的下半截。段落真的在前一欄結束時，前一欄要嘛
+  // 沒排滿，要嘛以句讀收尾。
+  const closed = (c) => !c || endsShort(c) || TERMINAL.has(c.text.at(-1))
   const units = []
   for (let i = 0; i < cols.length; i += 1) {
     const c = cols[i]
     const prev = cols[i - 1]
-    if (units.length === 0 || indented(c) || endsShort(prev)) {
-      units.push({ text: c.text, indentedStart: indented(c) })
+    const starts = indented(c) && (!byIndent || closed(prev))
+    if (units.length === 0 || starts || (!byIndent && endsShort(prev))) {
+      units.push({ text: c.text, indentedStart: starts })
     } else units.at(-1).text += c.text
   }
   units.at(-1).endsShortLast = endsShort(cols.at(-1))
@@ -146,6 +161,11 @@ for (const src of sources) {
   if (!existsSync(segPath) && dumpId !== src.id) fail(`${src.id}：找不到 segmentation.json（先用 --dump ${src.id} 看流再定錨）`)
   const seg = existsSync(segPath) ? JSON.parse(readFileSync(segPath, 'utf8')) : null
   if (dumpId && dumpId !== src.id) continue
+  // 段落靠什麼標示：columnBreak 是報刊的排法，段首不低格，段落換在欄的交界上；
+  // indent 是書的排法，段首低二格，欄排滿與否不作數。兩者的判準見 bandUnits。
+  const mark = seg?.paragraphMark ?? 'columnBreak'
+  if (!['columnBreak', 'indent'].includes(mark)) fail(`${src.id}：paragraphMark 只能是 columnBreak 或 indent，宣告的是「${mark}」`)
+  const byIndent = mark === 'indent'
 
   // 轉錄檔供給的讀稿（手寫件）：一件一檔，不走字框重建，也不套標點歸位（正文照錄他館的翻刻）。
   if (seg?.transcript) {
@@ -231,7 +251,7 @@ for (const src of sources) {
 
     const pageParas = []
     for (const band of bands) {
-      const units = bandUnits(band, charW, spec.indentCells ?? seg?.indentCells ?? 0.6)
+      const units = bandUnits(band, charW, spec.indentCells ?? seg?.indentCells ?? 0.6, byIndent)
       units[0].bandStart = true
       pageParas.push(...units)
     }
@@ -239,10 +259,13 @@ for (const src of sources) {
     for (const p of pageParas) p.text = dots(cornerQuotes(widen(p.text))).text
 
     // 2. 接流：層頭（或頁頭）第一段沒有段首縮排、前一層的末段沒說完（末字不是句讀收尾、
-    // 末欄排滿到層底）的，是同一段的下半截。
+    // 末欄排滿到層底）的，是同一段的下半截。byIndent 的刊物不看末欄排滿到哪裡——頁末
+    // 那一欄的底線是各欄底的分位數，末欄本身排到了底照樣量得出一格多的短少（pg-07 末欄
+    // 三十八字排滿，量出來短 1.12 格），據以擋下接續，會把句子切在頁界上。
     for (const p of pageParas) {
       const prev = paragraphs.at(-1)
-      const joinable = p.bandStart && !p.indentedStart && prev && !prev.endsShort &&
+      const joinable = p.bandStart && !p.indentedStart && prev &&
+        (byIndent || !prev.endsShort) &&
         !TERMINAL.has(prev.pieces.at(-1).text.at(-1))
       if (joinable) {
         prev.pieces.push({ text: p.text, page: spec.page })
