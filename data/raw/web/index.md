@@ -58,3 +58,16 @@ https://www.jacar.archives.go.jp/das/meta/C13050247000 ，2026-09-11 抓取，HT
 翻刻全文，用新字體。原件 PDF 收在
 `data/raw/articles/工程學會祝電_日本陸軍放送記錄_JACAR-C13050247000_1942.pdf`，本文是手寫行草，
 辨讀引擎讀不出來；ZJR-008 的讀稿以這一欄為底，逐句對過原頁圖。
+
+## `leads/dissertation-1922-holdings/`
+
+2026-09-21 查朱家驊 1922 年柏林大學博士論文的書目與現存印本，十二份頁面連同純文字收在這個子目錄，
+子目錄的 `index.md` 一件一列記檔名、網址、抓取時間、狀態碼。兩份目錄記錄核出論文本身未印行：
+德國國家圖書館 https://d-nb.info/363911103 著錄「Ausz. in: Jahrbuch d. Diss. d. Phil. Fak. Berlin.
+1922-23. I.- Dass. [Maschinenschrift] 94 S. m. Taf. 4」，K10plus PPN 617626693 著錄「Auszug aus
+nichtgedruckter Dissertation」，並記作者「geboren 15.5.1893 zu Huchowfu, Chekiang」。印出來的只有
+年鑑 1922/23 卷（1925 年出版）第 37 至 41 頁的摘要；年鑑的紙本館藏見 ZDB idn 013079654，線上版
+由德國國家圖書館 2021 年數位化而只在萊比錫閱覽室的電腦上開放。HathiTrust 五次都回 403 的驗證頁，
+Google Books API 當日額度已盡，DigiZeitschriften 2025 年底停止服務，三處未取到結果。CiNii
+BA52896374 的其他題名「Dissertations of Dr. Chu Chia-Hua」抄自《言論集》PDF 第 786 頁的英文書名頁。
+線索編號 LEAD-010。

@@ -41,3 +41,30 @@
    來源登記走 `sources.json`，原件或影像照 `archive-raw-sources` 落 `sources/raw/`。
 
 對方文中「中研院資料也獨立確認」「歷史書目明確著錄」都沒有給出處，查核時一律回原件，不引用這段話本身。
+
+## 查核結果（2026-09-21）
+
+五項裡三項有了答案，兩項卡在取件。落檔在 `data/raw/web/leads/dissertation-1922-holdings/`，
+線索條目 LEAD-010。
+
+對方那段話裡有一件與目錄記錄相反：它假定 1922 年的學位論文有多份印刷本分送各館。德國國家
+圖書館 https://d-nb.info/363911103 著錄的附註是「Ausz. in: Jahrbuch d. Diss. d. Phil. Fak. Berlin.
+1922-23. I.- Dass. [Maschinenschrift] 94 S. m. Taf. 4」，K10plus PPN 617626693 記「Auszug aus
+nichtgedruckter Dissertation」。全文是 94 頁打字稿附 4 幅圖版，未印行；印出來的只有年鑑上的
+五頁摘要。對方寫的「94 S., Taf.」是打字稿的頁數，「Berlin, 1922」是學位的地點與年份；年鑑
+1922/23 卷 1925 年才出版（ZDB 的館藏欄寫「1922/23(1925)」，K10plus 的出版年欄寫 1925）。
+
+摘要的頁碼 37 至 41 兩筆記錄一致，對方這一項對。年表 1923 年目寫「一月，補做博士論文摘要，在
+校刊上發表」，1945 年目寫兩廣地質調查所的捐書「包括他的博士論文抽印本」全部丟光，兩處所指
+都是這五頁。
+
+「專門收錄中國留歐博士論文的歷史書目」對方沒給書名，候選只有袁同禮那部 Guide（OCLC 8336673），
+條目本身沒取到：本機沒有這本書，HathiTrust 回 403 的 Cloudflare 驗證頁，Google Books API 當日
+額度已盡。是不是同一部書，要拿到條目才定。
+
+CiNii BA52896374 的其他題名欄「Dissertations of Dr. Chu Chia-Hua」抄的是《言論集》自己的英文
+書名頁（本倉 PDF 第 786 頁），日本七所大學圖書館所藏的是這部書。目次 198 篇無德文論文。
+
+打字稿現在在哪裡沒有查到。K10plus 沒有把它當獨立文獻編目的記錄；洪堡大學校史檔案館的
+Promotionsakten 入口是 findbuch.net 的單頁應用，headless 瀏覽器在搜尋欄位輸入逾時，未取得結果；
+HU Primus 未查；克勞斯塔爾工業大學圖書館的目錄網域解析不到。

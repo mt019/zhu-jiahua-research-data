@@ -1,5 +1,18 @@
 # 工程紀錄
 
+## 2026-09-21（續四）　1922 年博士論文：目錄記錄核出全文未印行
+
+站主貼來的另一個模型的回覆說當年應有多份印刷本分送各館，要找的是「現存印本」。德國國家圖書館
+https://d-nb.info/363911103 與 K10plus PPN 617626693 兩筆記錄核出的是：全文是 94 頁打字稿附
+4 幅圖版，未印行，印出來的只有 Jahrbuch der Dissertationen der Philosophischen Fakultät Berlin
+1922/23 卷（1925 年出版）第 37 至 41 頁的摘要。年表 1923 年目「補做博士論文摘要，在校刊上發表」
+與 1945 年目丟失的「博士論文抽印本」指的都是這五頁。CiNii 的其他題名「Dissertations of Dr. Chu
+Chia-Hua」抄自《言論集》第 786 頁的英文書名頁。線索條目 LEAD-010，落檔
+`data/raw/web/leads/dissertation-1922-holdings/`，要核的項目與結果在
+`engineering/leads/dissertation-1922-holdings.md`。摘要影本與打字稿的下落都還沒取得，取件
+途徑寫在 LEAD-010 的 nextStep。查核由 subagent 抓頁面，中途撞 session 額度，用 SendMessage
+接續同一個 agent 寫完索引，沒有重抓。
+
 ## 2026-09-21（續三）　ZJR-009 的節標層與年表分組標籤
 
 原書四層節標（一　前言／甲、組織的定義／1.發展組織／（一）徵求黨員）共 34 條。其中「一　前言」與

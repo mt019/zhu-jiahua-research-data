@@ -85,6 +85,14 @@
       "why": "兩報的今名已定，考述寫得出來；刊出日仍未確認，朱家驊的投書有沒有真的刊出還不知道。",
       "status": "部分查得",
       "nextStep": "存卷的取得途徑各不相同。Frankfurter Zeitung 由法蘭克福大學圖書館數位化（sammlungen.ub.uni-frankfurt.de/periodika），1926 年的分冊已在線上；該站的搜尋比對的是刊名、卷期與日期，不及頁面全文，以 Kiahua 查詢零命中只說明後設資料層沒有這個詞。下一步是逐日開 1926 年 1 月 28 日起約兩個月的分冊頁圖自己讀，search/quick?query=Frankfurter+Zeitung+1926 的結果清單可當分冊入口。Die Welt am Abend 在 ZDB 只著錄兩份縮微捲片，藏於柏林國立圖書館與聯邦檔案館黨政檔案部，沒有線上版的著錄，要看只能調閱捲片。ZEFYS 是柏林國立圖書館自己的入口，其搜尋頁要實際互動才發查詢，本次沒有取到可讀的結果，兩報在不在它的名單上未能確認。德國報紙入口 deutsche-digitale-bibliothek.de/newspaper 回機器人驗證頁，未取到結果。"
+    },
+    {
+      "id": "LEAD-010",
+      "what": "朱家驊 1922 年柏林大學哲學院博士論文 Untersuchungen im Kimmeridge des Langenbergs bei Oker am Harz 的現存本。德國國家圖書館（https://d-nb.info/363911103）與 K10plus（PPN 617626693）兩筆目錄記錄一致：論文本身是 94 頁打字稿附 4 幅圖版，未印行；印行的只有摘要，登在 Jahrbuch der Dissertationen der Philosophischen Fakultät der Friedrich-Wilhelms-Universität zu Berlin 1922/23 卷（1925 年出版）第 37 至 41 頁。K10plus 另記作者生於 1893 年 5 月 15 日浙江湖州府。年表 1923 年目所記「補做博士論文摘要，在校刊上發表」與 1945 年目「博士論文抽印本」隨捐贈藏書丟失，指的都是這五頁摘要。",
+      "why": "站主 2026-09-21 貼來另一個模型的查核回覆，稱當年應有多份印刷本分送各館。目錄記錄核出的是相反的事：全文只有打字稿一份，摘要才有印本。要看全文，找的對象是柏林大學當年收存的那份打字稿。",
+      "status": "部分查得",
+      "nextStep": "摘要五頁：ZDB idn 013079654 列出持有 1922/23 卷的館，柏林國家圖書館（Ah 7870）、洪堡大學圖書館（PA 9123）、自由大學圖書館（28/86/457(0)）三館逐卷核過，德國國家圖書館萊比錫館的架號 ZA 11087 - 1922/23,1；可循館際複印或 subito 取影本，取到就開 SRC 條目並照 archive-raw-sources 落 data/raw/articles/。打字稿：洪堡大學校史檔案館的 Promotionsakten（1810 至 1945 年各院系學位程序檔案，入口 https://www.archiv-hu-berlin.findbuch.net/php/main.php?ar_id=3775）是目前查得的可能落點，2026-09-21 headless 瀏覽器在該站的搜尋欄位輸入逾時，要改用有頭瀏覽器或直接去信檔案館查詢；HU Primus 目錄未查。袁同禮 A Guide to Doctoral Dissertations by Chinese Students in Continental Europe, 1907–1962（OCLC 8336673）裡的朱家驊條目未取得，對方所稱的「歷史書目」是不是這一部仍未定，HathiTrust 與 Google Books 兩處被擋，可從臺大圖書館或中研院的紙本查。",
+      "found": "書目確認，見 data/raw/web/leads/dissertation-1922-holdings/ 的 dnb-permalink 與 k10plus jahrbuch 兩份頁面。CiNii BA52896374 的其他題名「Dissertations of Dr. Chu Chia-Hua」是《言論集》自己的英文書名，本倉 PDF 第 786 頁的英文書名頁印「Collection of Historical Materials No. 3 / DISSERTATIONS OF DR. CHU CHIA-HUA / EDITED BY WANG YEE-CHUN SUN PIN / INSTITUTE OF MODERN HISTORY ACADEMIA SINICA / 1977」，日本七所大學圖書館的館藏都是這部書，與德文論文無關。目次抄本 198 篇無德文論文。K10plus 以作者索引查「Zhu Jiahua」的 18 筆全是另一位在世的經濟學者。"
     }
   ]
 }
