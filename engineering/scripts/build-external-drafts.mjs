@@ -342,6 +342,17 @@ for (const src of sources) {
     paragraphs.splice(at.para, 1, head, tail)
   }
 
+  // 6b. 宣告過的補段：整條漏讀的節標（自成一欄、字大而稀，GCV 對 pg-04 的「一　前言」
+  // 與 pg-69 的「2.對人民團體的領導」都沒有回傳字框），人工對原頁圖補回，插在 before 起首
+  // 的那一段之前，頁籤照宣告。before 須落在段首；落在段中的是接段或校訂，不是補段。
+  for (const ins of seg.inserts ?? []) {
+    if (!ins.text || !ins.before || !ins.page) fail(`${src.id}：insert 要有 text、before、page`)
+    if (!pageSpecs.some((s) => s.page === ins.page)) fail(`${src.id}：insert「${ins.text}」的 page ${ins.page} 不在 pages 裡`)
+    const at = locate(paragraphs, ins.before, `${src.id} insert「${ins.text}」的 before`)
+    if (at.offset !== 0) fail(`${src.id}：insert「${ins.text}」的 before 不在段首（位移 ${at.offset}）`)
+    paragraphs.splice(at.para, 0, { pieces: [{ text: ins.text, page: ins.page }], endsShort: false })
+  }
+
   // 7. 剔除宣告過的字串（篇題欄、雜訊），各須命中剛好一次。
   const streamText = () => paragraphs.map((p) => p.pieces.map((x) => x.text).join('')).join('\n')
   for (const ig of seg.ignores ?? []) {
@@ -417,6 +428,7 @@ for (const src of sources) {
 
   // 6. 逐件輸出。
   const pageOf = Object.fromEntries(pageSpecs.map((s) => [s.page, s.sourcePage ?? s.page]))
+  const matchedHeadings = new Set()
   for (let i = 0; i < anchors.length; i += 1) {
     const a = anchors[i]
     const to = a.endAt ?? (i + 1 < anchors.length ? anchors[i + 1].at : endPos)
@@ -437,6 +449,26 @@ for (const src of sources) {
       corrections: corrections.map((c) => ({ sourcePage: pageOf[c.page], from: c.from, to: c.to })),
       paragraphs: paras,
       pageBreaks,
+    }
+    // 節標：segmentation 的 headings[] 逐條與本件整段相符的段落剛好一段，寫成 para 索引。
+    // 層級是封閉集合 1–4，第一條須是 1 級，之後每條最多比前一條深一級。
+    if (seg.headings?.length) {
+      const mine = []
+      for (const h of seg.headings) {
+        if (![1, 2, 3, 4].includes(h.level)) fail(`${src.id}：節標「${h.text}」的 level ${h.level} 不在 1–4`)
+        const idx = paras.map((p, k) => (p === h.text ? k : -1)).filter((k) => k >= 0)
+        if (idx.length > 1) fail(`${src.id} ${a.docId}：節標「${h.text}」整段相符的有 ${idx.length} 段，須剛好 1 段`)
+        if (idx.length === 1) { mine.push({ para: idx[0], level: h.level, text: h.text }); matchedHeadings.add(h.text) }
+      }
+      if (mine.length) {
+        mine.sort((x, y) => x.para - y.para)
+        if (mine[0].level !== 1) fail(`${src.id} ${a.docId}：第一條節標「${mine[0].text}」是 ${mine[0].level} 級，須是 1 級`)
+        for (let k = 1; k < mine.length; k += 1) {
+          if (mine[k].level > mine[k - 1].level + 1) fail(`${src.id} ${a.docId}：節標「${mine[k].text}」從 ${mine[k - 1].level} 級跳到 ${mine[k].level} 級`)
+        }
+        doc.headings = mine
+        if (seg.headingsNote) doc.headingsNote = seg.headingsNote
+      }
     }
     const marks = sideMarks.get(a.docId) ?? []
     if (marks.length) {
@@ -463,6 +495,7 @@ for (const src of sources) {
     totalDocs += 1
   }
   for (const docId of sideMarks.keys()) fail(`${src.id}：side-marks.tsv 記著 ${docId}，本次沒有這一件的輸出`)
+  for (const h of seg.headings ?? []) if (!matchedHeadings.has(h.text)) fail(`${src.id}：節標「${h.text}」在任何一件的讀稿裡都沒有整段相符的段落`)
   void streamText
 }
 

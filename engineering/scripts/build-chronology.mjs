@@ -289,11 +289,13 @@ const years = index.map((entry, i) => {
     age: entry.ce - 1893,
   }
   if (entry.note) out.indexNote = entry.note
-  // 左欄年目樹的分組標籤由資料層給，前端只挑一種印（十年是原書自己的刻度，人生階段見 stages）
+  // 左欄年目樹的分組標籤由資料層給，前端只挑一種印（十年是原書自己的刻度，人生階段見 stages）。
+  // 每種分組是 { lead?, name }：lead 是起訖年，name 是名目，樹把兩者排成兩行各自不折——
+  // 併成一串印在窄欄會折成第二行只剩兩個字（站主 2026-09-21 令禁）。
   const stage = stages.find((s) => entry.ce >= s.from && entry.ce <= s.to)
   out.groups = {
-    stage: `${stage.from}–${stage.to}　${stage.label}`,
-    decade: `${Math.floor(entry.ce / 10) * 10} 年代`,
+    stage: { lead: `${stage.from}–${stage.to}`, name: stage.label },
+    decade: { name: `${Math.floor(entry.ce / 10) * 10} 年代` },
   }
   const pieces = piecesByCe.get(entry.ce) ?? []
   if (pieces.length) out.pieces = pieces

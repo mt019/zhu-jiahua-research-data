@@ -117,6 +117,13 @@ for (const f of draftFiles) {
     if (!(b.offset >= 0 && b.offset <= d.paragraphs[b.para].length)) fail(`${d.id} 的頁界位移超出段落`)
     if (!(b.sourcePage >= pLo && b.sourcePage <= (pHi ?? pLo))) fail(`${d.id} 的頁界在原刊頁 ${b.sourcePage}，平表宣告的是 ${rel.sourcePages}`)
   }
+  // 節標：para 指得到、text 與那一段整段相同、level 在 1–4。前端拿它渲染標題與章節樹，
+  // 指錯一段就是把正文當標題印。
+  for (const h of d.headings ?? []) {
+    if (!(Number.isInteger(h.para) && h.para >= 0 && h.para < d.paragraphs.length)) fail(`${d.id} 的節標指到不存在的第 ${h.para} 段`)
+    if (d.paragraphs[h.para] !== h.text) fail(`${d.id} 第 ${h.para} 段與節標宣告不同：「${h.text}」`)
+    if (![1, 2, 3, 4].includes(h.level)) fail(`${d.id} 節標「${h.text}」的 level ${h.level} 不在 1–4`)
+  }
   for (const m of d.sideMarks ?? []) {
     if (!['專名號', '書名號'].includes(m.kind)) fail(`${d.id} 側記號種類「${m.kind}」不在封閉集合`)
     if (d.paragraphs[m.para]?.slice(m.from, m.to) !== m.text) fail(`${d.id} 第 ${m.para} 段側記號切片與 text 不符：「${m.text}」`)
@@ -154,9 +161,12 @@ for (const l of leadsFile.leads) {
 // 讀稿過共用辨讀稿層：嚴重度「擋」的當場中止，「待核」列出來。
 {
   const { results } = checkDrafts(drafts.map((d) => ({ path: `external-drafts/${d.id}.json`, paragraphs: d.paragraphs })))
+  const headingParas = new Map(drafts.map((d) => [`external-drafts/${d.id}.json`, new Set((d.headings ?? []).map((h) => h.para))]))
   for (const r of results) {
     for (const f of r.findings) {
       if (f.severity === '擋') fail(`${r.path} 第 ${f.paragraph} 段是辨讀稿殘留（${f.rule}）：「${f.sample}」`)
+      // 宣告過的節標本來就沒有句讀，不列待核；別的規則照列。
+      if (f.rule === '段末無句讀' && headingParas.get(r.path)?.has(f.paragraph)) continue
       console.log(`  待核：${r.path} 第 ${f.paragraph} 段（${f.rule}）「${f.sample}」`)
     }
   }
@@ -203,6 +213,7 @@ if (rootAt < 0) {
     ['案的投影缺角', (t) => edit(t, 'data/derived/cases.json', (j) => { j.cases[0].documents.pop() })],
     ['sourceId 指向不存在的來源', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[0].sourceId = 'SRC-nonesuch' })],
     ['側記號切片不符', (t) => edit(t, 'data/processed/external-drafts/ZJR-005.json', (j) => { j.sideMarks[0].text = '壞' })],
+    ['節標宣告與段落不符', (t) => edit(t, 'data/processed/external-drafts/ZJR-009.json', (j) => { j.headings[0].text = '壞' })],
     ['多出未登記的讀稿', (t) => writeFileSync(join(t, 'data/processed/external-drafts/ZJR-999.json'), '{"id":"ZJR-999"}')],
     ['rights.status 非法值', (t) => edit(t, 'data/derived/sources.json', (j) => { j.sources[0].rights.status = 'open' })],
     ['查核紀錄用語進讀稿', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.statusNote += '列為未確認。' })],
