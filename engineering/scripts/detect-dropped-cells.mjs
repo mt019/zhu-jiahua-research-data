@@ -13,8 +13,13 @@
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const JSON_DIR = 'data/materials/speeches/gcv/txt/json'
-const DUPES = 'data/materials/speeches/gcv-duplicate-pages.json'
+// 預設是《言論集》那批；書外文獻各件的頁圖與辨讀稿在 data/materials/external/<SRC-id>/gcv/json，
+// 用 ZJH_SOURCE=<SRC-id> 指過去（那些件沒有重拍頁的登記檔，跳過重頁檢查）。
+const SOURCE = process.env.ZJH_SOURCE ?? ''
+const JSON_DIR = SOURCE
+  ? `data/materials/external/${SOURCE}/gcv/json`
+  : 'data/materials/speeches/gcv/txt/json'
+const DUPES = SOURCE ? '' : 'data/materials/speeches/gcv-duplicate-pages.json'
 const GAP = Number(process.env.ZJH_GAP ?? 1.5)
 const HEAD_MIN = Number(process.env.ZJH_HEAD_MIN ?? 0.7)   // 欄首低於欄頂線幾個字才報
 const INDENT = Number(process.env.ZJH_INDENT ?? 2)          // 段首縮排的字數
@@ -28,9 +33,9 @@ const MAX = { 欄內間距: Number(process.env.ZJH_MAX_GAP ?? 5), 欄首起排: 
 // 一頁報得太多，表示那一頁不是連排的正文（表格、名錄、目次），整頁另案處理
 const PAGE_CAP = Number(process.env.ZJH_PAGE_CAP ?? 10)
 
-const canonical = new Map(
-  JSON.parse(readFileSync(DUPES, 'utf8')).items.map((d) => [d.pdfPage, d.canonical]),
-)
+const canonical = DUPES
+  ? new Map(JSON.parse(readFileSync(DUPES, 'utf8')).items.map((d) => [d.pdfPage, d.canonical]))
+  : new Map()
 const files = new Map()
 for (const f of readdirSync(JSON_DIR)) {
   const n = Number(f.match(/(\d+)\.json$/)?.[1])

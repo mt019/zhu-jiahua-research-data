@@ -17,8 +17,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
-MATERIALS = REPO / "data" / "materials" / "external"
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from ocr_align import MATERIALS, select_stems  # noqa: E402
 
 
 def main() -> int:
@@ -37,13 +37,9 @@ def main() -> int:
     out_dir = source_dir / "tess" / "txt"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    stems = sorted(p.stem for p in pages_dir.glob("*.png"))
-    if args.only:
-        wanted = {s.strip() for s in args.only.split(",") if s.strip()}
-        missing = wanted - set(stems)
-        if missing:
-            raise SystemExit(f"查無這幾頁：{sorted(missing)}")
-        stems = [s for s in stems if s in wanted]
+    stems = select_stems(sorted(p.stem for p in pages_dir.glob("*.png")), args.only)
+    if not stems:
+        raise SystemExit(f"{pages_dir} 底下一張頁圖都沒有，沒有要讀的頁。")
 
     done = 0
     for stem in stems:
@@ -59,7 +55,10 @@ def main() -> int:
             print(f"{stem} 失敗：{result.stderr.strip()[:200]}", file=sys.stderr)
             return 1
         if not target.exists() or not target.read_text(encoding="utf-8").strip():
-            print(f"{stem}：產物是空的", file=sys.stderr)
+            # 空殼留著的話，下一次執行會因為檔案存在而跳過它，而對齊那支拿到空稿
+            # 會把整頁算成一個涵蓋全頁的差異，覆蓋判定跟著失真（2026-09-22 審查）。
+            target.unlink(missing_ok=True)
+            print(f"{stem}：產物是空的，已刪除，不留空殼", file=sys.stderr)
             return 1
         done += 1
     print(f"{done} 頁新讀，{len(stems)} 頁在 {out_dir}")

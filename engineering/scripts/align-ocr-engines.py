@@ -1,37 +1,37 @@
 #!/usr/bin/env python3
-"""把同一頁的兩份辨讀稿（GCV 與 PaddleOCR）逐字對齊，列出兩邊不同的位置。
+"""把同一頁的兩份辨讀稿（GCV 與第二引擎）逐字對齊，列出兩邊不同的位置。
 
 兩邊都對的字不必看，兩邊都錯的字這個篩子也看不到（所以它是排查核順序的工具，
 不是校訂本身的依據）；判準是「兩邊不同的位置回原頁圖判」。
 
 用法：
-  python3 engineering/scripts/align-ocr-engines.py --source SRC-... --only pg-59,pg-63,pg-65
-  python3 engineering/scripts/align-ocr-engines.py --source SRC-... --out diffs.tsv
+  python3 engineering/scripts/align-ocr-engines.py --source SRC-... --only pg-59,pg-63
+  python3 engineering/scripts/align-ocr-engines.py --source SRC-... --insertions-only --out ins.tsv
+  python3 engineering/scripts/align-ocr-engines.py --source SRC-... --check-known "站主 2026-09-21 點名"
   python3 engineering/scripts/align-ocr-engines.py --self-test
 
-比對前只留漢字與數字：兩個引擎的標點判讀本來就不同（逗號、頓號、圓點），全部納入會把
-真正的錯字淹掉。標點的校訂走另一條線（第二輪 88 條那批）。
+比對前只留漢字與數字（判定在 lib/ocr_align.py，裁圖那支共用同一份，位置才對得上）。
 
-輸出一列一處：頁、在該頁漢字流的位置、GCV 讀到的、Paddle 讀到的、前後各十字的脈絡。
+輸出一列一處：頁、在該頁漢字流的位置、GCV 讀到的、第二引擎讀到的、前後各十字的脈絡。
 """
 
 import argparse
-import re
 import sys
 from difflib import SequenceMatcher
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
-MATERIALS = REPO / "data" / "materials" / "external"
-KEEP = re.compile(r"[㐀-䶿一-鿿豈-﫿0-9A-Za-z]")
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from ocr_align import CJK, KEEP, MATERIALS, normalise, select_stems  # noqa: E402
+
+# 第二引擎讀出來的字數不到 GCV 的兩成，當它沒讀到這一頁而不是讀出了一頁空白：
+# 空稿餵進對齊會變成一個涵蓋全頁的刪除型命中，下游的覆蓋判定會把整頁都算成「看過了」。
+MIN_SECOND_RATIO = 0.2
 
 
-def normalise(text: str) -> str:
-    return "".join(ch for ch in text if KEEP.match(ch))
-
-
-def diff_page(gcv: str, paddle: str, context: int = 10):
-    a, b = normalise(gcv), normalise(paddle)
+def diff_page(gcv: str, second: str, context: int = 10):
+    a, b = normalise(gcv), normalise(second)
+    if a and len(b) < len(a) * MIN_SECOND_RATIO:
+        raise ValueError(f"第二引擎只讀到 {len(b)} 字，GCV 有 {len(a)} 字，這一頁不當作讀過")
     hits = []
     for tag, i1, i2, j1, j2 in SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
         if tag == "equal":
@@ -39,45 +39,29 @@ def diff_page(gcv: str, paddle: str, context: int = 10):
         hits.append({
             "position": i1,
             "gcv": a[i1:i2],
-            "paddle": b[j1:j2],
+            "second": b[j1:j2],
             "context": a[max(0, i1 - context):i2 + context],
         })
     return hits, len(a), len(b)
 
 
-def self_test() -> int:
-    """負向測試：對同一份稿注入五種已知的差異（漏字、多字、換字），看報不報得出來；
-    相同的稿與只差標點的稿要一處都不報。"""
-    base = "主義領袖組織爲構成黨的領導力量的三大要素缺一不可本黨有正確的主義"
-    cases = [
-        ("漏一字（組織爲→組爲）", base.replace("組織爲", "組爲"), "織"),
-        ("漏另一字（領導力量的→領導力的）", base.replace("領導力量的", "領導力的"), "量"),
-        ("多一字", base.replace("三大要素", "三大要要素"), "要"),
-        ("換字（爲→為）", base.replace("組織爲", "組織為"), "為"),
-    ]
-    cases.append(("換兩字（政權與治權→政與治樓）", "執行政與治樓", "權", "執行政權與治權"))
-    failures = []
-    for case in cases:
-        name, mutated, needle = case[0], case[1], case[2]
-        reference = case[3] if len(case) > 3 else base
-        hits, _, _ = diff_page(reference, mutated)
-        if not hits:
-            failures.append(f"{name}：一處都沒報")
-            continue
-        if not any(needle in hit["gcv"] or needle in hit["paddle"] for hit in hits):
-            failures.append(f"{name}：報了 {len(hits)} 處，但沒有一處含「{needle}」")
-    same, _, _ = diff_page(base, base)
-    if same:
-        failures.append(f"相同的兩份稿報了 {len(same)} 處，應為 0")
-    punct, _, _ = diff_page("一個領袖、一個主義", "一個領袖*一個主義")
-    if punct:
-        failures.append(f"只有標點不同的兩份稿報了 {len(punct)} 處，應為 0（標點在比對前剝掉）")
-    for failure in failures:
-        print(f"未通過 {failure}", file=sys.stderr)
-    if failures:
-        return 1
-    print("自測通過：五種差異都報得出來，相同的稿與只差標點的稿都不報。")
-    return 0
+def hit_span(hit):
+    """命中在 GCV 位置流上涵蓋的區間。插入型的 i1 == i2，那個字落在前後兩字之間，
+    區間取 [p-1, p+1)，否則字串尾端的漏字永遠算不到。"""
+    start = hit["position"]
+    length = len(hit["gcv"])
+    if length == 0:
+        return max(0, start - 1), start + 1
+    return start, start + length
+
+
+def wanted_chars(wrong: str, right: str):
+    """「正」比「誤」多出或換掉的字。第二引擎要讀到其中之一，才算它指出了這一處。"""
+    chars = []
+    for tag, i1, i2, j1, j2 in SequenceMatcher(None, normalise(wrong), normalise(right)).get_opcodes():
+        if tag != "equal":
+            chars.extend(normalise(right)[j1:j2])
+    return set(chars)
 
 
 def known_errors(source_dir: Path, note_mark: str):
@@ -96,58 +80,119 @@ def known_errors(source_dir: Path, note_mark: str):
 
 def check_known(source_dir: Path, note_mark: str, context: int, second: str = "tess",
                 insertions_only: bool = False) -> int:
-    """驗收：已知的每一處錯字，在該頁的差異清單裡有沒有被蓋到。
+    """驗收：已知的每一處錯字，這個篩子指不指得到它。
 
-    蓋到的判準是位置區間相交——誤與正逐字比出哪幾個位置不同，那些位置要落在
-    某一個被報出來的差異區間內。沒被蓋到就是這個篩子漏掉它，(b) 這條路不成立。
+    算「蓋到」要同時成立兩件事：命中的區間與該處錯字相交，而且第二引擎在那裡讀到的字
+    正是「正」比「誤」多出或換掉的字。只問區間相交會嚴重高估——每頁 97 處差異，
+    十來字的誤欄隨便撞到一處無關的差異就算蓋到（2026-09-22 審查以 fixture 重現）。
+    第二引擎讀到另一個錯字時這裡算漏掉，寧可低報。
     """
-    gcv_dir, paddle_dir = source_dir / "gcv" / "txt", source_dir / second / "txt"
+    gcv_dir, second_dir = source_dir / "gcv" / "txt", source_dir / second / "txt"
     cases = known_errors(source_dir, note_mark)
     if not cases:
         raise SystemExit(f"校訂表裡找不到註記含「{note_mark}」的列，沒有東西可驗。")
     misses = []
     for stem, wrong, right in cases:
-        paddle_path = paddle_dir / f"{stem}.txt"
-        if not paddle_path.exists():
+        second_path = second_dir / f"{stem}.txt"
+        if not second_path.exists():
             misses.append(f"{stem}「{wrong}」：這一頁還沒有第二引擎的稿")
             continue
-        gcv_text = gcv_dir / f"{stem}.txt"
-        hits, _, _ = diff_page(gcv_text.read_text(encoding="utf-8"),
-                               paddle_path.read_text(encoding="utf-8"), context)
+        gcv_text = (gcv_dir / f"{stem}.txt").read_text(encoding="utf-8")
+        try:
+            hits, _, _ = diff_page(gcv_text, second_path.read_text(encoding="utf-8"), context)
+        except ValueError as exc:
+            misses.append(f"{stem}「{wrong}」：{exc}")
+            continue
         if insertions_only:
             hits = [h for h in hits if not h["gcv"]]
-        stream = normalise(gcv_text.read_text(encoding="utf-8"))
+        stream = normalise(gcv_text)
         needle = normalise(wrong)
         start = stream.find(needle)
         if start < 0:
             misses.append(f"{stem}「{wrong}」：在 GCV 稿裡找不到這段（校訂表與稿不同步？）")
             continue
         span = (start, start + len(needle))
-        covered = any(hit["position"] < span[1] and hit["position"] + max(len(hit["gcv"]), 1) > span[0]
-                      for hit in hits)
-        mark = "蓋到" if covered else "漏掉"
-        print(f"{mark}\t{stem}\t{wrong} → {right}")
-        if not covered:
-            misses.append(f"{stem}「{wrong}」不在任何一個差異區間內")
+        targets = wanted_chars(wrong, right)
+        matched = [h for h in hits
+                   if hit_span(h)[0] < span[1] and hit_span(h)[1] > span[0]
+                   and (set(h["second"]) & targets)]
+        print(f"{'蓋到' if matched else '漏掉'}\t{stem}\t{wrong} → {right}"
+              + (f"\t第二引擎讀到 {matched[0]['second']}" if matched else ""))
+        if not matched:
+            misses.append(f"{stem}「{wrong}」沒有一處差異指到它")
     print(f"已知錯字 {len(cases)} 處，漏掉 {len(misses)} 處。")
     for miss in misses:
         print(f"  漏：{miss}", file=sys.stderr)
     return 1 if misses else 0
 
 
+def self_test() -> int:
+    """負向測試：對同一份稿注入五種已知的差異（漏字、多字、換字），看報不報得出來；
+    相同的稿與只差標點的稿要一處都不報；空的第二引擎稿要拋錯。"""
+    base = "主義領袖組織爲構成黨的領導力量的三大要素缺一不可本黨有正確的主義"
+    cases = [
+        ("漏一字（組織爲→組爲）", base.replace("組織爲", "組爲"), "織", base),
+        ("漏另一字（領導力量的→領導力的）", base.replace("領導力量的", "領導力的"), "量", base),
+        ("多一字", base.replace("三大要素", "三大要要素"), "要", base),
+        ("換字（爲→為）", base.replace("組織爲", "組織為"), "為", base),
+        ("換兩字（政權與治權→政與治樓）", "執行政與治樓", "權", "執行政權與治權"),
+    ]
+    failures = []
+    for name, mutated, needle, reference in cases:
+        hits, _, _ = diff_page(reference, mutated)
+        if not hits:
+            failures.append(f"{name}：一處都沒報")
+            continue
+        if not any(needle in hit["gcv"] or needle in hit["second"] for hit in hits):
+            failures.append(f"{name}：報了 {len(hits)} 處，但沒有一處含「{needle}」")
+    same, _, _ = diff_page(base, base)
+    if same:
+        failures.append(f"相同的兩份稿報了 {len(same)} 處，應為 0")
+    punct, _, _ = diff_page("一個領袖、一個主義", "一個領袖*一個主義")
+    if punct:
+        failures.append(f"只有標點不同的兩份稿報了 {len(punct)} 處，應為 0（標點在比對前剝掉）")
+
+    # 覆蓋判定：尾端的漏字要蓋得到，無關的差異不算數。
+    tail_hits, _, _ = diff_page("甲乙丙領導力", "甲乙丙領導力量")
+    tail = [h for h in tail_hits
+            if hit_span(h)[0] < 6 and hit_span(h)[1] > 3 and (set(h["second"]) & {"量"})]
+    if not tail:
+        failures.append("尾端的漏字沒被算成蓋到")
+    noise_hits, _, _ = diff_page("甲乙丙丁戊己", "甲王丙丁戊己")
+    noise = [h for h in noise_hits
+             if hit_span(h)[0] < 6 and hit_span(h)[1] > 0 and (set(h["second"]) & {"偉"})]
+    if noise:
+        failures.append("無關的差異被算成蓋到")
+    try:
+        diff_page(base, "")
+        failures.append("空的第二引擎稿沒有拋錯")
+    except ValueError:
+        pass
+
+    for failure in failures:
+        print(f"未通過 {failure}", file=sys.stderr)
+    if failures:
+        return 1
+    print("自測通過：五種差異都報得出來；相同、只差標點的稿不報；"
+          "尾端漏字蓋得到、無關差異不算數；空稿拋錯。")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source")
     parser.add_argument("--only", default="")
-    parser.add_argument("--out", default="", help="寫成 TSV；不給就印到畫面")
-    parser.add_argument("--context", type=int, default=10)
-    parser.add_argument("--self-test", action="store_true")
     parser.add_argument("--second", default="tess",
                         help="第二引擎的目錄名（tess＝tesseract chi_tra_vert，paddle＝PaddleOCR）")
+    parser.add_argument("--out", default="", help="寫成 TSV；不給就印到畫面")
+    parser.add_argument("--context", type=int, default=10)
     parser.add_argument("--insertions-only", action="store_true",
-                        help="只看 GCV 那一側是空的差異——也就是第二引擎讀到而 GCV 漏掉的字")
+                        help="只看 GCV 那邊是空的差異——第二引擎讀到而 GCV 漏掉的字")
+    parser.add_argument("--cjk-only", action="store_true",
+                        help="只留第二引擎讀到的是漢字的那些（剝掉它把標點讀成數字的雜訊）")
     parser.add_argument("--check-known", default="",
-                        help="驗收模式：校訂表註記含這段字的列，逐處看有沒有落在差異裡")
+                        help="驗收模式：校訂表註記含這段字的列，逐處看這個篩子指不指得到")
+    parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
         return self_test()
@@ -158,42 +203,50 @@ def main() -> int:
     if args.check_known:
         return check_known(source_dir, args.check_known, args.context, args.second,
                            args.insertions_only)
-    gcv_dir, paddle_dir = source_dir / "gcv" / "txt", source_dir / args.second / "txt"
-    if not paddle_dir.is_dir():
-        raise SystemExit(f"查無第二引擎的辨讀稿：{paddle_dir}")
-    stems = sorted(p.stem for p in paddle_dir.glob("*.txt"))
-    if args.only:
-        wanted = {s.strip() for s in args.only.split(",") if s.strip()}
-        missing = wanted - set(stems)
-        if missing:
-            raise SystemExit(f"這幾頁還沒有 Paddle 稿：{sorted(missing)}")
-        stems = [s for s in stems if s in wanted]
+    gcv_dir, second_dir = source_dir / "gcv" / "txt", source_dir / args.second / "txt"
+    if not second_dir.is_dir():
+        raise SystemExit(f"查無第二引擎的辨讀稿：{second_dir}")
+    stems = select_stems(sorted(p.stem for p in second_dir.glob("*.txt")), args.only)
 
-    rows = ["頁\t位置\tGCV\tPaddle\t脈絡（GCV）"]
+    rows = ["頁\t位置\tGCV\t第二引擎\t脈絡（GCV）"]
     totals = []
+    skipped = []
     for stem in stems:
         gcv_path = gcv_dir / f"{stem}.txt"
         if not gcv_path.exists():
-            print(f"{stem}：沒有 GCV 稿，略過", file=sys.stderr)
+            skipped.append(f"{stem}：沒有 GCV 稿")
             continue
-        hits, len_a, len_b = diff_page(
-            gcv_path.read_text(encoding="utf-8"),
-            (paddle_dir / f"{stem}.txt").read_text(encoding="utf-8"),
-            args.context,
-        )
+        try:
+            hits, len_a, len_b = diff_page(
+                gcv_path.read_text(encoding="utf-8"),
+                (second_dir / f"{stem}.txt").read_text(encoding="utf-8"),
+                args.context,
+            )
+        except ValueError as exc:
+            skipped.append(f"{stem}：{exc}")
+            continue
         if args.insertions_only:
             hits = [h for h in hits if not h["gcv"]]
+        if args.cjk_only:
+            hits = [h for h in hits if CJK.match(h["second"] or "")]
         totals.append((stem, len(hits), len_a, len_b))
         for hit in hits:
-            rows.append(f"{stem}\t{hit['position']}\t{hit['gcv']}\t{hit['paddle']}\t{hit['context']}")
+            rows.append(f"{stem}\t{hit['position']}\t{hit['gcv']}\t{hit['second']}\t{hit['context']}")
 
+    for problem in skipped:
+        print(f"略過 {problem}", file=sys.stderr)
+    if not totals:
+        print(f"一頁都沒有對齊到（第二引擎目錄 {second_dir}，略過 {len(skipped)} 頁）。",
+              file=sys.stderr)
+        return 1
     total_hits = sum(c for _, c, _, _ in totals)
     total_chars = sum(a for _, _, a, _ in totals)
     for stem, count, len_a, len_b in totals:
         ratio = count / len_a * 100 if len_a else 0
         print(f"{stem}: 差異 {count} 處，GCV {len_a} 字、第二引擎 {len_b} 字（差異占 {ratio:.1f}%）")
     print(f"合計：{len(totals)} 頁，GCV {total_chars} 字，差異 {total_hits} 處"
-          f"（每頁平均 {total_hits / max(1, len(totals)):.0f} 處）")
+          f"（每頁平均 {total_hits / len(totals):.0f} 處）"
+          + (f"；另有 {len(skipped)} 頁略過" if skipped else ""))
     body = "\n".join(rows) + "\n"
     if args.out:
         Path(args.out).write_text(body, encoding="utf-8")

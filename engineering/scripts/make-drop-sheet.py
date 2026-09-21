@@ -17,16 +17,13 @@ GCV 的逐字框在 gcv/json，命中的位置回那批框取前後各幾個字�
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 
 from PIL import Image
 
-REPO = Path(__file__).resolve().parents[2]
-MATERIALS = REPO / "data" / "materials" / "external"
-KEEP = re.compile(r"[㐀-䶿一-鿿豈-﫿0-9A-Za-z]")
-CJK = re.compile(r"^[㐀-䶿一-鿿豈-﫿]+$")
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from ocr_align import CJK, KEEP, MATERIALS, keep_index  # noqa: E402
 
 
 def symbol_boxes(source_dir: Path, stem: str):
@@ -47,21 +44,19 @@ def symbol_boxes(source_dir: Path, stem: str):
 
 
 def raw_context(source_dir: Path, stem: str, position: int, window: int) -> str:
-    """把命中位置換算回 gcv/txt 的原文（帶標點），校訂表的誤欄要照原文抄。"""
+    """把命中位置換算回 gcv/txt 的原文（帶標點），供辨識該處長什麼樣。
+
+    校訂表真正的比對面是 build-external-drafts.mjs 接完流、半形轉全形之後的那一串，
+    不是 gcv/txt（2026-09-22 審查指出，四條裡有一條的逗號就差在這裡）；誤欄逐字照抄
+    之前用該腳本的 --dump 核一次。
+    """
     text = (source_dir / "gcv" / "txt" / f"{stem}.txt").read_text(encoding="utf-8")
-    index = -1
-    start = end = None
-    for offset, ch in enumerate(text):
-        if KEEP.match(ch):
-            index += 1
-            if index == max(0, position - window):
-                start = offset
-            if index == position + window:
-                end = offset
-                break
-    if start is None:
+    index = keep_index(text)
+    if not index:
         return ""
-    return text[start:end if end is not None else len(text)].replace("\n", "␤")
+    first = index[max(0, position - window)]
+    last_at = min(position + window, len(index) - 1)
+    return text[first:index[last_at]].replace("\n", "␤")
 
 
 def main() -> int:

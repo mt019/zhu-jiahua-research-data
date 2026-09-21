@@ -302,6 +302,20 @@ for (const src of sources) {
   // 5. 校訂表：接完流再套，改法才寫得到跨欄、跨層的錯（欄頂被漏認的句讀就長在段界上）。
   // 每條在全流命中剛好一次，且命中處落在記的那一頁。
   paragraphs.corrections = []
+  // 走訪 corrections/ 目錄本身，不從已宣告的頁次去組檔名：按頁次組路徑時，頁次打錯或
+  // 該頁不在本件範圍的校訂表沒有人會讀到，而 validate 照樣回綠（2026-09-22 審查）。
+  const corrDir = join(base, 'corrections')
+  const declared = new Set(pageSpecs.map((spec) => spec.page))
+  const corrFiles = existsSync(corrDir)
+    ? readdirSync(corrDir).filter((f) => /^pg-\d+\.tsv$/.test(f)).sort()
+    : []
+  for (const file of corrFiles) {
+    const page = Number(file.slice(3, -4))
+    if (!declared.has(page)) {
+      fail(`${src.id} corrections/${file}：pg-${page} 不在本件宣告的頁次裡，這張表沒有人會讀到`)
+    }
+  }
+  let corrLines = 0
   for (const spec of pageSpecs) {
     const n = String(spec.page).padStart(2, '0')
     const corrPath = join(base, `corrections/pg-${n}.tsv`)
@@ -325,8 +339,10 @@ for (const src of sources) {
       cutSpan(p, at.offset, wrong.length)
       insertAt(p, at.offset, right)
       paragraphs.corrections.push({ page: spec.page, from: wrong, to: right })
+      corrLines += 1
     })
   }
+  if (corrFiles.length) console.log(`  ${src.id} 校訂表 ${corrFiles.length} 張 ${corrLines} 條，逐條命中剛好一次`)
 
   // 6. 宣告過的分段：以 before 起首的位置把段切開（清單的相鄰兩點排在同一欄裡相接、
   // 前欄又排滿到層底時，幾何上切不開，人工對原頁圖宣告）。
