@@ -20,7 +20,21 @@ const JSON_DIR = SOURCE
   ? `data/materials/external/${SOURCE}/gcv/json`
   : 'data/materials/speeches/gcv/txt/json'
 const DUPES = SOURCE ? '' : 'data/materials/speeches/gcv-duplicate-pages.json'
-const GAP = Number(process.env.ZJH_GAP ?? 1.5)
+
+// 門檻按件計，不共用一組：《言論集》是印刷廠的排印件，行距整齊，真命中落在 0.90 到 3.05；
+// 中央訓練團那本是 1944 年的戰時印件，行距本身就不勻，同一組門檻下 78 頁報 1,429 處、
+// 55 頁被 PAGE_CAP 整頁跳過（含站主點名的 pg-59）。該件的值另量一次，依據寫在下面。
+// 新收一件書外文獻而它的門檻沒量過，就是用《言論集》這一組，量過再進這張表。
+const TUNED = {
+  // 拿第二引擎（tesseract 直排）的插入型當校準面，逐個比值帶算重合率：1.9 以下 0–12%，
+  // 1.9 到 2.1 是 20–24%，2.2 以上回落到 8–12%（那一段是版面本身的空白）。
+  // 已核的四條漏字校訂落在 1.94 到 2.06，全在 1.9–2.3 之內。
+  // PAGE_CAP 取 30 只剔掉 pg-34 與 pg-70 兩頁——pg-70 的兩欄交錯是已知的，
+  // 那兩頁的欄分群不成立，報出來的不是漏字。
+  'SRC-nlc-dang-de-zuzhi-yu-lingdao-1944': { GAP: 1.9, MAX_GAP: 2.3, PAGE_CAP: 30 },
+}
+const tuned = TUNED[SOURCE] ?? {}
+const GAP = Number(process.env.ZJH_GAP ?? tuned.GAP ?? 1.5)
 const HEAD_MIN = Number(process.env.ZJH_HEAD_MIN ?? 0.7)   // 欄首低於欄頂線幾個字才報
 const INDENT = Number(process.env.ZJH_INDENT ?? 2)          // 段首縮排的字數
 const INDENT_TOL = Number(process.env.ZJH_INDENT_TOL ?? 0.45)
@@ -29,9 +43,11 @@ const MIN_COL = Number(process.env.ZJH_MIN_COL ?? 6)        // 欄太短量不�
 const HONORIFIC = /^(總理|總統|總裁|國父|先總統|先總理|蔣公|蔣中正|蔣委員長|蔣主席|蔣先生|蔣總|主席|委員長|領袖|鈞座|鈞鑒|鈞長|台座|尊處|先生逝|公之)/
 // 上限：超過這幾個字距的空白不是掉字，是版面本身（篇名行與小標的起排、段落止於欄中、
 // 書眉殘留、表格欄）。實測十頁的真命中落在 0.90 到 3.05 之間
-const MAX = { 欄內間距: Number(process.env.ZJH_MAX_GAP ?? 5), 欄首起排: Number(process.env.ZJH_MAX_HEAD ?? 3.5), 欄末止排: Number(process.env.ZJH_MAX_TAIL ?? 3) }
-// 一頁報得太多，表示那一頁不是連排的正文（表格、名錄、目次），整頁另案處理
-const PAGE_CAP = Number(process.env.ZJH_PAGE_CAP ?? 10)
+const MAX = { 欄內間距: Number(process.env.ZJH_MAX_GAP ?? tuned.MAX_GAP ?? 5), 欄首起排: Number(process.env.ZJH_MAX_HEAD ?? tuned.MAX_HEAD ?? 3.5), 欄末止排: Number(process.env.ZJH_MAX_TAIL ?? tuned.MAX_TAIL ?? 3) }
+// 一頁報得太多，那一頁的逐處清單沒有用：要嘛版面不是連排的正文（表格、名錄、目次），
+// 要嘛整頁辨讀壞掉、欄分群不成立。後者正是漏字最多的那幾頁，不是可以放掉的那幾頁——
+// 這幾頁要逐欄對原頁圖，清單裡看不到它們，所以頁號印在畫面上並寫進 ZJH_HEAVY_TSV。
+const PAGE_CAP = Number(process.env.ZJH_PAGE_CAP ?? tuned.PAGE_CAP ?? 10)
 
 const canonical = DUPES
   ? new Map(JSON.parse(readFileSync(DUPES, 'utf8')).items.map((d) => [d.pdfPage, d.canonical]))
@@ -167,10 +183,10 @@ const byPage = new Map()
 for (const h of hits) byPage.set(h.pdfPage, (byPage.get(h.pdfPage) ?? 0) + 1)
 const heavy = [...byPage].filter(([, n]) => n > PAGE_CAP).map(([p]) => p)
 const kept = hits.filter((h) => h.ratio <= MAX[h.kind] && !heavy.includes(h.pdfPage))
-if (heavy.length) console.log(`整頁另案：${heavy.length} 頁報超過 ${PAGE_CAP} 處（表格、名錄、目次這一類），共 ${hits.length - hits.filter((h) => !heavy.includes(h.pdfPage)).length} 處未列：${heavy.join(' ')}`)
+if (heavy.length) console.log(`整頁另案，要逐欄對原頁圖：${heavy.length} 頁報超過 ${PAGE_CAP} 處，共 ${hits.length - hits.filter((h) => !heavy.includes(h.pdfPage)).length} 處未列：${heavy.join(' ')}`)
 console.log(`上限之外（版面本身）${hits.filter((h) => h.ratio > MAX[h.kind] && !heavy.includes(h.pdfPage)).length} 處未列`)
 for (const h of kept) console.log(`${h.pdfPage}\t${h.kind}\t${h.ratio}\t${h.before}｜${h.after}\t${h.context}`)
-console.log(`--- ${targets.length} 頁，列出 ${kept.length} 處（欄內間距 ${kept.filter((h) => h.kind === '欄內間距').length}、欄首起排 ${kept.filter((h) => h.kind === '欄首起排').length}、欄末止排 ${kept.filter((h) => h.kind === '欄末止排').length}），偵測到 ${hits.length} 處，門檻 GAP=${GAP} HEAD_MIN=${HEAD_MIN}`)
+console.log(`--- ${targets.length} 頁，列出 ${kept.length} 處（欄內間距 ${kept.filter((h) => h.kind === '欄內間距').length}、欄首起排 ${kept.filter((h) => h.kind === '欄首起排').length}、欄末止排 ${kept.filter((h) => h.kind === '欄末止排').length}），偵測到 ${hits.length} 處，門檻 GAP=${GAP} HEAD_MIN=${HEAD_MIN} MAX_GAP=${MAX.欄內間距} PAGE_CAP=${PAGE_CAP}${TUNED[SOURCE] ? `（${SOURCE} 的量過的值）` : ''}`)
 
 // 整頁另案的那幾頁只印在畫面上就沒有人看得到第二次，留一份檔案。
 const heavyTsv = process.env.ZJH_HEAVY_TSV
