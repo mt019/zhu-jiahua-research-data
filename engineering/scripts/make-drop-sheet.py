@@ -46,6 +46,24 @@ def symbol_boxes(source_dir: Path, stem: str):
     return out
 
 
+def raw_context(source_dir: Path, stem: str, position: int, window: int) -> str:
+    """把命中位置換算回 gcv/txt 的原文（帶標點），校訂表的誤欄要照原文抄。"""
+    text = (source_dir / "gcv" / "txt" / f"{stem}.txt").read_text(encoding="utf-8")
+    index = -1
+    start = end = None
+    for offset, ch in enumerate(text):
+        if KEEP.match(ch):
+            index += 1
+            if index == max(0, position - window):
+                start = offset
+            if index == position + window:
+                end = offset
+                break
+    if start is None:
+        return ""
+    return text[start:end if end is not None else len(text)].replace("\n", "␤")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True)
@@ -85,7 +103,8 @@ def main() -> int:
             image = image.rotate(-90, expand=True)
         image.thumbnail((300, 900))
         tiles.append(image)
-        print(f"{stem}\t{position}\t+{inserted}\t{''.join(b[0] for b in window)}")
+        print(f"{stem}\t{position}\t+{inserted}\t{''.join(b[0] for b in window)}"
+              f"\t{raw_context(source_dir, stem, position, args.window + 4)}")
 
     if not tiles:
         print("這一批一格都裁不出來。", file=sys.stderr)

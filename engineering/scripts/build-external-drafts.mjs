@@ -42,6 +42,10 @@ import { widen, cornerQuotes, dots } from './lib/punctuation.mjs'
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
 const fail = (msg) => { console.error(`✗ ${msg}`); process.exit(1) }
 
+// --check：照常讀材料、套校訂、跑所有判準，但不寫檔也不刪檔。validate 拿它查
+// 「校訂表的每一條在該頁剛好命中一次」——那道判準本來只在建置時跑，validate 因此
+// 對一張命中 0 次的校訂表照樣回綠（2026-09-22 實測）。
+const checkOnly = process.argv.includes('--check')
 const dumpAt = process.argv.indexOf('--dump')
 const dumpId = dumpAt >= 0 ? process.argv[dumpAt + 1] : null
 if (dumpAt >= 0 && !dumpId) fail('--dump 要帶 SRC-id')
@@ -222,7 +226,7 @@ for (const src of sources) {
         pageBreaks: breaks,
       }
       if (t.sourceUrl) doc.transcriptSource = t.sourceUrl
-      writeFileSync(join(outDir, `${d.docId}.json`), `${JSON.stringify(doc, null, 2)}\n`)
+      if (!checkOnly) writeFileSync(join(outDir, `${d.docId}.json`), `${JSON.stringify(doc, null, 2)}\n`)
       written.add(`${d.docId}.json`)
       console.log(`${d.docId}（${rel.title}）：轉錄稿 ${paras.length} 段 ${doc.charCount} 字，原刊頁 ${breaks.map((b) => b.sourcePage).join('、')}`)
       totalDocs += 1
@@ -498,7 +502,7 @@ for (const src of sources) {
       sideMarks.delete(a.docId)
     }
     const file = join(outDir, `${a.docId}.json`)
-    writeFileSync(file, `${JSON.stringify(doc, null, 2)}\n`)
+    if (!checkOnly) writeFileSync(file, `${JSON.stringify(doc, null, 2)}\n`)
     written.add(`${a.docId}.json`)
     console.log(`${a.docId}（${rel.title}）：${paras.length} 段 ${doc.charCount} 字，原刊頁 ${pageBreaks.map((b) => b.sourcePage).join('、')}`)
     totalDocs += 1
@@ -510,7 +514,7 @@ for (const src of sources) {
 
 // 上次執行寫過而本次沒有再產的檔要清掉，不清的話舊檔會被當成本次的產物。
 for (const f of readdirSync(outDir).filter((f) => f.endsWith('.json'))) {
-  if (!written.has(f)) { unlinkSync(join(outDir, f)); console.log(`清掉上一輪的 ${f}`) }
+  if (!written.has(f) && !checkOnly) { unlinkSync(join(outDir, f)); console.log(`清掉上一輪的 ${f}`) }
 }
 console.log(`書外文獻讀稿輸出 ${totalDocs} 件 → data/processed/external-drafts/`)
 
