@@ -42,6 +42,9 @@ data/materials/speeches/*
 !data/materials/external/
 data/materials/external/*/pages/
 data/materials/external/*/gcv/
+# 第二引擎（PaddleOCR 繁中）的辨讀稿同此：由 ocr-pages-paddle.py 從同一批頁圖再生，不進版控。
+data/materials/external/*/paddle/
+data/materials/external/*/tess/
 notes/*
 !notes/.gitkeep
 
