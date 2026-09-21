@@ -458,7 +458,16 @@ for (const src of sources) {
         if (![1, 2, 3, 4].includes(h.level)) fail(`${src.id}：節標「${h.text}」的 level ${h.level} 不在 1–4`)
         const idx = paras.map((p, k) => (p === h.text ? k : -1)).filter((k) => k >= 0)
         if (idx.length > 1) fail(`${src.id} ${a.docId}：節標「${h.text}」整段相符的有 ${idx.length} 段，須剛好 1 段`)
-        if (idx.length === 1) { mine.push({ para: idx[0], level: h.level, text: h.text }); matchedHeadings.add(h.text) }
+        if (idx.length === 1) {
+          // 節標所在的原刊頁由資料層算好（頁界依段、位移排序，取最後一個不晚於該段起點的），前端只印
+          let sourcePage = null
+          for (const b of pageBreaks) if (b.para < idx[0] || (b.para === idx[0] && b.offset === 0)) sourcePage = b.sourcePage
+          // anchor 是正文標題與左欄樹共用的元素 id；tree 是左欄樹的一列（標題、縮排層級、提示），前端只加 href
+          const anchor = `${a.docId}-h${idx[0]}`
+          mine.push({ para: idx[0], level: h.level, text: h.text, sourcePage, anchor,
+            tree: { id: anchor, title: h.text, depth: h.level, hint: `原刊第 ${sourcePage} 頁` } })
+          matchedHeadings.add(h.text)
+        }
       }
       if (mine.length) {
         mine.sort((x, y) => x.para - y.para)

@@ -123,6 +123,8 @@ for (const f of draftFiles) {
     if (!(Number.isInteger(h.para) && h.para >= 0 && h.para < d.paragraphs.length)) fail(`${d.id} 的節標指到不存在的第 ${h.para} 段`)
     if (d.paragraphs[h.para] !== h.text) fail(`${d.id} 第 ${h.para} 段與節標宣告不同：「${h.text}」`)
     if (![1, 2, 3, 4].includes(h.level)) fail(`${d.id} 節標「${h.text}」的 level ${h.level} 不在 1–4`)
+    if (!Number.isInteger(h.sourcePage)) fail(`${d.id} 節標「${h.text}」沒有 sourcePage`)
+    if (h.anchor !== `${d.id}-h${h.para}` || h.tree?.id !== h.anchor) fail(`${d.id} 節標「${h.text}」的 anchor 與 tree.id 不是 <docId>-h<para>`)
   }
   for (const m of d.sideMarks ?? []) {
     if (!['專名號', '書名號'].includes(m.kind)) fail(`${d.id} 側記號種類「${m.kind}」不在封閉集合`)

@@ -67,6 +67,6 @@
 
 ### 節標層（2026-09-21）
 
-第 4 件材料第二輪加了節標層。`segmentation.json` 的 `inserts[]` 補回辨讀整條漏掉的節標（`text`、`before`、`page`；`before` 須落在段首，插在那一段之前），`headings[]` 逐條宣告節標的字串與層級（1 至 4）。`build-external-drafts.mjs` 在切件之後找與宣告整段相符的段落，剛好一段才收，寫進讀稿的 `headings[]`（`para`、`level`、`text`），第一條須是 1 級、之後每條最多比前一條深一級。`validate-related.mjs` 驗 `para` 指得到、字串與那一段相同、層級在封閉集合內；宣告過的節標段不列「段末無句讀」待核，別的規則照列。前端 `DraftBody` 把這些段渲染成各級標題，案頁左欄樹在該件底下列章節。
+第 4 件材料第二輪加了節標層。`segmentation.json` 的 `inserts[]` 補回辨讀整條漏掉的節標（`text`、`before`、`page`；`before` 須落在段首，插在那一段之前），`headings[]` 逐條宣告節標的字串與層級（1 至 4）。`build-external-drafts.mjs` 在切件之後找與宣告整段相符的段落，剛好一段才收，寫進讀稿的 `headings[]`（`para`、`level`、`text`、`sourcePage`、`anchor`、`tree`；原刊頁由建置從頁界算好，`anchor` 是正文標題與左欄樹共用的元素 id，`tree` 是左欄樹的一列，前端只加 href），第一條須是 1 級、之後每條最多比前一條深一級。`validate-related.mjs` 驗 `para` 指得到、字串與那一段相同、層級在封閉集合內；宣告過的節標段不列「段末無句讀」待核，別的規則照列。前端 `DraftBody` 把這些段渲染成各級標題，案頁左欄樹在該件底下列章節。
 
 年表快照 `years[].groups` 的每一種分組自同日起是 `{ lead?, name }`：人生階段的 `lead` 是起訖年、`name` 是階段名，十年只有 `name`。左欄樹把 `lead` 與 `name` 排成兩行、各自不折。

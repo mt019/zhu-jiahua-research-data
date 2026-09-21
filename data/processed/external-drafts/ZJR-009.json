@@ -1224,172 +1224,444 @@
     {
       "para": 0,
       "level": 1,
-      "text": "一　前言"
+      "text": "一　前言",
+      "sourcePage": 1,
+      "anchor": "ZJR-009-h0",
+      "tree": {
+        "id": "ZJR-009-h0",
+        "title": "一　前言",
+        "depth": 1,
+        "hint": "原刊第 1 頁"
+      }
     },
     {
       "para": 3,
       "level": 1,
-      "text": "二　何謂組織"
+      "text": "二　何謂組織",
+      "sourcePage": 2,
+      "anchor": "ZJR-009-h3",
+      "tree": {
+        "id": "ZJR-009-h3",
+        "title": "二　何謂組織",
+        "depth": 1,
+        "hint": "原刊第 2 頁"
+      }
     },
     {
       "para": 4,
       "level": 2,
-      "text": "甲、組織的定義"
+      "text": "甲、組織的定義",
+      "sourcePage": 2,
+      "anchor": "ZJR-009-h4",
+      "tree": {
+        "id": "ZJR-009-h4",
+        "title": "甲、組織的定義",
+        "depth": 2,
+        "hint": "原刊第 2 頁"
+      }
     },
     {
       "para": 8,
       "level": 2,
-      "text": "乙、兩種在本質上不同的組織"
+      "text": "乙、兩種在本質上不同的組織",
+      "sourcePage": 4,
+      "anchor": "ZJR-009-h8",
+      "tree": {
+        "id": "ZJR-009-h8",
+        "title": "乙、兩種在本質上不同的組織",
+        "depth": 2,
+        "hint": "原刊第 4 頁"
+      }
     },
     {
       "para": 17,
       "level": 2,
-      "text": "丙、兩種不同的整體"
+      "text": "丙、兩種不同的整體",
+      "sourcePage": 9,
+      "anchor": "ZJR-009-h17",
+      "tree": {
+        "id": "ZJR-009-h17",
+        "title": "丙、兩種不同的整體",
+        "depth": 2,
+        "hint": "原刊第 9 頁"
+      }
     },
     {
       "para": 24,
       "level": 2,
-      "text": "丁、黨的組織的特質"
+      "text": "丁、黨的組織的特質",
+      "sourcePage": 12,
+      "anchor": "ZJR-009-h24",
+      "tree": {
+        "id": "ZJR-009-h24",
+        "title": "丁、黨的組織的特質",
+        "depth": 2,
+        "hint": "原刊第 12 頁"
+      }
     },
     {
       "para": 30,
       "level": 1,
-      "text": "三　何謂領導"
+      "text": "三　何謂領導",
+      "sourcePage": 15,
+      "anchor": "ZJR-009-h30",
+      "tree": {
+        "id": "ZJR-009-h30",
+        "title": "三　何謂領導",
+        "depth": 1,
+        "hint": "原刊第 15 頁"
+      }
     },
     {
       "para": 31,
       "level": 2,
-      "text": "甲、領導的定義"
+      "text": "甲、領導的定義",
+      "sourcePage": 15,
+      "anchor": "ZJR-009-h31",
+      "tree": {
+        "id": "ZJR-009-h31",
+        "title": "甲、領導的定義",
+        "depth": 2,
+        "hint": "原刊第 15 頁"
+      }
     },
     {
       "para": 38,
       "level": 2,
-      "text": "乙、領導的分類"
+      "text": "乙、領導的分類",
+      "sourcePage": 17,
+      "anchor": "ZJR-009-h38",
+      "tree": {
+        "id": "ZJR-009-h38",
+        "title": "乙、領導的分類",
+        "depth": 2,
+        "hint": "原刊第 17 頁"
+      }
     },
     {
       "para": 43,
       "level": 2,
-      "text": "丙、領導與領袖"
+      "text": "丙、領導與領袖",
+      "sourcePage": 19,
+      "anchor": "ZJR-009-h43",
+      "tree": {
+        "id": "ZJR-009-h43",
+        "title": "丙、領導與領袖",
+        "depth": 2,
+        "hint": "原刊第 19 頁"
+      }
     },
     {
       "para": 48,
       "level": 1,
-      "text": "四　黨的組織"
+      "text": "四　黨的組織",
+      "sourcePage": 22,
+      "anchor": "ZJR-009-h48",
+      "tree": {
+        "id": "ZJR-009-h48",
+        "title": "四　黨的組織",
+        "depth": 1,
+        "hint": "原刊第 22 頁"
+      }
     },
     {
       "para": 49,
       "level": 2,
-      "text": "甲、本黨組織中的三個主要基礎"
+      "text": "甲、本黨組織中的三個主要基礎",
+      "sourcePage": 22,
+      "anchor": "ZJR-009-h49",
+      "tree": {
+        "id": "ZJR-009-h49",
+        "title": "甲、本黨組織中的三個主要基礎",
+        "depth": 2,
+        "hint": "原刊第 22 頁"
+      }
     },
     {
       "para": 55,
       "level": 2,
-      "text": "乙、本黨的組織原則"
+      "text": "乙、本黨的組織原則",
+      "sourcePage": 29,
+      "anchor": "ZJR-009-h55",
+      "tree": {
+        "id": "ZJR-009-h55",
+        "title": "乙、本黨的組織原則",
+        "depth": 2,
+        "hint": "原刊第 29 頁"
+      }
     },
     {
       "para": 61,
       "level": 2,
-      "text": "丙、本黨的組織現況"
+      "text": "丙、本黨的組織現況",
+      "sourcePage": 35,
+      "anchor": "ZJR-009-h61",
+      "tree": {
+        "id": "ZJR-009-h61",
+        "title": "丙、本黨的組織現況",
+        "depth": 2,
+        "hint": "原刊第 35 頁"
+      }
     },
     {
       "para": 69,
       "level": 2,
-      "text": "丁、本黨組織的分佈及黨員的質量"
+      "text": "丁、本黨組織的分佈及黨員的質量",
+      "sourcePage": 42,
+      "anchor": "ZJR-009-h69",
+      "tree": {
+        "id": "ZJR-009-h69",
+        "title": "丁、本黨組織的分佈及黨員的質量",
+        "depth": 2,
+        "hint": "原刊第 42 頁"
+      }
     },
     {
       "para": 72,
       "level": 2,
-      "text": "戊、今後的組織工作"
+      "text": "戊、今後的組織工作",
+      "sourcePage": 46,
+      "anchor": "ZJR-009-h72",
+      "tree": {
+        "id": "ZJR-009-h72",
+        "title": "戊、今後的組織工作",
+        "depth": 2,
+        "hint": "原刊第 46 頁"
+      }
     },
     {
       "para": 74,
       "level": 3,
-      "text": "1.發展組織"
+      "text": "1.發展組織",
+      "sourcePage": 47,
+      "anchor": "ZJR-009-h74",
+      "tree": {
+        "id": "ZJR-009-h74",
+        "title": "1.發展組織",
+        "depth": 3,
+        "hint": "原刊第 47 頁"
+      }
     },
     {
       "para": 75,
       "level": 4,
-      "text": "（一）徵求黨員"
+      "text": "（一）徵求黨員",
+      "sourcePage": 47,
+      "anchor": "ZJR-009-h75",
+      "tree": {
+        "id": "ZJR-009-h75",
+        "title": "（一）徵求黨員",
+        "depth": 4,
+        "hint": "原刊第 47 頁"
+      }
     },
     {
       "para": 80,
       "level": 4,
-      "text": "（二）完成各級黨部組織"
+      "text": "（二）完成各級黨部組織",
+      "sourcePage": 49,
+      "anchor": "ZJR-009-h80",
+      "tree": {
+        "id": "ZJR-009-h80",
+        "title": "（二）完成各級黨部組織",
+        "depth": 4,
+        "hint": "原刊第 49 頁"
+      }
     },
     {
       "para": 82,
       "level": 4,
-      "text": "（三）擴展黨的外圍"
+      "text": "（三）擴展黨的外圍",
+      "sourcePage": 50,
+      "anchor": "ZJR-009-h82",
+      "tree": {
+        "id": "ZJR-009-h82",
+        "title": "（三）擴展黨的外圍",
+        "depth": 4,
+        "hint": "原刊第 50 頁"
+      }
     },
     {
       "para": 84,
       "level": 3,
-      "text": "2.健全組織"
+      "text": "2.健全組織",
+      "sourcePage": 51,
+      "anchor": "ZJR-009-h84",
+      "tree": {
+        "id": "ZJR-009-h84",
+        "title": "2.健全組織",
+        "depth": 3,
+        "hint": "原刊第 51 頁"
+      }
     },
     {
       "para": 85,
       "level": 4,
-      "text": "（一）訓練黨員"
+      "text": "（一）訓練黨員",
+      "sourcePage": 51,
+      "anchor": "ZJR-009-h85",
+      "tree": {
+        "id": "ZJR-009-h85",
+        "title": "（一）訓練黨員",
+        "depth": 4,
+        "hint": "原刊第 51 頁"
+      }
     },
     {
       "para": 88,
       "level": 4,
-      "text": "（二）培養並選拔幹部"
+      "text": "（二）培養並選拔幹部",
+      "sourcePage": 52,
+      "anchor": "ZJR-009-h88",
+      "tree": {
+        "id": "ZJR-009-h88",
+        "title": "（二）培養並選拔幹部",
+        "depth": 4,
+        "hint": "原刊第 52 頁"
+      }
     },
     {
       "para": 90,
       "level": 4,
-      "text": "（三）健全機構"
+      "text": "（三）健全機構",
+      "sourcePage": 54,
+      "anchor": "ZJR-009-h90",
+      "tree": {
+        "id": "ZJR-009-h90",
+        "title": "（三）健全機構",
+        "depth": 4,
+        "hint": "原刊第 54 頁"
+      }
     },
     {
       "para": 92,
       "level": 1,
-      "text": "五　黨的領導"
+      "text": "五　黨的領導",
+      "sourcePage": 55,
+      "anchor": "ZJR-009-h92",
+      "tree": {
+        "id": "ZJR-009-h92",
+        "title": "五　黨的領導",
+        "depth": 1,
+        "hint": "原刊第 55 頁"
+      }
     },
     {
       "para": 93,
       "level": 2,
-      "text": "甲、過去領導工作的檢討"
+      "text": "甲、過去領導工作的檢討",
+      "sourcePage": 55,
+      "anchor": "ZJR-009-h93",
+      "tree": {
+        "id": "ZJR-009-h93",
+        "title": "甲、過去領導工作的檢討",
+        "depth": 2,
+        "hint": "原刊第 55 頁"
+      }
     },
     {
       "para": 95,
       "level": 3,
-      "text": "1.領導的方式"
+      "text": "1.領導的方式",
+      "sourcePage": 56,
+      "anchor": "ZJR-009-h95",
+      "tree": {
+        "id": "ZJR-009-h95",
+        "title": "1.領導的方式",
+        "depth": 3,
+        "hint": "原刊第 56 頁"
+      }
     },
     {
       "para": 99,
       "level": 3,
-      "text": "2.黨誼與黨德"
+      "text": "2.黨誼與黨德",
+      "sourcePage": 59,
+      "anchor": "ZJR-009-h99",
+      "tree": {
+        "id": "ZJR-009-h99",
+        "title": "2.黨誼與黨德",
+        "depth": 3,
+        "hint": "原刊第 59 頁"
+      }
     },
     {
       "para": 108,
       "level": 2,
-      "text": "乙　今後的領導工作"
+      "text": "乙　今後的領導工作",
+      "sourcePage": 62,
+      "anchor": "ZJR-009-h108",
+      "tree": {
+        "id": "ZJR-009-h108",
+        "title": "乙　今後的領導工作",
+        "depth": 2,
+        "hint": "原刊第 62 頁"
+      }
     },
     {
       "para": 109,
       "level": 3,
-      "text": "1.對政府機關的領導"
+      "text": "1.對政府機關的領導",
+      "sourcePage": 62,
+      "anchor": "ZJR-009-h109",
+      "tree": {
+        "id": "ZJR-009-h109",
+        "title": "1.對政府機關的領導",
+        "depth": 3,
+        "hint": "原刊第 62 頁"
+      }
     },
     {
       "para": 116,
       "level": 3,
-      "text": "2.對人民團體的領導"
+      "text": "2.對人民團體的領導",
+      "sourcePage": 66,
+      "anchor": "ZJR-009-h116",
+      "tree": {
+        "id": "ZJR-009-h116",
+        "title": "2.對人民團體的領導",
+        "depth": 3,
+        "hint": "原刊第 66 頁"
+      }
     },
     {
       "para": 119,
       "level": 3,
-      "text": "3.社會思想的領導"
+      "text": "3.社會思想的領導",
+      "sourcePage": 68,
+      "anchor": "ZJR-009-h119",
+      "tree": {
+        "id": "ZJR-009-h119",
+        "title": "3.社會思想的領導",
+        "depth": 3,
+        "hint": "原刊第 68 頁"
+      }
     },
     {
       "para": 121,
       "level": 3,
-      "text": "4.社會事業的領導"
+      "text": "4.社會事業的領導",
+      "sourcePage": 69,
+      "anchor": "ZJR-009-h121",
+      "tree": {
+        "id": "ZJR-009-h121",
+        "title": "4.社會事業的領導",
+        "depth": 3,
+        "hint": "原刊第 69 頁"
+      }
     },
     {
       "para": 124,
       "level": 1,
-      "text": "六　結論"
+      "text": "六　結論",
+      "sourcePage": 72,
+      "anchor": "ZJR-009-h124",
+      "tree": {
+        "id": "ZJR-009-h124",
+        "title": "六　結論",
+        "depth": 1,
+        "hint": "原刊第 72 頁"
+      }
     }
   ],
   "headingsNote": "本書四層節標照原書：一級是漢字數目加空一格加題（一　前言），二級是天干加頓號（甲、組織的定義），三級是阿拉伯數字加點（1.發展組織），四級是括號漢字數目（（一）徵求黨員）。二級節標原書自己排得不一致：原刊頁 55 的「甲、過去領導工作的檢討」排頓號，原刊頁 62 的「乙　今後的領導工作」排空格，兩處都對過原頁圖（pg-58、pg-65），2026-09-21 站主閱後裁定照原書各留其排法，不統一。每條與讀稿裡整段相符的段落剛好一段，建置寫進讀稿的 headings[]，前端據以渲染標題與案頁左欄的章節樹。"
