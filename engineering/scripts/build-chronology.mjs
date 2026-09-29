@@ -255,6 +255,40 @@ const datedPieces = toc.filter((t) => t.dateIso).length
 const placed = [...piecesByCe.values()].reduce((n, list) => n + list.length, 0)
 if (placed !== datedPieces) fail(`帶日期的 ${datedPieces} 篇裡只掛上 ${placed} 篇`)
 
+// ── 書外文獻掛到年上（2026-09-29 起）─────────────────────────────────────
+// 《言論集》未收的文獻按 dateIso 的年份掛到各年目，點了進該件所屬的案頁。案的歸屬以 cases.json
+// 的 documents[] 為準，刊名與卷期取 sources.json；dateIso 缺的件（原刊未署）不掛，數目另外對帳。
+const relatedIndex = JSON.parse(readFileSync(join(root, 'data/derived/related_index.json'), 'utf8')).documents
+const caseList = JSON.parse(readFileSync(join(root, 'data/derived/cases.json'), 'utf8')).cases
+const sourceList = JSON.parse(readFileSync(join(root, 'data/derived/sources.json'), 'utf8')).sources
+const caseOfDoc = new Map(caseList.flatMap((c) => c.documents.map((d) => [d.docId, c])))
+const sourceById = new Map(sourceList.map((s) => [s.id, s]))
+const externalByCe = new Map()
+for (const doc of relatedIndex) {
+  if (!doc.dateIso) continue
+  const ce = Number(doc.dateIso.slice(0, 4))
+  const kase = caseOfDoc.get(doc.id)
+  const src = sourceById.get(doc.sourceId)
+  if (!kase) fail(`書外文獻 ${doc.id} 不在任何一案的 documents[] 裡`)
+  if (!src) fail(`書外文獻 ${doc.id} 的來源 ${doc.sourceId} 不在 sources.json`)
+  externalByCe.set(ce, [...(externalByCe.get(ce) ?? []), {
+    id: doc.id,
+    title: doc.title,
+    author: doc.author ?? null,
+    relation: doc.relation,
+    dateIso: doc.dateIso,
+    // 年表列尾只印刊名（不折行），卷期在案頁
+    source: `《${src.title}》`,
+    href: `/zhujiahua/case/${kase.slug}#${doc.id}`,
+    caseSlug: kase.slug,
+    caseTitle: kase.title,
+  }])
+}
+for (const list of externalByCe.values()) list.sort((a, b) => (a.dateIso < b.dateIso ? -1 : a.dateIso > b.dateIso ? 1 : a.id.localeCompare(b.id)))
+const datedExternal = relatedIndex.filter((d) => d.dateIso).length
+const placedExternal = [...externalByCe.values()].reduce((n, list) => n + list.length, 0)
+if (placedExternal !== datedExternal) fail(`帶日期的書外文獻 ${datedExternal} 件裡只掛上 ${placedExternal} 件`)
+
 const STATUS_LABEL = {
   verified: '人工逐頁校訂',
   gcv: 'Google Cloud Vision 未校辨讀稿',
@@ -299,10 +333,16 @@ const years = index.map((entry, i) => {
   }
   const pieces = piecesByCe.get(entry.ce) ?? []
   if (pieces.length) out.pieces = pieces
+  const external = externalByCe.get(entry.ce) ?? []
+  if (external.length) out.external = external
   // 左欄樹的一列：標籤、提示與列尾墨色小方塊的深淺（篇數對全書單年最大篇數線性映到 0.25–0.85）
+  const hint = [
+    pieces.length ? `《言論集》${pieces.length} 篇` : null,
+    external.length ? `書外文獻 ${external.length} 件` : null,
+  ].filter(Boolean).join('，')
   out.tree = {
     title: `${entry.ce}　${entry.rocLabel}`,
-    hint: pieces.length ? `本年收入《言論集》${pieces.length} 篇` : null,
+    hint: hint ? `本年收入${hint}` : null,
     mark: pieces.length ? 0.25 + 0.6 * (pieces.length / maxPieces) : null,
   }
   if (text) {
@@ -406,3 +446,4 @@ const paras = withText.reduce((n, y) => n + y.text.paragraphs.length, 0)
 console.log(`年表 ${years.length} 個年目，其中 ${withText.length} 年帶正文（${totalChars.toLocaleString('en-US')} 字、${paras} 段）`)
 console.log(`人工逐頁校訂 ${verifiedYears} 年、Google Cloud Vision 未校辨讀稿 ${gcvYears} 年、跨界混合 ${mixedYears} 年`)
 console.log(`《言論集》${placed} 篇掛到 ${years.filter((y) => y.pieces).length} 個年目上 → ${OUT}`)
+console.log(`書外文獻 ${placedExternal} 件掛到 ${years.filter((y) => y.external).length} 個年目上（另 ${relatedIndex.length - datedExternal} 件原刊未署日期，不掛）`)

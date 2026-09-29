@@ -42,6 +42,8 @@
 - `text.pageBreaks`：每筆帶 `bookPage`、`para`、`offset`、`source`。
 - `text.coverageNote`：`coverage` 為「部分」，或 `transcriptionStatus` 為 `mixed` 時必填，寫明缺哪一段或交界在哪裡。
 
+年目另有兩個選配欄位：`pieces`（《言論集》有日期的篇，按原文日期排）與 `external`（2026-09-29 起，書外文獻按 `related_index.json` 的 `dateIso` 年份掛上，每筆帶 `id`、`title`、`author`、`relation`、`dateIso`、`source`（《刊名》）、`href`（案頁錨點）、`caseSlug`、`caseTitle`）。原刊未署日期的書外文獻不掛，建置時對帳帶日期的件數與掛上的件數。`tree.hint` 兩者都寫。
+
 年目的先後順序以 `page_index.csv` 的 71 列位置為準，不靠辨讀稿裡的民國紀年數字（那串數字在未校頁面可能就是機器誤讀）；建置時逐年比對「偵測到的年目抬頭數」與「索引列數」相等，不等就中止。
 
 `unreviewedOcr` 欄位交代辨讀引擎、涵蓋頁碼與「未抽樣、不宣稱準確率」的限度；讀者要看到才算數，不得以前端文案掩飾這批材料未經校對。
@@ -51,6 +53,8 @@
 《朱家驊先生言論集》以外的文獻層。三種 id：SRC-（來源，一件刊物一筆）、ZJR-（文獻，一件一筆的平表）、ZJC-（文獻案，一場往還或論爭）。母本在 `data/derived/` 的 `sources.json`、`related_index.json`、`cases.json`；`cases.json` 的 `documents[]` 是權威，`related_index.json` 的 `caseId` 是它的投影，`validate-related.mjs` 對帳。聚合（案、刊物、作者、年份）都從平表組出來，不寫死在文獻本身。
 
 `related-documents.json` 由 `build-related.mjs` 產生，不手改；來源只投影書目欄位，權利判定、取得途徑、掃描參數與收錄來歷留在 derived。讀稿一件一檔在 `external-drafts/ZJR-NNN.json`，由 `build-external-drafts.mjs` 從 GCV 原始回應在符號層重建直排閱讀序產生，欄位形狀照 `reading-drafts/`，另帶 `sourceId`、`pageBreaks[].sourcePage`（原刊頁碼）與哥德件的 `sideMarks[]`（`para`＋`from`／`to`＋`kind`＋`text`，kind 是專名號或書名號，`text` 與正文切片逐字驗）。人工判定收在 `data/materials/external/<SRC-id>/` 的 `segmentation.json`（界內窗、分層線、接段、分段、剔除、起收錨）、`corrections/pg-NN.tsv`（誤／正兩欄，全流命中剛好一次且落在記的那一頁）與 `side-marks.tsv`；三者進版控，頁圖與辨讀稿由原 PDF 再生，不進。
+
+讀稿的 `status` 有三種。GCV 那條路預設「未校辨讀稿」；`segmentation.json` 宣告 `review`（`status: 人工逐字校訂`、`verifiedAt`、`glyphPolicy`、`statusNote`）的來源，讀稿寫成「人工逐字校訂」並帶 `verifiedAt` 與 `glyphPolicy`，宣告的前提是全文逐欄對過原頁圖、辨讀錯字全數收進校訂表，另經一次未參與判讀者的逐字複核（2026-09-29 教師節兩件起）；轉錄檔那條路照填，另須 `transcriptSource`。`validate-related.mjs` 對「人工逐字校訂」要求 `verifiedAt` 與封閉集合內的 `glyphPolicy`，檢索語料把它記成 `review: verified`。同一處連改兩次的校訂（先補字再改字形）要併成一條，讀稿的 `corrections` 只比對得到最後一次改動的結果。
 
 查證線索在 `data/derived/leads.json`，是工程紀錄，永不 sync 到前端；讀者該知道的未定事項寫在 `cases.json` 的 `openQuestions`。新收一件材料只動 JSON／TSV 與 external-drafts，程式與常數表一行不必改（第 3 件材料進來時以此為回歸判準）。
 
@@ -64,6 +68,8 @@
 掃描在原尺寸整欄漏字）；`build-external-gcv.mjs` 讀 `segmentation.json` 的 `blankPages`，宣告過的
 空白頁才准辨讀成空；新增 `propose-external-layout.mjs` 從辨讀稿量出每頁的 `bodyX` 印成草案，
 七十四頁不逐頁手量。前端 `seo.js` 的 `CASE_PAGES` 照舊要補一筆。
+
+案頁的網頁標題、描述、關鍵詞與結構化資料的刊名，2026-09-29 起收在 `cases.json` 每案的 `seo`（`title`、`description`、`keywords`、`periodical`），前端 `seo.js` 由同步過來的快照組出 `CASE_PAGES`，一案跨兩種刊物時各件改記自己的刊名。新增一案因此只動資料層，第 3、4 件材料回歸時列的那一處程式改動（補 `CASE_PAGES`）不再需要。快照的 `view.casesByPiece` 是 `relatedPieces` 的反查，《言論集》篇頁據此連回書外文獻的案。
 
 ### 節標層（2026-09-21）
 

@@ -49,6 +49,11 @@ const view = {
     const to = c.dateTo ? c.dateTo.slice(0, 4) : null
     return [c.id, { yearsLabel: !from ? '—' : to && to !== from ? `${from}–${to}` : from }]
   })),
+  // 《言論集》篇目反查關連的案（relatedPieces 的反向），篇頁據此連回書外文獻
+  casesByPiece: cases.cases.reduce((acc, c) => {
+    for (const { id } of c.relatedPieces ?? []) (acc[id] ??= []).push(c.id)
+    return acc
+  }, {}),
   facets: {
     relation: facet(docs.map((d) => d.relation), '全部關係'),
     year: facet(docs.map(yearOf), '全部年代'),

@@ -44,9 +44,15 @@
       ]
     },
     {
+      "heading": "書外文獻的校訂",
+      "paragraphs": [
+        "書外文獻的讀稿標「人工逐字校訂」的，全文逐欄對過原頁圖，辨讀錯字逐條改正，並另由一人對原頁圖逐字複核一次。原刊自己的錯字照原刊，例如《新運導報》那篇的「以仁爲基礙」。原頁墨色糊、要靠殘存筆畫與文義判讀的字，判讀的依據寫在該件的校訂表裡。其餘各件標「未校辨讀稿」，只改了回原頁圖核過的幾處錯字，引用之前請核對原頁。"
+      ]
+    },
+    {
       "heading": "逐條的憑據",
       "paragraphs": [
-        "改過的地方逐條收在[校訂表](https://github.com/mt019/zhu-jiahua-research-data/tree/main/data/materials/speeches/corrections)，一篇一檔，四欄是誤、正、原書頁與判讀所依據的那一頁頁圖。年表另有一份同體例的校訂表。"
+        "改過的地方逐條收在[校訂表](https://github.com/mt019/zhu-jiahua-research-data/tree/main/data/materials/speeches/corrections)，一篇一檔，四欄是誤、正、原書頁與判讀所依據的那一頁頁圖。年表另有一份同體例的校訂表。書外文獻的校訂表按來源分，收在[各來源的目錄](https://github.com/mt019/zhu-jiahua-research-data/tree/main/data/materials/external)底下。"
       ]
     },
     {

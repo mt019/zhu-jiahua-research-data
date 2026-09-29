@@ -151,7 +151,7 @@ export function buildSearchCorpus() {
     records.push({
       id: draft.id,
       type: 'external',
-      review: 'gcv',
+      review: draft.status === '人工逐字校訂' ? 'verified' : 'gcv',
       title: draft.title,
       author: doc.author ?? null,
       relation: doc.relation ?? null,

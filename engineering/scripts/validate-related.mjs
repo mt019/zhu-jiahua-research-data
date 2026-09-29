@@ -108,7 +108,11 @@ for (const f of draftFiles) {
   if (d.textVersion !== createHash('sha256').update(text).digest('hex').slice(0, 12)) fail(`${d.id} 的 textVersion 與正文對不上`)
   if (d.manualCorrections !== (d.corrections?.length ?? 0)) fail(`${d.id} 的 manualCorrections 與 corrections 筆數不同`)
   // 正文不出自本倉辨讀的（手寫件走轉錄檔那條路），要指得出它抄自哪裡。
-  if (d.status !== '未校辨讀稿' && !d.transcriptSource) fail(`${d.id} 的讀稿狀態是「${d.status}」而沒有 transcriptSource`)
+  // 本倉逐字校過的件（segmentation.json 宣告 review）另要校訂日期與字形政策，字形政策是封閉集合。
+  if (d.status === '人工逐字校訂') {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.verifiedAt ?? '')) fail(`${d.id} 是人工逐字校訂而沒有 verifiedAt`)
+    if (!['原書字形', '通用字形'].includes(d.glyphPolicy)) fail(`${d.id} 的 glyphPolicy「${d.glyphPolicy}」不在原書字形／通用字形之列`)
+  } else if (d.status !== '未校辨讀稿' && !d.transcriptSource) fail(`${d.id} 的讀稿狀態是「${d.status}」而沒有 transcriptSource`)
   if (d.transcriptSource && !/^https?:\/\//.test(d.transcriptSource)) fail(`${d.id} 的 transcriptSource 不是網址：${d.transcriptSource}`)
   // 頁界落在段落範圍內，原刊頁落在平表宣告的頁範圍內。
   const [pLo, pHi] = String(rel.sourcePages).split('-').map(Number)
@@ -224,6 +228,8 @@ if (rootAt < 0) {
     ['工作用語進快照', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].account += '待站主裁定。' })],
     ['他館翻刻的讀稿沒有出處', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { delete j.transcriptSource })],
     ['轉錄出處不是網址', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { j.transcriptSource = 'JACAR' })],
+    ['校訂稿沒有校訂日期', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.status = '人工逐字校訂'; j.glyphPolicy = '原書字形' })],
+    ['校訂稿的字形政策非法', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.status = '人工逐字校訂'; j.verifiedAt = '2026-09-29'; j.glyphPolicy = '隨便' })],
   ]
   const edit = (t, rel, mutate) => {
     const p = join(t, rel)

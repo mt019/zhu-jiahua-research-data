@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0",
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-09-29",
   "source": {
     "title": "朱家驊先生年譜簡編",
     "author": "胡頌平",
@@ -1506,9 +1506,33 @@
           "name": "1920 年代"
         }
       },
+      "external": [
+        {
+          "id": "ZJR-001",
+          "title": "德國竟與帝國主義者協謀中國",
+          "author": "朱家驊",
+          "relation": "自撰",
+          "dateIso": "1926-01-28",
+          "source": "《改正條約會附刊》",
+          "href": "/zhujiahua/case/sino-german-relations-1926#ZJR-001",
+          "caseSlug": "sino-german-relations-1926",
+          "caseTitle": "中德關係的往還"
+        },
+        {
+          "id": "ZJR-003",
+          "title": "朱家驊覆米松林書",
+          "author": "朱家驊",
+          "relation": "覆他",
+          "dateIso": "1926-03-04",
+          "source": "《改正條約會附刊》",
+          "href": "/zhujiahua/case/sino-german-relations-1926#ZJR-003",
+          "caseSlug": "sino-german-relations-1926",
+          "caseTitle": "中德關係的往還"
+        }
+      ],
       "tree": {
         "title": "1926　民國 15 年",
-        "hint": null,
+        "hint": "本年收入書外文獻 2 件",
         "mark": null
       },
       "text": {
@@ -3175,9 +3199,22 @@
           "bookStartPage": 615
         }
       ],
+      "external": [
+        {
+          "id": "ZJR-008",
+          "title": "中國工程師學會蘭州年會賀電",
+          "author": "朱家驊",
+          "relation": "論及",
+          "dateIso": "1942-07-31",
+          "source": "《工程学会に対する朱家驊の祝電　華文放送　昭和一七年七月三一日》",
+          "href": "/zhujiahua/case/engineers-lanzhou-1942#ZJR-008",
+          "caseSlug": "engineers-lanzhou-1942",
+          "caseTitle": "中國工程師學會蘭州年會的賀電"
+        }
+      ],
       "tree": {
         "title": "1942　民國 31 年",
-        "hint": "本年收入《言論集》28 篇",
+        "hint": "本年收入《言論集》28 篇，書外文獻 1 件",
         "mark": 0.85
       },
       "text": {
@@ -3429,9 +3466,22 @@
           "bookStartPage": 290
         }
       ],
+      "external": [
+        {
+          "id": "ZJR-009",
+          "title": "黨的組織與領導",
+          "author": "朱家驊",
+          "relation": "自撰",
+          "dateIso": "1944-02",
+          "source": "《黨的組織與領導》",
+          "href": "/zhujiahua/case/party-organisation-1944#ZJR-009",
+          "caseSlug": "party-organisation-1944",
+          "caseTitle": "中央訓練團講演〈黨的組織與領導〉"
+        }
+      ],
       "tree": {
         "title": "1944　民國 33 年",
-        "hint": "本年收入《言論集》9 篇",
+        "hint": "本年收入《言論集》9 篇，書外文獻 1 件",
         "mark": 0.44285714285714284
       },
       "text": {
@@ -3830,9 +3880,22 @@
           "bookStartPage": 88
         }
       ],
+      "external": [
+        {
+          "id": "ZJR-010",
+          "title": "孔子的精神與教師的責任",
+          "author": "朱家驊",
+          "relation": "自撰",
+          "dateIso": "1947",
+          "source": "《新運導報》",
+          "href": "/zhujiahua/case/teachers-day-1947-1948#ZJR-010",
+          "caseSlug": "teachers-day-1947-1948",
+          "caseTitle": "民國三十六、七年的教師節文章"
+        }
+      ],
       "tree": {
         "title": "1947　民國 36 年",
-        "hint": "本年收入《言論集》10 篇",
+        "hint": "本年收入《言論集》10 篇，書外文獻 1 件",
         "mark": 0.4642857142857143
       },
       "text": {
@@ -4031,9 +4094,22 @@
           "bookStartPage": 319
         }
       ],
+      "external": [
+        {
+          "id": "ZJR-011",
+          "title": "紀念孔子與教師救國",
+          "author": "朱家驊",
+          "relation": "自撰",
+          "dateIso": "1948",
+          "source": "《教育通訊》",
+          "href": "/zhujiahua/case/teachers-day-1947-1948#ZJR-011",
+          "caseSlug": "teachers-day-1947-1948",
+          "caseTitle": "民國三十六、七年的教師節文章"
+        }
+      ],
       "tree": {
         "title": "1948　民國 37 年",
-        "hint": "本年收入《言論集》18 篇",
+        "hint": "本年收入《言論集》18 篇，書外文獻 1 件",
         "mark": 0.6357142857142857
       },
       "text": {

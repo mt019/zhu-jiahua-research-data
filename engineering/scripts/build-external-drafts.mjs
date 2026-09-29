@@ -457,12 +457,19 @@ for (const src of sources) {
     const rel = docsHere.find((r) => r.id === a.docId)
     const text = paras.join('\n')
     const corrections = (paragraphs.corrections ?? []).filter((c) => text.includes(c.to))
+    // 逐字校過的來源在 segmentation.json 宣告 review（2026-09-29 教師節兩件起）：全文逐欄對過原頁圖，
+    // 辨讀錯字全數寫進校訂表，另由一個未參與判讀的人對原頁圖複核過一次。宣告了才寫成校訂稿，
+    // 沒宣告的一律是未校辨讀稿。
+    const review = seg.review
+    if (review && (review.status !== '人工逐字校訂' || !review.verifiedAt || !review.glyphPolicy || !review.statusNote))
+      fail(`${src.id}：segmentation.json 的 review 要有 status「人工逐字校訂」、verifiedAt、glyphPolicy 與 statusNote`)
     const doc = {
       id: a.docId,
       sourceId: src.id,
       title: rel.title,
-      status: '未校辨讀稿',
-      statusNote: 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。',
+      status: review ? review.status : '未校辨讀稿',
+      statusNote: review ? review.statusNote : 'Google Cloud Vision 的辨讀結果，未經逐字人工校訂。直排的欄序由字框座標重排，上下兩層與跨頁的接續按段首縮排與句讀判定。引用前請核對原頁圖。',
+      ...(review ? { verifiedAt: review.verifiedAt, glyphPolicy: review.glyphPolicy } : {}),
       charCount: text.replace(/\s/g, '').length,
       textVersion: createHash('sha256').update(text).digest('hex').slice(0, 12),
       manualCorrections: corrections.length,
