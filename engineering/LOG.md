@@ -1,5 +1,21 @@
 # 工程紀錄
 
+## 2026-09-29（續五）｜法律教育併入主題，議題欄 threads 進 subjects.json
+
+站主：「法律主題也可以優化一下」。法律教育六篇原本是主題系統出現以前手寫在 `zhu-jiahua-app.json` 的 `legalEducation`（導讀、五條閱讀線索、九個議題），前端另有一頁 `/zhujiahua/legal-education`，三份對照表寫死在 `ZhuJiahua.jsx`、`seo.js`，不在主題清單裡，也不進書內篇頁右欄的主題系列。
+
+| 改動 | 檔 | 驗證 |
+|---|---|---|
+| 新主題 `legal-education`，成員 ZJH-074 至 079，考述由舊導讀與閱讀線索改寫，西元日期 | `data/derived/subjects.json` | `validate-related` 通過 |
+| 主題選配欄 `threads`（議題）：九條由 `legalEducation.themes` 移入，成員編號改用篇目編號；note 內的引文改回原書字形（卽、爲） | 同上；`validate-related.mjs` 驗 id、成員歸屬、note 非空並送文風層 | 負向測試「議題列了非成員」，23 項全照預期失敗 |
+| 書內成員列加 `textPath` | `build-related.mjs` | 快照重建 |
+| 舊網址 308 轉主題頁 | `data/derived/retired-urls.json` | 前端 `validate:tabroutes`：停用網址 6 條落點都在 |
+| `legalEducation` 只留 `items`（全文頁抬頭用） | `data/processed/zhu-jiahua-app.json`、`docs/data-contract.md` | 前端 `baseline:synced` 更新 |
+
+舊的議題說明有幾處寫成移動與判詞（「走到主張廢除」「是六篇裡立場移動最清楚的一條」「措辭一路加重」），改寫時換成年月與各篇所說的內容。九條 note 的引文逐句拿校訂全文比過，四處原本用通用字形、一處把「這貫通的工作」縮成「貫通工作」，已照原文改。
+
+前端（phenom-zhujiahua）：刪手刻頁與導覽列的「法律教育專題」；主題頁在成員列之後印「依議題」；主題頁與六篇全文頁的成員連結有 `textPath` 就連全文頁；六篇全文頁右欄印所屬主題。`/zhujiahua/legal-education` 在前端路由照同一份停用表轉。JSX 由 2990 行降到 2869 行，`verify:policy` 通過。
+
 ## 2026-09-29（續四）｜日期標示統一為西元並依精度；篇名、補編件、卷首、年目加複製連結
 
 站主收工時提出兩件：「年月日系統標示混亂！怎麼辦？」「每個獨立篇目的 title 都做錨點可定位有需要吧！！！」。改動前，書內篇的列表印目次原文（民國三十一年七月二十八日），補編件印 `1942-07-31`，主題頁的成員表兩種並列。

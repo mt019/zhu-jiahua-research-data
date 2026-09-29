@@ -52,7 +52,7 @@ const memberRow = (id) => {
     const item = tocById.get(id)
     if (!item) fail(`主題成員 ${id} 不在篇目索引`)
     return { kind: 'book', id, anchor: item.anchor, part: item.part, title: item.title, dateLabel: item.dateLabel,
-      dateIso: item.dateIso ?? null, where: `《朱家驊先生言論集》${item.part}，原書第 ${item.bookStartPage} 頁` }
+      dateIso: item.dateIso ?? null, textPath: item.textPath ?? null, where: `《朱家驊先生言論集》${item.part}，原書第 ${item.bookStartPage} 頁` }
   }
   const doc = docById.get(id)
   if (!doc) fail(`主題成員 ${id} 不在書外文獻平表`)

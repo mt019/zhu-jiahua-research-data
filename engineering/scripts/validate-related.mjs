@@ -94,6 +94,18 @@ for (const s of subjectsFile.subjects) {
   for (const id of s.members) {
     if (!(tocIds.has(id) || docs.has(id))) fail(`主題 ${s.slug} 的成員 ${id} 不在篇目索引也不在書外文獻平表`)
   }
+  // 議題（選配）：同一題的成員按議題重排，每條列出它在哪幾件出現、該件怎麼談；note 取自該件原文
+  const threadIds = new Set()
+  for (const t of s.threads ?? []) {
+    if (!SLUG.test(t.id) || threadIds.has(t.id)) fail(`主題 ${s.slug} 的議題 id「${t.id}」形狀不對或重複`)
+    threadIds.add(t.id)
+    for (const k of ['label', 'summary']) if (!t[k]) fail(`主題 ${s.slug} 的議題 ${t.id} 缺 ${k}`)
+    if (!t.appearances?.length) fail(`主題 ${s.slug} 的議題 ${t.id} 一件都沒有`)
+    for (const a of t.appearances) {
+      if (!s.members.includes(a.id)) fail(`主題 ${s.slug} 的議題 ${t.id} 列了 ${a.id}，它不是本題成員`)
+      if (!a.note) fail(`主題 ${s.slug} 的議題 ${t.id} 在 ${a.id} 缺 note`)
+    }
+  }
 }
 
 // 停用網址：落點要是現行的主題頁或補編裡的錨點；停用的網址不得與現行網址相撞。
@@ -171,6 +183,10 @@ for (const s of subjects.values()) {
   for (const k of ['scope', 'account']) push(`subjects.json:${s.slug}:${k}`, s[k], 'prose')
   push(`subjects.json:${s.slug}:seo.description`, s.seo.description, 'prose')
   ;(s.openQuestions ?? []).forEach((q, i) => push(`subjects.json:${s.slug}:openQuestions[${i}]`, q, 'prose'))
+  for (const t of s.threads ?? []) {
+    push(`subjects.json:${s.slug}:threads.${t.id}.summary`, t.summary, 'prose')
+    t.appearances.forEach((a) => push(`subjects.json:${s.slug}:threads.${t.id}.${a.id}`, a.note, 'prose'))
+  }
 }
 for (const d of docs.values()) {
   for (const k of ['titleNote', 'authorNote', 'translatorNote', 'dateNote', 'account']) push(`related_index.json:${d.id}:${k}`, d[k], 'prose')
@@ -276,6 +292,7 @@ if (rootAt < 0) {
     ['補編漏排一件', (t) => edit(t, 'data/derived/supplement.json', (j) => { j.order.pop() })],
     ['主題只剩一件', (t) => edit(t, 'data/derived/subjects.json', (j) => { j.subjects[0].members = j.subjects[0].members.slice(0, 1) })],
     ['主題成員不存在', (t) => edit(t, 'data/derived/subjects.json', (j) => { j.subjects[0].members.push('ZJH-999') })],
+    ['議題列了非成員', (t) => edit(t, 'data/derived/subjects.json', (j) => { j.subjects.find((x) => x.threads).threads[0].appearances.push({ id: 'ZJH-001', note: '測試' }) })],
     ['錨點重複', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[1].anchor = j.documents[0].anchor })],
     ['停用網址落點不存在', (t) => edit(t, 'data/derived/retired-urls.json', (j) => { j.urls[0].to = '/zhujiahua/subject/nonesuch' })],
     ['文獻還帶 caseId', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[0].caseId = 'ZJC-01' })],

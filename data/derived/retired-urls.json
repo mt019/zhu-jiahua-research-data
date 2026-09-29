@@ -25,6 +25,11 @@
       "from": "/zhujiahua/case/teachers-day-1947-1948",
       "to": "/zhujiahua/subject/teachers-day",
       "retiredAt": "2026-09-29"
+    },
+    {
+      "from": "/zhujiahua/legal-education",
+      "to": "/zhujiahua/subject/legal-education",
+      "retiredAt": "2026-09-29"
     }
   ]
 }
