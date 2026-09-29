@@ -16,6 +16,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { dateLabel, UNDATED_BOOK, UNDATED_PRINT } from './lib/date-label.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
 const read = (rel) => JSON.parse(readFileSync(join(root, rel), 'utf8'))
@@ -28,6 +29,7 @@ const sources = read('data/derived/sources.json').sources.map((s) => {
     'primaryPending', 'primaryPendingNote']) {
     if (k in s) out[k] = s[k]
   }
+  if ('dateIso' in out) out.dateLabel = dateLabel(out.dateIso, UNDATED_PRINT)
   return out
 })
 const related = read('data/derived/related_index.json')
@@ -49,13 +51,13 @@ const memberRow = (id) => {
   if (id.startsWith('ZJH-')) {
     const item = tocById.get(id)
     if (!item) fail(`主題成員 ${id} 不在篇目索引`)
-    return { kind: 'book', id, anchor: item.anchor, part: item.part, title: item.title, date: item.date ?? null,
+    return { kind: 'book', id, anchor: item.anchor, part: item.part, title: item.title, dateLabel: item.dateLabel,
       dateIso: item.dateIso ?? null, where: `《朱家驊先生言論集》${item.part}，原書第 ${item.bookStartPage} 頁` }
   }
   const doc = docById.get(id)
   if (!doc) fail(`主題成員 ${id} 不在書外文獻平表`)
   return { kind: 'supplement', id, anchor: doc.anchor, title: doc.title, author: doc.author ?? null,
-    role: doc.role ?? null, dateIso: doc.dateIso ?? null, where: `補編・${sourceLabel(doc.sourceId)}` }
+    role: doc.role ?? null, dateIso: doc.dateIso ?? null, dateLabel: dateLabel(doc.dateIso, UNDATED_PRINT), where: `補編・${sourceLabel(doc.sourceId)}` }
 }
 const subjects = subjectsFile.subjects.map((s) => {
   const members = s.members.map(memberRow)
@@ -70,7 +72,7 @@ const subjects = subjectsFile.subjects.map((s) => {
 })
 
 const subjectsOf = (id) => subjectsFile.subjects.filter((s) => s.members.includes(id)).map((s) => s.slug)
-const documents = related.documents.map((d) => ({ ...d, subjects: subjectsOf(d.id) }))
+const documents = related.documents.map((d) => ({ ...d, dateLabel: dateLabel(d.dateIso, UNDATED_PRINT), subjects: subjectsOf(d.id) }))
 
 const facet = (values, allLabel) => {
   const counts = new Map()

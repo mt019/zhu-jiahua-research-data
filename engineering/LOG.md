@@ -1,5 +1,21 @@
 # 工程紀錄
 
+## 2026-09-29（續四）｜日期標示統一為西元並依精度；篇名、補編件、卷首、年目加複製連結
+
+站主收工時提出兩件：「年月日系統標示混亂！怎麼辦？」「每個獨立篇目的 title 都做錨點可定位有需要吧！！！」。改動前，書內篇的列表印目次原文（民國三十一年七月二十八日），補編件印 `1942-07-31`，主題頁的成員表兩種並列。
+
+`engineering/scripts/lib/date-label.mjs` 由 `dateIso` 產 `dateLabel`，精度照資料，寫成 `1942 年 7 月 28 日`、`1944 年 2 月`、`1947 年`；沒有日期的書內篇寫「原書未載日期」，書外件寫「原刊未署日期」。`build-app-toc`、`build-related`、`build-chronology`、`build-search-corpus` 四支都呼叫它，篇目、法學教育六篇、年表列、主題成員、補編件與來源各帶一份。書內 198 篇的分布是年月日 174、年月 12、只有年 6、未載 6。排序照舊用 `dateIso`。
+
+快照裡原本叫 `date` 的欄裝的是目次原文，改名 `dateOriginal`；`plates.json` 的 `dateLabel` 裝的也是圖說原文，同樣改名，免得同一個欄名在兩處指相反的東西。篇頭在 `dateLabel` 下一行照錄原文紀年，資料層組好放在 `dateSources`：「原書目次：民國十九年十一月十日」，篇端署日與目次不同時再加「篇端署：⋯　待核」。目次那一形照原書保留全形空格（「民國二十年　月」）。
+
+`validate-processed.mjs` 走訪四份產物，帶 `dateIso` 的物件都要帶 `dateLabel` 且等於函式算出的值，`dateLabel` 只准上述形狀，舊欄 `date` 不准與 `dateIso` 並存；每份至少要看到一個帶 `dateIso` 的物件，看到 0 個即失敗。負向測試把年表一筆改成 `1925-10-03`，報出兩處。`validate-related.mjs` 比對快照與 derived 時略過建置加上的 `dateLabel`。前端另有 `scripts/validate-date-labels.mjs`（接進 `verify:policy`），讀 `dateIso` 的行只准取年份，舊欄 `.date` 不准讀；檢索頁 `SearchPage.jsx` 由另一個 session 在改，暫登記為例外，那邊提交後改讀 `record.dateLabel` 並刪掉例外。前端的單篇校訂頁描述原本讀 `textMeta?.date`，欄位改名後會安靜地變成空值，前端那支檢查擋的就是這種寫法。
+
+`@phenomcanvas/ui` v0.1.71 新增 `HeadingAnchor`，標題旁一個 `#`，點了改網址列並複製網址；桌機滑過標題時顯出，觸控裝置常駐。書內篇、補編件、卷首三項、年目四處的標題都接上。卷首的錨點由 `#ZJH-FM-001` 改為 `#dedication`、`#origins`、`#plates`（`build-app-toc.mjs` 寫 `anchor` 與 `legacyAnchor`），舊網址照 `legacyAnchor` 捲到同一處。
+
+headless 在本機 dev server 跑過首頁篇目清單、教育部次、補編、哥德主題頁、年譜、卷首與手機寬度，ISO 為 0，點 `#` 之後網址列與剪貼簿都是 `#p121`，舊的 `#ZJH-FM-002` 與 `#ZJH-FM-PLATES` 都落到對應的節。前端 JSX 的行數正好在 3000 行的上限上。
+
+主題的 `scope` 與各篇 `note` 的考述散文仍寫民國紀年（「民國十四年《現代評論》上關於⋯⋯的討論」），驗證器只看日期欄，這幾處照舊。
+
 ## 2026-09-29（續三）｜案退役，書外文獻改由補編與主題組織；工程編號下前端
 
 站主當日四道裁示：「沒有『本案』這種東西⋯⋯編進整體」「我還想要主題性編目，例如教師節主題」「工程語言禁止上前端」「工程編號禁止上前端」，末了「你決定，工程完整留痕，長期運維」。

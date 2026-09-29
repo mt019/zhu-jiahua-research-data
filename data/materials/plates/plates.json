@@ -38,7 +38,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國三十七年",
+      "dateOriginal": "民國三十七年",
       "note": "次頁 PDF 17 印出席院士姓名表，位置與照片中各人相對應，尚未轉錄",
       "companionPdfPage": 17
     },
@@ -56,7 +56,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國四十年十二月二十日"
+      "dateOriginal": "民國四十年十二月二十日"
     },
     {
       "id": "PL-019",
@@ -72,7 +72,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國四十四年五月"
+      "dateOriginal": "民國四十四年五月"
     },
     {
       "id": "PL-020",
@@ -88,7 +88,7 @@
         "pageH": 3148
       },
       "rotate": 0,
-      "dateLabel": "民國四十四年五月"
+      "dateOriginal": "民國四十四年五月"
     },
     {
       "id": "PL-021",
@@ -104,7 +104,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國四十八年十月廿四日"
+      "dateOriginal": "民國四十八年十月廿四日"
     },
     {
       "id": "PL-022",
@@ -120,7 +120,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國四十八年十月廿四日"
+      "dateOriginal": "民國四十八年十月廿四日"
     },
     {
       "id": "PL-023",
@@ -136,7 +136,7 @@
         "pageH": 3148
       },
       "rotate": 270,
-      "dateLabel": "民國四十八年十月廿四日"
+      "dateOriginal": "民國四十八年十月廿四日"
     },
     {
       "id": "PL-024",

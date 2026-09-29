@@ -18,6 +18,7 @@
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
+import { dateLabel, UNDATED_BOOK, UNDATED_PRINT } from './lib/date-label.mjs'
 
 const ROOT = fileURLToPath(new URL('../../', import.meta.url))
 const DRAFT_DIR = `${ROOT}data/processed/reading-drafts`
@@ -98,6 +99,7 @@ export function buildSearchCorpus() {
       part: toc.part,
       dateOriginal: meta.date_original ?? null,
       dateIso: meta.date_iso ?? null,
+      dateLabel: dateLabel(meta.date_iso, UNDATED_BOOK),
       bookPages: pages.length === 1 ? String(pages[0]) : `${pages[0]}–${pages[pages.length - 1]}`,
       text: body(lines),
     })
@@ -122,6 +124,7 @@ export function buildSearchCorpus() {
       part: toc?.part ?? '卷首',
       dateOriginal: draft.dateOriginal ?? null,
       dateIso: toc?.dateIso ?? null,
+      dateLabel: dateLabel(toc?.dateIso, UNDATED_BOOK),
       bookPages: draft.bookPages ?? front?.bookPages ?? null,
       text: body(draft.paragraphs),
     })
@@ -156,6 +159,7 @@ export function buildSearchCorpus() {
       author: doc.author ?? null,
       relation: doc.relation ?? null,
       dateIso: doc.dateIso ?? null,
+      dateLabel: dateLabel(doc.dateIso, UNDATED_PRINT),
       sourcePages: doc.sourcePages ?? null,
       text: body(draft.paragraphs),
     })

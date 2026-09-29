@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { widen, dots, cornerQuotes } from './lib/punctuation.mjs'
+import { dateLabel, UNDATED_BOOK, UNDATED_PRINT } from './lib/date-label.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const txDir = join(root, 'data/derived/chronology/transcriptions')
@@ -241,8 +242,8 @@ for (const item of toc) {
     id: item.id,
     title: item.title,
     part: item.part,
-    date: item.dateOriginal ?? null,
     dateIso: item.dateIso,
+    dateLabel: dateLabel(item.dateIso, UNDATED_BOOK),
     bookStartPage: item.bookStartPage,
   }])
 }
@@ -274,6 +275,7 @@ for (const doc of relatedIndex) {
     author: doc.author ?? null,
     relation: doc.relation,
     dateIso: doc.dateIso,
+    dateLabel: dateLabel(doc.dateIso, UNDATED_PRINT),
     // 年表列尾只印刊名（不折行），卷期在補編
     source: `《${src.title}》`,
     href: `/zhujiahua/part/supplement#${doc.anchor}`,

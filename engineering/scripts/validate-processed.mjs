@@ -26,6 +26,44 @@ for (const key of ['author', 'edition', 'transcription', 'frontMatter', 'verifie
 }
 if ('note' in data.rights) throw new Error('rights.note 是寫給維護的人的，不進公開快照');
 
+// 日期標示（站主 2026-09-29「年月日系統標示混亂」）：凡是帶 dateIso 的物件都要帶 dateLabel，
+// 且 dateLabel 須等於 lib/date-label.mjs 由 dateIso 算出的值；dateLabel 只准「1942 年 7 月 28 日」「1944 年 2 月」
+// 「1947 年」與兩句未署。舊欄名 date 不准與 dateIso 並存——它裝的是目次原文，已改叫 dateOriginal。
+// 四份產物各自要看到物件，看到 0 個就是欄位改名或結構變了，而不是全部合格。
+{
+  const { DATE_LABEL_SHAPE, UNDATED_BOOK, UNDATED_PRINT, dateLabelMatches } = await import('./lib/date-label.mjs');
+  const labelOk = (label) => DATE_LABEL_SHAPE.test(label) || label === UNDATED_BOOK || label === UNDATED_PRINT;
+  // 判準自己先驗：好的過、ISO 與民國紀年都不過，精度不合的不過
+  if (!dateLabelMatches('1942 年 7 月 28 日', '1942-07-28') || !dateLabelMatches('1944 年 2 月', '1944-02')
+    || labelOk('1942-07-28') || labelOk('民國三十一年七月二十八日') || dateLabelMatches('1942 年', '1942-07-28')) {
+    throw new Error('日期標示的判準自測沒過——看 lib/date-label.mjs');
+  }
+  const files = ['zhu-jiahua-app.json', 'chronology.json', 'related-documents.json', 'search-corpus.json'];
+  for (const name of files) {
+    const root = JSON.parse(await readFile(new URL(`../../data/processed/${name}`, import.meta.url), 'utf8'));
+    const bad = [];
+    let seen = 0;
+    const walk = (node, path) => {
+      if (Array.isArray(node)) return node.forEach((v, i) => walk(v, `${path}[${i}]`));
+      if (!node || typeof node !== 'object') return;
+      const where = `${path}${node.id ? `(${node.id})` : ''}`;
+      if ('dateIso' in node) {
+        seen += 1;
+        if (!('dateLabel' in node)) bad.push(`${where} 有 dateIso 沒有 dateLabel`);
+        else if (!dateLabelMatches(node.dateLabel, node.dateIso, UNDATED_BOOK) && !dateLabelMatches(node.dateLabel, node.dateIso, UNDATED_PRINT)) {
+          bad.push(`${where} 的 dateLabel「${node.dateLabel}」與 dateIso ${node.dateIso} 對不上`);
+        }
+        if ('date' in node) bad.push(`${where} 還帶舊欄 date，原文紀年改叫 dateOriginal`);
+      }
+      if ('dateLabel' in node && !labelOk(node.dateLabel)) bad.push(`${where} 的 dateLabel「${node.dateLabel}」不是規定的形狀`);
+      for (const [k, v] of Object.entries(node)) walk(v, `${path}.${k}`);
+    };
+    walk(root, name);
+    if (!seen) throw new Error(`${name} 裡一個帶 dateIso 的物件都沒看到——欄位改名了，日期檢查等於沒跑`);
+    if (bad.length) throw new Error(`日期標示不合（${bad.length} 處）：${bad.slice(0, 6).join('；')}`);
+  }
+}
+
 // 研究流程紀錄留在資料倉（engineering/LOG.md 與 data/derived），不進公開快照。
 // 這條是使用者的全局規則：canvas 公開面連未渲染的 JSON 欄位都不放工程作業語言。
 const internalOnly = ['methodPlan', 'riskRegister', 'immediateNextWork', 'contentProgress', 'materialSegments'];
@@ -681,7 +719,7 @@ const FRONTEND_FORBIDDEN = [
 
   // 欄位改名不會報錯，只會讓那一欄靜靜變成 null（建置端一律 ?? null）。日期是其中最容易
   // 掉的一欄，拿篇目登記的日期筆數對它。
-  const datedPieces = toc.items.filter((item) => item.date).length;
+  const datedPieces = toc.items.filter((item) => item.dateOriginal).length;
   const datedRecords = stored.records.filter(
     (record) => (record.type === 'draft' || record.type === 'verified') && record.dateOriginal,
   ).length;

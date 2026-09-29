@@ -47,62 +47,68 @@
       {
         "id": "ZJH-LE-001",
         "title": "中國之法律教育問題",
-        "date": "民國三十四年四月十八日",
         "dateIso": "1945-04-18",
         "occasion": "在教育部法律教育委員會致詞",
         "bookPages": "303–308",
         "status": "全文已轉錄並複核",
-        "shortTitle": "法律教育問題"
+        "shortTitle": "法律教育問題",
+        "dateOriginal": "民國三十四年四月十八日",
+        "dateLabel": "1945 年 4 月 18 日"
       },
       {
         "id": "ZJH-LE-002",
         "title": "法律教育的一種看法",
-        "date": "民國三十六年六月二十七日",
         "dateIso": "1947-06-27",
         "occasion": "第三次法律教育會議講詞",
         "bookPages": "308–312",
         "status": "全文已轉錄並複核",
-        "shortTitle": "一種看法"
+        "shortTitle": "一種看法",
+        "dateOriginal": "民國三十六年六月二十七日",
+        "dateLabel": "1947 年 6 月 27 日"
       },
       {
         "id": "ZJH-LE-003",
         "title": "法律教育委員會第五次會議致詞",
-        "date": "民國三十七年二月四日",
         "dateIso": "1948-02-04",
         "occasion": "在教育部會議室講",
         "bookPages": "312–316",
         "status": "全文已轉錄並複核",
-        "shortTitle": "第五次會議"
+        "shortTitle": "第五次會議",
+        "dateOriginal": "民國三十七年二月四日",
+        "dateLabel": "1948 年 2 月 4 日"
       },
       {
         "id": "ZJH-LE-004",
         "title": "法律教育委員會第六次會議致詞",
-        "date": "民國三十七年七月一日",
         "dateIso": "1948-07-01",
         "occasion": "在教育部會議室講",
         "bookPages": "316–319",
         "status": "全文已轉錄並複核",
-        "shortTitle": "第六次會議"
+        "shortTitle": "第六次會議",
+        "dateOriginal": "民國三十七年七月一日",
+        "dateLabel": "1948 年 7 月 1 日"
       },
       {
         "id": "ZJH-LE-005",
         "title": "法律教育委員會第七次會議致詞",
-        "date": "民國三十七年十二月二日",
         "dateIso": "1948-12-02",
         "occasion": "第七次法律教育委員會會議",
         "bookPages": "319–324",
         "status": "全文已轉錄並複核",
-        "shortTitle": "第七次會議"
+        "shortTitle": "第七次會議",
+        "dateOriginal": "民國三十七年十二月二日",
+        "dateLabel": "1948 年 12 月 2 日"
       },
       {
         "id": "ZJH-LE-006",
         "title": "法治行政",
-        "date": "民國三十九年九月十二日",
         "dateIso": "1950-09-12",
         "occasion": "在臺灣省青年服務團講",
         "bookPages": "325–330",
         "status": "全文已轉錄並複核",
-        "shortTitle": "法治行政"
+        "shortTitle": "法治行政",
+        "dateOriginal": "民國三十九年九月十二日",
+        "dateLabel": "1950 年 9 月 12 日"
       }
     ],
     "themes": [
@@ -434,6 +440,8 @@
     "frontMatter": [
       {
         "title": "獻詞",
+        "anchor": "dedication",
+        "legacyAnchor": "ZJH-FM-001",
         "id": "ZJH-FM-001",
         "author": "萬紹章",
         "bookPages": "1–7",
@@ -442,6 +450,8 @@
       },
       {
         "title": "緣起",
+        "anchor": "origins",
+        "legacyAnchor": "ZJH-FM-002",
         "id": "ZJH-FM-002",
         "author": "王聿均",
         "bookPages": "1–6",
@@ -450,6 +460,8 @@
       },
       {
         "title": "圖片",
+        "anchor": "plates",
+        "legacyAnchor": "ZJH-FM-PLATES",
         "plateCount": 11,
         "plates": [
           {
@@ -461,43 +473,43 @@
             "id": "PL-016",
             "caption": "中央研究院成立第二十週年紀念會暨第一次院士會議攝影（下為出席院士姓名表）",
             "pdfPage": 16,
-            "dateLabel": "民國三十七年"
+            "dateOriginal": "民國三十七年"
           },
           {
             "id": "PL-018",
             "caption": "傅孟眞先生逝世週年紀念日送葬後攝於墓前（四十年十二月二十日）",
             "pdfPage": 18,
-            "dateLabel": "民國四十年十二月二十日"
+            "dateOriginal": "民國四十年十二月二十日"
           },
           {
             "id": "PL-019",
             "caption": "偕董作賓溥心畬兩先生應邀訪韓，在漢城機場接受歡迎者獻花（四十四年五月）",
             "pdfPage": 19,
-            "dateLabel": "民國四十四年五月"
+            "dateOriginal": "民國四十四年五月"
           },
           {
             "id": "PL-020",
             "caption": "訪問韓國，與韓國前國會議長申翼熙前國務總理李範奭合影（四十四年五月）",
             "pdfPage": 20,
-            "dateLabel": "民國四十四年五月"
+            "dateOriginal": "民國四十四年五月"
           },
           {
             "id": "PL-021",
             "caption": "聯合國日酒會朱先生伉儷與陳副總統合影（四十八年十月廿四日）",
             "pdfPage": 21,
-            "dateLabel": "民國四十八年十月廿四日"
+            "dateOriginal": "民國四十八年十月廿四日"
           },
           {
             "id": "PL-022",
             "caption": "聯合國酒會與胡適之先生合影（四十八年十月廿四日）",
             "pdfPage": 22,
-            "dateLabel": "民國四十八年十月廿四日"
+            "dateOriginal": "民國四十八年十月廿四日"
           },
           {
             "id": "PL-023",
             "caption": "聯合國日酒會與胡適之蔣緯國兩先生合影（四十八年十月廿四日）",
             "pdfPage": 23,
-            "dateLabel": "民國四十八年十月廿四日"
+            "dateOriginal": "民國四十八年十月廿四日"
           },
           {
             "id": "PL-024",
@@ -596,9 +608,13 @@
         "title": "設立兩廣地質調查所意見書",
         "part": "壹、文化學術",
         "bookStartPage": 1,
-        "date": "民國十六年五月",
+        "dateOriginal": "民國十六年五月",
         "dateIso": "1927-05",
+        "dateLabel": "1927 年 5 月",
         "textPath": "/zhujiahua/text-two-guang-geological-survey",
+        "dateSources": [
+          "原書目次：民國十六年五月"
+        ],
         "occasion": "於廣州",
         "occasionStatus": "待核",
         "bookEndPage": 1,
@@ -611,8 +627,12 @@
         "title": "復庚款生陳永齡述提倡大地測量學經過",
         "part": "壹、文化學術",
         "bookStartPage": 2,
-        "date": "民國二十七年十二月二十三日",
+        "dateOriginal": "民國二十七年十二月二十三日",
         "dateIso": "1938-12-23",
+        "dateLabel": "1938 年 12 月 23 日",
+        "dateSources": [
+          "原書目次：民國二十七年十二月二十三日"
+        ],
         "bookEndPage": 3,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -623,8 +643,12 @@
         "title": "復同濟大學校長趙士卿述提倡大地測量學經過",
         "part": "壹、文化學術",
         "bookStartPage": 3,
-        "date": "民國二十八年七月十三日",
+        "dateOriginal": "民國二十八年七月十三日",
         "dateIso": "1939-07-13",
+        "dateLabel": "1939 年 7 月 13 日",
+        "dateSources": [
+          "原書目次：民國二十八年七月十三日"
+        ],
         "bookEndPage": 4,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -635,8 +659,12 @@
         "title": "函同濟大學校長周均時轉請改進測量學系之意見",
         "part": "壹、文化學術",
         "bookStartPage": 4,
-        "date": "民國二十九年九月二日",
+        "dateOriginal": "民國二十九年九月二日",
         "dateIso": "1940-09-02",
+        "dateLabel": "1940 年 9 月 2 日",
+        "dateSources": [
+          "原書目次：民國二十九年九月二日"
+        ],
         "bookEndPage": 5,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -647,11 +675,16 @@
         "title": "全國學術會議召集意義",
         "part": "壹、文化學術",
         "bookStartPage": 5,
-        "date": "民國三十年三月二十一日",
+        "dateOriginal": "民國三十年三月二十一日",
         "dateIso": "1941-03-21",
+        "dateLabel": "1941 年 3 月 21 日",
         "note": "正文題下作「民國三十年三月廿一日談話」",
         "dateInText": "民國三十年三月廿一日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國三十年三月二十一日",
+          "篇端署：民國三十年三月廿一日　待核"
+        ],
         "occasion": "談話",
         "occasionStatus": "待核",
         "bookEndPage": 6,
@@ -664,8 +697,12 @@
         "title": "對英國科學協會廣播詞",
         "part": "壹、文化學術",
         "bookStartPage": 6,
-        "date": "民國三十年九月二十六日",
+        "dateOriginal": "民國三十年九月二十六日",
         "dateIso": "1941-09-26",
+        "dateLabel": "1941 年 9 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十年九月二十六日"
+        ],
         "bookEndPage": 7,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -676,8 +713,12 @@
         "title": "科學研究之意見",
         "part": "壹、文化學術",
         "bookStartPage": 8,
-        "date": "民國三十年十一月三十日",
+        "dateOriginal": "民國三十年十一月三十日",
         "dateIso": "1941-11-30",
+        "dateLabel": "1941 年 11 月 30 日",
+        "dateSources": [
+          "原書目次：民國三十年十一月三十日"
+        ],
         "occasion": "在自然科學社第十四屆年會講",
         "occasionStatus": "待核",
         "bookEndPage": 12,
@@ -690,8 +731,12 @@
         "title": "電賀中國工程師學會在蘭州舉行年會",
         "part": "壹、文化學術",
         "bookStartPage": 12,
-        "date": "民國三十一年七月二十八日",
+        "dateOriginal": "民國三十一年七月二十八日",
         "dateIso": "1942-07-28",
+        "dateLabel": "1942 年 7 月 28 日",
+        "dateSources": [
+          "原書目次：民國三十一年七月二十八日"
+        ],
         "bookEndPage": 12,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -702,8 +747,12 @@
         "title": "函陸地測量總局黃思基商討共同發展測量事業",
         "part": "壹、文化學術",
         "bookStartPage": 12,
-        "date": "民國三十一年十月一日",
+        "dateOriginal": "民國三十一年十月一日",
         "dateIso": "1942-10-01",
+        "dateLabel": "1942 年 10 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月一日"
+        ],
         "bookEndPage": 14,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -714,8 +763,12 @@
         "title": "如何迎頭趕上西洋文化",
         "part": "壹、文化學術",
         "bookStartPage": 14,
-        "date": "民國三十一年十月三十一日",
+        "dateOriginal": "民國三十一年十月三十一日",
         "dateIso": "1942-10-31",
+        "dateLabel": "1942 年 10 月 31 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月三十一日"
+        ],
         "bookEndPage": 22,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -726,10 +779,15 @@
         "title": "牛頓與近代科學",
         "part": "壹、文化學術",
         "bookStartPage": 22,
-        "date": "民國三十二年一月五日",
+        "dateOriginal": "民國三十二年一月五日",
         "dateIso": "1943-01-05",
+        "dateLabel": "1943 年 1 月 5 日",
         "dateInText": "一九四三年一月五日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國三十二年一月五日",
+          "篇端署：一九四三年一月五日　待核"
+        ],
         "occasion": "牛頓三百年紀念日廣播講演",
         "occasionStatus": "待核",
         "bookEndPage": 25,
@@ -742,8 +800,12 @@
         "title": "中國地質學會第十九屆年會致詞",
         "part": "壹、文化學術",
         "bookStartPage": 25,
-        "date": "民國三十二年三月五日",
+        "dateOriginal": "民國三十二年三月五日",
         "dateIso": "1943-03-05",
+        "dateLabel": "1943 年 3 月 5 日",
+        "dateSources": [
+          "原書目次：民國三十二年三月五日"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 29,
@@ -756,8 +818,12 @@
         "title": "科學世界與建國前途",
         "part": "壹、文化學術",
         "bookStartPage": 29,
-        "date": "民國三十二年四月八日",
+        "dateOriginal": "民國三十二年四月八日",
         "dateIso": "1943-04-08",
+        "dateLabel": "1943 年 4 月 8 日",
+        "dateSources": [
+          "原書目次：民國三十二年四月八日"
+        ],
         "occasion": "在青年團第一次全國代表大會講演",
         "occasionStatus": "待核",
         "bookEndPage": 37,
@@ -770,8 +836,12 @@
         "title": "科學之路",
         "part": "壹、文化學術",
         "bookStartPage": 37,
-        "date": "民國三十二年七月十九日",
+        "dateOriginal": "民國三十二年七月十九日",
         "dateIso": "1943-07-19",
+        "dateLabel": "1943 年 7 月 19 日",
+        "dateSources": [
+          "原書目次：民國三十二年七月十九日"
+        ],
         "occasion": "在三民主義青年團南嶽夏令營講",
         "occasionStatus": "待核",
         "bookEndPage": 47,
@@ -784,8 +854,12 @@
         "title": "科學與軍事",
         "part": "壹、文化學術",
         "bookStartPage": 48,
-        "date": "民國三十二年八月二十六日",
+        "dateOriginal": "民國三十二年八月二十六日",
         "dateIso": "1943-08-26",
+        "dateLabel": "1943 年 8 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十二年八月二十六日"
+        ],
         "occasion": "在重慶北碚三民主義青年團夏令營講",
         "occasionStatus": "待核",
         "bookEndPage": 56,
@@ -798,8 +872,12 @@
         "title": "青年與科學",
         "part": "壹、文化學術",
         "bookStartPage": 56,
-        "date": "民國三十三年三月二十七日",
+        "dateOriginal": "民國三十三年三月二十七日",
         "dateIso": "1944-03-27",
+        "dateLabel": "1944 年 3 月 27 日",
+        "dateSources": [
+          "原書目次：民國三十三年三月二十七日"
+        ],
         "occasion": "於重慶陪都",
         "occasionStatus": "待核",
         "bookEndPage": 60,
@@ -812,8 +890,12 @@
         "title": "中國工程師學會年會致詞",
         "part": "壹、文化學術",
         "bookStartPage": 60,
-        "date": "民國三十四年六月六日",
+        "dateOriginal": "民國三十四年六月六日",
         "dateIso": "1945-06-06",
+        "dateLabel": "1945 年 6 月 6 日",
+        "dateSources": [
+          "原書目次：民國三十四年六月六日"
+        ],
         "occasion": "於重慶復興關",
         "occasionStatus": "待核",
         "bookEndPage": 62,
@@ -826,8 +908,12 @@
         "title": "中國教育學術團體聯合會致詞",
         "part": "壹、文化學術",
         "bookStartPage": 62,
-        "date": "民國三十四年八月十八日",
+        "dateOriginal": "民國三十四年八月十八日",
         "dateIso": "1945-08-18",
+        "dateLabel": "1945 年 8 月 18 日",
+        "dateSources": [
+          "原書目次：民國三十四年八月十八日"
+        ],
         "occasion": "於北碚",
         "occasionStatus": "待核",
         "bookEndPage": 67,
@@ -840,8 +926,12 @@
         "title": "自然科學之重要性",
         "part": "壹、文化學術",
         "bookStartPage": 68,
-        "date": "民國三十四年十月十七日",
+        "dateOriginal": "民國三十四年十月十七日",
         "dateIso": "1945-10-17",
+        "dateLabel": "1945 年 10 月 17 日",
+        "dateSources": [
+          "原書目次：民國三十四年十月十七日"
+        ],
         "occasion": "中華自然科學社十九屆年會致詞",
         "occasionStatus": "待核",
         "bookEndPage": 71,
@@ -854,8 +944,12 @@
         "title": "十科學團體聯合年會致詞",
         "part": "壹、文化學術",
         "bookStartPage": 71,
-        "date": "民國三十七年十月九日",
+        "dateOriginal": "民國三十七年十月九日",
         "dateIso": "1948-10-09",
+        "dateLabel": "1948 年 10 月 9 日",
+        "dateSources": [
+          "原書目次：民國三十七年十月九日"
+        ],
         "occasion": "在中央大學大禮堂講",
         "occasionStatus": "待核",
         "bookEndPage": 72,
@@ -868,8 +962,12 @@
         "title": "代理中央研究院院長就職談話",
         "part": "貳、中央研究院",
         "bookStartPage": 73,
-        "date": "民國二十九年十月一日",
+        "dateOriginal": "民國二十九年十月一日",
         "dateIso": "1940-10-01",
+        "dateLabel": "1940 年 10 月 1 日",
+        "dateSources": [
+          "原書目次：民國二十九年十月一日"
+        ],
         "bookEndPage": 74,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -880,8 +978,12 @@
         "title": "評議會第二屆第一次年會致詞",
         "part": "貳、中央研究院",
         "bookStartPage": 74,
-        "date": "民國三十一年六月三十日",
+        "dateOriginal": "民國三十一年六月三十日",
         "dateIso": "1942-06-30",
+        "dateLabel": "1942 年 6 月 30 日",
+        "dateSources": [
+          "原書目次：民國三十一年六月三十日"
+        ],
         "bookEndPage": 77,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -892,8 +994,12 @@
         "title": "抗戰以來中央研究院之概況",
         "part": "貳、中央研究院",
         "bookStartPage": 77,
-        "date": "民國三十一年十月十日",
+        "dateOriginal": "民國三十一年十月十日",
         "dateIso": "1942-10-10",
+        "dateLabel": "1942 年 10 月 10 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月十日"
+        ],
         "bookEndPage": 83,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -904,9 +1010,13 @@
         "title": "歡迎英國陶德斯尼德漢兩教授",
         "part": "貳、中央研究院",
         "bookStartPage": 84,
-        "date": "民國三十二年四月十日",
+        "dateOriginal": "民國三十二年四月十日",
         "dateIso": "1943-04-10",
+        "dateLabel": "1943 年 4 月 10 日",
         "note": "兩位英國學者的中譯名依原書照錄，未比對西文原名",
+        "dateSources": [
+          "原書目次：民國三十二年四月十日"
+        ],
         "bookEndPage": 85,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -917,8 +1027,12 @@
         "title": "評議會第二屆第二次年會開幕詞",
         "part": "貳、中央研究院",
         "bookStartPage": 85,
-        "date": "民國三十三年三月八日",
+        "dateOriginal": "民國三十三年三月八日",
         "dateIso": "1944-03-08",
+        "dateLabel": "1944 年 3 月 8 日",
+        "dateSources": [
+          "原書目次：民國三十三年三月八日"
+        ],
         "bookEndPage": 87,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -929,9 +1043,13 @@
         "title": "評議會第二屆第四次年會開幕詞",
         "part": "貳、中央研究院",
         "bookStartPage": 88,
-        "date": "民國三十六年十月十五日",
+        "dateOriginal": "民國三十六年十月十五日",
         "dateIso": "1947-10-15",
+        "dateLabel": "1947 年 10 月 15 日",
         "note": "目次未列第二屆第三次年會，原書如此",
+        "dateSources": [
+          "原書目次：民國三十六年十月十五日"
+        ],
         "bookEndPage": 89,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -942,8 +1060,12 @@
         "title": "評議會第二屆第五次年會開幕詞",
         "part": "貳、中央研究院",
         "bookStartPage": 89,
-        "date": "民國三十七年三月二十五日",
+        "dateOriginal": "民國三十七年三月二十五日",
         "dateIso": "1948-03-25",
+        "dateLabel": "1948 年 3 月 25 日",
+        "dateSources": [
+          "原書目次：民國三十七年三月二十五日"
+        ],
         "bookEndPage": 91,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -954,8 +1076,12 @@
         "title": "中央研究院概況",
         "part": "貳、中央研究院",
         "bookStartPage": 91,
-        "date": "民國三十七年七月二十六日",
+        "dateOriginal": "民國三十七年七月二十六日",
         "dateIso": "1948-07-26",
+        "dateLabel": "1948 年 7 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十七年七月二十六日"
+        ],
         "occasion": "在中國國民黨中央黨部紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 95,
@@ -968,8 +1094,12 @@
         "title": "第一次院士會議開幕詞",
         "part": "貳、中央研究院",
         "bookStartPage": 95,
-        "date": "民國三十七年九月二十三日",
+        "dateOriginal": "民國三十七年九月二十三日",
         "dateIso": "1948-09-23",
+        "dateLabel": "1948 年 9 月 23 日",
+        "dateSources": [
+          "原書目次：民國三十七年九月二十三日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 98,
@@ -982,8 +1112,12 @@
         "title": "第二次院士會議開幕詞——學術研究工作的簡說",
         "part": "貳、中央研究院",
         "bookStartPage": 98,
-        "date": "民國四十六年四月二日",
+        "dateOriginal": "民國四十六年四月二日",
         "dateIso": "1957-04-02",
+        "dateLabel": "1957 年 4 月 2 日",
+        "dateSources": [
+          "原書目次：民國四十六年四月二日"
+        ],
         "bookEndPage": 103,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -994,8 +1128,12 @@
         "title": "第二次院士會議閉幕詞",
         "part": "貳、中央研究院",
         "bookStartPage": 103,
-        "date": "民國四十六年四月四日",
+        "dateOriginal": "民國四十六年四月四日",
         "dateIso": "1957-04-04",
+        "dateLabel": "1957 年 4 月 4 日",
+        "dateSources": [
+          "原書目次：民國四十六年四月四日"
+        ],
         "bookEndPage": 104,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1006,8 +1144,12 @@
         "title": "三十年來的中央研究院",
         "part": "貳、中央研究院",
         "bookStartPage": 104,
-        "date": "民國四十七年六月九日",
+        "dateOriginal": "民國四十七年六月九日",
         "dateIso": "1958-06-09",
+        "dateLabel": "1958 年 6 月 9 日",
+        "dateSources": [
+          "原書目次：民國四十七年六月九日"
+        ],
         "occasion": "在中央研究院三十週年紀念致詞",
         "occasionStatus": "待核",
         "bookEndPage": 120,
@@ -1021,8 +1163,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 121,
         "section": "一、教育行政",
-        "date": "民國十九年十一月十日",
+        "dateOriginal": "民國十九年十一月十日",
         "dateIso": "1930-11-10",
+        "dateLabel": "1930 年 11 月 10 日",
+        "dateSources": [
+          "原書目次：民國十九年十一月十日"
+        ],
         "occasion": "在中央第八十五次紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 125,
@@ -1036,11 +1182,16 @@
         "part": "叁、教育言論",
         "bookStartPage": 125,
         "section": "一、教育行政",
-        "date": "民國二十年　月",
+        "dateOriginal": "民國二十年　月",
         "dateIso": "1931",
+        "dateLabel": "1931 年",
         "note": "原書月份欄空白",
         "dateInText": "民國二十年春",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國二十年　月",
+          "篇端署：民國二十年春　待核"
+        ],
         "occasion": "在中央紀念週講",
         "occasionStatus": "待核",
         "bookEndPage": 131,
@@ -1054,8 +1205,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 131,
         "section": "一、教育行政",
-        "date": "民國二十一年十一月二十五日",
+        "dateOriginal": "民國二十一年十一月二十五日",
         "dateIso": "1932-11-25",
+        "dateLabel": "1932 年 11 月 25 日",
+        "dateSources": [
+          "原書目次：民國二十一年十一月二十五日"
+        ],
         "bookEndPage": 154,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1067,8 +1222,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 154,
         "section": "一、教育行政",
-        "date": "民國二十二年四月二十八日",
+        "dateOriginal": "民國二十二年四月二十八日",
         "dateIso": "1933-04-28",
+        "dateLabel": "1933 年 4 月 28 日",
+        "dateSources": [
+          "原書目次：民國二十二年四月二十八日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 156,
@@ -1082,8 +1241,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 156,
         "section": "一、教育行政",
-        "date": "民國二十四年一月一日",
+        "dateOriginal": "民國二十四年一月一日",
         "dateIso": "1935-01-01",
+        "dateLabel": "1935 年 1 月 1 日",
+        "dateSources": [
+          "原書目次：民國二十四年一月一日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 159,
@@ -1097,8 +1260,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 159,
         "section": "一、教育行政",
-        "date": "民國二十四年",
+        "dateOriginal": "民國二十四年",
         "dateIso": "1935",
+        "dateLabel": "1935 年",
+        "dateSources": [
+          "原書目次：民國二十四年"
+        ],
         "bookEndPage": 164,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1110,8 +1277,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 164,
         "section": "一、教育行政",
-        "date": "民國三十一年三月三十日",
+        "dateOriginal": "民國三十一年三月三十日",
         "dateIso": "1942-03-30",
+        "dateLabel": "1942 年 3 月 30 日",
+        "dateSources": [
+          "原書目次：民國三十一年三月三十日"
+        ],
         "bookEndPage": 170,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1123,8 +1294,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 170,
         "section": "一、教育行政",
-        "date": "民國三十三年十二月十四日",
+        "dateOriginal": "民國三十三年十二月十四日",
         "dateIso": "1944-12-14",
+        "dateLabel": "1944 年 12 月 14 日",
+        "dateSources": [
+          "原書目次：民國三十三年十二月十四日"
+        ],
         "bookEndPage": 171,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1136,8 +1311,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 171,
         "section": "一、教育行政",
-        "date": "民國三十四年七月七日",
+        "dateOriginal": "民國三十四年七月七日",
         "dateIso": "1945-07-07",
+        "dateLabel": "1945 年 7 月 7 日",
+        "dateSources": [
+          "原書目次：民國三十四年七月七日"
+        ],
         "bookEndPage": 173,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1149,8 +1328,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 174,
         "section": "一、教育行政",
-        "date": "民國三十四年八月十四日",
+        "dateOriginal": "民國三十四年八月十四日",
         "dateIso": "1945-08-14",
+        "dateLabel": "1945 年 8 月 14 日",
+        "dateSources": [
+          "原書目次：民國三十四年八月十四日"
+        ],
         "bookEndPage": 176,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1162,8 +1345,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 176,
         "section": "一、教育行政",
-        "date": "民國三十四年九月二十日",
+        "dateOriginal": "民國三十四年九月二十日",
         "dateIso": "1945-09-20",
+        "dateLabel": "1945 年 9 月 20 日",
+        "dateSources": [
+          "原書目次：民國三十四年九月二十日"
+        ],
         "bookEndPage": 180,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1175,8 +1362,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 180,
         "section": "一、教育行政",
-        "date": "民國三十四年九月二十四日",
+        "dateOriginal": "民國三十四年九月二十四日",
         "dateIso": "1945-09-24",
+        "dateLabel": "1945 年 9 月 24 日",
+        "dateSources": [
+          "原書目次：民國三十四年九月二十四日"
+        ],
         "bookEndPage": 183,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1188,8 +1379,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 183,
         "section": "一、教育行政",
-        "date": "民國三十四年九月二十六日",
+        "dateOriginal": "民國三十四年九月二十六日",
         "dateIso": "1945-09-26",
+        "dateLabel": "1945 年 9 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十四年九月二十六日"
+        ],
         "bookEndPage": 186,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1201,8 +1396,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 186,
         "section": "一、教育行政",
-        "date": "民國三十五年五月二十四日",
+        "dateOriginal": "民國三十五年五月二十四日",
         "dateIso": "1946-05-24",
+        "dateLabel": "1946 年 5 月 24 日",
+        "dateSources": [
+          "原書目次：民國三十五年五月二十四日"
+        ],
         "bookEndPage": 188,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1214,8 +1413,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 188,
         "section": "一、教育行政",
-        "date": "民國三十五年十二月二十八日",
+        "dateOriginal": "民國三十五年十二月二十八日",
         "dateIso": "1946-12-28",
+        "dateLabel": "1946 年 12 月 28 日",
+        "dateSources": [
+          "原書目次：民國三十五年十二月二十八日"
+        ],
         "bookEndPage": 200,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1227,8 +1430,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 200,
         "section": "一、教育行政",
-        "date": "民國三十六年八月二十八日",
+        "dateOriginal": "民國三十六年八月二十八日",
         "dateIso": "1947-08-28",
+        "dateLabel": "1947 年 8 月 28 日",
+        "dateSources": [
+          "原書目次：民國三十六年八月二十八日"
+        ],
         "bookEndPage": 203,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1240,8 +1447,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 203,
         "section": "一、教育行政",
-        "date": "民國三十六年九月三日",
+        "dateOriginal": "民國三十六年九月三日",
         "dateIso": "1947-09-03",
+        "dateLabel": "1947 年 9 月 3 日",
+        "dateSources": [
+          "原書目次：民國三十六年九月三日"
+        ],
         "bookEndPage": 205,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1253,8 +1464,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 205,
         "section": "一、教育行政",
-        "date": "民國三十六年九月十二日",
+        "dateOriginal": "民國三十六年九月十二日",
         "dateIso": "1947-09-12",
+        "dateLabel": "1947 年 9 月 12 日",
+        "dateSources": [
+          "原書目次：民國三十六年九月十二日"
+        ],
         "bookEndPage": 206,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1266,8 +1481,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 206,
         "section": "一、教育行政",
-        "date": "民國三十七年",
+        "dateOriginal": "民國三十七年",
         "dateIso": "1948",
+        "dateLabel": "1948 年",
+        "dateSources": [
+          "原書目次：民國三十七年"
+        ],
         "bookEndPage": 208,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1279,8 +1498,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 208,
         "section": "一、教育行政",
-        "date": "民國三十七年一月十八日",
+        "dateOriginal": "民國三十七年一月十八日",
         "dateIso": "1948-01-18",
+        "dateLabel": "1948 年 1 月 18 日",
+        "dateSources": [
+          "原書目次：民國三十七年一月十八日"
+        ],
         "occasion": "在臺中",
         "occasionStatus": "待核",
         "bookEndPage": 213,
@@ -1294,8 +1517,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 214,
         "section": "一、教育行政",
-        "date": "民國三十七年二月二日",
+        "dateOriginal": "民國三十七年二月二日",
         "dateIso": "1948-02-02",
+        "dateLabel": "1948 年 2 月 2 日",
+        "dateSources": [
+          "原書目次：民國三十七年二月二日"
+        ],
         "occasion": "在教育部月會講",
         "occasionStatus": "待核",
         "bookEndPage": 217,
@@ -1309,8 +1536,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 217,
         "section": "二、教育施政報告",
-        "date": "民國三十四年四月二十三日",
+        "dateOriginal": "民國三十四年四月二十三日",
         "dateIso": "1945-04-23",
+        "dateLabel": "1945 年 4 月 23 日",
+        "dateSources": [
+          "原書目次：民國三十四年四月二十三日"
+        ],
         "occasion": "在中央紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 222,
@@ -1324,8 +1555,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 222,
         "section": "二、教育施政報告",
-        "date": "民國三十四年七月九日",
+        "dateOriginal": "民國三十四年七月九日",
         "dateIso": "1945-07-09",
+        "dateLabel": "1945 年 7 月 9 日",
+        "dateSources": [
+          "原書目次：民國三十四年七月九日"
+        ],
         "occasion": "第四屆參政會第一次大會報告",
         "occasionStatus": "待核",
         "bookEndPage": 232,
@@ -1339,8 +1574,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 233,
         "section": "二、教育施政報告",
-        "date": "民國三十五年六月二十四日",
+        "dateOriginal": "民國三十五年六月二十四日",
         "dateIso": "1946-06-24",
+        "dateLabel": "1946 年 6 月 24 日",
+        "dateSources": [
+          "原書目次：民國三十五年六月二十四日"
+        ],
         "occasion": "在國民政府中央紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 236,
@@ -1354,8 +1593,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 236,
         "section": "二、教育施政報告",
-        "date": "民國三十六年",
+        "dateOriginal": "民國三十六年",
         "dateIso": "1947",
+        "dateLabel": "1947 年",
+        "dateSources": [
+          "原書目次：民國三十六年"
+        ],
         "bookEndPage": 240,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1367,8 +1610,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 240,
         "section": "二、教育施政報告",
-        "date": "民國三十七年四月十四日",
+        "dateOriginal": "民國三十七年四月十四日",
         "dateIso": "1948-04-14",
+        "dateLabel": "1948 年 4 月 14 日",
+        "dateSources": [
+          "原書目次：民國三十七年四月十四日"
+        ],
         "occasion": "在國民大會報告",
         "occasionStatus": "待核",
         "bookEndPage": 246,
@@ -1382,8 +1629,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 246,
         "section": "二、教育施政報告",
-        "date": "民國三十七年六月三十日",
+        "dateOriginal": "民國三十七年六月三十日",
         "dateIso": "1948-06-30",
+        "dateLabel": "1948 年 6 月 30 日",
+        "dateSources": [
+          "原書目次：民國三十七年六月三十日"
+        ],
         "occasion": "於立法院教育文化委員會報告",
         "occasionStatus": "待核",
         "bookEndPage": 249,
@@ -1397,8 +1648,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 249,
         "section": "三、各大學演講詞",
-        "date": "民國十六年四月一日",
+        "dateOriginal": "民國十六年四月一日",
         "dateIso": "1927-04-01",
+        "dateLabel": "1927 年 4 月 1 日",
+        "dateSources": [
+          "原書目次：民國十六年四月一日"
+        ],
         "occasion": "在本校開學典禮日講演詞",
         "occasionStatus": "待核",
         "bookEndPage": 260,
@@ -1412,8 +1667,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 261,
         "section": "三、各大學演講詞",
-        "date": "民國十七年十月一日",
+        "dateOriginal": "民國十七年十月一日",
         "dateIso": "1928-10-01",
+        "dateLabel": "1928 年 10 月 1 日",
+        "dateSources": [
+          "原書目次：民國十七年十月一日"
+        ],
         "occasion": "在廣州中山大學",
         "occasionStatus": "待核",
         "bookEndPage": 263,
@@ -1427,10 +1686,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 264,
         "section": "三、各大學演講詞",
-        "date": "民國十八年六月二十九日",
+        "dateOriginal": "民國十八年六月二十九日",
         "dateIso": "1929-06-29",
+        "dateLabel": "1929 年 6 月 29 日",
         "dateInText": "民國十八年六月廿九日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國十八年六月二十九日",
+          "篇端署：民國十八年六月廿九日　待核"
+        ],
         "occasion": "在廣州中山大學",
         "occasionStatus": "待核",
         "bookEndPage": 267,
@@ -1444,8 +1708,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 267,
         "section": "三、各大學演講詞",
-        "date": "民國十九年九月十八日",
+        "dateOriginal": "民國十九年九月十八日",
         "dateIso": "1930-09-18",
+        "dateLabel": "1930 年 9 月 18 日",
+        "dateSources": [
+          "原書目次：民國十九年九月十八日"
+        ],
         "bookEndPage": 269,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1457,10 +1725,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 269,
         "section": "三、各大學演講詞",
-        "date": "民國十九年十月六日",
+        "dateOriginal": "民國十九年十月六日",
         "dateIso": "1930-10-06",
+        "dateLabel": "1930 年 10 月 6 日",
         "dateInText": "十九年十月六日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國十九年十月六日",
+          "篇端署：十九年十月六日　待核"
+        ],
         "bookEndPage": 276,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1472,8 +1745,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 276,
         "section": "三、各大學演講詞",
-        "date": "民國十九年十二月九日",
+        "dateOriginal": "民國十九年十二月九日",
         "dateIso": "1930-12-09",
+        "dateLabel": "1930 年 12 月 9 日",
+        "dateSources": [
+          "原書目次：民國十九年十二月九日"
+        ],
         "occasion": "在廣州中山大學",
         "occasionStatus": "待核",
         "bookEndPage": 277,
@@ -1487,8 +1764,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 277,
         "section": "三、各大學演講詞",
-        "date": "民國十九年十二月九日",
+        "dateOriginal": "民國十九年十二月九日",
         "dateIso": "1930-12-09",
+        "dateLabel": "1930 年 12 月 9 日",
+        "dateSources": [
+          "原書目次：民國十九年十二月九日"
+        ],
         "occasion": "在廣州中山大學",
         "occasionStatus": "待核",
         "bookEndPage": 282,
@@ -1502,8 +1783,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 282,
         "section": "三、各大學演講詞",
-        "date": "民國三十一年七月四日",
+        "dateOriginal": "民國三十一年七月四日",
         "dateIso": "1942-07-04",
+        "dateLabel": "1942 年 7 月 4 日",
+        "dateSources": [
+          "原書目次：民國三十一年七月四日"
+        ],
         "occasion": "在中山大學同學會歡迎會致詞",
         "occasionStatus": "待核",
         "bookEndPage": 284,
@@ -1517,10 +1802,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 284,
         "section": "三、各大學演講詞",
-        "date": "民國三十七年十月二十日",
+        "dateOriginal": "民國三十七年十月二十日",
         "dateIso": "1948-10-20",
+        "dateLabel": "1948 年 10 月 20 日",
         "dateInText": "民國三十七年十月廿日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國三十七年十月二十日",
+          "篇端署：民國三十七年十月廿日　待核"
+        ],
         "bookEndPage": 286,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1532,9 +1822,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 287,
         "section": "三、各大學演講詞",
-        "date": "民國三十七年十一月五日",
+        "dateOriginal": "民國三十七年十一月五日",
         "dateIso": "1948-11-05",
+        "dateLabel": "1948 年 11 月 5 日",
         "note": "原書作「爲」",
+        "dateSources": [
+          "原書目次：民國三十七年十一月五日"
+        ],
         "bookEndPage": 288,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1546,8 +1840,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 288,
         "section": "三、各大學演講詞",
-        "date": "民國二十八年七月二十五日",
+        "dateOriginal": "民國二十八年七月二十五日",
         "dateIso": "1939-07-25",
+        "dateLabel": "1939 年 7 月 25 日",
+        "dateSources": [
+          "原書目次：民國二十八年七月二十五日"
+        ],
         "bookEndPage": 290,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1559,10 +1857,15 @@
         "part": "叁、教育言論",
         "bookStartPage": 290,
         "section": "三、各大學演講詞",
-        "date": "民國三十三年十二月二十五日",
+        "dateOriginal": "民國三十三年十二月二十五日",
         "dateIso": "1944-12-25",
+        "dateLabel": "1944 年 12 月 25 日",
         "dateInText": "民國三十三年十二月廿五日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國三十三年十二月二十五日",
+          "篇端署：民國三十三年十二月廿五日　待核"
+        ],
         "occasion": "在中央大學紀念週講",
         "occasionStatus": "待核",
         "bookEndPage": 296,
@@ -1576,9 +1879,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 296,
         "section": "三、各大學演講詞",
-        "date": "民國三十一年五月十日",
+        "dateOriginal": "民國三十一年五月十日",
         "dateIso": "1942-05-10",
+        "dateLabel": "1942 年 5 月 10 日",
         "note": "本篇收電、函兩件：原書 296 頁篇端作「電丁校長」，298 頁作「函丁校長」，日期同為民國三十一年五月十日。目次把「電」「函」二字並排於同一字格，其下「丁文淵校長賀國立同濟大學三十五週年校慶」由兩件共用。目次所載日期作民國三十五年五月十日；電文自書「中華民國三十一年五月二十日爲國立同濟大學成立三十五週年紀念日」，同濟自 1907 年創校起算，三十五週年在民國三十一年，本站日期依正文。",
+        "dateSources": [
+          "原書目次：民國三十一年五月十日"
+        ],
         "bookEndPage": 298,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1590,8 +1897,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 298,
         "section": "三、各大學演講詞",
-        "date": "民國四十六年五月一日",
+        "dateOriginal": "民國四十六年五月一日",
         "dateIso": "1957-05-01",
+        "dateLabel": "1957 年 5 月 1 日",
+        "dateSources": [
+          "原書目次：民國四十六年五月一日"
+        ],
         "bookEndPage": 303,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1603,10 +1914,14 @@
         "part": "叁、教育言論",
         "bookStartPage": 303,
         "section": "四、法律教育",
-        "date": "民國三十四年四月十八日",
+        "dateOriginal": "民國三十四年四月十八日",
         "dateIso": "1945-04-18",
+        "dateLabel": "1945 年 4 月 18 日",
         "textPath": "/zhujiahua/original-text",
         "note": "正文題名作「中國之法律教育問題」，與目次不同",
+        "dateSources": [
+          "原書目次：民國三十四年四月十八日"
+        ],
         "bookEndPage": 308,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1618,9 +1933,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 308,
         "section": "四、法律教育",
-        "date": "民國三十六年六月二十七日",
+        "dateOriginal": "民國三十六年六月二十七日",
         "dateIso": "1947-06-27",
+        "dateLabel": "1947 年 6 月 27 日",
         "textPath": "/zhujiahua/text-a-view-of-legal-education",
+        "dateSources": [
+          "原書目次：民國三十六年六月二十七日"
+        ],
         "occasion": "第三次法律教育會議講詞",
         "occasionStatus": "待核",
         "bookEndPage": 312,
@@ -1634,9 +1953,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 312,
         "section": "四、法律教育",
-        "date": "民國三十七年二月四日",
+        "dateOriginal": "民國三十七年二月四日",
         "dateIso": "1948-02-04",
+        "dateLabel": "1948 年 2 月 4 日",
         "textPath": "/zhujiahua/text-committee-5th",
+        "dateSources": [
+          "原書目次：民國三十七年二月四日"
+        ],
         "occasion": "在教育部會議室講",
         "occasionStatus": "待核",
         "bookEndPage": 316,
@@ -1650,9 +1973,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 316,
         "section": "四、法律教育",
-        "date": "民國三十七年七月一日",
+        "dateOriginal": "民國三十七年七月一日",
         "dateIso": "1948-07-01",
+        "dateLabel": "1948 年 7 月 1 日",
         "textPath": "/zhujiahua/text-committee-6th",
+        "dateSources": [
+          "原書目次：民國三十七年七月一日"
+        ],
         "bookEndPage": 319,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1664,9 +1991,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 319,
         "section": "四、法律教育",
-        "date": "民國三十七年十二月二日",
+        "dateOriginal": "民國三十七年十二月二日",
         "dateIso": "1948-12-02",
+        "dateLabel": "1948 年 12 月 2 日",
         "textPath": "/zhujiahua/text-committee-7th",
+        "dateSources": [
+          "原書目次：民國三十七年十二月二日"
+        ],
         "bookEndPage": 324,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1678,9 +2009,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 325,
         "section": "四、法律教育",
-        "date": "民國三十九年九月十二日",
+        "dateOriginal": "民國三十九年九月十二日",
         "dateIso": "1950-09-12",
+        "dateLabel": "1950 年 9 月 12 日",
         "textPath": "/zhujiahua/text-rule-of-law-administration",
+        "dateSources": [
+          "原書目次：民國三十九年九月十二日"
+        ],
         "occasion": "在臺灣省青年服務團講",
         "occasionStatus": "待核",
         "bookEndPage": 330,
@@ -1694,9 +2029,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 330,
         "section": "五、教師節紀念",
-        "date": "民國三十四年九月二十八日",
+        "dateOriginal": "民國三十四年九月二十八日",
         "dateIso": "1945-09-28",
+        "dateLabel": "1945 年 9 月 28 日",
         "note": "目次作「教師節之感言」，原書 330 頁篇端作「教師節之感想」。",
+        "dateSources": [
+          "原書目次：民國三十四年九月二十八日"
+        ],
         "occasion": "教師節",
         "occasionStatus": "待核",
         "bookEndPage": 333,
@@ -1710,9 +2049,13 @@
         "part": "叁、教育言論",
         "bookStartPage": 333,
         "section": "五、教師節紀念",
-        "date": "民國三十五年十月二十八日",
+        "dateOriginal": "民國三十五年十月二十八日",
         "dateIso": "1946-10-28",
+        "dateLabel": "1946 年 10 月 28 日",
         "note": "原書於「與」「蔣」之間空一格（擡頭）",
+        "dateSources": [
+          "原書目次：民國三十五年十月二十八日"
+        ],
         "bookEndPage": 340,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1724,8 +2067,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 340,
         "section": "五、教師節紀念",
-        "date": "民國四十年三月三十日",
+        "dateOriginal": "民國四十年三月三十日",
         "dateIso": "1951-03-30",
+        "dateLabel": "1951 年 3 月 30 日",
+        "dateSources": [
+          "原書目次：民國四十年三月三十日"
+        ],
         "occasion": "在臺灣師範學院國父紀念週講",
         "occasionStatus": "待核",
         "bookEndPage": 345,
@@ -1739,8 +2086,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 345,
         "section": "五、教師節紀念",
-        "date": "民國四十年九月二十八日",
+        "dateOriginal": "民國四十年九月二十八日",
         "dateIso": "1951-09-28",
+        "dateLabel": "1951 年 9 月 28 日",
+        "dateSources": [
+          "原書目次：民國四十年九月二十八日"
+        ],
         "bookEndPage": 351,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1752,8 +2103,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 351,
         "section": "六、青年修養與國家民族",
-        "date": "民國二十六年",
+        "dateOriginal": "民國二十六年",
         "dateIso": "1937",
+        "dateLabel": "1937 年",
+        "dateSources": [
+          "原書目次：民國二十六年"
+        ],
         "occasion": "在廬山講演",
         "occasionStatus": "待核",
         "bookEndPage": 354,
@@ -1767,8 +2122,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 354,
         "section": "六、青年修養與國家民族",
-        "date": "民國三十一年七月一日",
+        "dateOriginal": "民國三十一年七月一日",
         "dateIso": "1942-07-01",
+        "dateLabel": "1942 年 7 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十一年七月一日"
+        ],
         "bookEndPage": 358,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1780,8 +2139,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 358,
         "section": "六、青年修養與國家民族",
-        "date": "民國三十三年五月四日",
+        "dateOriginal": "民國三十三年五月四日",
         "dateIso": "1944-05-04",
+        "dateLabel": "1944 年 5 月 4 日",
+        "dateSources": [
+          "原書目次：民國三十三年五月四日"
+        ],
         "bookEndPage": 360,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1793,8 +2156,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 361,
         "section": "六、青年修養與國家民族",
-        "date": "民國三十四年三月二十九日",
+        "dateOriginal": "民國三十四年三月二十九日",
         "dateIso": "1945-03-29",
+        "dateLabel": "1945 年 3 月 29 日",
+        "dateSources": [
+          "原書目次：民國三十四年三月二十九日"
+        ],
         "bookEndPage": 366,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1806,8 +2173,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 366,
         "section": "六、青年修養與國家民族",
-        "date": "民國三十五年八月二十六日",
+        "dateOriginal": "民國三十五年八月二十六日",
         "dateIso": "1946-08-26",
+        "dateLabel": "1946 年 8 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十五年八月二十六日"
+        ],
         "bookEndPage": 369,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1819,8 +2190,12 @@
         "part": "叁、教育言論",
         "bookStartPage": 369,
         "section": "六、青年修養與國家民族",
-        "date": "民國三十六年三月二十九日",
+        "dateOriginal": "民國三十六年三月二十九日",
         "dateIso": "1947-03-29",
+        "dateLabel": "1947 年 3 月 29 日",
+        "dateSources": [
+          "原書目次：民國三十六年三月二十九日"
+        ],
         "bookEndPage": 371,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1831,8 +2206,12 @@
         "title": "首都新生活運動促進會成立大會開會詞",
         "part": "肆、新生活運動",
         "bookStartPage": 371,
-        "date": "民國二十三年三月十六日",
+        "dateOriginal": "民國二十三年三月十六日",
         "dateIso": "1934-03-16",
+        "dateLabel": "1934 年 3 月 16 日",
+        "dateSources": [
+          "原書目次：民國二十三年三月十六日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 374,
@@ -1845,8 +2224,12 @@
         "title": "新生活運動與教育",
         "part": "肆、新生活運動",
         "bookStartPage": 374,
-        "date": "民國二十三年三月十九日",
+        "dateOriginal": "民國二十三年三月十九日",
         "dateIso": "1934-03-19",
+        "dateLabel": "1934 年 3 月 19 日",
+        "dateSources": [
+          "原書目次：民國二十三年三月十九日"
+        ],
         "occasion": "在中央紀念週講",
         "occasionStatus": "待核",
         "bookEndPage": 376,
@@ -1859,8 +2242,12 @@
         "title": "新生活運動在抗戰期間",
         "part": "肆、新生活運動",
         "bookStartPage": 377,
-        "date": "民國三十年一月一日",
+        "dateOriginal": "民國三十年一月一日",
         "dateIso": "1941-01-01",
+        "dateLabel": "1941 年 1 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十年一月一日"
+        ],
         "bookEndPage": 378,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1871,8 +2258,12 @@
         "title": "新生活運動與復興民族",
         "part": "肆、新生活運動",
         "bookStartPage": 378,
-        "date": "民國三十一年三月二十日",
+        "dateOriginal": "民國三十一年三月二十日",
         "dateIso": "1942-03-20",
+        "dateLabel": "1942 年 3 月 20 日",
+        "dateSources": [
+          "原書目次：民國三十一年三月二十日"
+        ],
         "bookEndPage": 380,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1883,8 +2274,12 @@
         "title": "新生活運動之意義",
         "part": "肆、新生活運動",
         "bookStartPage": 380,
-        "date": "民國三十一年十二月十六日",
+        "dateOriginal": "民國三十一年十二月十六日",
         "dateIso": "1942-12-16",
+        "dateLabel": "1942 年 12 月 16 日",
+        "dateSources": [
+          "原書目次：民國三十一年十二月十六日"
+        ],
         "bookEndPage": 382,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1895,8 +2290,12 @@
         "title": "新生活運動與教育之關係",
         "part": "肆、新生活運動",
         "bookStartPage": 383,
-        "date": "民國三十六年二月十六日",
+        "dateOriginal": "民國三十六年二月十六日",
         "dateIso": "1947-02-16",
+        "dateLabel": "1947 年 2 月 16 日",
+        "dateSources": [
+          "原書目次：民國三十六年二月十六日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 385,
@@ -1909,8 +2308,12 @@
         "title": "對中英庚款第一屆留英學生訓詞",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 385,
-        "date": "民國二十二年八月二十九日",
+        "dateOriginal": "民國二十二年八月二十九日",
         "dateIso": "1933-08-29",
+        "dateLabel": "1933 年 8 月 29 日",
+        "dateSources": [
+          "原書目次：民國二十二年八月二十九日"
+        ],
         "bookEndPage": 386,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1921,8 +2324,12 @@
         "title": "對中英庚款第二屆留英學生訓詞",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 386,
-        "date": "民國二十三年八月十八日",
+        "dateOriginal": "民國二十三年八月十八日",
         "dateIso": "1934-08-18",
+        "dateLabel": "1934 年 8 月 18 日",
+        "dateSources": [
+          "原書目次：民國二十三年八月十八日"
+        ],
         "occasion": "於上海",
         "occasionStatus": "待核",
         "bookEndPage": 388,
@@ -1935,8 +2342,12 @@
         "title": "勉中國地理研究所大地測量組同仁",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 388,
-        "date": "民國三十年十二月四日",
+        "dateOriginal": "民國三十年十二月四日",
         "dateIso": "1941-12-04",
+        "dateLabel": "1941 年 12 月 4 日",
+        "dateSources": [
+          "原書目次：民國三十年十二月四日"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 390,
@@ -1949,8 +2360,12 @@
         "title": "復國立黔江中學全體學生兼告河西湟川兩中學學生書",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 390,
-        "date": "民國三十年一月二十八日",
+        "dateOriginal": "民國三十年一月二十八日",
         "dateIso": "1941-01-28",
+        "dateLabel": "1941 年 1 月 28 日",
+        "dateSources": [
+          "原書目次：民國三十年一月二十八日"
+        ],
         "bookEndPage": 393,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -1961,8 +2376,12 @@
         "title": "中國地理研究之重要",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 393,
-        "date": "民國三十一年二月五日",
+        "dateOriginal": "民國三十一年二月五日",
         "dateIso": "1942-02-05",
+        "dateLabel": "1942 年 2 月 5 日",
+        "dateSources": [
+          "原書目次：民國三十一年二月五日"
+        ],
         "bookEndPage": 394,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1973,9 +2392,13 @@
         "title": "簽呈　總裁報告中國地理研究所概況",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 395,
-        "date": "民國三十二年一月二十一日",
+        "dateOriginal": "民國三十二年一月二十一日",
         "dateIso": "1943-01-21",
+        "dateLabel": "1943 年 1 月 21 日",
         "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+        "dateSources": [
+          "原書目次：民國三十二年一月二十一日"
+        ],
         "bookEndPage": 396,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1986,9 +2409,13 @@
         "title": "簽呈　總裁報告測量事業聯繫計劃乞裁察施行",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 397,
-        "date": "民國三十二年三月九日",
+        "dateOriginal": "民國三十二年三月九日",
         "dateIso": "1943-03-09",
+        "dateLabel": "1943 年 3 月 9 日",
         "note": "原書於「簽呈」「總裁」之間空一格（擡頭）",
+        "dateSources": [
+          "原書目次：民國三十二年三月九日"
+        ],
         "bookEndPage": 398,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -1999,8 +2426,12 @@
         "title": "中英文教基金董事會概況",
         "part": "伍、中英庚款基金董事會",
         "bookStartPage": 399,
-        "date": "民國三十八年四月",
+        "dateOriginal": "民國三十八年四月",
         "dateIso": "1949-04",
+        "dateLabel": "1949 年 4 月",
+        "dateSources": [
+          "原書目次：民國三十八年四月"
+        ],
         "bookEndPage": 406,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -2011,9 +2442,13 @@
         "title": "中國之交通",
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 407,
+        "dateLabel": "原書未載日期",
         "note": "原書無日期",
         "dateInText": "民國二十三年十月",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "篇端署：民國二十三年十月　待核"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 413,
@@ -2026,6 +2461,7 @@
         "title": "我在交通部的重要改革",
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 413,
+        "dateLabel": "原書未載日期",
         "note": "原書無日期",
         "bookEndPage": 421,
         "bookEndPageStatus": "待核",
@@ -2037,8 +2473,12 @@
         "title": "浙江省第一屆考取縣長之訓話",
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 421,
-        "date": "民國十七年四月",
+        "dateOriginal": "民國十七年四月",
         "dateIso": "1928-04",
+        "dateLabel": "1928 年 4 月",
+        "dateSources": [
+          "原書目次：民國十七年四月"
+        ],
         "bookEndPage": 425,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2049,8 +2489,12 @@
         "title": "浙江省政報告",
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 425,
-        "date": "民國二十五年十二月二十一日",
+        "dateOriginal": "民國二十五年十二月二十一日",
         "dateIso": "1936-12-21",
+        "dateLabel": "1936 年 12 月 21 日",
+        "dateSources": [
+          "原書目次：民國二十五年十二月二十一日"
+        ],
         "occasion": "在省府紀念週報告詞",
         "occasionStatus": "待核",
         "bookEndPage": 428,
@@ -2063,9 +2507,13 @@
         "title": "浙江省今後的政治動向",
         "part": "陸、交通部與浙江省政",
         "bookStartPage": 429,
+        "dateLabel": "原書未載日期",
         "note": "原書無日期",
         "dateInText": "民國二十六年一月四日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "篇端署：民國二十六年一月四日　待核"
+        ],
         "occasion": "黨政擴大紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 433,
@@ -2078,8 +2526,12 @@
         "title": "嚴防反動份子的活動",
         "part": "柒、黨務教育",
         "bookStartPage": 433,
-        "date": "民國十六年一月十五日",
+        "dateOriginal": "民國十六年一月十五日",
         "dateIso": "1927-01-15",
+        "dateLabel": "1927 年 1 月 15 日",
+        "dateSources": [
+          "原書目次：民國十六年一月十五日"
+        ],
         "occasion": "於廣州",
         "occasionStatus": "待核",
         "bookEndPage": 437,
@@ -2092,8 +2544,12 @@
         "title": "告全國教育學術界同仁書",
         "part": "柒、黨務教育",
         "bookStartPage": 437,
-        "date": "民國二十九年三月二十四日",
+        "dateOriginal": "民國二十九年三月二十四日",
         "dateIso": "1940-03-24",
+        "dateLabel": "1940 年 3 月 24 日",
+        "dateSources": [
+          "原書目次：民國二十九年三月二十四日"
+        ],
         "bookEndPage": 437,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -2104,8 +2560,12 @@
         "title": "中國婦女運動之回顧與前瞻",
         "part": "柒、黨務教育",
         "bookStartPage": 438,
-        "date": "民國二十九年五月七日",
+        "dateOriginal": "民國二十九年五月七日",
         "dateIso": "1940-05-07",
+        "dateLabel": "1940 年 5 月 7 日",
+        "dateSources": [
+          "原書目次：民國二十九年五月七日"
+        ],
         "occasion": "對新運婦女高級幹部訓練班講詞",
         "occasionStatus": "待核",
         "bookEndPage": 444,
@@ -2118,8 +2578,12 @@
         "title": "學校黨務的詮釋",
         "part": "柒、黨務教育",
         "bookStartPage": 444,
-        "date": "民國二十九年六月二十二日",
+        "dateOriginal": "民國二十九年六月二十二日",
         "dateIso": "1940-06-22",
+        "dateLabel": "1940 年 6 月 22 日",
+        "dateSources": [
+          "原書目次：民國二十九年六月二十二日"
+        ],
         "occasion": "在中央電臺廣播講詞",
         "occasionStatus": "待核",
         "bookEndPage": 446,
@@ -2132,8 +2596,12 @@
         "title": "學校黨務之鵠的",
         "part": "柒、黨務教育",
         "bookStartPage": 446,
-        "date": "民國二十九年七月七日",
+        "dateOriginal": "民國二十九年七月七日",
         "dateIso": "1940-07-07",
+        "dateLabel": "1940 年 7 月 7 日",
+        "dateSources": [
+          "原書目次：民國二十九年七月七日"
+        ],
         "bookEndPage": 450,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2144,8 +2612,12 @@
         "title": "自力更生與教育學術界的組織力",
         "part": "柒、黨務教育",
         "bookStartPage": 450,
-        "date": "民國二十九年十月二十三日",
+        "dateOriginal": "民國二十九年十月二十三日",
         "dateIso": "1940-10-23",
+        "dateLabel": "1940 年 10 月 23 日",
+        "dateSources": [
+          "原書目次：民國二十九年十月二十三日"
+        ],
         "bookEndPage": 453,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2156,8 +2628,12 @@
         "title": "黨務與教育",
         "part": "柒、黨務教育",
         "bookStartPage": 453,
-        "date": "民國三十年一月一日",
+        "dateOriginal": "民國三十年一月一日",
         "dateIso": "1941-01-01",
+        "dateLabel": "1941 年 1 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十年一月一日"
+        ],
         "bookEndPage": 457,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2169,9 +2645,13 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 457,
         "section": "一、國內方面",
-        "date": "民國二十一年四月四日",
+        "dateOriginal": "民國二十一年四月四日",
         "dateIso": "1932-04-04",
+        "dateLabel": "1932 年 4 月 4 日",
         "note": "原書作「眞」",
+        "dateSources": [
+          "原書目次：民國二十一年四月四日"
+        ],
         "occasion": "在中央留京辦事處總理紀念週講演",
         "occasionStatus": "待核",
         "bookEndPage": 462,
@@ -2185,8 +2665,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 462,
         "section": "一、國內方面",
-        "date": "民國二十七年一月十一日",
+        "dateOriginal": "民國二十七年一月十一日",
         "dateIso": "1938-01-11",
+        "dateLabel": "1938 年 1 月 11 日",
+        "dateSources": [
+          "原書目次：民國二十七年一月十一日"
+        ],
         "occasion": "到漢口時對記者談話",
         "occasionStatus": "待核",
         "bookEndPage": 463,
@@ -2200,8 +2684,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 463,
         "section": "一、國內方面",
-        "date": "民國二十七年八月十三日",
+        "dateOriginal": "民國二十七年八月十三日",
         "dateIso": "1938-08-13",
+        "dateLabel": "1938 年 8 月 13 日",
+        "dateSources": [
+          "原書目次：民國二十七年八月十三日"
+        ],
         "occasion": "於漢口",
         "occasionStatus": "待核",
         "bookEndPage": 465,
@@ -2215,9 +2703,13 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 465,
         "section": "一、國內方面",
-        "date": "民國二十七年九月二十日",
+        "dateOriginal": "民國二十七年九月二十日",
         "dateIso": "1938-09-20",
+        "dateLabel": "1938 年 9 月 20 日",
         "note": "目次所載日期作民國二十七年九月十八日，與篇名的「九一八」相同；原書 465 頁篇端作「民國二十七年九月二十日於漢口」，本站日期依正文。",
+        "dateSources": [
+          "原書目次：民國二十七年九月二十日"
+        ],
         "occasion": "於漢口",
         "occasionStatus": "待核",
         "bookEndPage": 467,
@@ -2231,9 +2723,13 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 467,
         "section": "一、國內方面",
-        "date": "民國二十八年七月九日",
+        "dateOriginal": "民國二十八年七月九日",
         "dateIso": "1939-07-09",
+        "dateLabel": "1939 年 7 月 9 日",
         "note": "日期後附小字「廣播」；本篇日期晚於次篇，原書如此",
+        "dateSources": [
+          "原書目次：民國二十八年七月九日"
+        ],
         "occasion": "廣播",
         "occasionStatus": "待核",
         "bookEndPage": 469,
@@ -2247,9 +2743,13 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 469,
         "section": "一、國內方面",
-        "date": "民國二十八年六月十二日",
+        "dateOriginal": "民國二十八年六月十二日",
         "dateIso": "1939-06-12",
+        "dateLabel": "1939 年 6 月 12 日",
         "note": "日期早於前篇，原書如此",
+        "dateSources": [
+          "原書目次：民國二十八年六月十二日"
+        ],
         "bookEndPage": 473,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2261,8 +2761,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 473,
         "section": "一、國內方面",
-        "date": "民國二十九年三月二十八日",
+        "dateOriginal": "民國二十九年三月二十八日",
         "dateIso": "1940-03-28",
+        "dateLabel": "1940 年 3 月 28 日",
+        "dateSources": [
+          "原書目次：民國二十九年三月二十八日"
+        ],
         "bookEndPage": 476,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2274,8 +2778,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 476,
         "section": "一、國內方面",
-        "date": "民國二十九年六月二十日",
+        "dateOriginal": "民國二十九年六月二十日",
         "dateIso": "1940-06-20",
+        "dateLabel": "1940 年 6 月 20 日",
+        "dateSources": [
+          "原書目次：民國二十九年六月二十日"
+        ],
         "bookEndPage": 479,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2287,8 +2795,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 479,
         "section": "一、國內方面",
-        "date": "民國二十九年七月七日",
+        "dateOriginal": "民國二十九年七月七日",
         "dateIso": "1940-07-07",
+        "dateLabel": "1940 年 7 月 7 日",
+        "dateSources": [
+          "原書目次：民國二十九年七月七日"
+        ],
         "bookEndPage": 484,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2300,9 +2812,13 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 484,
         "section": "一、國內方面",
-        "date": "民國三十年一月一日",
+        "dateOriginal": "民國三十年一月一日",
         "dateIso": "1941-01-01",
+        "dateLabel": "1941 年 1 月 1 日",
         "note": "原書 484 頁篇端在篇名之外另排一行「刋上海大美晚報」。",
+        "dateSources": [
+          "原書目次：民國三十年一月一日"
+        ],
         "bookEndPage": 485,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2314,8 +2830,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 485,
         "section": "一、國內方面",
-        "date": "民國三十三年五月一日",
+        "dateOriginal": "民國三十三年五月一日",
         "dateIso": "1944-05-01",
+        "dateLabel": "1944 年 5 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十三年五月一日"
+        ],
         "occasion": "在中央廣播電臺播講",
         "occasionStatus": "待核",
         "bookEndPage": 487,
@@ -2329,8 +2849,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 487,
         "section": "一、國內方面",
-        "date": "民國三十三年六月一日",
+        "dateOriginal": "民國三十三年六月一日",
         "dateIso": "1944-06-01",
+        "dateLabel": "1944 年 6 月 1 日",
+        "dateSources": [
+          "原書目次：民國三十三年六月一日"
+        ],
         "occasion": "向淪陷區播講",
         "occasionStatus": "待核",
         "bookEndPage": 491,
@@ -2344,8 +2868,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 491,
         "section": "二、國際方面",
-        "date": "民國二十七年八月十五日",
+        "dateOriginal": "民國二十七年八月十五日",
         "dateIso": "1938-08-15",
+        "dateLabel": "1938 年 8 月 15 日",
+        "dateSources": [
+          "原書目次：民國二十七年八月十五日"
+        ],
         "bookEndPage": 493,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2357,8 +2885,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 493,
         "section": "二、國際方面",
-        "date": "民國二十七年九月十五日",
+        "dateOriginal": "民國二十七年九月十五日",
         "dateIso": "1938-09-15",
+        "dateLabel": "1938 年 9 月 15 日",
+        "dateSources": [
+          "原書目次：民國二十七年九月十五日"
+        ],
         "occasion": "於漢口",
         "occasionStatus": "待核",
         "bookEndPage": 496,
@@ -2372,8 +2904,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 496,
         "section": "二、國際方面",
-        "date": "民國二十八年八月十五日",
+        "dateOriginal": "民國二十八年八月十五日",
         "dateIso": "1939-08-15",
+        "dateLabel": "1939 年 8 月 15 日",
+        "dateSources": [
+          "原書目次：民國二十八年八月十五日"
+        ],
         "occasion": "在重慶青年夏令營講演",
         "occasionStatus": "待核",
         "bookEndPage": 502,
@@ -2387,8 +2923,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 502,
         "section": "二、國際方面",
-        "date": "民國二十八年十一月二十八日",
+        "dateOriginal": "民國二十八年十一月二十八日",
         "dateIso": "1939-11-28",
+        "dateLabel": "1939 年 11 月 28 日",
+        "dateSources": [
+          "原書目次：民國二十八年十一月二十八日"
+        ],
         "occasion": "在外交問題研究會講",
         "occasionStatus": "待核",
         "bookEndPage": 510,
@@ -2402,6 +2942,7 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 510,
         "section": "二、國際方面",
+        "dateLabel": "原書未載日期",
         "note": "原書無日期；原書作「爲」",
         "bookEndPage": 512,
         "bookEndPageStatus": "待核",
@@ -2414,8 +2955,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 513,
         "section": "二、國際方面",
-        "date": "民國三十年一月十五日",
+        "dateOriginal": "民國三十年一月十五日",
         "dateIso": "1941-01-15",
+        "dateLabel": "1941 年 1 月 15 日",
+        "dateSources": [
+          "原書目次：民國三十年一月十五日"
+        ],
         "bookEndPage": 515,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2427,8 +2972,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 515,
         "section": "二、國際方面",
-        "date": "民國三十年二月十七日",
+        "dateOriginal": "民國三十年二月十七日",
         "dateIso": "1941-02-17",
+        "dateLabel": "1941 年 2 月 17 日",
+        "dateSources": [
+          "原書目次：民國三十年二月十七日"
+        ],
         "occasion": "在陸軍大學講演",
         "occasionStatus": "待核",
         "bookEndPage": 523,
@@ -2442,8 +2991,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 523,
         "section": "二、國際方面",
-        "date": "民國三十年五月五日",
+        "dateOriginal": "民國三十年五月五日",
         "dateIso": "1941-05-05",
+        "dateLabel": "1941 年 5 月 5 日",
+        "dateSources": [
+          "原書目次：民國三十年五月五日"
+        ],
         "bookEndPage": 528,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2455,8 +3008,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 528,
         "section": "二、國際方面",
-        "date": "民國三十年六月",
+        "dateOriginal": "民國三十年六月",
         "dateIso": "1941-06",
+        "dateLabel": "1941 年 6 月",
+        "dateSources": [
+          "原書目次：民國三十年六月"
+        ],
         "bookEndPage": 533,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2468,8 +3025,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 533,
         "section": "二、國際方面",
-        "date": "民國三十一年一月十四日",
+        "dateOriginal": "民國三十一年一月十四日",
         "dateIso": "1942-01-14",
+        "dateLabel": "1942 年 1 月 14 日",
+        "dateSources": [
+          "原書目次：民國三十一年一月十四日"
+        ],
         "occasion": "廣播",
         "occasionStatus": "待核",
         "bookEndPage": 535,
@@ -2483,8 +3044,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 535,
         "section": "二、國際方面",
-        "date": "民國三十一年二月九日",
+        "dateOriginal": "民國三十一年二月九日",
         "dateIso": "1942-02-09",
+        "dateLabel": "1942 年 2 月 9 日",
+        "dateSources": [
+          "原書目次：民國三十一年二月九日"
+        ],
         "occasion": "在中央組織部總理紀念週講",
         "occasionStatus": "待核",
         "bookEndPage": 540,
@@ -2498,8 +3063,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 540,
         "section": "二、國際方面",
-        "date": "民國三十一年九月六日",
+        "dateOriginal": "民國三十一年九月六日",
         "dateIso": "1942-09-06",
+        "dateLabel": "1942 年 9 月 6 日",
+        "dateSources": [
+          "原書目次：民國三十一年九月六日"
+        ],
         "occasion": "在宜賓中央軍校特別訓練班講",
         "occasionStatus": "待核",
         "bookEndPage": 548,
@@ -2513,8 +3082,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 548,
         "section": "二、國際方面",
-        "date": "民國三十三年五月五日",
+        "dateOriginal": "民國三十三年五月五日",
         "dateIso": "1944-05-05",
+        "dateLabel": "1944 年 5 月 5 日",
+        "dateSources": [
+          "原書目次：民國三十三年五月五日"
+        ],
         "occasion": "在中央組織部講",
         "occasionStatus": "待核",
         "bookEndPage": 553,
@@ -2528,8 +3101,12 @@
         "part": "捌、抗戰言論",
         "bookStartPage": 553,
         "section": "二、國際方面",
-        "date": "民國三十四年二月十二日",
+        "dateOriginal": "民國三十四年二月十二日",
         "dateIso": "1945-02-12",
+        "dateLabel": "1945 年 2 月 12 日",
+        "dateSources": [
+          "原書目次：民國三十四年二月十二日"
+        ],
         "occasion": "在教育部講演",
         "occasionStatus": "待核",
         "bookEndPage": 557,
@@ -2542,8 +3119,12 @@
         "title": "國際聯盟中國同志會招待外國記者講詞",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 557,
-        "date": "民國二十七年一月二十九日",
+        "dateOriginal": "民國二十七年一月二十九日",
         "dateIso": "1938-01-29",
+        "dateLabel": "1938 年 1 月 29 日",
+        "dateSources": [
+          "原書目次：民國二十七年一月二十九日"
+        ],
         "occasion": "於漢口",
         "occasionStatus": "待核",
         "bookEndPage": 559,
@@ -2556,8 +3137,12 @@
         "title": "「九一八」九週年紀念告友邦人士書",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 559,
-        "date": "民國二十九年九月十八日",
+        "dateOriginal": "民國二十九年九月十八日",
         "dateIso": "1940-09-18",
+        "dateLabel": "1940 年 9 月 18 日",
+        "dateSources": [
+          "原書目次：民國二十九年九月十八日"
+        ],
         "bookEndPage": 560,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2568,8 +3153,12 @@
         "title": "聯合國中國同志會第二次大會致詞",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 560,
-        "date": "民國三十七年三月十四日",
+        "dateOriginal": "民國三十七年三月十四日",
         "dateIso": "1948-03-14",
+        "dateLabel": "1948 年 3 月 14 日",
+        "dateSources": [
+          "原書目次：民國三十七年三月十四日"
+        ],
         "bookEndPage": 563,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2580,8 +3169,12 @@
         "title": "呼籲加強擁護聯合國保障世界和平",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 563,
-        "date": "民國三十七年十月二十四日",
+        "dateOriginal": "民國三十七年十月二十四日",
         "dateIso": "1948-10-24",
+        "dateLabel": "1948 年 10 月 24 日",
+        "dateSources": [
+          "原書目次：民國三十七年十月二十四日"
+        ],
         "bookEndPage": 565,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2592,8 +3185,12 @@
         "title": "聯合國對人類的貢獻",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 565,
-        "date": "民國四十年三月二十五日",
+        "dateOriginal": "民國四十年三月二十五日",
         "dateIso": "1951-03-25",
+        "dateLabel": "1951 年 3 月 25 日",
+        "dateSources": [
+          "原書目次：民國四十年三月二十五日"
+        ],
         "occasion": "在聯合國中國同志會會員大會講",
         "occasionStatus": "待核",
         "bookEndPage": 569,
@@ -2606,8 +3203,12 @@
         "title": "根絕侵略主義完成聯合國使命",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 569,
-        "date": "民國四十年十月二十四日",
+        "dateOriginal": "民國四十年十月二十四日",
         "dateIso": "1951-10-24",
+        "dateLabel": "1951 年 10 月 24 日",
+        "dateSources": [
+          "原書目次：民國四十年十月二十四日"
+        ],
         "occasion": "在自由中國各界慶祝聯合國日大會開幕致詞",
         "occasionStatus": "待核",
         "bookEndPage": 572,
@@ -2620,8 +3221,12 @@
         "title": "實現聯合國的崇高理想",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 572,
-        "date": "民國四十二年十月二十四日",
+        "dateOriginal": "民國四十二年十月二十四日",
         "dateIso": "1953-10-24",
+        "dateLabel": "1953 年 10 月 24 日",
+        "dateSources": [
+          "原書目次：民國四十二年十月二十四日"
+        ],
         "occasion": "在臺北全國各界慶祝第八屆聯合國大會開會致詞",
         "occasionStatus": "待核",
         "bookEndPage": 574,
@@ -2634,8 +3239,12 @@
         "title": "聯合國中國同志會第八屆會員大會開會詞",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 574,
-        "date": "民國四十二年十二月六日",
+        "dateOriginal": "民國四十二年十二月六日",
         "dateIso": "1953-12-06",
+        "dateLabel": "1953 年 12 月 6 日",
+        "dateSources": [
+          "原書目次：民國四十二年十二月六日"
+        ],
         "bookEndPage": 577,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2646,8 +3255,12 @@
         "title": "聯合國中國同志會第十屆會員大會開會詞",
         "part": "玖、國際聯盟、聯合國",
         "bookStartPage": 577,
-        "date": "民國四十六年五月五日",
+        "dateOriginal": "民國四十六年五月五日",
         "dateIso": "1957-05-05",
+        "dateLabel": "1957 年 5 月 5 日",
+        "dateSources": [
+          "原書目次：民國四十六年五月五日"
+        ],
         "occasion": "在聯合國中國同志會會員大會講",
         "occasionStatus": "待核",
         "bookEndPage": 580,
@@ -2660,8 +3273,12 @@
         "title": "西北觀感",
         "part": "拾、邊疆言論",
         "bookStartPage": 581,
-        "date": "民國三十年九月十五日",
+        "dateOriginal": "民國三十年九月十五日",
         "dateIso": "1941-09-15",
+        "dateLabel": "1941 年 9 月 15 日",
+        "dateSources": [
+          "原書目次：民國三十年九月十五日"
+        ],
         "occasion": "在中央紀念週報告",
         "occasionStatus": "待核",
         "bookEndPage": 583,
@@ -2674,8 +3291,12 @@
         "title": "到西北去",
         "part": "拾、邊疆言論",
         "bookStartPage": 583,
-        "date": "民國三十年九月二十五日",
+        "dateOriginal": "民國三十年九月二十五日",
         "dateIso": "1941-09-25",
+        "dateLabel": "1941 年 9 月 25 日",
+        "dateSources": [
+          "原書目次：民國三十年九月二十五日"
+        ],
         "occasion": "在中央廣播電臺播講",
         "occasionStatus": "待核",
         "bookEndPage": 585,
@@ -2688,8 +3309,12 @@
         "title": "西北建設問題與科學化運動",
         "part": "拾、邊疆言論",
         "bookStartPage": 585,
-        "date": "民國三十年十月十二日",
+        "dateOriginal": "民國三十年十月十二日",
         "dateIso": "1941-10-12",
+        "dateLabel": "1941 年 10 月 12 日",
+        "dateSources": [
+          "原書目次：民國三十年十月十二日"
+        ],
         "occasion": "在中央廣播電臺播講",
         "occasionStatus": "待核",
         "bookEndPage": 587,
@@ -2702,8 +3327,12 @@
         "title": "西北經濟建設之我見",
         "part": "拾、邊疆言論",
         "bookStartPage": 587,
-        "date": "民國三十年十月十三日",
+        "dateOriginal": "民國三十年十月十三日",
         "dateIso": "1941-10-13",
+        "dateLabel": "1941 年 10 月 13 日",
+        "dateSources": [
+          "原書目次：民國三十年十月十三日"
+        ],
         "occasion": "在資源委員會講",
         "occasionStatus": "待核",
         "bookEndPage": 593,
@@ -2716,8 +3345,12 @@
         "title": "邊疆問題與邊疆工作",
         "part": "拾、邊疆言論",
         "bookStartPage": 594,
-        "date": "民國三十一年十月二十一日",
+        "dateOriginal": "民國三十一年十月二十一日",
         "dateIso": "1942-10-21",
+        "dateLabel": "1942 年 10 月 21 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月二十一日"
+        ],
         "occasion": "在招待邊疆人士茶話會席上講",
         "occasionStatus": "待核",
         "bookEndPage": 605,
@@ -2730,8 +3363,12 @@
         "title": "邊務工作應有的認識和態度",
         "part": "拾、邊疆言論",
         "bookStartPage": 605,
-        "date": "民國三十一年十月二十五日",
+        "dateOriginal": "民國三十一年十月二十五日",
         "dateIso": "1942-10-25",
+        "dateLabel": "1942 年 10 月 25 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月二十五日"
+        ],
         "occasion": "在邊務工作會報席上致詞",
         "occasionStatus": "待核",
         "bookEndPage": 614,
@@ -2744,8 +3381,12 @@
         "title": "新疆壯行詞",
         "part": "拾、邊疆言論",
         "bookStartPage": 615,
-        "date": "民國三十一年十二月二十九日",
+        "dateOriginal": "民國三十一年十二月二十九日",
         "dateIso": "1942-12-29",
+        "dateLabel": "1942 年 12 月 29 日",
+        "dateSources": [
+          "原書目次：民國三十一年十二月二十九日"
+        ],
         "occasion": "在中央組織部招待赴新疆工作同志茶會席上講",
         "occasionStatus": "待核",
         "bookEndPage": 620,
@@ -2758,8 +3399,12 @@
         "title": "去新疆後",
         "part": "拾、邊疆言論",
         "bookStartPage": 621,
-        "date": "民國三十二年三月二十三日",
+        "dateOriginal": "民國三十二年三月二十三日",
         "dateIso": "1943-03-23",
+        "dateLabel": "1943 年 3 月 23 日",
+        "dateSources": [
+          "原書目次：民國三十二年三月二十三日"
+        ],
         "occasion": "在中央組織部招待第二次赴新疆工作同志茶會席上講",
         "occasionStatus": "待核",
         "bookEndPage": 627,
@@ -2772,8 +3417,12 @@
         "title": "邊疆政策與邊疆建設",
         "part": "拾、邊疆言論",
         "bookStartPage": 627,
-        "date": "民國三十二年四月二十八日",
+        "dateOriginal": "民國三十二年四月二十八日",
         "dateIso": "1943-04-28",
+        "dateLabel": "1943 年 4 月 28 日",
+        "dateSources": [
+          "原書目次：民國三十二年四月二十八日"
+        ],
         "occasion": "在第二次邊疆會報席上講",
         "occasionStatus": "待核",
         "bookEndPage": 637,
@@ -2786,8 +3435,12 @@
         "title": "關於一個譯詩問題的批評",
         "part": "拾壹、專論",
         "bookStartPage": 637,
-        "date": "民國十四年十月三日",
+        "dateOriginal": "民國十四年十月三日",
         "dateIso": "1925-10-03",
+        "dateLabel": "1925 年 10 月 3 日",
+        "dateSources": [
+          "原書目次：民國十四年十月三日"
+        ],
         "bookEndPage": 640,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2798,8 +3451,12 @@
         "title": "外銀輸入的利弊",
         "part": "拾壹、專論",
         "bookStartPage": 640,
-        "date": "民國二十年一月十九日",
+        "dateOriginal": "民國二十年一月十九日",
         "dateIso": "1931-01-19",
+        "dateLabel": "1931 年 1 月 19 日",
+        "dateSources": [
+          "原書目次：民國二十年一月十九日"
+        ],
         "occasion": "在中央大學紀念週講演",
         "occasionStatus": "待核",
         "bookEndPage": 643,
@@ -2812,8 +3469,12 @@
         "title": "中國的民主政治",
         "part": "拾壹、專論",
         "bookStartPage": 643,
-        "date": "民國三十年",
+        "dateOriginal": "民國三十年",
         "dateIso": "1941",
+        "dateLabel": "1941 年",
+        "dateSources": [
+          "原書目次：民國三十年"
+        ],
         "bookEndPage": 647,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2824,8 +3485,12 @@
         "title": "建軍與將校團",
         "part": "拾壹、專論",
         "bookStartPage": 647,
-        "date": "民國三十年八月",
+        "dateOriginal": "民國三十年八月",
         "dateIso": "1941-08",
+        "dateLabel": "1941 年 8 月",
+        "dateSources": [
+          "原書目次：民國三十年八月"
+        ],
         "occasion": "在中央陸軍軍官學校第七分校講詞",
         "occasionStatus": "待核",
         "bookEndPage": 652,
@@ -2838,8 +3503,12 @@
         "title": "從建國大綱談到地方自治",
         "part": "拾壹、專論",
         "bookStartPage": 652,
-        "date": "民國三十六年一月四日",
+        "dateOriginal": "民國三十六年一月四日",
         "dateIso": "1947-01-04",
+        "dateLabel": "1947 年 1 月 4 日",
+        "dateSources": [
+          "原書目次：民國三十六年一月四日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 654,
@@ -2852,8 +3521,12 @@
         "title": "新重慶與新時代",
         "part": "拾壹、專論",
         "bookStartPage": 654,
-        "date": "民國三十六年三月",
+        "dateOriginal": "民國三十六年三月",
         "dateIso": "1947-03",
+        "dateLabel": "1947 年 3 月",
+        "dateSources": [
+          "原書目次：民國三十六年三月"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 657,
@@ -2866,9 +3539,13 @@
         "title": "致德國總參謀長 Keitel 大將書",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 657,
-        "date": "民國二十九年七月七日",
+        "dateOriginal": "民國二十九年七月七日",
         "dateIso": "1940-07-07",
+        "dateLabel": "1940 年 7 月 7 日",
         "note": "原書以拉丁字母印作 Keitel",
+        "dateSources": [
+          "原書目次：民國二十九年七月七日"
+        ],
         "bookEndPage": 659,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2879,8 +3556,12 @@
         "title": "致英國克利浦斯爵士書",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 659,
-        "date": "民國三十一年二月二十五日",
+        "dateOriginal": "民國三十一年二月二十五日",
         "dateIso": "1942-02-25",
+        "dateLabel": "1942 年 2 月 25 日",
+        "dateSources": [
+          "原書目次：民國三十一年二月二十五日"
+        ],
         "bookEndPage": 660,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -2891,9 +3572,13 @@
         "title": "復美國陸軍部長史汀生書",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 661,
-        "date": "民國三十一年九月二十五日",
+        "dateOriginal": "民國三十一年九月二十五日",
         "dateIso": "1942-09-25",
+        "dateLabel": "1942 年 9 月 25 日",
         "note": "目次作「復美國陸軍部長史汀生書」，原書 661 頁篇端作「復美國陸軍部長史汀生先生函」。",
+        "dateSources": [
+          "原書目次：民國三十一年九月二十五日"
+        ],
         "bookEndPage": 661,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2904,6 +3589,7 @@
         "title": "附史汀生致朱先生函",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 661,
+        "dateLabel": "原書未載日期",
         "note": "附錄，與前篇同頁接排；原書無日期",
         "bookEndPage": 662,
         "bookEndPageStatus": "待核",
@@ -2915,9 +3601,13 @@
         "title": "致美國蒲利德先生備忘錄",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 662,
-        "date": "民國三十七年十一月十九日",
+        "dateOriginal": "民國三十七年十一月十九日",
         "dateIso": "1948-11-19",
+        "dateLabel": "1948 年 11 月 19 日",
         "note": "目次作「致美國蒲利德先生備忘錄」，原書 662 頁篇端作「致美國蒲立德先生備忘錄」。",
+        "dateSources": [
+          "原書目次：民國三十七年十一月十九日"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 663,
@@ -2930,8 +3620,12 @@
         "title": "致美國國務卿杜爾斯公開信",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 664,
-        "date": "民國四十三年四月二十五日",
+        "dateOriginal": "民國四十三年四月二十五日",
         "dateIso": "1954-04-25",
+        "dateLabel": "1954 年 4 月 25 日",
+        "dateSources": [
+          "原書目次：民國四十三年四月二十五日"
+        ],
         "bookEndPage": 666,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2942,8 +3636,12 @@
         "title": "致德國友人書",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 666,
-        "date": "民國四十四年四月八日",
+        "dateOriginal": "民國四十四年四月八日",
         "dateIso": "1955-04-08",
+        "dateLabel": "1955 年 4 月 8 日",
+        "dateSources": [
+          "原書目次：民國四十四年四月八日"
+        ],
         "bookEndPage": 668,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2954,11 +3652,16 @@
         "title": "復穆罕默德伊敏函—論所謂「新疆問題」",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 668,
-        "date": "民國四十一年二月二十三日",
+        "dateOriginal": "民國四十一年二月二十三日",
         "dateIso": "1952-02-23",
+        "dateLabel": "1952 年 2 月 23 日",
         "note": "目次的副題「論所謂「新疆問題」」不見於正文，原書 668 頁篇端只排「復穆罕默德伊敏函」一行。",
         "dateInText": "民國四十一年二月廿三日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "原書目次：民國四十一年二月二十三日",
+          "篇端署：民國四十一年二月廿三日　待核"
+        ],
         "bookEndPage": 675,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2969,9 +3672,13 @@
         "title": "復穆罕默德伊敏函—二論「新疆問題」",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 675,
-        "date": "民國四十三年十月一日",
+        "dateOriginal": "民國四十三年十月一日",
         "dateIso": "1954-10-01",
+        "dateLabel": "1954 年 10 月 1 日",
         "note": "原書 675 頁篇端的副題作「二論新疆問題」，目次於「新疆問題」加引號。",
+        "dateSources": [
+          "原書目次：民國四十三年十月一日"
+        ],
         "bookEndPage": 687,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2982,8 +3689,12 @@
         "title": "再復穆罕默德伊敏函—三論所謂「新疆問題」",
         "part": "拾貳、致中外友人書",
         "bookStartPage": 687,
-        "date": "民國四十六年七月三十日",
+        "dateOriginal": "民國四十六年七月三十日",
         "dateIso": "1957-07-30",
+        "dateLabel": "1957 年 7 月 30 日",
+        "dateSources": [
+          "原書目次：民國四十六年七月三十日"
+        ],
         "bookEndPage": 697,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -2994,8 +3705,12 @@
         "title": "第一次中國教育年鑑序",
         "part": "拾叁、書序",
         "bookStartPage": 697,
-        "date": "民國二十二年十月",
+        "dateOriginal": "民國二十二年十月",
         "dateIso": "1933-10",
+        "dateLabel": "1933 年 10 月",
+        "dateSources": [
+          "原書目次：民國二十二年十月"
+        ],
         "occasion": "於南京",
         "occasionStatus": "待核",
         "bookEndPage": 698,
@@ -3008,8 +3723,12 @@
         "title": "朱倓著「幾社考」序言",
         "part": "拾叁、書序",
         "bookStartPage": 698,
-        "date": "民國三十年十一月二十四日",
+        "dateOriginal": "民國三十年十一月二十四日",
         "dateIso": "1941-11-24",
+        "dateLabel": "1941 年 11 月 24 日",
+        "dateSources": [
+          "原書目次：民國三十年十一月二十四日"
+        ],
         "bookEndPage": 700,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -3020,8 +3739,12 @@
         "title": "戴季陶著「青年之路」再版序",
         "part": "拾叁、書序",
         "bookStartPage": 701,
-        "date": "民國三十一年四月二十六日",
+        "dateOriginal": "民國三十一年四月二十六日",
         "dateIso": "1942-04-26",
+        "dateLabel": "1942 年 4 月 26 日",
+        "dateSources": [
+          "原書目次：民國三十一年四月二十六日"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 704,
@@ -3034,8 +3757,12 @@
         "title": "國立同濟大學測量系特刊序—測量之效用",
         "part": "拾叁、書序",
         "bookStartPage": 704,
-        "date": "民國三十一年六月",
+        "dateOriginal": "民國三十一年六月",
         "dateIso": "1942-06",
+        "dateLabel": "1942 年 6 月",
+        "dateSources": [
+          "原書目次：民國三十一年六月"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 707,
@@ -3048,8 +3775,12 @@
         "title": "王文新著「師範教育概論」書序",
         "part": "拾叁、書序",
         "bookStartPage": 707,
-        "date": "民國三十一年八月",
+        "dateOriginal": "民國三十一年八月",
         "dateIso": "1942-08",
+        "dateLabel": "1942 年 8 月",
+        "dateSources": [
+          "原書目次：民國三十一年八月"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 709,
@@ -3062,9 +3793,13 @@
         "title": "高平叔著「蔡孑民先生傳略」序",
         "part": "拾叁、書序",
         "bookStartPage": 709,
-        "date": "民國三十一年九月十九日",
+        "dateOriginal": "民國三十一年九月十九日",
         "dateIso": "1942-09-19",
+        "dateLabel": "1942 年 9 月 19 日",
         "note": "蔡孑民即蔡元培（孑民為其號）",
+        "dateSources": [
+          "原書目次：民國三十一年九月十九日"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 710,
@@ -3077,8 +3812,12 @@
         "title": "中國地理研究所地理組序言",
         "part": "拾叁、書序",
         "bookStartPage": 711,
-        "date": "民國三十一年十月二十七日",
+        "dateOriginal": "民國三十一年十月二十七日",
         "dateIso": "1942-10-27",
+        "dateLabel": "1942 年 10 月 27 日",
+        "dateSources": [
+          "原書目次：民國三十一年十月二十七日"
+        ],
         "bookEndPage": 713,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3089,9 +3828,13 @@
         "title": "中國地理研究所測量組序言",
         "part": "拾叁、書序",
         "bookStartPage": 713,
-        "date": "民國三十一年十月二十七日",
+        "dateOriginal": "民國三十一年十月二十七日",
         "dateIso": "1942-10-27",
+        "dateLabel": "1942 年 10 月 27 日",
         "note": "與前篇同日，分屬地理組與測量組，非重複",
+        "dateSources": [
+          "原書目次：民國三十一年十月二十七日"
+        ],
         "bookEndPage": 715,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3102,8 +3845,12 @@
         "title": "葉祖灝著「廢除不平等條約」序",
         "part": "拾叁、書序",
         "bookStartPage": 715,
-        "date": "民國三十三年四月",
+        "dateOriginal": "民國三十三年四月",
         "dateIso": "1944-04",
+        "dateLabel": "1944 年 4 月",
+        "dateSources": [
+          "原書目次：民國三十三年四月"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 716,
@@ -3116,8 +3863,12 @@
         "title": "第二次中國教育年鑑序",
         "part": "拾叁、書序",
         "bookStartPage": 716,
-        "date": "民國三十七年十月",
+        "dateOriginal": "民國三十七年十月",
         "dateIso": "1948-10",
+        "dateLabel": "1948 年 10 月",
+        "dateSources": [
+          "原書目次：民國三十七年十月"
+        ],
         "bookEndPage": 717,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3128,8 +3879,12 @@
         "title": "徐觀餘著「中國童子軍」序言",
         "part": "拾叁、書序",
         "bookStartPage": 717,
-        "date": "民國四十年四月十四日",
+        "dateOriginal": "民國四十年四月十四日",
         "dateIso": "1951-04-14",
+        "dateLabel": "1951 年 4 月 14 日",
+        "dateSources": [
+          "原書目次：民國四十年四月十四日"
+        ],
         "bookEndPage": 719,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3140,8 +3895,12 @@
         "title": "陳思成博士著「國父學說的法理體系」序",
         "part": "拾叁、書序",
         "bookStartPage": 719,
-        "date": "民國四十三年五月十一日",
+        "dateOriginal": "民國四十三年五月十一日",
         "dateIso": "1954-05-11",
+        "dateLabel": "1954 年 5 月 11 日",
+        "dateSources": [
+          "原書目次：民國四十三年五月十一日"
+        ],
         "bookEndPage": 723,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3152,8 +3911,12 @@
         "title": "追念蔣百里先生",
         "part": "拾肆、追念師友",
         "bookStartPage": 723,
-        "date": "民國二十七年十二月二十八日",
+        "dateOriginal": "民國二十七年十二月二十八日",
         "dateIso": "1938-12-28",
+        "dateLabel": "1938 年 12 月 28 日",
+        "dateSources": [
+          "原書目次：民國二十七年十二月二十八日"
+        ],
         "occasion": "重慶大公報",
         "occasionStatus": "待核",
         "bookEndPage": 723,
@@ -3166,9 +3929,13 @@
         "title": "悼蔡孑民先生",
         "part": "拾肆、追念師友",
         "bookStartPage": 723,
-        "date": "民國二十九年三月二十四日",
+        "dateOriginal": "民國二十九年三月二十四日",
         "dateIso": "1940-03-24",
+        "dateLabel": "1940 年 3 月 24 日",
         "note": "與前篇同頁接排；蔡孑民即蔡元培",
+        "dateSources": [
+          "原書目次：民國二十九年三月二十四日"
+        ],
         "occasion": "重慶中央日報",
         "occasionStatus": "待核",
         "bookEndPage": 725,
@@ -3181,9 +3948,13 @@
         "title": "永念孑民先生的精神",
         "part": "拾肆、追念師友",
         "bookStartPage": 725,
-        "date": "民國三十年三月五日",
+        "dateOriginal": "民國三十年三月五日",
         "dateIso": "1941-03-05",
+        "dateLabel": "1941 年 3 月 5 日",
         "note": "孑民即蔡元培",
+        "dateSources": [
+          "原書目次：民國三十年三月五日"
+        ],
         "bookEndPage": 726,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false
@@ -3194,8 +3965,12 @@
         "title": "悼滕若渠同志",
         "part": "拾肆、追念師友",
         "bookStartPage": 727,
-        "date": "民國三十一年八月十一日",
+        "dateOriginal": "民國三十一年八月十一日",
         "dateIso": "1942-08-11",
+        "dateLabel": "1942 年 8 月 11 日",
+        "dateSources": [
+          "原書目次：民國三十一年八月十一日"
+        ],
         "occasion": "於重慶",
         "occasionStatus": "待核",
         "bookEndPage": 729,
@@ -3208,8 +3983,12 @@
         "title": "悼朱子元君",
         "part": "拾肆、追念師友",
         "bookStartPage": 729,
-        "date": "民國三十一年九月十九日",
+        "dateOriginal": "民國三十一年九月十九日",
         "dateIso": "1942-09-19",
+        "dateLabel": "1942 年 9 月 19 日",
+        "dateSources": [
+          "原書目次：民國三十一年九月十九日"
+        ],
         "bookEndPage": 732,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3220,9 +3999,13 @@
         "title": "蔡孑民先生逝世三周年紀念辭",
         "part": "拾肆、追念師友",
         "bookStartPage": 732,
-        "date": "民國三十二年三月五日",
+        "dateOriginal": "民國三十二年三月五日",
         "dateIso": "1943-03-05",
+        "dateLabel": "1943 年 3 月 5 日",
         "note": "蔡孑民即蔡元培",
+        "dateSources": [
+          "原書目次：民國三十二年三月五日"
+        ],
         "bookEndPage": 733,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3233,9 +4016,13 @@
         "title": "悼張靜江先生",
         "part": "拾肆、追念師友",
         "bookStartPage": 733,
-        "date": "民國三十九年五月十九日",
+        "dateOriginal": "民國三十九年五月十九日",
         "dateIso": "1950-05-19",
+        "dateLabel": "1950 年 5 月 19 日",
         "note": "目次所載日期早於張靜江逝世之日；日期依目次照錄，待與正文原書頁 733 的題下日期核對",
+        "dateSources": [
+          "原書目次：民國三十九年五月十九日"
+        ],
         "bookEndPage": 736,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true
@@ -3246,8 +4033,12 @@
         "title": "追念戴季陶先生",
         "part": "拾肆、追念師友",
         "bookStartPage": 736,
-        "date": "民國四十年二月十二日",
+        "dateOriginal": "民國四十年二月十二日",
         "dateIso": "1951-02-12",
+        "dateLabel": "1951 年 2 月 12 日",
+        "dateSources": [
+          "原書目次：民國四十年二月十二日"
+        ],
         "occasion": "於臺北",
         "occasionStatus": "待核",
         "bookEndPage": 741,
@@ -3260,8 +4051,12 @@
         "title": "悼亡友傅孟真先生",
         "part": "拾肆、追念師友",
         "bookStartPage": 741,
-        "date": "民國三十九年十二月二十九日",
+        "dateOriginal": "民國三十九年十二月二十九日",
         "dateIso": "1950-12-29",
+        "dateLabel": "1950 年 12 月 29 日",
+        "dateSources": [
+          "原書目次：民國三十九年十二月二十九日"
+        ],
         "occasion": "於臺北",
         "occasionStatus": "待核",
         "bookEndPage": 744,
@@ -3274,9 +4069,13 @@
         "title": "附紀念傅故所長孟真五十六歲誕辰特刊序",
         "part": "拾肆、追念師友",
         "bookStartPage": 744,
+        "dateLabel": "原書未載日期",
         "note": "附錄；原書無日期",
         "dateInText": "民國四十年三月十日",
         "dateInTextStatus": "待核",
+        "dateSources": [
+          "篇端署：民國四十年三月十日　待核"
+        ],
         "occasion": "於臺北",
         "occasionStatus": "待核",
         "bookEndPage": 745,
@@ -3289,8 +4088,12 @@
         "title": "丁文江與中央研究院",
         "part": "拾肆、追念師友",
         "bookStartPage": 745,
-        "date": "民國四十五年十二月",
+        "dateOriginal": "民國四十五年十二月",
         "dateIso": "1956-12",
+        "dateLabel": "1956 年 12 月",
+        "dateSources": [
+          "原書目次：民國四十五年十二月"
+        ],
         "bookEndPage": 750,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false

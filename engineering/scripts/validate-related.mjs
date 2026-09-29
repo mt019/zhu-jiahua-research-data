@@ -217,7 +217,8 @@ for (const l of leadsFile.leads) {
   }
   for (const w of [...BANNED_WORDS, '待站主裁定']) if (raw.includes(w)) fail(`公開快照裡有工作用語「${w}」`)
   const same = (a, b, what) => { if (JSON.stringify(a) !== JSON.stringify(b)) fail(`快照的 ${what} 與 derived 不一致——重跑 build-related.mjs`) }
-  same(snap.documents.map(({ subjects: _s, ...d }) => d), relatedFile.documents, 'documents')
+  // subjects 與 dateLabel 是建置時加的（dateLabel 由 validate-processed.mjs 對 dateIso 驗），其餘逐欄照 derived
+  same(snap.documents.map(({ subjects: _s, dateLabel: _l, ...d }) => d), relatedFile.documents, 'documents')
   same(snap.subjects.map((s) => [s.slug, s.members.map((m) => m.id)]), subjectsFile.subjects.map((s) => [s.slug, s.members]), '主題與成員')
   same(snap.supplement.order, supplementFile.order, '補編排列')
   same(snap.retiredUrls, retiredFile.urls.map(({ from, to }) => ({ from, to })), '停用網址')
