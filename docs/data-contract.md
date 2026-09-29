@@ -8,7 +8,7 @@
 - `source`：可公開書目與權利邊界，不含本機路徑
 - `project`：標題、階段與研究焦點
 - `materialCoverage`：全書頁數與公開全文的門檻，只留讀者看得懂的兩項
-- `tableOfContents`：**全書目次的公開投影**，198 篇的篇名、原文日期、原書起頁與部次／分節；已校訂全文者帶 `textPath`。來源是 `data/derived/toc_index.json`，不在此手改。頁碼一律是原書頁碼，不是 PDF 頁次（兩者差值在全書中不是定值，見 `data/derived/README.md`）。日期分三欄（2026-09-29 起，全站各產物同此）：`dateIso` 供排序與取年份；`dateLabel` 是印給讀者的標示，由 `engineering/scripts/lib/date-label.mjs` 產生，只有「1942 年 7 月 28 日」「1944 年 2 月」「1947 年」「原書未載日期」「原刊未署日期」五種形狀；`dateOriginal` 是目次照錄的紀年，前端只在篇頭經 `dateSources` 印一行。卷首三項另帶網址錨點 `anchor`（dedication、origins、plates）與舊網址的 `legacyAnchor`
+- `tableOfContents`：**全書目次的公開投影**，198 篇的篇名、原文日期、原書起頁與部次／分節；已校訂全文者帶 `textPath`。來源是 `data/derived/toc_index.json`，不在此手改。頁碼一律是原書頁碼，不是 PDF 頁次（兩者差值在全書中不是定值，見 `data/derived/README.md`）。日期分三欄（2026-09-29 起，全站各產物同此）：`dateIso` 供排序與取年份；`dateLabel` 是印給讀者的標示，由 `engineering/scripts/lib/date-label.mjs` 產生，只有「1942 年 7 月 28 日」「1944 年 2 月」「1947 年」「原書未載日期」「原刊未署日期」五種形狀；`dateOriginal` 是目次照錄的紀年，前端只在篇頭經 `dateSources` 印一行。本站標注兩欄（2026-09-29 起，母本在 `toc_index.json`）：`siteOccasion` 以統一格式寫會議或場合（「教育部法律教育委員會第三次會議」），篇端原文仍照錄在 `occasion`；`firstPrinting` 記首刊的刊物、卷期、年、頁碼、原刊題名與副題，建置時組成 `label` 供前端照印。卷首三項另帶網址錨點 `anchor`（dedication、origins、plates）與舊網址的 `legacyAnchor`
 - `legalEducation`：法律教育六篇的篇目列（`items`：篇名、日期、場合、原書頁碼、狀態、`shortTitle`），供六篇校訂全文頁的抬頭用。導讀與議題索引 2026-09-29 移進 `subjects.json` 的 `legal-education` 主題（考述與 `threads`），舊頁 `/zhujiahua/legal-education` 308 轉到主題頁
 - `verifiedTexts`：達人工逐字核對門檻、可完整公開的篇章原文。每一篇都必須在 `tableOfContents` 有一筆帶 `textPath` 的對應篇目，兩邊筆數相等
 - `initialResults`：只由目前已核頁面支持的初步內容觀察

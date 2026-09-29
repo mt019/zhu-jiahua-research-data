@@ -33,13 +33,13 @@
       {
         "id": "ZJH-LE-002",
         "title": "法律教育的一種看法",
-        "dateIso": "1947-06-27",
+        "dateIso": "1946-06-27",
         "occasion": "第三次法律教育會議講詞",
         "bookPages": "308–312",
         "status": "全文已轉錄並複核",
         "shortTitle": "一種看法",
         "dateOriginal": "民國三十六年六月二十七日",
-        "dateLabel": "1947 年 6 月 27 日"
+        "dateLabel": "1946 年 6 月 27 日"
       },
       {
         "id": "ZJH-LE-003",
@@ -1821,6 +1821,15 @@
         "dateSources": [
           "原書目次：民國三十四年四月十八日"
         ],
+        "siteOccasion": "教育部法律教育委員會第一次會議",
+        "firstPrinting": {
+          "publication": "《國風》（重慶）",
+          "issue": "第四十八期",
+          "year": 1945,
+          "pages": "12–14",
+          "title": "中國之法律教育問題",
+          "label": "《國風》（重慶）第四十八期（1945），頁 12–14，題作〈中國之法律教育問題〉"
+        },
         "bookEndPage": 308,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true,
@@ -1834,14 +1843,25 @@
         "bookStartPage": 308,
         "section": "四、法律教育",
         "dateOriginal": "民國三十六年六月二十七日",
-        "dateIso": "1947-06-27",
-        "dateLabel": "1947 年 6 月 27 日",
+        "dateIso": "1946-06-27",
+        "dateLabel": "1946 年 6 月 27 日",
         "textPath": "/zhujiahua/text-a-view-of-legal-education",
+        "note": "原書目次與篇端皆繫民國三十六年六月二十七日。本篇首刊《教育通訊》復刊第三卷第七期（1947），記者按語說本篇是朱家驊在法律教育委員會第三次會議所致開幕詞，時在「去年六月廿七日」，原稿已歸檔，記者徵得朱家驊同意後代擬題發表；《教育通訊》復刊第一卷第十期（1946）也記第三次會議自六月廿七日起舉行，朱家驊在會上報告一年來法律教育實施情形。正文說委員會「自去年五月在渝成立以來，迄今已逾一年」。本站日期依首刊按語作 1946 年 6 月 27 日。",
         "dateSources": [
           "原書目次：民國三十六年六月二十七日"
         ],
         "occasion": "第三次法律教育會議講詞",
         "occasionStatus": "待核",
+        "siteOccasion": "教育部法律教育委員會第三次會議",
+        "firstPrinting": {
+          "publication": "《教育通訊》",
+          "issue": "復刊第三卷第七期",
+          "year": 1947,
+          "pages": "8–9",
+          "title": "法律教育的一種看法",
+          "note": "篇名由《教育通訊》記者代擬。",
+          "label": "《教育通訊》復刊第三卷第七期（1947），頁 8–9，題作〈法律教育的一種看法〉"
+        },
         "bookEndPage": 312,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true,
@@ -1863,6 +1883,16 @@
         ],
         "occasion": "在教育部會議室講",
         "occasionStatus": "待核",
+        "siteOccasion": "教育部法律教育委員會第五次會議",
+        "firstPrinting": {
+          "publication": "《教育通訊》",
+          "issue": "復刊第五卷第三期",
+          "year": 1948,
+          "pages": "1–2",
+          "title": "法律教育設施",
+          "subtitle": "法律教育委員會第五次會議致詞",
+          "label": "《教育通訊》復刊第五卷第三期（1948），頁 1–2，題作〈法律教育設施〉，副題「法律教育委員會第五次會議致詞」"
+        },
         "bookEndPage": 316,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true,
@@ -1882,6 +1912,16 @@
         "dateSources": [
           "原書目次：民國三十七年七月一日"
         ],
+        "siteOccasion": "教育部法律教育委員會第六次會議",
+        "firstPrinting": {
+          "publication": "《教育通訊》",
+          "issue": "復刊第六卷第七期",
+          "year": 1948,
+          "pages": "1–2",
+          "title": "法律教育的幾個問題",
+          "subtitle": "民國三十七年七月一日在法律教育委員會第六次會議致詞",
+          "label": "《教育通訊》復刊第六卷第七期（1948），頁 1–2，題作〈法律教育的幾個問題〉，副題「民國三十七年七月一日在法律教育委員會第六次會議致詞」"
+        },
         "bookEndPage": 319,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true,
@@ -1901,6 +1941,16 @@
         "dateSources": [
           "原書目次：民國三十七年十二月二日"
         ],
+        "siteOccasion": "教育部法律教育委員會第七次會議",
+        "firstPrinting": {
+          "publication": "《教育通訊》",
+          "issue": "復刊第六卷第八期",
+          "year": 1948,
+          "pages": "1–3",
+          "title": "法律教育與法制",
+          "subtitle": "民國卅七年十二月二日在法律教育委員會講",
+          "label": "《教育通訊》復刊第六卷第八期（1948），頁 1–3，題作〈法律教育與法制〉，副題「民國卅七年十二月二日在法律教育委員會講」"
+        },
         "bookEndPage": 324,
         "bookEndPageStatus": "待核",
         "sharesEndPage": false,
@@ -1922,6 +1972,7 @@
         ],
         "occasion": "在臺灣省青年服務團講",
         "occasionStatus": "待核",
+        "siteOccasion": "臺灣省青年服務團",
         "bookEndPage": 330,
         "bookEndPageStatus": "待核",
         "sharesEndPage": true,

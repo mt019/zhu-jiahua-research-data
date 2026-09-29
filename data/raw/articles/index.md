@@ -68,3 +68,27 @@
 
 收進本倉的理由：這是《朱家驊先生言論集》之外的一件朱家驊文字，而且經由日方的監聽記錄
 保存下來。處理順序見 `data/derived/leads.json` 的 LEAD-007。
+
+## `legal-education-bksy/`（17 件，2026-09-29）
+
+全國報刊索引鏡像站（`140.112.115.21:8090`）以「法律教育委员会」「法律教育会议」「朱家骅 法律教育」「庞德 法律教育」四組詞檢索，用 `~/.claude/skills/bksy-fetch/scripts/bksy_fetch.py` 下載，同目錄的 `bksy-records.json` 記索引欄位、下載網址、位元組數與 SHA256。辨讀稿（Google Cloud Vision）每件一個 `.txt` 放在 PDF 旁邊，逐頁稿在 `.ocr-gcv/`。另以「法律教育 第四次会议」「法律教育 第二次会议」檢索，都是零筆。
+
+| 檔名（去副檔名） | 刊物、卷期、頁碼 | 內容 |
+|---|---|---|
+| 1945-guofeng-48-zhongguo-zhi-falv-jiaoyu-wenti | 《國風》（重慶）第 48 期，頁 12–14 | 朱家驊〈中國之法律教育問題〉，ZJH-074 的首刊 |
+| 1945-zhendan-2-1-conference-summary | 《震旦法律經濟雜誌》第 2 卷第 1 期 | 〈法律教育會議紀要〉，1945 年 4 月 18 日委員會會議，附〈法律教育綱領〉十條 |
+| 1946-jiaoyu-tongxun-1-10-report-conference | 《教育通訊》復刊第 1 卷第 10 期，頁 18 | 第三次會議自 6 月 27 日起開兩天，朱家驊報告一年來實施情形 |
+| 1947-falv-zhishi-1-5-report-committee-founded | 《法律知識》第 1 卷第 5 期，頁 10 | 教育部設法律教育委員會的報導，辨讀稿後半欄序錯亂 |
+| 1947-fasheng-42-report-pound-first | 《法聲》第 42 期，頁 1 | 某月 9 日至 10 日的會議討論龐德第一次報告書，月份未印在辨讀到的範圍 |
+| 1947-jiaoyu-tongxun-3-7-falv-jiaoyu-de-yizhong-kanfa | 《教育通訊》復刊第 3 卷第 7 期，頁 8–9 | ZJH-075 的首刊，記者按語記第三次會議日期與代擬題 |
+| 1947-zhonghua-faxue-5-8-pound-first-report | 《中華法學雜誌》新編第 5 卷第 8 期，頁 67–92 | 龐德〈法律教育第一次報告書〉，張企泰譯 |
+| 1948-jiaoyu-bu-gongbao-20-4-order-11976 | 《教育部公報》第 20 卷第 4 期，頁 17–18 | 教育部訓令法字第一一九七六號，抄發委員會決議 |
+| 1948-jiaoyu-bu-gongbao-20-11-order-58006 | 《教育部公報》第 20 卷第 11 期，頁 19 | 教育部訓令高字第五八〇〇六號，修訂法律學系必修科目表，朱家驊署 |
+| 1948-jiaoyu-tongxun-4-12-report-convened | 《教育通訊》復刊第 4 卷第 12 期，頁 31 | 第五次會議的預告，龐德受邀出席 |
+| 1948-jiaoyu-tongxun-5-1-report-meeting | 《教育通訊》復刊第 5 卷第 1 期，頁 30 | 第五次會議 2 月 4、5 日開會經過與決議 |
+| 1948-jiaoyu-tongxun-5-3-falv-jiaoyu-sheshi | 《教育通訊》復刊第 5 卷第 3 期，頁 1–2 | ZJH-076 的首刊，題作〈法律教育設施〉 |
+| 1948-jiaoyu-tongxun-5-7-pound-lecture | 《教育通訊》復刊第 5 卷第 7 期，頁 10–17 | 龐德〈從歐美法律教育的經驗談到中國法律教育〉 |
+| 1948-jiaoyu-tongxun-5-10-report-sixth | 《教育通訊》復刊第 5 卷第 10 期，頁 32 | 第六次會議 7 月 1 日的決議；辨讀稿作「第七次」，原頁圖是「第六次」 |
+| 1948-jiaoyu-tongxun-6-7-falv-jiaoyu-de-jige-wenti | 《教育通訊》復刊第 6 卷第 7 期，頁 1–2 | ZJH-077 的首刊，題作〈法律教育的幾個問題〉 |
+| 1948-jiaoyu-tongxun-6-8-falv-jiaoyu-yu-fazhi | 《教育通訊》復刊第 6 卷第 8 期，頁 1–3 | ZJH-078 的首刊，題作〈法律教育與法制〉 |
+| 1948-sifa-qianbao-34-report-conference | 《司法黔報》第 34 期 | 〈法律教育會議昨在首都舉行〉，辨讀稿欄序錯亂，未讀出是哪一次 |

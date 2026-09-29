@@ -60,6 +60,13 @@ app.tableOfContents.items = toc.items.map((item) => {
     out.occasion = head.occasion
     out.occasionStatus = '待核'
   }
+  // 本站標注：會議與場合用統一格式（「教育部法律教育委員會第三次會議」），篇端的原文照錄在 occasion；
+  // firstPrinting 記首刊的刊物、卷期、頁碼與原刊題名。兩欄都是本站所加，母本在 toc_index.json。
+  if (item.siteOccasion) out.siteOccasion = item.siteOccasion
+  if (item.firstPrinting) {
+    const f = item.firstPrinting
+    out.firstPrinting = { ...f, label: `${f.publication}${f.issue}（${f.year}），頁 ${f.pages}，題作〈${f.title}〉${f.subtitle ? `，副題「${f.subtitle}」` : ''}` }
+  }
   if (head?.bookEndPage) {
     out.bookEndPage = head.bookEndPage
     out.bookEndPageStatus = '待核'

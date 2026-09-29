@@ -1,5 +1,17 @@
 # 工程紀錄
 
+## 2026-09-29（續六）｜法律教育六篇的會議標注、首刊出處與〈法律教育的一種看法〉的日期
+
+全國報刊索引取回 17 件（清單在 `data/raw/articles/index.md` 的 `legal-education-bksy/` 一節）。
+
+| 改動 | 檔 |
+|---|---|
+| 六篇加 `siteOccasion`（教育部法律教育委員會第一、三、五、六、七次會議；臺灣省青年服務團）與 `firstPrinting`（074 首刊《國風》第 48 期，075 至 078 首刊《教育通訊》） | `data/derived/toc_index.json`、`build-app-toc.mjs` |
+| ZJH-075 的 `dateIso` 改 1946-06-27：首刊按語記為第三次會議開幕詞「去年六月廿七日」，1946 年《教育通訊》復刊第一卷第十期的報導同；原書目次與篇端的民國三十六年照錄 | `toc_index.json` 的 note、`zhu-jiahua-app.json` 的 `legalEducation.items` |
+| 主題考述改寫，加上七次會議與書中收錄的五次 | `data/derived/subjects.json` |
+
+第二、四次會議的講詞在報刊索引檢索零筆。第六次會議報導的辨讀稿作「第七次」，原頁圖是「第六次」。兩件朱家驊署名的教育部訓令與龐德的兩件文字已下載、未編入補編。
+
 ## 2026-09-29（續五）｜法律教育併入主題，議題欄 threads 進 subjects.json
 
 站主：「法律主題也可以優化一下」。法律教育六篇原本是主題系統出現以前手寫在 `zhu-jiahua-app.json` 的 `legalEducation`（導讀、五條閱讀線索、九個議題），前端另有一頁 `/zhujiahua/legal-education`，三份對照表寫死在 `ZhuJiahua.jsx`、`seo.js`，不在主題清單裡，也不進書內篇頁右欄的主題系列。
