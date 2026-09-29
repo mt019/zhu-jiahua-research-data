@@ -49,7 +49,7 @@ const memberRow = (id) => {
   if (id.startsWith('ZJH-')) {
     const item = tocById.get(id)
     if (!item) fail(`主題成員 ${id} 不在篇目索引`)
-    return { kind: 'book', id, anchor: item.anchor, title: item.title, date: item.date ?? null,
+    return { kind: 'book', id, anchor: item.anchor, part: item.part, title: item.title, date: item.date ?? null,
       dateIso: item.dateIso ?? null, where: `《朱家驊先生言論集》${item.part}，原書第 ${item.bookStartPage} 頁` }
   }
   const doc = docById.get(id)
@@ -62,7 +62,11 @@ const subjects = subjectsFile.subjects.map((s) => {
   const years = members.map((m) => m.dateIso?.slice(0, 4)).filter(Boolean).sort()
   const from = years[0]
   const to = years.at(-1)
-  return { ...s, members, yearsLabel: !from ? '—' : from === to ? from : `${from}–${to}` }
+  const yearsLabel = !from ? '—' : from === to ? from : `${from}–${to}`
+  const book = members.filter((m) => m.kind === 'book').length
+  // 抬頭與總覽頁印的件數一行，前端只挑著印
+  const countsLabel = [book ? `書內 ${book} 篇` : null, members.length - book ? `書外 ${members.length - book} 件` : null].filter(Boolean).join('、')
+  return { ...s, members, yearsLabel, countsLabel }
 })
 
 const subjectsOf = (id) => subjectsFile.subjects.filter((s) => s.members.includes(id)).map((s) => s.slug)
