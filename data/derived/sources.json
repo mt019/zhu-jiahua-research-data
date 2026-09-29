@@ -37,7 +37,7 @@
       "bookPagesRunning": "423-425",
       "pages": 3,
       "dateIso": null,
-      "dateNote": "版心印第二卷第五十期，未印出刊日。篇首署「九月十六日稿於西齋」，是撰稿日。正文引朱家驊的批評載於本刊第二卷第四十三期。公眾號轉錄本於文末記「原載：民國十四年十一月二十一日《現代評論》第二卷第五十期」，該日期待原刊核（見 leads.json 的 LEAD-001）。",
+      "dateNote": "版心印第二卷第五十期，未印出刊日。篇首署「九月十六日稿於西齋」，是撰稿日。正文引朱家驊的批評載於本刊第二卷第四十三期。公眾號轉錄本於文末記「原載：民國十四年十一月二十一日《現代評論》第二卷第五十期」，該日期待原刊核。",
       "language": "zh-Hant",
       "script": "直排鉛印",
       "digitisation": {
@@ -65,7 +65,7 @@
       "language": "zh-Hant",
       "script": "直排鉛印",
       "primaryPending": true,
-      "primaryPendingNote": "原刊未收得。手上只有一則公眾號轉錄（見 leads.json 的 LEAD-001），轉錄不作出處。",
+      "primaryPendingNote": "原刊未收得。所見只有一則公眾號轉錄，轉錄不作出處。",
       "rights": {
         "status": "pending",
         "why": "原刊未收得，權利未判。",
@@ -85,7 +85,7 @@
       "language": "zh-Hant",
       "script": "直排鉛印",
       "primaryPending": true,
-      "primaryPendingNote": "原刊未收得。本倉所據是《朱家驊先生言論集》所收本。",
+      "primaryPendingNote": "原刊未收得，此處所據是《朱家驊先生言論集》所收本。",
       "rights": {
         "status": "pending",
         "why": "原刊未收得，權利未判。",
@@ -93,7 +93,7 @@
       },
       "access": "not-held",
       "whyHere": "朱家驊〈關於一個譯詩問題的批評〉刊此期，《言論集》收為 ZJH-160。",
-      "dateNote": "出刊日未考。公眾號轉錄本記為民國十四年十月三日，與《言論集》繫 ZJH-160 的日期相同，兩者待原刊核。"
+      "dateNote": "出刊日未考。公眾號轉錄本記為民國十四年十月三日，與《言論集》所收〈關於一個譯詩問題的批評〉所繫的日期相同，兩者待原刊核。"
     },
     {
       "id": "SRC-jacar-c13050247000",

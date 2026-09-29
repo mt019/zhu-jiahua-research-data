@@ -210,6 +210,32 @@ for (const s of pending) {
 }
 
 if ([sources.size, docs.size, cases.size, drafts.length].some((n) => n === 0)) fail('來源、文獻、案、讀稿有一類是 0——檢查沒有看到東西')
+// ---- 印到前端的文句不帶工程編號與工程用語 ----
+// 同步出去的三類產物裡，凡含漢字的字串都是讀者讀得到的文句；純編號、網址、欄位值不含漢字，不在此列。
+// 2026-09-29 站主點名案頁考述裡的「ZJH-080〈教師節之感言〉」，同批另有「本倉所據」兩處。
+const FRONT_ID = /(?:ZJ[HRC]|SRC|LEAD)-[\w-]+/
+// 「辨讀稿」「校訂表」是凡例向讀者解說過的用語，不在此列。
+// 辨讀引擎的名字照轉錄體例也不該進前端，但目前由四支建置腳本寫進讀稿與年表的凡例，待另一輪改完再收進這張表。
+const FRONT_WORDS = ['本倉', '快照', '資料層', '前端']
+const HAN = /[一-鿿]/
+const frontFiles = ['data/processed/related-documents.json', 'data/processed/chronology.json',
+  ...draftFiles.map((f) => `data/processed/external-drafts/${f}`)]
+const frontHits = []
+const scanFront = (v, file, path) => {
+  if (typeof v === 'string') {
+    if (!HAN.test(v)) return
+    const id = v.match(FRONT_ID)?.[0]
+    const word = FRONT_WORDS.find((w) => v.includes(w))
+    if (id || word) frontHits.push(`${file} ${path}：「${id ?? word}」`)
+  } else if (Array.isArray(v)) v.forEach((x, i) => scanFront(x, file, `${path}[${i}]`))
+  else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) scanFront(x, file, `${path}.${k}`)
+}
+for (const rel of frontFiles) {
+  const p = join(root, rel)
+  if (existsSync(p)) scanFront(JSON.parse(readFileSync(p, 'utf8')), rel, '$')
+}
+if (frontHits.length) fail(`印到前端的文句帶工程編號或工程用語 ${frontHits.length} 處：\n  ${frontHits.slice(0, 20).join('\n  ')}`)
+
 console.log(`書外文獻檢查通過：來源 ${sources.size}（掛帳 ${pending.length}）、文獻 ${docs.size}、案 ${cases.size}、讀稿 ${drafts.length}。`)
 
 // ---- 負向測試：把資料樹複製出去、各壞一處，逐個要求本檢查以非零狀態結束 ----
@@ -222,6 +248,8 @@ if (rootAt < 0) {
     ['節標宣告與段落不符', (t) => edit(t, 'data/processed/external-drafts/ZJR-009.json', (j) => { j.headings[0].text = '壞' })],
     ['多出未登記的讀稿', (t) => writeFileSync(join(t, 'data/processed/external-drafts/ZJR-999.json'), '{"id":"ZJR-999"}')],
     ['rights.status 非法值', (t) => edit(t, 'data/derived/sources.json', (j) => { j.sources[0].rights.status = 'open' })],
+    ['工程編號進考述', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].account += '見 ZJH-080。' })],
+    ['工程用語進待核事項', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].openQuestions.push('本倉所據是另一本。') })],
     ['查核紀錄用語進讀稿', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.statusNote += '列為未確認。' })],
     ['related_index 不在', (t) => renameSync(join(t, 'data/derived/related_index.json'), join(t, 'data/derived/related_index.json.away'))],
     ['快照與 derived 不同步', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.documents.pop() })],
