@@ -1,5 +1,5 @@
 {
-  "note": "書外文獻的平表：一件文獻一筆。author 答誰寫的、translator 答誰譯的、relation 答與朱家驊的關係、sourceId 答刊在哪、caseId 答屬於哪場往還。聚合（案、刊物、作者、年份）由這張表組出來，不寫死在文獻本身。id 依收進本倉的先後編，件在原刊的先後看 seqInSource。author 為 null 而配 authorNote 是合法值，判有無用鍵在不在，不用真假值。",
+  "note": "書外文獻的平表：一件文獻一筆。author 答誰寫的、translator 答誰譯的、relation 答與朱家驊的關係、role 答它在原刊裡是哪一種文字（投書、覆信、按語⋯）、sourceId 答刊在哪。anchor 是公開網址的錨點（年份加短名），上線後不改。account 與 openQuestions 印在補編該件之後，寫給讀者。所屬主題記在 subjects.json，補編的排列記在 supplement.json，都不寫在文獻本身。id 依收進本倉的先後編，件在原刊的先後看 seqInSource。author 為 null 而配 authorNote 是合法值，判有無用鍵在不在，不用真假值。2026-09-29 起不再有 caseId：案退役，改由主題與補編兩處組織。",
   "idPrefix": "ZJR",
   "relations": [
     "自撰",
@@ -7,7 +7,7 @@
     "致他",
     "覆他",
     "論及",
-    "同案並列"
+    "同刊並列"
   ],
   "documents": [
     {
@@ -21,8 +21,13 @@
       "dateIso": "1926-01-28",
       "dateNote": "篇端註記「此文曾於民國十五年一月二十八日寄德國福郞克府爾脫報與柏林世界晚報登載」，記的是寄出日；兩報刊出的日期原刊未記。",
       "sourcePages": "34",
-      "caseId": "ZJC-01",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1926-germany-and-imperialists",
+      "role": "投書",
+      "openQuestions": [
+        "兩報登載本篇的日期，原刊只記寄出日，未記刊出日。Frankfurter Zeitung 1926 年的分冊已由法蘭克福大學圖書館數位化，Die Welt am Abend 同年的存卷只有縮微捲片，兩邊都還沒有逐日核過。",
+        "《改正條約會附刊》的刊期與卷次，所見三頁未印。"
+      ]
     },
     {
       "id": "ZJR-002",
@@ -38,8 +43,9 @@
       "dateIso": null,
       "dateNote": "原刊未署日期，繫於朱家驊覆信之前。",
       "sourcePages": "34-35",
-      "caseId": "ZJC-01",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1926-mueller-letter",
+      "role": "論辯來書"
     },
     {
       "id": "ZJR-006",
@@ -50,11 +56,15 @@
       "titleNote": "原刊無標題，接在米松林署名之後，以「按」字起首。",
       "author": null,
       "authorNote": "不署名。文中稱「用再駁覆之。特附於後」，接下來一件即朱家驊的覆信，撰者是朱家驊或編者，未定。",
-      "relation": "同案並列",
+      "relation": "同刊並列",
       "dateIso": null,
       "sourcePages": "35",
-      "caseId": "ZJC-01",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1926-note-after-mueller",
+      "role": "按語",
+      "openQuestions": [
+        "本則按語不署名，稱「用再駁覆之。特附於後」，撰者是朱家驊或編者，未定。"
+      ]
     },
     {
       "id": "ZJR-003",
@@ -67,8 +77,9 @@
       "dateIso": "1926-03-04",
       "dateNote": "文末署「朱家驊　十五年三月四日」。",
       "sourcePages": "35-36",
-      "caseId": "ZJC-01",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1926-reply-to-mueller",
+      "role": "覆信"
     },
     {
       "id": "ZJR-004",
@@ -79,11 +90,15 @@
       "titleNote": "原刊無標題，接在朱家驊覆信之後，以「心史按」起首。",
       "author": "心史",
       "authorNote": "署「心史」，本名未考。",
-      "relation": "同案並列",
+      "relation": "同刊並列",
       "dateIso": null,
       "sourcePages": "36",
-      "caseId": "ZJC-01",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1926-xinshi-note",
+      "role": "按語",
+      "openQuestions": [
+        "按語署「心史」，本名未考。"
+      ]
     },
     {
       "id": "ZJR-005",
@@ -97,8 +112,12 @@
       "dateNote": "篇首署「九月十六日稿於西齋」，是撰稿日；該期未印出刊日。",
       "sourcePages": "15-17",
       "sourcePagesRunning": "423-425",
-      "caseId": "ZJC-02",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1925-li-jinghe-on-goethe",
+      "role": "商榷",
+      "openQuestions": [
+        "《現代評論》第二卷第五十期的出刊日未考，李競何署的「九月十六日」是撰稿日。"
+      ]
     },
     {
       "id": "ZJR-007",
@@ -109,11 +128,12 @@
       "titleNote": "原刊無標題，接在〈商榷〉末尾，以小字排兩行，署「記者」。",
       "author": null,
       "authorNote": "署「記者」，本名未考。附記說明此稿在記者手中逾一月、因稿件擁擠未得早日登出。",
-      "relation": "同案並列",
+      "relation": "同刊並列",
       "dateIso": null,
       "sourcePages": "17",
-      "caseId": "ZJC-02",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1925-editor-postscript",
+      "role": "附記"
     },
     {
       "id": "ZJR-008",
@@ -128,8 +148,14 @@
       "dateNote": "記錄的日期。所記的放送在七月三十日，賀電本身的發出日記錄未載。",
       "language": "ja",
       "sourcePages": "1-2",
-      "caseId": "ZJC-03",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1942-lanzhou-telegram",
+      "role": "賀電",
+      "account": "民國三十一年七月，中國工程師學會的年次大會在蘭州舉行，中央研究院代理院長朱家驊致賀電。電文講抗戰建國的工作有待工程學者的努力、蘭州自古是一處名邑而為歐亞交通的要點，以及國人往往忽略西北而蘭州在版圖上實居全國之中，末句以國家的實業計畫期之。重慶七月三十日放送這則消息，日本陸軍的監聽者次日寫進放送記錄。同一通賀電的中文全文，《朱家驊先生言論集》收為〈電賀中國工程師學會在蘭州舉行年會〉，繫民國三十一年七月二十八日。",
+      "openQuestions": [
+        "放送記錄只記電文的要旨，用字與斷句都經過轉譯，與書內全文逐句相應處未逐一對照。",
+        "記錄的本文以行草手寫，此處的正文出自 JACAR 目錄詳細頁的翻刻，用新字體，與原頁圖逐句對過，逐字的異同未及細校。"
+      ]
     },
     {
       "id": "ZJR-009",
@@ -142,8 +168,13 @@
       "dateIso": "1944-02",
       "dateNote": "封面所印的印行年月；講演的日期封面與正文都未記。",
       "sourcePages": "1-74",
-      "caseId": "ZJC-04",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1944-party-organisation",
+      "role": "講演錄",
+      "account": "民國三十三年二月，中央訓練團黨政訓練班印行朱家驊的講演錄《黨的組織與領導》，封面標「機密」。講演先界定組織與領導，再檢討本黨的組織現狀與過去領導工作的得失，末以組織意識與黨的領導兩件事作結。《朱家驊先生言論集》未收此篇。",
+      "openQuestions": [
+        "講演的日期與該班的期次，封面與正文都未記，只印「民國三十三年二月印」。"
+      ]
     },
     {
       "id": "ZJR-010",
@@ -157,8 +188,14 @@
       "dateIso": "1947",
       "dateNote": "原刊未署日期。正文寫「今天，首都以及全國各地都在普遍地舉行紀念」，文成於是年教師節當天。",
       "sourcePages": "24",
-      "caseId": "ZJC-05",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1947-teachers-day",
+      "role": "紀念文",
+      "openQuestions": [
+        "該期的出刊月日，刊頭與版面都未印，全國報刊索引也只著錄年與卷期；正文寫在孔子誕辰當天，出刊日要另核該期的目錄或版權頁。",
+        "本篇是講稿還是專為刊物所寫，原刊未記。",
+        "該頁左下的照片，圖說記首都各界尊師遊藝大會，與正文是否同一年的活動，圖說未署日期。"
+      ]
     },
     {
       "id": "ZJR-011",
@@ -171,8 +208,13 @@
       "dateIso": "1948",
       "dateNote": "原刊未署日期。副題作「三十七年教師節誌感」，正文首句「今日是孔子誕辰」。",
       "sourcePages": "1",
-      "caseId": "ZJC-05",
-      "inBook": null
+      "inBook": null,
+      "anchor": "1948-teachers-day",
+      "role": "誌感",
+      "openQuestions": [
+        "該期的出刊月日，刊頭與版面都未印，全國報刊索引也只著錄年與卷期；正文寫在孔子誕辰當天，出刊日要另核該期的目錄或版權頁。",
+        "本篇是講稿還是專為刊物所寫，原刊未記。"
+      ]
     }
   ]
 }

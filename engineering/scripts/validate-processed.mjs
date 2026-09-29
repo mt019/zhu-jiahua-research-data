@@ -36,6 +36,19 @@ for (const key of internalOnly) {
 // 篇目索引：數量、頁碼單調、全文連結指得到實際存在的校訂全文
 const toc = data.tableOfContents;
 if (toc.items.length !== toc.itemCount) throw new Error('tableOfContents.itemCount 與實際筆數不符');
+// 公開錨點：原書起頁，同頁第二篇起加序號；唯一、與起頁相符（build-app-toc.mjs 產生，上線後不改）
+{
+  const seen = new Map();
+  const used = new Set();
+  for (const item of toc.items) {
+    const n = (seen.get(item.bookStartPage) ?? 0) + 1;
+    seen.set(item.bookStartPage, n);
+    const want = n === 1 ? `p${item.bookStartPage}` : `p${item.bookStartPage}-${n}`;
+    if (item.anchor !== want) throw new Error(`${item.id} 的 anchor「${item.anchor}」應為「${want}」——重跑 build-app-toc.mjs`);
+    if (used.has(item.anchor)) throw new Error(`篇目錨點重複：${item.anchor}`);
+    used.add(item.anchor);
+  }
+}
 const readable = toc.items.filter((item) => item.textPath);
 if (readable.length !== toc.readableCount) throw new Error('tableOfContents.readableCount 與帶 textPath 的筆數不符');
 if (readable.length !== data.verifiedTexts.length) {

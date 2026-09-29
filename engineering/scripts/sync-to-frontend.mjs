@@ -89,7 +89,7 @@ const searchTarget = resolve(dirname(target), 'zhuJiahuaSearchCorpus.json');
 await copyTracked(resolve(here, '../../data/processed/search-corpus.json'), searchTarget);
 console.log(`已同步檢索語料：${searchTarget}`);
 
-// 書外文獻：快照一份、讀稿一件一檔，案頁與總覽頁讀前者、正文按需載入後者。
+// 書外文獻：快照一份、讀稿一件一檔，補編、主題頁與總覽頁讀前者、正文按需載入後者。
 const relatedSource = resolve(here, '../../data/processed/related-documents.json');
 const relatedTarget = resolve(dirname(target), 'zhuJiahuaRelated.json');
 await copyTracked(relatedSource, relatedTarget);

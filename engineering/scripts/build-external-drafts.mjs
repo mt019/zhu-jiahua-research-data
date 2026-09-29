@@ -490,7 +490,8 @@ for (const src of sources) {
           let sourcePage = null
           for (const b of pageBreaks) if (b.para < idx[0] || (b.para === idx[0] && b.offset === 0)) sourcePage = b.sourcePage
           // anchor 是正文標題與左欄樹共用的元素 id；tree 是左欄樹的一列（標題、縮排層級、提示），前端只加 href
-          const anchor = `${a.docId}-h${idx[0]}`
+          // 錨點用該件的公開錨點（related_index.json 的 anchor），編號不上網址
+          const anchor = `${relatedDocs.find((r) => r.id === a.docId).anchor}-h${idx[0]}`
           mine.push({ para: idx[0], level: h.level, text: h.text, sourcePage, anchor,
             tree: { id: anchor, title: h.text, depth: h.level, hint: `原刊第 ${sourcePage} 頁` } })
           matchedHeadings.add(h.text)

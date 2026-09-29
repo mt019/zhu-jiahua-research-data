@@ -14,11 +14,22 @@ const toc = JSON.parse(readFileSync(TOC, 'utf8'))
 const app = JSON.parse(readFileSync(APP, 'utf8'))
 const keep = new Map(app.tableOfContents.items.map((i) => [i.id, i]))
 
+// 網址錨點取原書起頁（p330），讀者看得懂也引得了；同一頁起兩篇時第二篇起加序號（p12-2）。
+// 錨點公開後不再改，所以序號按目次先後定，validate-processed.mjs 驗它與起頁、唯一性相符。
+// 舊網址的 #ZJH-NNN 由前端的對照表接住，id 本身不上網址。
+const seenStart = new Map()
+const anchorOf = (item) => {
+  const n = (seenStart.get(item.bookStartPage) ?? 0) + 1
+  seenStart.set(item.bookStartPage, n)
+  return n === 1 ? `p${item.bookStartPage}` : `p${item.bookStartPage}-${n}`
+}
+
 app.tableOfContents.items = toc.items.map((item) => {
   const prev = keep.get(item.id) ?? {}
   const head = item.textHead
   const out = {
     id: item.id,
+    anchor: anchorOf(item),
     title: item.title,
     part: item.part,
     bookStartPage: item.bookStartPage,

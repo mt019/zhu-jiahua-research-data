@@ -1,0 +1,30 @@
+{
+  "note": "停用的公開網址與轉去的落點。worker 以 308 轉、前端路由同樣轉，兩處都讀同步過去的這一份；validate-related.mjs 驗每個落點在現行路由與錨點裡存在。停用的網址永不再用作新頁。",
+  "urls": [
+    {
+      "from": "/zhujiahua/case/sino-german-relations-1926",
+      "to": "/zhujiahua/subject/sino-german-relations",
+      "retiredAt": "2026-09-29"
+    },
+    {
+      "from": "/zhujiahua/case/goethe-quatrain-1925",
+      "to": "/zhujiahua/subject/goethe-quatrain",
+      "retiredAt": "2026-09-29"
+    },
+    {
+      "from": "/zhujiahua/case/engineers-lanzhou-1942",
+      "to": "/zhujiahua/subject/chinese-institute-of-engineers",
+      "retiredAt": "2026-09-29"
+    },
+    {
+      "from": "/zhujiahua/case/party-organisation-1944",
+      "to": "/zhujiahua/part/supplement#1944-party-organisation",
+      "retiredAt": "2026-09-29"
+    },
+    {
+      "from": "/zhujiahua/case/teachers-day-1947-1948",
+      "to": "/zhujiahua/subject/teachers-day",
+      "retiredAt": "2026-09-29"
+    }
+  ]
+}

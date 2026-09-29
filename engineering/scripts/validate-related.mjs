@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// 書外文獻層的固定檢查。對象是 data/derived 的 sources.json、related_index.json、
-// cases.json、leads.json 與 data/processed/external-drafts/。
+// 書外文獻層與主題的固定檢查。對象是 data/derived 的 sources.json、related_index.json、
+// subjects.json、supplement.json、retired-urls.json、leads.json 與 data/processed/external-drafts/。
 //
-// 覆蓋範圍自報：末行印來源、文獻、案、讀稿四個計數，任一為 0 就 exit 1——
+// 覆蓋範圍自報：末行印來源、文獻、主題、讀稿四個計數，任一為 0 就 exit 1——
 // 一個對象都沒看到的檢查與沒有檢查等價（writing-ops-gates）。
 // 掛帳（primaryPending）與待查線索每次執行都逐條列出，不是只在出錯時。
 //
@@ -29,7 +29,9 @@ const readJson = (rel) => {
 
 const sourcesFile = readJson('data/derived/sources.json')
 const relatedFile = readJson('data/derived/related_index.json')
-const casesFile = readJson('data/derived/cases.json')
+const subjectsFile = readJson('data/derived/subjects.json')
+const supplementFile = readJson('data/derived/supplement.json')
+const retiredFile = readJson('data/derived/retired-urls.json')
 const leadsFile = readJson('data/derived/leads.json')
 const tocIndex = readJson('data/derived/toc_index.json')
 
@@ -57,27 +59,51 @@ for (const [srcId] of sources) {
   if (new Set(seqs).size !== seqs.length) fail(`${srcId} 之下的 seqInSource 有重複`)
 }
 
-// 案與平表的雙向對帳：cases 的 documents 是權威，related_index 的 caseId 是投影。
+// 公開錨點：一件一個，形狀是「四位年份-小寫短名」，上線後不改。案（caseId）自 2026-09-29 退役。
+const ANCHOR = /^\d{4}-[a-z0-9]+(?:-[a-z0-9]+)*$/
+const anchors = new Set()
+for (const d of docs.values()) {
+  if ('caseId' in d) fail(`${d.id} 還帶著 caseId；案已退役，改記主題（subjects.json）`)
+  if (!ANCHOR.test(d.anchor ?? '')) fail(`${d.id} 的 anchor「${d.anchor}」形狀不對，要「年份-短名」`)
+  if (anchors.has(d.anchor)) fail(`anchor 重複：${d.anchor}`)
+  anchors.add(d.anchor)
+  if (d.openQuestions && !Array.isArray(d.openQuestions)) fail(`${d.id} 的 openQuestions 要是陣列`)
+}
+
+// 補編的排列：每件剛好一次，不多不少。
+{
+  const order = supplementFile.order
+  if (new Set(order).size !== order.length) fail('supplement.json 的 order 有重複')
+  const missing = [...docs.keys()].filter((id) => !order.includes(id))
+  const extra = order.filter((id) => !docs.has(id))
+  if (missing.length || extra.length) fail(`supplement.json 的 order 與平表對不上：缺 ${missing.join('、') || '無'}，多 ${extra.join('、') || '無'}`)
+}
+
+// 主題：slug 公開且不改；成員是書內篇或書外件，存在、不重複，每題至少兩件。
 const tocIds = new Set(tocIndex.items.map((i) => i.id))
-const cases = new Map()
-for (const c of casesFile.cases) {
-  if (cases.has(c.id)) fail(`案 id 重複：${c.id}`)
-  cases.set(c.id, c)
-  for (const sid of c.sourceIds ?? []) if (!sources.has(sid)) fail(`${c.id} 指向不存在的來源 ${sid}`)
-  for (const entry of c.documents) {
-    const d = docs.get(entry.docId)
-    if (!d) fail(`${c.id} 收著不存在的文獻 ${entry.docId}`)
-    if (d.caseId !== c.id) fail(`${c.id} 收著 ${entry.docId}，而它的 caseId 是 ${d.caseId}——兩邊對不上`)
-  }
-  for (const rp of c.relatedPieces ?? []) {
-    if (!tocIds.has(rp.id)) fail(`${c.id} 的 relatedPieces 指向不存在的篇 ${rp.id}`)
+const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const subjects = new Map()
+for (const s of subjectsFile.subjects) {
+  if (!SLUG.test(s.slug)) fail(`主題 slug「${s.slug}」形狀不對`)
+  if (subjects.has(s.slug)) fail(`主題 slug 重複：${s.slug}`)
+  subjects.set(s.slug, s)
+  for (const k of ['name', 'scope', 'account']) if (!s[k]) fail(`主題 ${s.slug} 缺 ${k}`)
+  for (const k of ['title', 'description', 'keywords']) if (!s.seo?.[k]) fail(`主題 ${s.slug} 的 seo 缺 ${k}`)
+  if (new Set(s.members).size !== s.members.length) fail(`主題 ${s.slug} 的成員有重複`)
+  if (s.members.length < 2) fail(`主題 ${s.slug} 只有 ${s.members.length} 件；一件成不了主題，考述寫在該件自己`)
+  for (const id of s.members) {
+    if (!(tocIds.has(id) || docs.has(id))) fail(`主題 ${s.slug} 的成員 ${id} 不在篇目索引也不在書外文獻平表`)
   }
 }
-for (const d of docs.values()) {
-  if (!d.caseId) continue
-  const c = cases.get(d.caseId)
-  if (!c) fail(`${d.id} 指向不存在的案 ${d.caseId}`)
-  if (!c.documents.some((e) => e.docId === d.id)) fail(`${d.id} 記著 ${d.caseId}，該案的 documents 沒有它——投影缺角`)
+
+// 停用網址：落點要是現行的主題頁或補編裡的錨點；停用的網址不得與現行網址相撞。
+for (const { from, to } of retiredFile.urls) {
+  if (!from.startsWith('/zhujiahua/')) fail(`停用網址 ${from} 不在 /zhujiahua/ 底下`)
+  const subj = to.match(/^\/zhujiahua\/subject\/([^/#]+)$/)
+  const sup = to.match(/^\/zhujiahua\/part\/supplement#(.+)$/)
+  if (subj ? !subjects.has(subj[1]) : sup ? !anchors.has(sup[1]) : true) fail(`停用網址 ${from} 的落點 ${to} 不存在`)
+  const live = from.match(/^\/zhujiahua\/subject\/([^/#]+)$/)
+  if (live && subjects.has(live[1])) fail(`停用網址 ${from} 與現行主題頁相撞`)
 }
 
 // 讀稿的檔案集合要與平表一致：來源已在手的每一件都要有讀稿，多出來的檔也不放行。
@@ -128,7 +154,7 @@ for (const f of draftFiles) {
     if (d.paragraphs[h.para] !== h.text) fail(`${d.id} 第 ${h.para} 段與節標宣告不同：「${h.text}」`)
     if (![1, 2, 3, 4].includes(h.level)) fail(`${d.id} 節標「${h.text}」的 level ${h.level} 不在 1–4`)
     if (!Number.isInteger(h.sourcePage)) fail(`${d.id} 節標「${h.text}」沒有 sourcePage`)
-    if (h.anchor !== `${d.id}-h${h.para}` || h.tree?.id !== h.anchor) fail(`${d.id} 節標「${h.text}」的 anchor 與 tree.id 不是 <docId>-h<para>`)
+    if (h.anchor !== `${docs.get(d.id).anchor}-h${h.para}` || h.tree?.id !== h.anchor) fail(`${d.id} 節標「${h.text}」的 anchor 與 tree.id 不是 <該件錨點>-h<para>`)
   }
   for (const m of d.sideMarks ?? []) {
     if (!['專名號', '書名號'].includes(m.kind)) fail(`${d.id} 側記號種類「${m.kind}」不在封閉集合`)
@@ -141,12 +167,14 @@ for (const f of draftFiles) {
 // 散文欄位過共用文風層；讀者看得到的欄位算正文，倉內登記的來歷與線索算工程文件。
 const proseFiles = []
 const push = (path, text, kind) => { if (text) proseFiles.push({ path, text, kind }) }
-for (const c of cases.values()) {
-  push(`cases.json:${c.id}:account`, c.account, 'prose')
-  ;(c.openQuestions ?? []).forEach((q, i) => push(`cases.json:${c.id}:openQuestions[${i}]`, q, 'prose'))
+for (const s of subjects.values()) {
+  for (const k of ['scope', 'account']) push(`subjects.json:${s.slug}:${k}`, s[k], 'prose')
+  push(`subjects.json:${s.slug}:seo.description`, s.seo.description, 'prose')
+  ;(s.openQuestions ?? []).forEach((q, i) => push(`subjects.json:${s.slug}:openQuestions[${i}]`, q, 'prose'))
 }
 for (const d of docs.values()) {
-  for (const k of ['titleNote', 'authorNote', 'translatorNote', 'dateNote']) push(`related_index.json:${d.id}:${k}`, d[k], 'prose')
+  for (const k of ['titleNote', 'authorNote', 'translatorNote', 'dateNote', 'account']) push(`related_index.json:${d.id}:${k}`, d[k], 'prose')
+  ;(d.openQuestions ?? []).forEach((q, i) => push(`related_index.json:${d.id}:openQuestions[${i}]`, q, 'prose'))
 }
 for (const s of sources.values()) {
   for (const k of ['whyHere', 'issueNote', 'dateNote', 'primaryPendingNote']) push(`sources.json:${s.id}:${k}`, s[k], 'engineering')
@@ -189,8 +217,10 @@ for (const l of leadsFile.leads) {
   }
   for (const w of [...BANNED_WORDS, '待站主裁定']) if (raw.includes(w)) fail(`公開快照裡有工作用語「${w}」`)
   const same = (a, b, what) => { if (JSON.stringify(a) !== JSON.stringify(b)) fail(`快照的 ${what} 與 derived 不一致——重跑 build-related.mjs`) }
-  same(snap.documents, relatedFile.documents, 'documents')
-  same(snap.cases, casesFile.cases, 'cases')
+  same(snap.documents.map(({ subjects: _s, ...d }) => d), relatedFile.documents, 'documents')
+  same(snap.subjects.map((s) => [s.slug, s.members.map((m) => m.id)]), subjectsFile.subjects.map((s) => [s.slug, s.members]), '主題與成員')
+  same(snap.supplement.order, supplementFile.order, '補編排列')
+  same(snap.retiredUrls, retiredFile.urls.map(({ from, to }) => ({ from, to })), '停用網址')
   same(snap.sources.map((s) => s.id), sourcesFile.sources.map((s) => s.id), '來源 id 序列')
 }
 
@@ -205,11 +235,11 @@ for (const l of openLeads) console.log(`  線索${l.status}：${l.id}　${l.what
 console.log(`線索待查 ${openLeads.length} 條。`)
 const pending = [...sources.values()].filter((s) => s.primaryPending)
 for (const s of pending) {
-  const users = [...cases.values()].filter((c) => (c.sourceIds ?? []).includes(s.id)).map((c) => c.id)
-  console.log(`  一手原件掛帳：${s.id}（${s.title}${s.issue ? '・' + s.issue : ''}）${users.length ? '，引用它的案：' + users.join('、') : ''}`)
+  const users = [...docs.values()].filter((d) => d.sourceId === s.id).map((d) => d.id)
+  console.log(`  一手原件掛帳：${s.id}（${s.title}${s.issue ? '・' + s.issue : ''}）${users.length ? '，引用它的文獻：' + users.join('、') : ''}`)
 }
 
-if ([sources.size, docs.size, cases.size, drafts.length].some((n) => n === 0)) fail('來源、文獻、案、讀稿有一類是 0——檢查沒有看到東西')
+if ([sources.size, docs.size, subjects.size, drafts.length].some((n) => n === 0)) fail('來源、文獻、主題、讀稿有一類是 0——檢查沒有看到東西')
 // ---- 印到前端的文句不帶工程編號與工程用語 ----
 // 同步出去的三類產物裡，凡含漢字的字串都是讀者讀得到的文句；純編號、網址、欄位值不含漢字，不在此列。
 // 2026-09-29 站主點名案頁考述裡的「ZJH-080〈教師節之感言〉」，同批另有「本倉所據」兩處。
@@ -236,24 +266,29 @@ for (const rel of frontFiles) {
 }
 if (frontHits.length) fail(`印到前端的文句帶工程編號或工程用語 ${frontHits.length} 處：\n  ${frontHits.slice(0, 20).join('\n  ')}`)
 
-console.log(`書外文獻檢查通過：來源 ${sources.size}（掛帳 ${pending.length}）、文獻 ${docs.size}、案 ${cases.size}、讀稿 ${drafts.length}。`)
+console.log(`書外文獻檢查通過：來源 ${sources.size}（掛帳 ${pending.length}）、文獻 ${docs.size}、主題 ${subjects.size}、讀稿 ${drafts.length}。`)
 
 // ---- 負向測試：把資料樹複製出去、各壞一處，逐個要求本檢查以非零狀態結束 ----
 if (rootAt < 0) {
   const mutations = [
     ['relation 不在封閉集合', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[0].relation = '路過' })],
-    ['案的投影缺角', (t) => edit(t, 'data/derived/cases.json', (j) => { j.cases[0].documents.pop() })],
+    ['補編漏排一件', (t) => edit(t, 'data/derived/supplement.json', (j) => { j.order.pop() })],
+    ['主題只剩一件', (t) => edit(t, 'data/derived/subjects.json', (j) => { j.subjects[0].members = j.subjects[0].members.slice(0, 1) })],
+    ['主題成員不存在', (t) => edit(t, 'data/derived/subjects.json', (j) => { j.subjects[0].members.push('ZJH-999') })],
+    ['錨點重複', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[1].anchor = j.documents[0].anchor })],
+    ['停用網址落點不存在', (t) => edit(t, 'data/derived/retired-urls.json', (j) => { j.urls[0].to = '/zhujiahua/subject/nonesuch' })],
+    ['文獻還帶 caseId', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[0].caseId = 'ZJC-01' })],
     ['sourceId 指向不存在的來源', (t) => edit(t, 'data/derived/related_index.json', (j) => { j.documents[0].sourceId = 'SRC-nonesuch' })],
     ['側記號切片不符', (t) => edit(t, 'data/processed/external-drafts/ZJR-005.json', (j) => { j.sideMarks[0].text = '壞' })],
     ['節標宣告與段落不符', (t) => edit(t, 'data/processed/external-drafts/ZJR-009.json', (j) => { j.headings[0].text = '壞' })],
     ['多出未登記的讀稿', (t) => writeFileSync(join(t, 'data/processed/external-drafts/ZJR-999.json'), '{"id":"ZJR-999"}')],
     ['rights.status 非法值', (t) => edit(t, 'data/derived/sources.json', (j) => { j.sources[0].rights.status = 'open' })],
-    ['工程編號進考述', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].account += '見 ZJH-080。' })],
-    ['工程用語進待核事項', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].openQuestions.push('本倉所據是另一本。') })],
+    ['工程編號進考述', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.subjects[0].account += '見 ZJH-080。' })],
+    ['工程用語進待核事項', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.subjects[0].openQuestions.push('本倉所據是另一本。') })],
     ['查核紀錄用語進讀稿', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.statusNote += '列為未確認。' })],
     ['related_index 不在', (t) => renameSync(join(t, 'data/derived/related_index.json'), join(t, 'data/derived/related_index.json.away'))],
     ['快照與 derived 不同步', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.documents.pop() })],
-    ['工作用語進快照', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.cases[0].account += '待站主裁定。' })],
+    ['工作用語進快照', (t) => edit(t, 'data/processed/related-documents.json', (j) => { j.subjects[0].account += '待站主裁定。' })],
     ['他館翻刻的讀稿沒有出處', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { delete j.transcriptSource })],
     ['轉錄出處不是網址', (t) => edit(t, 'data/processed/external-drafts/ZJR-008.json', (j) => { j.transcriptSource = 'JACAR' })],
     ['校訂稿沒有校訂日期', (t) => edit(t, 'data/processed/external-drafts/ZJR-001.json', (j) => { j.status = '人工逐字校訂'; j.glyphPolicy = '原書字形' })],

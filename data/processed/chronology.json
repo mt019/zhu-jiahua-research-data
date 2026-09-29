@@ -1514,9 +1514,7 @@
           "relation": "自撰",
           "dateIso": "1926-01-28",
           "source": "《改正條約會附刊》",
-          "href": "/zhujiahua/case/sino-german-relations-1926#ZJR-001",
-          "caseSlug": "sino-german-relations-1926",
-          "caseTitle": "中德關係的往還"
+          "href": "/zhujiahua/part/supplement#1926-germany-and-imperialists"
         },
         {
           "id": "ZJR-003",
@@ -1525,9 +1523,7 @@
           "relation": "覆他",
           "dateIso": "1926-03-04",
           "source": "《改正條約會附刊》",
-          "href": "/zhujiahua/case/sino-german-relations-1926#ZJR-003",
-          "caseSlug": "sino-german-relations-1926",
-          "caseTitle": "中德關係的往還"
+          "href": "/zhujiahua/part/supplement#1926-reply-to-mueller"
         }
       ],
       "tree": {
@@ -3207,9 +3203,7 @@
           "relation": "論及",
           "dateIso": "1942-07-31",
           "source": "《工程学会に対する朱家驊の祝電　華文放送　昭和一七年七月三一日》",
-          "href": "/zhujiahua/case/engineers-lanzhou-1942#ZJR-008",
-          "caseSlug": "engineers-lanzhou-1942",
-          "caseTitle": "中國工程師學會蘭州年會的賀電"
+          "href": "/zhujiahua/part/supplement#1942-lanzhou-telegram"
         }
       ],
       "tree": {
@@ -3474,9 +3468,7 @@
           "relation": "自撰",
           "dateIso": "1944-02",
           "source": "《黨的組織與領導》",
-          "href": "/zhujiahua/case/party-organisation-1944#ZJR-009",
-          "caseSlug": "party-organisation-1944",
-          "caseTitle": "中央訓練團講演〈黨的組織與領導〉"
+          "href": "/zhujiahua/part/supplement#1944-party-organisation"
         }
       ],
       "tree": {
@@ -3888,9 +3880,7 @@
           "relation": "自撰",
           "dateIso": "1947",
           "source": "《新運導報》",
-          "href": "/zhujiahua/case/teachers-day-1947-1948#ZJR-010",
-          "caseSlug": "teachers-day-1947-1948",
-          "caseTitle": "民國三十六、七年的教師節文章"
+          "href": "/zhujiahua/part/supplement#1947-teachers-day"
         }
       ],
       "tree": {
@@ -4102,9 +4092,7 @@
           "relation": "自撰",
           "dateIso": "1948",
           "source": "《教育通訊》",
-          "href": "/zhujiahua/case/teachers-day-1947-1948#ZJR-011",
-          "caseSlug": "teachers-day-1947-1948",
-          "caseTitle": "民國三十六、七年的教師節文章"
+          "href": "/zhujiahua/part/supplement#1948-teachers-day"
         }
       ],
       "tree": {

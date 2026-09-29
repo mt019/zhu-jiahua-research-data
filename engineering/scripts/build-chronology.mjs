@@ -256,20 +256,17 @@ const placed = [...piecesByCe.values()].reduce((n, list) => n + list.length, 0)
 if (placed !== datedPieces) fail(`帶日期的 ${datedPieces} 篇裡只掛上 ${placed} 篇`)
 
 // ── 書外文獻掛到年上（2026-09-29 起）─────────────────────────────────────
-// 《言論集》未收的文獻按 dateIso 的年份掛到各年目，點了進該件所屬的案頁。案的歸屬以 cases.json
-// 的 documents[] 為準，刊名與卷期取 sources.json；dateIso 缺的件（原刊未署）不掛，數目另外對帳。
+// 《言論集》未收的文獻按 dateIso 的年份掛到各年目，點了進補編該件的錨點（related_index.json 的
+// anchor）；刊名與卷期取 sources.json；dateIso 缺的件（原刊未署）不掛，數目另外對帳。
 const relatedIndex = JSON.parse(readFileSync(join(root, 'data/derived/related_index.json'), 'utf8')).documents
-const caseList = JSON.parse(readFileSync(join(root, 'data/derived/cases.json'), 'utf8')).cases
 const sourceList = JSON.parse(readFileSync(join(root, 'data/derived/sources.json'), 'utf8')).sources
-const caseOfDoc = new Map(caseList.flatMap((c) => c.documents.map((d) => [d.docId, c])))
 const sourceById = new Map(sourceList.map((s) => [s.id, s]))
 const externalByCe = new Map()
 for (const doc of relatedIndex) {
   if (!doc.dateIso) continue
   const ce = Number(doc.dateIso.slice(0, 4))
-  const kase = caseOfDoc.get(doc.id)
   const src = sourceById.get(doc.sourceId)
-  if (!kase) fail(`書外文獻 ${doc.id} 不在任何一案的 documents[] 裡`)
+  if (!doc.anchor) fail(`書外文獻 ${doc.id} 沒有 anchor`)
   if (!src) fail(`書外文獻 ${doc.id} 的來源 ${doc.sourceId} 不在 sources.json`)
   externalByCe.set(ce, [...(externalByCe.get(ce) ?? []), {
     id: doc.id,
@@ -277,11 +274,9 @@ for (const doc of relatedIndex) {
     author: doc.author ?? null,
     relation: doc.relation,
     dateIso: doc.dateIso,
-    // 年表列尾只印刊名（不折行），卷期在案頁
+    // 年表列尾只印刊名（不折行），卷期在補編
     source: `《${src.title}》`,
-    href: `/zhujiahua/case/${kase.slug}#${doc.id}`,
-    caseSlug: kase.slug,
-    caseTitle: kase.title,
+    href: `/zhujiahua/part/supplement#${doc.anchor}`,
   }])
 }
 for (const list of externalByCe.values()) list.sort((a, b) => (a.dateIso < b.dateIso ? -1 : a.dateIso > b.dateIso ? 1 : a.id.localeCompare(b.id)))
