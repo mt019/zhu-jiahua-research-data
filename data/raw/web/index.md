@@ -71,3 +71,7 @@ nichtgedruckter Dissertation」，並記作者「geboren 15.5.1893 zu Huchowfu, 
 Google Books API 當日額度已盡，DigiZeitschriften 2025 年底停止服務，三處未取到結果。CiNii
 BA52896374 的其他題名「Dissertations of Dr. Chu Chia-Hua」抄自《言論集》PDF 第 786 頁的英文書名頁。
 線索編號 LEAD-010。
+
+## `teachers-day-dates/`
+
+2026-09-29，教師節兩篇（ZJH-080、ZJH-083）的日期查核。`gazette/` 是政府公報資訊網的七件逐則 PDF 與 `transcriptions.md` 逐字抄錄；`bksy/` 是全國報刊索引的六篇 PDF、辨讀稿與 `bksy-records.json`（網址、位元組數、SHA256）；`archives/` 是國史館與近史所檔案館的檢索頁與詳目頁，`index.md` 一件一列記網址、抓取時間、狀態與 SHA256。結論在 `data/derived/date-checks.json`。
