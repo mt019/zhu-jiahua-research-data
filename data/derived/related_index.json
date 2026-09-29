@@ -144,6 +144,35 @@
       "sourcePages": "1-74",
       "caseId": "ZJC-04",
       "inBook": null
+    },
+    {
+      "id": "ZJR-010",
+      "sourceId": "SRC-xinyun-daobao-14-4",
+      "seqInSource": 1,
+      "title": "孔子的精神與教師的責任",
+      "titleInSource": "孔子的精神與教師的責任",
+      "titleNote": "欄名「新運論壇」，欄題「教師節紀念文獻」；篇題下引「或生而知之，或學而知之，或困而知之，及其知之一也。」",
+      "author": "朱家驊",
+      "relation": "自撰",
+      "dateIso": "1947",
+      "dateNote": "原刊未署日期。正文寫「今天，首都以及全國各地都在普遍地舉行紀念」，文成於是年教師節當天。",
+      "sourcePages": "24",
+      "caseId": "ZJC-05",
+      "inBook": null
+    },
+    {
+      "id": "ZJR-011",
+      "sourceId": "SRC-jiaoyu-tongxun-fukan-6-2",
+      "seqInSource": 1,
+      "title": "紀念孔子與教師救國",
+      "titleInSource": "紀念孔子與教師救國——三十七年教師節誌感",
+      "author": "朱家驊",
+      "relation": "自撰",
+      "dateIso": "1948",
+      "dateNote": "原刊未署日期。副題作「三十七年教師節誌感」，正文首句「今日是孔子誕辰」。",
+      "sourcePages": "1",
+      "caseId": "ZJC-05",
+      "inBook": null
     }
   ]
 }

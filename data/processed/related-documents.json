@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T17:28:47.107Z",
+  "generatedAt": "2026-09-29T05:10:25.711Z",
   "idPrefixes": {
     "source": "SRC",
     "document": "ZJR",
@@ -90,6 +90,36 @@
       "pages": 74,
       "dateIso": "1944-02",
       "dateNote": "封面印「民國三十三年二月印」，是印行的年月；講演的日期封面與正文都未記。",
+      "language": "zh-Hant",
+      "script": "直排鉛印"
+    },
+    {
+      "id": "SRC-xinyun-daobao-14-4",
+      "kind": "期刊",
+      "title": "新運導報",
+      "volume": 14,
+      "number": 4,
+      "issue": "第十四卷第四期",
+      "issueNote": "版面的刊頭只印刊名，下緣印頁碼 24；卷期取全國報刊索引的著錄。",
+      "bookPages": "24",
+      "pages": 1,
+      "dateIso": "1947",
+      "dateNote": "刊頭與版面都未印出刊日，全國報刊索引只著錄年與卷期。正文寫「今天，首都以及全國各地都在普遍地舉行紀念」。",
+      "language": "zh-Hant",
+      "script": "直排鉛印"
+    },
+    {
+      "id": "SRC-jiaoyu-tongxun-fukan-6-2",
+      "kind": "期刊",
+      "title": "教育通訊",
+      "volume": 6,
+      "number": 2,
+      "issue": "復刊第六卷第二期",
+      "issueNote": "刊頭印「教育通訊」「（復刊六卷二期）」與頁碼「（1）」。全國報刊索引著錄刊名為「教育通訊（漢口）」。",
+      "bookPages": "1",
+      "pages": 1,
+      "dateIso": "1948",
+      "dateNote": "刊頭未印出刊日，全國報刊索引只著錄年與卷期。副題作「三十七年教師節誌感」，正文首句「今日是孔子誕辰」。",
       "language": "zh-Hant",
       "script": "直排鉛印"
     }
@@ -229,6 +259,35 @@
       "sourcePages": "1-74",
       "caseId": "ZJC-04",
       "inBook": null
+    },
+    {
+      "id": "ZJR-010",
+      "sourceId": "SRC-xinyun-daobao-14-4",
+      "seqInSource": 1,
+      "title": "孔子的精神與教師的責任",
+      "titleInSource": "孔子的精神與教師的責任",
+      "titleNote": "欄名「新運論壇」，欄題「教師節紀念文獻」；篇題下引「或生而知之，或學而知之，或困而知之，及其知之一也。」",
+      "author": "朱家驊",
+      "relation": "自撰",
+      "dateIso": "1947",
+      "dateNote": "原刊未署日期。正文寫「今天，首都以及全國各地都在普遍地舉行紀念」，文成於是年教師節當天。",
+      "sourcePages": "24",
+      "caseId": "ZJC-05",
+      "inBook": null
+    },
+    {
+      "id": "ZJR-011",
+      "sourceId": "SRC-jiaoyu-tongxun-fukan-6-2",
+      "seqInSource": 1,
+      "title": "紀念孔子與教師救國",
+      "titleInSource": "紀念孔子與教師救國——三十七年教師節誌感",
+      "author": "朱家驊",
+      "relation": "自撰",
+      "dateIso": "1948",
+      "dateNote": "原刊未署日期。副題作「三十七年教師節誌感」，正文首句「今日是孔子誕辰」。",
+      "sourcePages": "1",
+      "caseId": "ZJC-05",
+      "inBook": null
     }
   ],
   "cases": [
@@ -344,6 +403,43 @@
       "openQuestions": [
         "講演的日期與該班的期次，封面與正文都未記，只印「民國三十三年二月印」。"
       ]
+    },
+    {
+      "id": "ZJC-05",
+      "slug": "teachers-day-1947-1948",
+      "title": "民國三十六、七年的教師節文章",
+      "dateFrom": "1947",
+      "dateTo": "1948",
+      "sourceIds": [
+        "SRC-xinyun-daobao-14-4",
+        "SRC-jiaoyu-tongxun-fukan-6-2"
+      ],
+      "account": "民國三十六年與三十七年的教師節，朱家驊各有一篇文章刊出。三十六年的〈孔子的精神與教師的責任〉刊《新運導報》第十四卷第四期「新運論壇」欄，三十七年的〈紀念孔子與教師救國〉副題「三十七年教師節誌感」，刊《教育通訊》復刊第六卷第二期卷首。兩篇都以孔子誕辰為教師節，都以代表政府慰勞全國教師的名義寫成：前一篇講孔子的教法與戰後教師的清苦，後一篇講孔子處亂世的志業與當時的戰局。《朱家驊先生言論集》兩篇都未收；書內的教師節講話是 ZJH-080〈教師節之感言〉與 ZJH-083〈孔子教育哲學的基本原則〉，篇端各署民國三十四年與四十年的九月二十八日。",
+      "documents": [
+        {
+          "docId": "ZJR-010",
+          "role": "紀念文"
+        },
+        {
+          "docId": "ZJR-011",
+          "role": "誌感"
+        }
+      ],
+      "relatedPieces": [
+        {
+          "id": "ZJH-080",
+          "note": "書內的教師節講話，篇端署民國三十四年九月二十八日"
+        },
+        {
+          "id": "ZJH-083",
+          "note": "書內的教師節講話，篇端署民國四十年九月二十八日"
+        }
+      ],
+      "openQuestions": [
+        "兩期的出刊月日，刊頭與版面都未印，全國報刊索引也只著錄年與卷期。兩篇正文都寫在孔子誕辰當天，出刊日要另核該期的目錄或版權頁。",
+        "兩篇是講稿還是專為刊物所寫，原刊未記。",
+        "《新運導報》那一頁左下的照片，圖說記首都各界尊師遊藝大會，與正文是否同一年的活動，圖說未署日期。"
+      ]
     }
   ],
   "view": {
@@ -392,6 +488,16 @@
         "year": "1944",
         "sourceLabel": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
         "authorLabel": "朱家驊"
+      },
+      "ZJR-010": {
+        "year": "1947",
+        "sourceLabel": "《新運導報》第十四卷第四期",
+        "authorLabel": "朱家驊"
+      },
+      "ZJR-011": {
+        "year": "1948",
+        "sourceLabel": "《教育通訊》復刊第六卷第二期",
+        "authorLabel": "朱家驊"
       }
     },
     "cases": {
@@ -406,6 +512,9 @@
       },
       "ZJC-04": {
         "yearsLabel": "1944"
+      },
+      "ZJC-05": {
+        "yearsLabel": "1947–1948"
       }
     },
     "facets": {
@@ -413,12 +522,12 @@
         {
           "value": "all",
           "label": "全部關係",
-          "hint": "9"
+          "hint": "11"
         },
         {
           "value": "自撰",
           "label": "自撰",
-          "hint": "2"
+          "hint": "4"
         },
         {
           "value": "致他",
@@ -445,7 +554,7 @@
         {
           "value": "all",
           "label": "全部年代",
-          "hint": "9"
+          "hint": "11"
         },
         {
           "value": "1926",
@@ -461,13 +570,23 @@
           "value": "1944",
           "label": "1944",
           "hint": "1"
+        },
+        {
+          "value": "1947",
+          "label": "1947",
+          "hint": "1"
+        },
+        {
+          "value": "1948",
+          "label": "1948",
+          "hint": "1"
         }
       ],
       "source": [
         {
           "value": "all",
           "label": "全部刊物",
-          "hint": "9"
+          "hint": "11"
         },
         {
           "value": "《改正條約會附刊》",
@@ -488,18 +607,28 @@
           "value": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
           "label": "《黨的組織與領導》中央訓練團黨政訓練班講演錄",
           "hint": "1"
+        },
+        {
+          "value": "《新運導報》第十四卷第四期",
+          "label": "《新運導報》第十四卷第四期",
+          "hint": "1"
+        },
+        {
+          "value": "《教育通訊》復刊第六卷第二期",
+          "label": "《教育通訊》復刊第六卷第二期",
+          "hint": "1"
         }
       ],
       "author": [
         {
           "value": "all",
           "label": "全部作者",
-          "hint": "9"
+          "hint": "11"
         },
         {
           "value": "朱家驊",
           "label": "朱家驊",
-          "hint": "4"
+          "hint": "6"
         },
         {
           "value": "米松林",
