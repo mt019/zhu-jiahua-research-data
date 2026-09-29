@@ -64,6 +64,8 @@ app.tableOfContents.items = toc.items.map((item) => {
     out.bookEndPageStatus = '待核'
     out.sharesEndPage = Boolean(head.sharesEndPage)
   }
+  // 篇頭與右欄印的起訖頁（「121–125」，只有起頁時為「121」），前端照印
+  out.bookExtent = out.bookEndPage && out.bookEndPage !== item.bookStartPage ? `${item.bookStartPage}–${out.bookEndPage}` : String(item.bookStartPage)
   return out
 })
 // 卷首三項不在 198 篇裡，另記一份：獻詞與緣起已切成讀稿，圖片頁只有影像。

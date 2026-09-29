@@ -619,7 +619,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 1,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "1"
       },
       {
         "id": "ZJH-002",
@@ -635,7 +636,8 @@
         ],
         "bookEndPage": 3,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "2–3"
       },
       {
         "id": "ZJH-003",
@@ -651,7 +653,8 @@
         ],
         "bookEndPage": 4,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "3–4"
       },
       {
         "id": "ZJH-004",
@@ -667,7 +670,8 @@
         ],
         "bookEndPage": 5,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "4–5"
       },
       {
         "id": "ZJH-005",
@@ -689,7 +693,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 6,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "5–6"
       },
       {
         "id": "ZJH-006",
@@ -705,7 +710,8 @@
         ],
         "bookEndPage": 7,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "6–7"
       },
       {
         "id": "ZJH-007",
@@ -723,7 +729,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 12,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "8–12"
       },
       {
         "id": "ZJH-008",
@@ -739,7 +746,8 @@
         ],
         "bookEndPage": 12,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "12"
       },
       {
         "id": "ZJH-009",
@@ -755,7 +763,8 @@
         ],
         "bookEndPage": 14,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "12–14"
       },
       {
         "id": "ZJH-010",
@@ -771,7 +780,8 @@
         ],
         "bookEndPage": 22,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "14–22"
       },
       {
         "id": "ZJH-011",
@@ -792,7 +802,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 25,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "22–25"
       },
       {
         "id": "ZJH-012",
@@ -810,7 +821,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 29,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "25–29"
       },
       {
         "id": "ZJH-013",
@@ -828,7 +840,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 37,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "29–37"
       },
       {
         "id": "ZJH-014",
@@ -846,7 +859,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 47,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "37–47"
       },
       {
         "id": "ZJH-015",
@@ -864,7 +878,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 56,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "48–56"
       },
       {
         "id": "ZJH-016",
@@ -882,7 +897,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 60,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "56–60"
       },
       {
         "id": "ZJH-017",
@@ -900,7 +916,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 62,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "60–62"
       },
       {
         "id": "ZJH-018",
@@ -918,7 +935,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 67,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "62–67"
       },
       {
         "id": "ZJH-019",
@@ -936,7 +954,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 71,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "68–71"
       },
       {
         "id": "ZJH-020",
@@ -954,7 +973,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 72,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "71–72"
       },
       {
         "id": "ZJH-021",
@@ -970,7 +990,8 @@
         ],
         "bookEndPage": 74,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "73–74"
       },
       {
         "id": "ZJH-022",
@@ -986,7 +1007,8 @@
         ],
         "bookEndPage": 77,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "74–77"
       },
       {
         "id": "ZJH-023",
@@ -1002,7 +1024,8 @@
         ],
         "bookEndPage": 83,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "77–83"
       },
       {
         "id": "ZJH-024",
@@ -1019,7 +1042,8 @@
         ],
         "bookEndPage": 85,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "84–85"
       },
       {
         "id": "ZJH-025",
@@ -1035,7 +1059,8 @@
         ],
         "bookEndPage": 87,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "85–87"
       },
       {
         "id": "ZJH-026",
@@ -1052,7 +1077,8 @@
         ],
         "bookEndPage": 89,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "88–89"
       },
       {
         "id": "ZJH-027",
@@ -1068,7 +1094,8 @@
         ],
         "bookEndPage": 91,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "89–91"
       },
       {
         "id": "ZJH-028",
@@ -1086,7 +1113,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 95,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "91–95"
       },
       {
         "id": "ZJH-029",
@@ -1104,7 +1132,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 98,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "95–98"
       },
       {
         "id": "ZJH-030",
@@ -1120,7 +1149,8 @@
         ],
         "bookEndPage": 103,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "98–103"
       },
       {
         "id": "ZJH-031",
@@ -1136,7 +1166,8 @@
         ],
         "bookEndPage": 104,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "103–104"
       },
       {
         "id": "ZJH-032",
@@ -1154,7 +1185,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 120,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "104–120"
       },
       {
         "id": "ZJH-033",
@@ -1173,7 +1205,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 125,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "121–125"
       },
       {
         "id": "ZJH-034",
@@ -1196,7 +1229,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 131,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "125–131"
       },
       {
         "id": "ZJH-035",
@@ -1213,7 +1247,8 @@
         ],
         "bookEndPage": 154,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "131–154"
       },
       {
         "id": "ZJH-036",
@@ -1232,7 +1267,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 156,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "154–156"
       },
       {
         "id": "ZJH-037",
@@ -1251,7 +1287,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 159,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "156–159"
       },
       {
         "id": "ZJH-038",
@@ -1268,7 +1305,8 @@
         ],
         "bookEndPage": 164,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "159–164"
       },
       {
         "id": "ZJH-039",
@@ -1285,7 +1323,8 @@
         ],
         "bookEndPage": 170,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "164–170"
       },
       {
         "id": "ZJH-040",
@@ -1302,7 +1341,8 @@
         ],
         "bookEndPage": 171,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "170–171"
       },
       {
         "id": "ZJH-041",
@@ -1319,7 +1359,8 @@
         ],
         "bookEndPage": 173,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "171–173"
       },
       {
         "id": "ZJH-042",
@@ -1336,7 +1377,8 @@
         ],
         "bookEndPage": 176,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "174–176"
       },
       {
         "id": "ZJH-043",
@@ -1353,7 +1395,8 @@
         ],
         "bookEndPage": 180,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "176–180"
       },
       {
         "id": "ZJH-044",
@@ -1370,7 +1413,8 @@
         ],
         "bookEndPage": 183,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "180–183"
       },
       {
         "id": "ZJH-045",
@@ -1387,7 +1431,8 @@
         ],
         "bookEndPage": 186,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "183–186"
       },
       {
         "id": "ZJH-046",
@@ -1404,7 +1449,8 @@
         ],
         "bookEndPage": 188,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "186–188"
       },
       {
         "id": "ZJH-047",
@@ -1421,7 +1467,8 @@
         ],
         "bookEndPage": 200,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "188–200"
       },
       {
         "id": "ZJH-048",
@@ -1438,7 +1485,8 @@
         ],
         "bookEndPage": 203,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "200–203"
       },
       {
         "id": "ZJH-049",
@@ -1455,7 +1503,8 @@
         ],
         "bookEndPage": 205,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "203–205"
       },
       {
         "id": "ZJH-050",
@@ -1472,7 +1521,8 @@
         ],
         "bookEndPage": 206,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "205–206"
       },
       {
         "id": "ZJH-051",
@@ -1489,7 +1539,8 @@
         ],
         "bookEndPage": 208,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "206–208"
       },
       {
         "id": "ZJH-052",
@@ -1508,7 +1559,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 213,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "208–213"
       },
       {
         "id": "ZJH-053",
@@ -1527,7 +1579,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 217,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "214–217"
       },
       {
         "id": "ZJH-054",
@@ -1546,7 +1599,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 222,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "217–222"
       },
       {
         "id": "ZJH-055",
@@ -1565,7 +1619,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 232,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "222–232"
       },
       {
         "id": "ZJH-056",
@@ -1584,7 +1639,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 236,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "233–236"
       },
       {
         "id": "ZJH-057",
@@ -1601,7 +1657,8 @@
         ],
         "bookEndPage": 240,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "236–240"
       },
       {
         "id": "ZJH-058",
@@ -1620,7 +1677,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 246,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "240–246"
       },
       {
         "id": "ZJH-059",
@@ -1639,7 +1697,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 249,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "246–249"
       },
       {
         "id": "ZJH-060",
@@ -1658,7 +1717,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 260,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "249–260"
       },
       {
         "id": "ZJH-061",
@@ -1677,7 +1737,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 263,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "261–263"
       },
       {
         "id": "ZJH-062",
@@ -1699,7 +1760,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 267,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "264–267"
       },
       {
         "id": "ZJH-063",
@@ -1716,7 +1778,8 @@
         ],
         "bookEndPage": 269,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "267–269"
       },
       {
         "id": "ZJH-064",
@@ -1736,7 +1799,8 @@
         ],
         "bookEndPage": 276,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "269–276"
       },
       {
         "id": "ZJH-065",
@@ -1755,7 +1819,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 277,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "276–277"
       },
       {
         "id": "ZJH-066",
@@ -1774,7 +1839,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 282,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "277–282"
       },
       {
         "id": "ZJH-067",
@@ -1793,7 +1859,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 284,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "282–284"
       },
       {
         "id": "ZJH-068",
@@ -1813,7 +1880,8 @@
         ],
         "bookEndPage": 286,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "284–286"
       },
       {
         "id": "ZJH-069",
@@ -1831,7 +1899,8 @@
         ],
         "bookEndPage": 288,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "287–288"
       },
       {
         "id": "ZJH-070",
@@ -1848,7 +1917,8 @@
         ],
         "bookEndPage": 290,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "288–290"
       },
       {
         "id": "ZJH-071",
@@ -1870,7 +1940,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 296,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "290–296"
       },
       {
         "id": "ZJH-072",
@@ -1888,7 +1959,8 @@
         ],
         "bookEndPage": 298,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "296–298"
       },
       {
         "id": "ZJH-073",
@@ -1905,7 +1977,8 @@
         ],
         "bookEndPage": 303,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "298–303"
       },
       {
         "id": "ZJH-074",
@@ -1924,7 +1997,8 @@
         ],
         "bookEndPage": 308,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "303–308"
       },
       {
         "id": "ZJH-075",
@@ -1944,7 +2018,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 312,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "308–312"
       },
       {
         "id": "ZJH-076",
@@ -1964,7 +2039,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 316,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "312–316"
       },
       {
         "id": "ZJH-077",
@@ -1982,7 +2058,8 @@
         ],
         "bookEndPage": 319,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "316–319"
       },
       {
         "id": "ZJH-078",
@@ -2000,7 +2077,8 @@
         ],
         "bookEndPage": 324,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "319–324"
       },
       {
         "id": "ZJH-079",
@@ -2020,7 +2098,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 330,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "325–330"
       },
       {
         "id": "ZJH-080",
@@ -2040,7 +2119,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 333,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "330–333"
       },
       {
         "id": "ZJH-081",
@@ -2058,7 +2138,8 @@
         ],
         "bookEndPage": 340,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "333–340"
       },
       {
         "id": "ZJH-082",
@@ -2077,7 +2158,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 345,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "340–345"
       },
       {
         "id": "ZJH-083",
@@ -2094,7 +2176,8 @@
         ],
         "bookEndPage": 351,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "345–351"
       },
       {
         "id": "ZJH-084",
@@ -2113,7 +2196,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 354,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "351–354"
       },
       {
         "id": "ZJH-085",
@@ -2130,7 +2214,8 @@
         ],
         "bookEndPage": 358,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "354–358"
       },
       {
         "id": "ZJH-086",
@@ -2147,7 +2232,8 @@
         ],
         "bookEndPage": 360,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "358–360"
       },
       {
         "id": "ZJH-087",
@@ -2164,7 +2250,8 @@
         ],
         "bookEndPage": 366,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "361–366"
       },
       {
         "id": "ZJH-088",
@@ -2181,7 +2268,8 @@
         ],
         "bookEndPage": 369,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "366–369"
       },
       {
         "id": "ZJH-089",
@@ -2198,7 +2286,8 @@
         ],
         "bookEndPage": 371,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "369–371"
       },
       {
         "id": "ZJH-090",
@@ -2216,7 +2305,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 374,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "371–374"
       },
       {
         "id": "ZJH-091",
@@ -2234,7 +2324,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 376,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "374–376"
       },
       {
         "id": "ZJH-092",
@@ -2250,7 +2341,8 @@
         ],
         "bookEndPage": 378,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "377–378"
       },
       {
         "id": "ZJH-093",
@@ -2266,7 +2358,8 @@
         ],
         "bookEndPage": 380,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "378–380"
       },
       {
         "id": "ZJH-094",
@@ -2282,7 +2375,8 @@
         ],
         "bookEndPage": 382,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "380–382"
       },
       {
         "id": "ZJH-095",
@@ -2300,7 +2394,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 385,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "383–385"
       },
       {
         "id": "ZJH-096",
@@ -2316,7 +2411,8 @@
         ],
         "bookEndPage": 386,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "385–386"
       },
       {
         "id": "ZJH-097",
@@ -2334,7 +2430,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 388,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "386–388"
       },
       {
         "id": "ZJH-098",
@@ -2352,7 +2449,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 390,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "388–390"
       },
       {
         "id": "ZJH-099",
@@ -2368,7 +2466,8 @@
         ],
         "bookEndPage": 393,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "390–393"
       },
       {
         "id": "ZJH-100",
@@ -2384,7 +2483,8 @@
         ],
         "bookEndPage": 394,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "393–394"
       },
       {
         "id": "ZJH-101",
@@ -2401,7 +2501,8 @@
         ],
         "bookEndPage": 396,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "395–396"
       },
       {
         "id": "ZJH-102",
@@ -2418,7 +2519,8 @@
         ],
         "bookEndPage": 398,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "397–398"
       },
       {
         "id": "ZJH-103",
@@ -2434,7 +2536,8 @@
         ],
         "bookEndPage": 406,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "399–406"
       },
       {
         "id": "ZJH-104",
@@ -2453,7 +2556,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 413,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "407–413"
       },
       {
         "id": "ZJH-105",
@@ -2465,7 +2569,8 @@
         "note": "原書無日期",
         "bookEndPage": 421,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "413–421"
       },
       {
         "id": "ZJH-106",
@@ -2481,7 +2586,8 @@
         ],
         "bookEndPage": 425,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "421–425"
       },
       {
         "id": "ZJH-107",
@@ -2499,7 +2605,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 428,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "425–428"
       },
       {
         "id": "ZJH-108",
@@ -2518,7 +2625,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 433,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "429–433"
       },
       {
         "id": "ZJH-109",
@@ -2536,7 +2644,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 437,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "433–437"
       },
       {
         "id": "ZJH-110",
@@ -2552,7 +2661,8 @@
         ],
         "bookEndPage": 437,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "437"
       },
       {
         "id": "ZJH-111",
@@ -2570,7 +2680,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 444,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "438–444"
       },
       {
         "id": "ZJH-112",
@@ -2588,7 +2699,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 446,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "444–446"
       },
       {
         "id": "ZJH-113",
@@ -2604,7 +2716,8 @@
         ],
         "bookEndPage": 450,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "446–450"
       },
       {
         "id": "ZJH-114",
@@ -2620,7 +2733,8 @@
         ],
         "bookEndPage": 453,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "450–453"
       },
       {
         "id": "ZJH-115",
@@ -2636,7 +2750,8 @@
         ],
         "bookEndPage": 457,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "453–457"
       },
       {
         "id": "ZJH-116",
@@ -2656,7 +2771,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 462,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "457–462"
       },
       {
         "id": "ZJH-117",
@@ -2675,7 +2791,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 463,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "462–463"
       },
       {
         "id": "ZJH-118",
@@ -2694,7 +2811,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 465,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "463–465"
       },
       {
         "id": "ZJH-119",
@@ -2714,7 +2832,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 467,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "465–467"
       },
       {
         "id": "ZJH-120",
@@ -2734,7 +2853,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 469,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "467–469"
       },
       {
         "id": "ZJH-121",
@@ -2752,7 +2872,8 @@
         ],
         "bookEndPage": 473,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "469–473"
       },
       {
         "id": "ZJH-122",
@@ -2769,7 +2890,8 @@
         ],
         "bookEndPage": 476,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "473–476"
       },
       {
         "id": "ZJH-123",
@@ -2786,7 +2908,8 @@
         ],
         "bookEndPage": 479,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "476–479"
       },
       {
         "id": "ZJH-124",
@@ -2803,7 +2926,8 @@
         ],
         "bookEndPage": 484,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "479–484"
       },
       {
         "id": "ZJH-125",
@@ -2821,7 +2945,8 @@
         ],
         "bookEndPage": 485,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "484–485"
       },
       {
         "id": "ZJH-126",
@@ -2840,7 +2965,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 487,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "485–487"
       },
       {
         "id": "ZJH-127",
@@ -2859,7 +2985,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 491,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "487–491"
       },
       {
         "id": "ZJH-128",
@@ -2876,7 +3003,8 @@
         ],
         "bookEndPage": 493,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "491–493"
       },
       {
         "id": "ZJH-129",
@@ -2895,7 +3023,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 496,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "493–496"
       },
       {
         "id": "ZJH-130",
@@ -2914,7 +3043,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 502,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "496–502"
       },
       {
         "id": "ZJH-131",
@@ -2933,7 +3063,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 510,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "502–510"
       },
       {
         "id": "ZJH-132",
@@ -2946,7 +3077,8 @@
         "note": "原書無日期；原書作「爲」",
         "bookEndPage": 512,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "510–512"
       },
       {
         "id": "ZJH-133",
@@ -2963,7 +3095,8 @@
         ],
         "bookEndPage": 515,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "513–515"
       },
       {
         "id": "ZJH-134",
@@ -2982,7 +3115,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 523,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "515–523"
       },
       {
         "id": "ZJH-135",
@@ -2999,7 +3133,8 @@
         ],
         "bookEndPage": 528,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "523–528"
       },
       {
         "id": "ZJH-136",
@@ -3016,7 +3151,8 @@
         ],
         "bookEndPage": 533,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "528–533"
       },
       {
         "id": "ZJH-137",
@@ -3035,7 +3171,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 535,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "533–535"
       },
       {
         "id": "ZJH-138",
@@ -3054,7 +3191,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 540,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "535–540"
       },
       {
         "id": "ZJH-139",
@@ -3073,7 +3211,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 548,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "540–548"
       },
       {
         "id": "ZJH-140",
@@ -3092,7 +3231,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 553,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "548–553"
       },
       {
         "id": "ZJH-141",
@@ -3111,7 +3251,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 557,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "553–557"
       },
       {
         "id": "ZJH-142",
@@ -3129,7 +3270,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 559,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "557–559"
       },
       {
         "id": "ZJH-143",
@@ -3145,7 +3287,8 @@
         ],
         "bookEndPage": 560,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "559–560"
       },
       {
         "id": "ZJH-144",
@@ -3161,7 +3304,8 @@
         ],
         "bookEndPage": 563,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "560–563"
       },
       {
         "id": "ZJH-145",
@@ -3177,7 +3321,8 @@
         ],
         "bookEndPage": 565,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "563–565"
       },
       {
         "id": "ZJH-146",
@@ -3195,7 +3340,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 569,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "565–569"
       },
       {
         "id": "ZJH-147",
@@ -3213,7 +3359,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 572,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "569–572"
       },
       {
         "id": "ZJH-148",
@@ -3231,7 +3378,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 574,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "572–574"
       },
       {
         "id": "ZJH-149",
@@ -3247,7 +3395,8 @@
         ],
         "bookEndPage": 577,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "574–577"
       },
       {
         "id": "ZJH-150",
@@ -3265,7 +3414,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 580,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "577–580"
       },
       {
         "id": "ZJH-151",
@@ -3283,7 +3433,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 583,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "581–583"
       },
       {
         "id": "ZJH-152",
@@ -3301,7 +3452,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 585,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "583–585"
       },
       {
         "id": "ZJH-153",
@@ -3319,7 +3471,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 587,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "585–587"
       },
       {
         "id": "ZJH-154",
@@ -3337,7 +3490,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 593,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "587–593"
       },
       {
         "id": "ZJH-155",
@@ -3355,7 +3509,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 605,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "594–605"
       },
       {
         "id": "ZJH-156",
@@ -3373,7 +3528,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 614,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "605–614"
       },
       {
         "id": "ZJH-157",
@@ -3391,7 +3547,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 620,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "615–620"
       },
       {
         "id": "ZJH-158",
@@ -3409,7 +3566,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 627,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "621–627"
       },
       {
         "id": "ZJH-159",
@@ -3427,7 +3585,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 637,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "627–637"
       },
       {
         "id": "ZJH-160",
@@ -3443,7 +3602,8 @@
         ],
         "bookEndPage": 640,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "637–640"
       },
       {
         "id": "ZJH-161",
@@ -3461,7 +3621,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 643,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "640–643"
       },
       {
         "id": "ZJH-162",
@@ -3477,7 +3638,8 @@
         ],
         "bookEndPage": 647,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "643–647"
       },
       {
         "id": "ZJH-163",
@@ -3495,7 +3657,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 652,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "647–652"
       },
       {
         "id": "ZJH-164",
@@ -3513,7 +3676,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 654,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "652–654"
       },
       {
         "id": "ZJH-165",
@@ -3531,7 +3695,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 657,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "654–657"
       },
       {
         "id": "ZJH-166",
@@ -3548,7 +3713,8 @@
         ],
         "bookEndPage": 659,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "657–659"
       },
       {
         "id": "ZJH-167",
@@ -3564,7 +3730,8 @@
         ],
         "bookEndPage": 660,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "659–660"
       },
       {
         "id": "ZJH-168",
@@ -3581,7 +3748,8 @@
         ],
         "bookEndPage": 661,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "661"
       },
       {
         "id": "ZJH-169",
@@ -3593,7 +3761,8 @@
         "note": "附錄，與前篇同頁接排；原書無日期",
         "bookEndPage": 662,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "661–662"
       },
       {
         "id": "ZJH-170",
@@ -3612,7 +3781,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 663,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "662–663"
       },
       {
         "id": "ZJH-171",
@@ -3628,7 +3798,8 @@
         ],
         "bookEndPage": 666,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "664–666"
       },
       {
         "id": "ZJH-172",
@@ -3644,7 +3815,8 @@
         ],
         "bookEndPage": 668,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "666–668"
       },
       {
         "id": "ZJH-173",
@@ -3664,7 +3836,8 @@
         ],
         "bookEndPage": 675,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "668–675"
       },
       {
         "id": "ZJH-174",
@@ -3681,7 +3854,8 @@
         ],
         "bookEndPage": 687,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "675–687"
       },
       {
         "id": "ZJH-175",
@@ -3697,7 +3871,8 @@
         ],
         "bookEndPage": 697,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "687–697"
       },
       {
         "id": "ZJH-176",
@@ -3715,7 +3890,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 698,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "697–698"
       },
       {
         "id": "ZJH-177",
@@ -3731,7 +3907,8 @@
         ],
         "bookEndPage": 700,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "698–700"
       },
       {
         "id": "ZJH-178",
@@ -3749,7 +3926,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 704,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "701–704"
       },
       {
         "id": "ZJH-179",
@@ -3767,7 +3945,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 707,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "704–707"
       },
       {
         "id": "ZJH-180",
@@ -3785,7 +3964,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 709,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "707–709"
       },
       {
         "id": "ZJH-181",
@@ -3804,7 +3984,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 710,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "709–710"
       },
       {
         "id": "ZJH-182",
@@ -3820,7 +4001,8 @@
         ],
         "bookEndPage": 713,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "711–713"
       },
       {
         "id": "ZJH-183",
@@ -3837,7 +4019,8 @@
         ],
         "bookEndPage": 715,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "713–715"
       },
       {
         "id": "ZJH-184",
@@ -3855,7 +4038,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 716,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "715–716"
       },
       {
         "id": "ZJH-185",
@@ -3871,7 +4055,8 @@
         ],
         "bookEndPage": 717,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "716–717"
       },
       {
         "id": "ZJH-186",
@@ -3887,7 +4072,8 @@
         ],
         "bookEndPage": 719,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "717–719"
       },
       {
         "id": "ZJH-187",
@@ -3903,7 +4089,8 @@
         ],
         "bookEndPage": 723,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "719–723"
       },
       {
         "id": "ZJH-188",
@@ -3921,7 +4108,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 723,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "723"
       },
       {
         "id": "ZJH-189",
@@ -3940,7 +4128,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 725,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "723–725"
       },
       {
         "id": "ZJH-190",
@@ -3957,7 +4146,8 @@
         ],
         "bookEndPage": 726,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "725–726"
       },
       {
         "id": "ZJH-191",
@@ -3975,7 +4165,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 729,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "727–729"
       },
       {
         "id": "ZJH-192",
@@ -3991,7 +4182,8 @@
         ],
         "bookEndPage": 732,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "729–732"
       },
       {
         "id": "ZJH-193",
@@ -4008,7 +4200,8 @@
         ],
         "bookEndPage": 733,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "732–733"
       },
       {
         "id": "ZJH-194",
@@ -4025,7 +4218,8 @@
         ],
         "bookEndPage": 736,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "733–736"
       },
       {
         "id": "ZJH-195",
@@ -4043,7 +4237,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 741,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "736–741"
       },
       {
         "id": "ZJH-196",
@@ -4061,7 +4256,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 744,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "741–744"
       },
       {
         "id": "ZJH-197",
@@ -4080,7 +4276,8 @@
         "occasionStatus": "待核",
         "bookEndPage": 745,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": true
+        "sharesEndPage": true,
+        "bookExtent": "744–745"
       },
       {
         "id": "ZJH-198",
@@ -4096,7 +4293,8 @@
         ],
         "bookEndPage": 750,
         "bookEndPageStatus": "待核",
-        "sharesEndPage": false
+        "sharesEndPage": false,
+        "bookExtent": "745–750"
       }
     ],
     "pageNote": "頁碼為原書頁碼。相鄰兩篇共用一頁時，目次只標一個起頁。"
