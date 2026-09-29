@@ -1,6 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { checkDrafts } from '@phenomcanvas/prose-rules/ocr';
 import { buildEditorialNotes } from '@phenomcanvas/prose-rules/editorial-notes';
+import { dropHonorificSpace } from './lib/honorific-space.mjs';
 
 const target = new URL('../../data/processed/zhu-jiahua-app.json', import.meta.url);
 const data = JSON.parse(await readFile(target, 'utf8'));
@@ -37,6 +38,23 @@ if ('note' in data.rights) throw new Error('rights.note 是寫給維護的人的
   if (!dateLabelMatches('1942 年 7 月 28 日', '1942-07-28') || !dateLabelMatches('1944 年 2 月', '1944-02')
     || labelOk('1942-07-28') || labelOk('民國三十一年七月二十八日') || dateLabelMatches('1942 年', '1942-07-28')) {
     throw new Error('日期標示的判準自測沒過——看 lib/date-label.mjs');
+  }
+  // 挪抬（敬稱前空一格）站上不照排（站主 2026-09-29），母本留著，產物裡一處都不准有
+  {
+    const { HONORIFIC_SPACE } = await import('./lib/honorific-space.mjs');
+    const { readdirSync } = await import('node:fs');
+    const dirs = ['reading-drafts', 'external-drafts'];
+    const paths = [
+      'zhu-jiahua-app.json', 'chronology.json', 'related-documents.json', 'search-corpus.json',
+      ...dirs.flatMap((d) => readdirSync(new URL(`../../data/processed/${d}`, import.meta.url)).filter((f) => f.endsWith('.json')).map((f) => `${d}/${f}`)),
+    ];
+    const left = [];
+    for (const rel of paths) {
+      const raw = await readFile(new URL(`../../data/processed/${rel}`, import.meta.url), 'utf8');
+      for (const m of raw.matchAll(HONORIFIC_SPACE)) left.push(`${rel}「${raw.slice(Math.max(0, m.index - 8), m.index + 4)}」`);
+    }
+    if (paths.length < 200) throw new Error(`挪抬檢查只看到 ${paths.length} 個產物檔，讀稿目錄可能改名了`);
+    if (left.length) throw new Error(`產物裡還有敬稱前的空格（${left.length} 處）：${left.slice(0, 5).join('；')}——建置時應經 lib/honorific-space.mjs`);
   }
   const files = ['zhu-jiahua-app.json', 'chronology.json', 'related-documents.json', 'search-corpus.json'];
   for (const name of files) {
@@ -111,7 +129,7 @@ for (let i = 0; i < tocIndex.items.length; i += 1) {
   const out = toc.items[i];
   for (const [key, value] of [
     ['id', src.id],
-    ['title', src.title],
+    ['title', dropHonorificSpace(src.title)],
     ['part', src.part],
     ['bookStartPage', src.bookStartPage],
   ]) {

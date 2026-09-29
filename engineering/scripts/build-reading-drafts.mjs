@@ -14,6 +14,7 @@
 // 逐頁人工校訂完成的篇另存 data/derived/transcriptions/，前端以那一份為準。
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
+import { dropHonorificSpace } from './lib/honorific-space.mjs'
 import { createHash } from 'node:crypto'
 import { join } from 'node:path'
 import { widen, dots } from './lib/punctuation.mjs'
@@ -847,7 +848,7 @@ for (let i = 0; i < heads.length; i += 1) {
   totalChars += chars
   const draft = {
     id: h.id,
-    title: meta?.title ?? h.title,
+    title: dropHonorificSpace(meta?.title ?? h.title),
     part: meta?.part ?? null,
     dateOriginal: meta?.dateOriginal ?? null,
     // 卷首兩篇才有這兩欄；198 篇的作者都是朱家驊，不逐篇重寫一次

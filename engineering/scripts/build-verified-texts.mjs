@@ -7,6 +7,7 @@
 // 校訂記錄（`## 校訂記錄` 一節）與 frontmatter 的字形紀錄留在資料倉，不進快照。
 
 import { readFileSync, writeFileSync } from 'node:fs'
+import { dropHonorificSpace } from './lib/honorific-space.mjs'
 
 const APP = 'data/processed/zhu-jiahua-app.json'
 const DIR = 'data/derived/transcriptions'
@@ -45,11 +46,11 @@ app.verifiedTexts = FILES.map((id) => {
   if (meta.occasion && lines[0] === meta.occasion) lines.shift()
   const entry = {
     id,
-    title: meta.title,
+    title: dropHonorificSpace(meta.title),
     dateLine,
     bookPages: pageRange(meta.book_pages),
     status: meta.transcription_status,
-    paragraphs: lines,
+    paragraphs: lines.map(dropHonorificSpace),
   }
   if (meta.verification_note) {
     entry.statusNote = meta.verification_note

@@ -19,6 +19,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dateLabel, UNDATED_BOOK, UNDATED_PRINT } from './lib/date-label.mjs'
+import { dropHonorificSpace } from './lib/honorific-space.mjs'
 
 const ROOT = fileURLToPath(new URL('../../', import.meta.url))
 const DRAFT_DIR = `${ROOT}data/processed/reading-drafts`
@@ -95,13 +96,13 @@ export function buildSearchCorpus() {
       tocId: toc.id,
       type: 'verified',
       review: 'verified',
-      title: meta.title,
+      title: dropHonorificSpace(meta.title),
       part: toc.part,
       dateOriginal: meta.date_original ?? null,
       dateIso: meta.date_iso ?? null,
       dateLabel: dateLabel(meta.date_iso, UNDATED_BOOK),
       bookPages: pages.length === 1 ? String(pages[0]) : `${pages[0]}–${pages[pages.length - 1]}`,
-      text: body(lines),
+      text: dropHonorificSpace(body(lines)),
     })
   }
   if (supersededTocIds.size !== withTextPath.length) {

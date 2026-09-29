@@ -21,6 +21,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { widen, dots, cornerQuotes } from './lib/punctuation.mjs'
 import { dateLabel, UNDATED_BOOK, UNDATED_PRINT } from './lib/date-label.mjs'
+import { dropHonorificSpace } from './lib/honorific-space.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const txDir = join(root, 'data/derived/chronology/transcriptions')
@@ -240,7 +241,7 @@ for (const item of toc) {
   if (!Number.isInteger(ce)) continue
   piecesByCe.set(ce, [...(piecesByCe.get(ce) ?? []), {
     id: item.id,
-    title: item.title,
+    title: dropHonorificSpace(item.title),
     part: item.part,
     dateIso: item.dateIso,
     dateLabel: dateLabel(item.dateIso, UNDATED_BOOK),

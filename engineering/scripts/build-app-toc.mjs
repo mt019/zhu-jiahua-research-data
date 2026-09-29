@@ -7,6 +7,7 @@
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dateLabel, UNDATED_BOOK } from './lib/date-label.mjs'
+import { dropHonorificSpace } from './lib/honorific-space.mjs'
 
 const TOC = 'data/derived/toc_index.json'
 const APP = 'data/processed/zhu-jiahua-app.json'
@@ -31,7 +32,7 @@ app.tableOfContents.items = toc.items.map((item) => {
   const out = {
     id: item.id,
     anchor: anchorOf(item),
-    title: item.title,
+    title: dropHonorificSpace(item.title),
     part: item.part,
     bookStartPage: item.bookStartPage,
   }
